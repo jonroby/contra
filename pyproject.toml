@@ -9,6 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "langdetect>=1.0.9",
+    "openai>=2.32.0",
     "pgvector>=0.4.2",
     "psycopg[binary]>=3.3.3",
     "python-dotenv>=1.2.2",

@@ -1,14 +1,21 @@
 """
 Embed abstracts with SPECTER and load into Postgres.
 
-Reads year-shard JSON files from data/progress/, embeds each paper's
-title+abstract with allenai/specter, and upserts into the `papers` table.
+Two input modes:
+
+    --input data/abstracts_filtered.json    # single merged file (Option A flow)
+    --year 2026                              # one year-shard from data/progress/
+    (default)                                # all year-shards from data/progress/
+
+The merged file produced by filter_corpus.py also contains OpenAlex
+enrichment fields, which are populated when present.
 
 SPECTER expects "title [SEP] abstract" as input. The model is 768-dim,
 matching the schema vector(768) column.
 
 Usage:
-    uv run python scripts/embed_and_load.py                   # all shards
+    uv run python scripts/embed_and_load.py --input data/abstracts_filtered.json
+    uv run python scripts/embed_and_load.py                   # all year-shards
     uv run python scripts/embed_and_load.py --year 2026       # one year
     uv run python scripts/embed_and_load.py --batch-size 16   # tune for memory
 """
@@ -20,6 +27,7 @@ from pathlib import Path
 import psycopg
 from dotenv import load_dotenv
 from pgvector.psycopg import register_vector
+from psycopg.types.json import Jsonb
 from sentence_transformers import SentenceTransformer
 
 from db import resolve_url
@@ -33,6 +41,9 @@ DEFAULT_BATCH_SIZE = 32
 
 def parse_args():
     p = argparse.ArgumentParser(description="Embed abstracts and load into Postgres")
+    p.add_argument("--input", type=Path, default=None,
+                   help="Single JSON file to load (e.g., data/abstracts_filtered.json). "
+                        "Mutually exclusive with --year/year-shards mode.")
     p.add_argument("--year", type=int, default=None,
                    help="Only process this year's shard (default: all shards)")
     p.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
@@ -83,6 +94,13 @@ def upsert_papers(conn, papers: list[dict], embeddings) -> int:
             "; ".join(p.get("mesh_terms") or []),
             "; ".join(p.get("keywords") or []),
             emb,
+            # OpenAlex enrichment (None when filter_corpus.py didn't find a match)
+            p.get("openalex_id"),
+            p.get("cited_by_count"),
+            Jsonb(p["referenced_works"]) if p.get("referenced_works") is not None else None,
+            Jsonb(p["concepts"]) if p.get("concepts") is not None else None,
+            p.get("oa_status"),
+            p.get("oa_pdf_url"),
         )
         for p, emb in zip(papers, embeddings)
     ]
@@ -91,8 +109,11 @@ def upsert_papers(conn, papers: list[dict], embeddings) -> int:
             """
             INSERT INTO papers
               (pmid, title, abstract, authors, year, journal, doi,
-               publication_types, mesh_terms, keywords, embedding)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+               publication_types, mesh_terms, keywords, embedding,
+               openalex_id, cited_by_count, referenced_works, concepts,
+               oa_status, oa_pdf_url)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s)
             ON CONFLICT (pmid) DO NOTHING
             """,
             rows,
@@ -102,11 +123,19 @@ def upsert_papers(conn, papers: list[dict], embeddings) -> int:
 
 def main():
     args = parse_args()
+    if args.input and args.year:
+        raise SystemExit("--input and --year are mutually exclusive")
+
     url = resolve_url(args.target)
     print(f"Target: {args.target}")
 
-    paths = shard_paths(args.year)
-    print(f"Found {len(paths)} shard(s): {[p.name for p in paths]}")
+    if args.input:
+        if not args.input.exists():
+            raise SystemExit(f"No file at {args.input}")
+        paths = [args.input]
+    else:
+        paths = shard_paths(args.year)
+    print(f"Found {len(paths)} input file(s): {[p.name for p in paths]}")
 
     print(f"Loading model: {MODEL_NAME} (first run will download ~440MB)")
     model = SentenceTransformer(MODEL_NAME)

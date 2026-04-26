@@ -35,8 +35,23 @@ CREATE TABLE IF NOT EXISTS papers (
     publication_types TEXT,
     mesh_terms TEXT,
     keywords TEXT,
-    embedding vector({EMBEDDING_DIM})
+    embedding vector({EMBEDDING_DIM}),
+    -- OpenAlex enrichment (nullable; ~2% of papers lack coverage)
+    openalex_id TEXT,
+    cited_by_count INTEGER,
+    referenced_works JSONB,
+    concepts JSONB,
+    oa_status TEXT,
+    oa_pdf_url TEXT
 );
+
+-- Idempotent ALTERs for existing tables (no-op on fresh DB)
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS openalex_id TEXT;
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS cited_by_count INTEGER;
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS referenced_works JSONB;
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS concepts JSONB;
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS oa_status TEXT;
+ALTER TABLE papers ADD COLUMN IF NOT EXISTS oa_pdf_url TEXT;
 """
 
 

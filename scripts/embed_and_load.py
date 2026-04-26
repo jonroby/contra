@@ -15,13 +15,14 @@ Usage:
 
 import argparse
 import json
-import os
 from pathlib import Path
 
 import psycopg
 from dotenv import load_dotenv
 from pgvector.psycopg import register_vector
 from sentence_transformers import SentenceTransformer
+
+from db import resolve_url
 
 load_dotenv()
 
@@ -37,6 +38,7 @@ def parse_args():
     p.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     p.add_argument("--limit", type=int, default=None,
                    help="Cap papers loaded per shard (testing)")
+    p.add_argument("--target", choices=["local", "railway"], default="local")
     return p.parse_args()
 
 
@@ -100,9 +102,8 @@ def upsert_papers(conn, papers: list[dict], embeddings) -> int:
 
 def main():
     args = parse_args()
-    url = os.getenv("DATABASE_URL")
-    if not url:
-        raise SystemExit("DATABASE_URL not set in .env")
+    url = resolve_url(args.target)
+    print(f"Target: {args.target}")
 
     paths = shard_paths(args.year)
     print(f"Found {len(paths)} shard(s): {[p.name for p in paths]}")

@@ -12,6 +12,7 @@ import os
 
 from dotenv import load_dotenv
 
+from db import resolve_url
 from retrieval import Retriever
 
 load_dotenv()
@@ -27,6 +28,7 @@ def parse_args():
     p.add_argument("--pool", type=int, default=200)
     p.add_argument("--rank-pmid", type=str, default=None,
                    help="Print the rank of this PMID under each method")
+    p.add_argument("--target", choices=["local", "railway"], default="local")
     return p.parse_args()
 
 
@@ -46,10 +48,8 @@ def find_rank(results_full, pmid):
 
 def main():
     args = parse_args()
-    url = os.getenv("DATABASE_URL")
-    if not url:
-        raise SystemExit("DATABASE_URL not set in .env")
-
+    url = resolve_url(args.target)
+    print(f"Target: {args.target}")
     print("Loading retriever (model + corpus + BM25)...")
     r = Retriever(url)
     print(f"Corpus: {len(r.papers)} papers")

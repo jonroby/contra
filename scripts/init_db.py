@@ -8,10 +8,12 @@ Usage:
     uv run python scripts/init_db.py
 """
 
-import os
+import argparse
 
 import psycopg
 from dotenv import load_dotenv
+
+from db import resolve_url
 
 load_dotenv()
 
@@ -39,10 +41,12 @@ CREATE TABLE IF NOT EXISTS papers (
 
 
 def main():
-    url = os.getenv("DATABASE_URL")
-    if not url:
-        raise SystemExit("DATABASE_URL not set in .env")
+    p = argparse.ArgumentParser()
+    p.add_argument("--target", choices=["local", "railway"], default="local")
+    args = p.parse_args()
 
+    url = resolve_url(args.target)
+    print(f"Target: {args.target}")
     print(f"Connecting to {url.rsplit('@', 1)[-1]}...")
     with psycopg.connect(url) as conn:
         with conn.cursor() as cur:

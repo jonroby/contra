@@ -2,17 +2,19 @@
 Smoke test: embed a query and run cosine similarity search against papers.
 
 Usage:
-    uv run python scripts/query_similar.py "does lithium slow cognitive decline in Alzheimer's?"
-    uv run python scripts/query_similar.py --top 5 "amyloid beta plaque formation"
+    uv run python cli/query_similar.py "does lithium slow cognitive decline in Alzheimer's?"
+    uv run python cli/query_similar.py --top 5 "amyloid beta plaque formation"
+    uv run python cli/query_similar.py --target railway "..."
 """
 
 import argparse
-import os
 
 import psycopg
 from dotenv import load_dotenv
 from pgvector.psycopg import register_vector
 from sentence_transformers import SentenceTransformer
+
+from contra.db import resolve_url
 
 load_dotenv()
 
@@ -23,14 +25,13 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("query", type=str)
     p.add_argument("--top", type=int, default=10)
+    p.add_argument("--target", choices=["local", "railway"], default="local")
     return p.parse_args()
 
 
 def main():
     args = parse_args()
-    url = os.getenv("DATABASE_URL")
-    if not url:
-        raise SystemExit("DATABASE_URL not set in .env")
+    url = resolve_url(args.target)
 
     print(f"Loading model {MODEL_NAME}...")
     model = SentenceTransformer(MODEL_NAME)

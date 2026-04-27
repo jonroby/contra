@@ -2,18 +2,17 @@
 Run a query through vector, BM25, and hybrid retrieval and compare ranks.
 
 Usage:
-    uv run python scripts/query.py "does lithium slow cognitive decline in Alzheimer's?"
-    uv run python scripts/query.py --top 10 --alpha 0.7 "amyloid beta plaques"
-    uv run python scripts/query.py --rank-pmid 41980560 "lithium ..."  # show where a specific paper lands
+    uv run python cli/query.py "does lithium slow cognitive decline in Alzheimer's?"
+    uv run python cli/query.py --top 10 --alpha 0.7 "amyloid beta plaques"
+    uv run python cli/query.py --rank-pmid 41980560 "lithium ..."  # show where a specific paper lands
 """
 
 import argparse
-import os
 
 from dotenv import load_dotenv
 
-from db import resolve_url
-from retrieval import Retriever
+from contra.db import resolve_url
+from contra.retrieval import Retriever
 
 load_dotenv()
 

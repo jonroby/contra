@@ -30,7 +30,7 @@ from pgvector.psycopg import register_vector
 from psycopg.types.json import Jsonb
 from sentence_transformers import SentenceTransformer
 
-from db import resolve_url
+from contra.db import resolve_url
 
 load_dotenv()
 

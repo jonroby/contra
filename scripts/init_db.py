@@ -13,7 +13,7 @@ import argparse
 import psycopg
 from dotenv import load_dotenv
 
-from db import resolve_url
+from contra.db import resolve_url
 
 load_dotenv()
 

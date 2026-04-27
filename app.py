@@ -23,8 +23,8 @@ from contra.retrieval import Retriever
 
 load_dotenv()
 
-# Default to railway in deployed environments; local for dev.
-DEFAULT_TARGET = os.getenv("CONTRA_TARGET", "local")
+# Default to railway (deployed); set CONTRA_TARGET=local for dev.
+DEFAULT_TARGET = os.getenv("CONTRA_TARGET", "railway")
 
 EXAMPLES = [
     "Does lithium slow cognitive decline in Alzheimer's?",

@@ -170,12 +170,12 @@ psycopg==3.3.3
     # via contra
 psycopg-binary==3.3.3 ; implementation_name != 'pypy'
     # via psycopg
-pydantic==2.13.3
+pydantic<2.12.6
     # via
     #   fastapi
     #   gradio
     #   openai
-pydantic-core==2.46.3
+pydantic-core
     # via pydantic
 pydub==0.25.1
     # via gradio

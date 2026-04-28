@@ -17,11 +17,17 @@ import time
 import gradio as gr
 from dotenv import load_dotenv
 
+load_dotenv()
+
+if os.getenv("BRAINTRUST_API_KEY"):
+    import braintrust
+
+    braintrust.init_logger(project="contra")
+    braintrust.auto_instrument()
+
 from contra.db import resolve_url
 from contra.pipeline import PipelineResult, run_query
 from contra.retrieval import Retriever
-
-load_dotenv()
 
 # Default to railway (deployed); set CONTRA_TARGET=local for dev.
 DEFAULT_TARGET = os.getenv("CONTRA_TARGET", "railway")

@@ -62,6 +62,6 @@ async def extract_one(client: AsyncOpenAI, query: str, paper) -> dict[str, Any]:
 
 async def extract_all(query: str, papers: list) -> list[dict[str, Any]]:
     """Run extraction over all papers in parallel."""
-    client = AsyncOpenAI()
-    tasks = [extract_one(client, query, p) for p in papers]
-    return await asyncio.gather(*tasks)
+    async with AsyncOpenAI() as client:
+        tasks = [extract_one(client, query, p) for p in papers]
+        return await asyncio.gather(*tasks)

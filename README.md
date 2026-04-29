@@ -3,9 +3,8 @@ title: Contra
 emoji: 🧠
 colorFrom: indigo
 colorTo: pink
-sdk: gradio
-sdk_version: 6.13.0
-app_file: app.py
+sdk: docker
+app_port: 7860
 pinned: false
 license: mit
 short_description: Find where Alzheimer's research disagrees.

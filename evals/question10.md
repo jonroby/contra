@@ -52,6 +52,16 @@ None. The single label is appropriate for the single paper. The real
 issue is **corpus inadequacy**, not stance error.
 
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+- `37840487` — `wrong_population` — COCOA RCT tests a multimodal lifestyle
+  bundle (diet + cognitive training + exercise + remote coaching) where
+  cocoa is one minor component; cannot speak to isolated cocoa flavanol
+  effect that the question asks about.
+
 ---
 
 ## Abstracts (n=1)
@@ -59,6 +69,8 @@ issue is **corpus inadequacy**, not stance error.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 37840487 — current stance: `inconclusive`
+
+**Evidence span:** > The intervention arm ameliorated 2.1 [1.0] MPI points (mean [SD], p = 0.016) compared to the control over the two-year intervention.
 
 **Golden note:** Remotely coached multimodal lifestyle intervention in AD — cocoa one of many components, can't isolate cocoa effect.
 

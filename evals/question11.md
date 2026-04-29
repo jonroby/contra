@@ -14,6 +14,13 @@ labels — most studies show genuinely positive effects, though the
 evidence base relies heavily on small studies and ambiguous comparator
 designs (within-subject vs between-arm).
 
+Two additional papers (`30724333`, `33619666`) have mixed-signal
+characteristics — primary endpoint missed but secondary endpoint hit —
+that meet the strict bar's "genuinely mixed signal" criterion for
+`inconclusive`. They are flagged as Borderline rather than flipped,
+pending the cross-question policy decision on
+"missed-primary-significant-secondary."
+
 ---
 
 ## Proposed flips
@@ -23,20 +30,34 @@ designs (within-subject vs between-arm).
 | `18795985` | 2008 | **supports → inconclusive** | Ancoli-Israel RCT, n=52, 6 wk. Verbatim: *"A comparison of subjects randomized to 3 weeks of therapeutic versus placebo CPAP **suggested no significant improvements in cognition**."* The within-group pre/post comparison was significant, but that's not the controlled signal — the randomized comparison was null. The authors describe this as exploratory: *"The study was underpowered to make definitive statements."* Genuinely mixed → `inconclusive`. |
 | `19968005` | 2009 | **supports → inconclusive** | Sustained-CPAP follow-up, **n=10** (5 CPAP+ vs 5 CPAP-). Reports moderate-to-large effect sizes, but with such a small sample the effect estimates are highly imprecise. The abstract itself characterizes the study as *"preliminary"* and recommends *"prospective randomized controlled research trials evaluating these hypotheses are needed."* Per strict bar, pilot/exploratory → `inconclusive`. |
 
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+- `30724333` (Memories 1 quasi-experimental, n=54, 1 yr) — **supports** (kept).
+  Primary cognitive outcome was memory (HVLT-R), which showed only ES 0.20 at
+  6 mo and was not described as significant. The reported significant finding
+  was on the **secondary** outcome (psychomotor/cognitive processing speed).
+  Falls into policy category **(c) missed primary with significant secondary**.
+  Strict bar would say `inconclusive`. Flagged for cross-question consistency.
+- `33619666` (2021 OSAS+AD/MCI retrospective, n=24) — **supports** (kept).
+  Split outcome: *"A significant difference was found for the mean score change
+  of the CDR"* but *"No significant differences were found for the mean change
+  of MMSE."* Two cognitive endpoints reported, only one sig in the small
+  retrospective cohort. Falls into policy category **(c) missed primary with
+  significant secondary** (or split outcome — same family). Strict bar would
+  say `inconclusive`. Flagged for cross-question consistency.
+
 ## Confirmed (no change)
 
 - `31881487` (2019 OSA-cognition-AD SR — *"CPAP treatment may be effective in improving cognition"*) — **supports ✓** (defensible narrative SR)
-- `24828897` (2014 single-blind n=23, 3-yr follow-up) — **supports ✓** (annual MMSE decline -0.7 vs -2.2, p=0.013, sig)
+- `24828897` (2014 single-blind n=23, 3-yr follow-up) — **supports ✓** (annual MMSE decline -0.7 vs -2.2, p=0.013, sig; explicit pilot)
 - `16696743` (2006 daytime sleepiness primary, no cognitive primary) — **inconclusive ✓**
-- `30724333` (Memories 1 quasi-experimental, n=54, 1 yr) — **supports ✓** (sig improvement in psychomotor/cognitive processing speed)
 - `19699148` (2009 sleep parameter primary, no cognition) — **inconclusive ✓**
 - `35523585` (2022 PAP-cognitive disorders SR, 11 studies) — **supports ✓** (9/11 reported protective effect)
-- `34546386` (2021 cognition meta of 7 RCTs) — **supports ✓** (SMD 0.49, 95% CI 0.11-0.86, sig)
-- `33619666` (2021 OSAS+AD/MCI retrospective, n=24) — **supports ✓** (defensible; small but sig CDR difference)
+- `34546386` (2021 cognition meta of 7 RCTs) — **supports ✓** (SMD 0.49, 95% CI 0.11-0.86, sig on MMSE; null on MoCA)
 - `37924680` (2023 CPAP adherence SR — adherence focus) — **inconclusive ✓**
 - `37586145` (2023 CPAP adherence SR neurodegen — adherence focus) — **inconclusive ✓**
 - `32108738` (Memories 1 mild OSA secondary) — **supports ✓** (defensible) — *substudy of `30724333`*
-- `32045010` (Taiwan retrospective, 3,978 OSA) — **supports ✓** (treatment HR 0.23 sig)
+- `32045010` (Taiwan retrospective, 3,978 OSA) — **supports ✓** (treatment IRR 0.23 sig)
 
 ## Cross-cutting issues
 
@@ -50,6 +71,14 @@ designs (within-subject vs between-arm).
   cognitive decline in CPAP-treated AD/MCI. The closest is `18795985`
   where the controlled comparison was null but the within-subject
   comparison was positive.
+- **Missed-primary-sig-secondary pattern**: `30724333` and `33619666`
+  both show this pattern (policy category (c)). If the cross-question
+  policy lands on "treat as inconclusive," these flip and proposed
+  S/C/I becomes 6 / 0 / 8.
+- **Pilot/exploratory framing prevalence**: Multiple primary clinical
+  studies in this set (`18795985`, `19968005`, `24828897`, `30724333`)
+  explicitly call themselves pilot/preliminary/exploratory. Even sig
+  ones are tagged `pilot_positive` to flag the small-sample caveat.
 - After flips: 8 supports, 0 contradicts, 6 inconclusive — the
   `expected_consensus: "contested"` is debatable; "leaning positive
   with weak evidence base" might fit better.
@@ -62,6 +91,54 @@ designs (within-subject vs between-arm).
 - `19968005` supports → inconclusive — n=10 follow-up, abstract calls
   itself "preliminary."
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak"
+within a stance bucket. Untagged = strong/canonical; tagged = some caveat
+applies.
+
+### Proposed new tags (Q11)
+
+- `non_cognitive_primary` — clinical RCT whose primary endpoint is a
+  non-cognitive clinical measure (sleepiness, sleep architecture, etc.)
+  and which therefore does not directly speak to the cognitive question.
+  Distinct from `biomarker_only` (which targets imaging/CSF/blood markers)
+  and `wrong_population` (population mismatch, not endpoint mismatch).
+- `adherence_focused` — systematic review or study whose primary aim is
+  characterizing treatment adherence/feasibility rather than efficacy.
+
+### Tags by pmid
+
+- `18795985` — `underpowered_null`, `pilot_positive` (within-group sig
+  was the only positive signal; randomized comparison was null;
+  abstract self-describes as "underpowered")
+- `19968005` — `pilot_positive`, `uncontrolled_observational` (n=10
+  follow-up; CPAP+ vs CPAP- was self-selected, not randomized)
+- `24828897` — `pilot_positive` (abstract: "in this pilot study"; n=23
+  but achieved sig p=0.013 on primary MMSE)
+- `30724333` — `missed_primary_sig_secondary`, `pilot_positive`,
+  `same_cohort_duplicate` (Memories 1 parent; primary memory ES 0.20
+  at 6 mo not described as sig; sig finding on secondary processing
+  speed; explicitly called "pilot clinical trial")
+- `32108738` — `same_cohort_duplicate` (Memories 1 mild-OSA substudy
+  of `30724333`)
+- `33619666` — `split_outcome`, `pilot_positive` (n=24 retrospective;
+  sig on CDR but null on MMSE)
+- `31881487` — `narrative_review` (non-pooled SR; conclusion is hedged
+  *"may be effective"*)
+- `35523585` — `narrative_review` (non-pooled SR; counts 9/11 protective
+  but no quantitative pooling)
+- `34546386` — `hedged_meta`, `split_outcome` (sig on MMSE SMD 0.49
+  but null on MoCA SMD 0.43 [-0.85, 1.72]; authors conclude
+  *"partial efficiency"*)
+- `16696743` — `non_cognitive_primary` (primary is sleepiness, not
+  cognition)
+- `19699148` — `non_cognitive_primary` (primary is sleep architecture,
+  not cognition)
+- `37924680` — `adherence_focused`, `narrative_review`
+- `37586145` — `adherence_focused`, `narrative_review`
+- `32045010` — untagged (large retrospective cohort, n=3,978; treatment
+  IRR 0.23 sig; canonical real-world supports)
 
 ---
 
@@ -70,6 +147,8 @@ designs (within-subject vs between-arm).
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 18795985 — current stance: `supports`
+
+**Evidence span:** > A comparison of subjects randomized to 3 weeks of therapeutic versus placebo CPAP suggested no significant improvements in cognition. A comparison of pre- and posttreatment neuropsychological test scores after 3 weeks of therapeutic CPAP in both groups showed a significant improvement in cognition.
 
 **Golden note:** Ancoli-Israel CPAP RCT in AD — improved cognition.
 
@@ -83,6 +162,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31881487 — current stance: `supports`
 
+**Evidence span:** > CPAP treatment may be effective in improving cognition in OSA patients with AD.
+
 **Golden note:** OSA-cognition-AD systematic review — treatment beneficial.
 
 **Obstructive sleep apnea, cognition and Alzheimer's disease: A systematic review integrating three decades of multidisciplinary research.**
@@ -94,6 +175,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19968005 — current stance: `supports`
+
+**Evidence span:** > The results of this preliminary study raise the possibility that sustained, long-term CPAP treatment for patients with AD and OSA may result in lasting improvements in sleep and mood as well as a slowing of cognitive deterioration.
 
 **Golden note:** Sustained CPAP slows cognitive decline in AD+OSA preliminary study.
 
@@ -107,6 +190,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24828897 — current stance: `supports`
 
+**Evidence span:** > The median annual MMSE decline was significantly slower in the CPAP group (-0.7 (-1.7; +0.8)) than in the non-CPAP group (-2.2 (-3.3; -1.9); p=0.013).
+
 **Golden note:** CPAP slows cognitive decline in mild-mod AD.
 
 **Treatment of sleep apnoea syndrome decreases cognitive decline in patients with Alzheimer's disease.**
@@ -118,6 +203,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 16696743 — current stance: `inconclusive`
+
+**Evidence span:** > These data provide evidence of the effectiveness of CPAP in reducing subjective daytime sleepiness in patients with AD with SDB.
 
 **Golden note:** CPAP reduces daytime sleepiness in mild-mod AD — sleepiness primary, not cognition.
 
@@ -131,6 +218,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30724333 — current stance: `supports`
 
+**Evidence span:** > Controlling for baseline differences, 1 year of CPAP adherence in MCI +OSA significantly improved cognition, compared with a nonadherent control group, and may slow the trajectory of cognitive decline.
+
 **Golden note:** CPAP adherence slows cognitive decline in MCI + apnea.
 
 **CPAP Adherence May Slow 1-Year Cognitive Decline in Older Adults with Mild Cognitive Impairment and Apnea.**
@@ -142,6 +231,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19699148 — current stance: `inconclusive`
+
+**Evidence span:** > In mild to moderate AD patients with OSA, the use of tCPAP resulted in deeper sleep after just one night, with improvements maintained for 3 weeks.
 
 **Golden note:** CPAP deepens sleep in AD+OSA — sleep parameter primary, not cognition.
 
@@ -155,6 +246,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35523585 — current stance: `supports`
 
+**Evidence span:** > Nine out of 11 studies reported a protective effect of PAP therapy on MCI and AD incidence, e.g., delayed age at MCI onset, reduced MCI or AD incidence, slower cognitive decline, or progression to AD.
+
 **Golden note:** PAP + cognitive disorders systematic review — beneficial.
 
 **Positive Airway Pressure and Cognitive Disorders in Adults With Obstructive Sleep Apnea: A Systematic Review of the Literature.**
@@ -166,6 +259,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34546386 — current stance: `supports`
+
+**Evidence span:** > It revealed that cognitive functions of OSA patients with mild cognitive impairment (MCI) or AD were mildly but significantly improved after CPAP treatment (SMD 0.49, 95% CI 0.11-0.86), especially long-term CPAP treatment (SMD 0.56, 95% CI 0.10-1.02, p = 0.02).
 
 **Golden note:** CPAP cognition meta in OSA + cognitive impairment — improves cognition.
 
@@ -179,6 +274,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33619666 — current stance: `supports`
 
+**Evidence span:** > A significant difference was found for the mean score change of the CDR since CPAP non-adherent patients showed a higher mean change of CDR compared to CPAP adherent patients. No significant differences were found for the mean change of MMSE.
+
 **Golden note:** CPAP + OSAS + AD/MCI retrospective — slows deterioration.
 
 **Obstructive sleep apnea syndrome and Alzheimer's disease pathology: may continuous positive airway pressure treatment delay cognitive deterioration?**
@@ -190,6 +287,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37924680 — current stance: `inconclusive`
+
+**Evidence span:** > Long-term, well-powered efficacy trials are required to understand whether CPAP could slow cognitive decline in individuals with MCI/AD, but its tolerability in this group remains uncertain.
 
 **Golden note:** CPAP adherence systematic review in MCI/AD — efficacy trials still needed.
 
@@ -203,6 +302,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37586145 — current stance: `inconclusive`
 
+**Evidence span:** > PAP therapy is challenging in patients with OSA and NDD, as evidenced by the considerable attrition and low adherence rates reported in this systematic review.
+
 **Golden note:** CPAP adherence in neurodegen — adherence focus, mixed.
 
 **Adherence to continuous positive airway pressure for the treatment of obstructive sleep apnea in neurodegenerative diseases: A systematic review.**
@@ -215,6 +316,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32108738 — current stance: `supports`
 
+**Evidence span:** > Those in the mild cognitive impairment + CPAP group compared to the mild cognitive impairment - CPAP group demonstrated a significant improvement in psychomotor/cognitive processing speed, measured by the Digit Symbol Coding Test.
+
 **Golden note:** 1-year CPAP adherence improves cognition in mild apnea + MCI.
 
 **One Year of Continuous Positive Airway Pressure Adherence Improves Cognition in Older Adults With Mild Apnea and Mild Cognitive Impairment.**
@@ -226,6 +329,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32045010 — current stance: `supports`
+
+**Evidence span:** > Patients with OSA who received treatment (continuous positive airway pressure or surgery) exhibited a significantly reduced risk of AD compared with those without treatment (incidence rate ratio 0.23, 95% CI, 0.06-0.98).
 
 **Golden note:** OSA AD risk real-world — treated patients had lower AD risk.
 

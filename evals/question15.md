@@ -5,8 +5,15 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=27 PMIDs.
 
 **Current S/C/I**: 18 / 0 / 9
-**Proposed S/C/I**: 17 / 0 / 10
-**Net flips**: 4 (1 I→S, 3 S→I)
+**Proposed S/C/I**: 15 / 0 / 12
+**Net flips**: 5 (1 I→S, 4 S→I)
+
+**Audit note (second pass):** Added one additional flip — `30682676`
+(MeDi-AD biomarker meta) `supports → inconclusive`, since per the strict bar
+biomarker-only studies (tau/Aβ outcomes, no clinical endpoint) belong in
+`inconclusive`. All four originally proposed flips confirmed against the
+strict bar. Several `supports` entries flagged for split-outcome / hedged-meta
+patterns but kept (positive AD-incidence sub-outcome dominates).
 
 The current labeling is largely sound. Most positive labels reflect
 significantly-positive observational meta-analyses; most inconclusive
@@ -24,6 +31,7 @@ boundary corrections.
 | `34153553` | 2021 | **supports → inconclusive** | MeDi-cognition meta. Verbatim findings show MeDi sig for global cognitive decline (RR 0.26 sig) **but**: *"no significant associations between MeDi and mobility, MCI, dementia were found."* The dementia/MCI outcomes — which are the relevant outcomes for this question — were **null**. Mixed signal: cognition trajectory positive, dementia incidence negative. → `inconclusive`. |
 | `36529364` | 2022 | **supports → inconclusive** | MeDi neuroimaging biomarker SR. Verbatim: *"Four studies reported on hippocampal volume, with **inconclusive or no associations** seen with MedDiet adherence. Two studies found a significant association between higher MedDiet adherence and lower WMHV, while two other studies found no significant associations."* Self-described as inconclusive on hippocampal volume; mixed on WMH. The note ("favorable") doesn't match the abstract. |
 | `41599807` | 2026 | **supports → inconclusive** | "MIND Pattern Nutritional Intervention" — observational case-control, n=60 (30 ALZ + 30 controls). Primary outcome was MEDAS adherence + gut microbiota changes, not cognitive incidence in cognitively-normal adults. Verbatim describes the design: *"In an observational case-control study"* — not testing whether MeDi adherence reduces AD incidence in healthy adults. The intervention even **enrolled ALZ patients** — wrong population for the question (which asks about cognitively normal adults). |
+| `30682676` | 2018 | **supports → inconclusive** | [Added on second pass.] MeDi-AD biomarker meta-analysis. The pooled effect (β = 0.11, 95% CI 0.04–0.17, p = 0.002) is on **AD biomarkers (tau and beta-amyloid)**, not clinical AD incidence. Per the strict bar, biomarker-only studies with no clinical endpoint are `inconclusive`. Verbatim: *"investigated this relationship with respect to the hallmark AD biomarkers (tau and beta-amyloid) that manifest decades before clinical symptomatology."* The biomarker signal is suggestive but doesn't establish that MeDi reduces incident AD in cognitively normal adults. |
 
 ## Confirmed (no change)
 
@@ -33,7 +41,6 @@ boundary corrections.
 - `28697569` (dietary patterns review — MeDi/MIND/DASH protective) — **supports ✓**
 - `30689586` (dietary patterns SR with MeDi protective) — **inconclusive ✓** (note framing)
 - `26887612` (AD-diet SR — 50/64 studies show association) — **supports ✓**
-- `30682676` (MeDi-AD biomarker meta — favorable biomarker associations) — **supports ✓**
 - `34835984` (nutrition RCT review — heterogeneous) — **inconclusive ✓**
 - `31240575` (dietary pattern-AD review) — **supports ✓**
 - `39797935` (2025 MeDi-AD meta — AD HR 0.70 sig) — **supports ✓**
@@ -69,8 +76,25 @@ boundary corrections.
   large RCT has been adequately powered for AD-incidence as a primary
   endpoint. PREDIMED and FINGER-style trials use cognitive scores not
   incident AD.
-- After flips: 17/0/10 — minor net change, the "mostly positive"
+- After flips: 15/0/12 — minor net change, the "mostly positive"
   expected consensus holds well.
+
+### Recurring policy patterns observed in Q15
+
+- **(a) Subgroup-positive in parent-null trial:** Not strongly present.
+  Closest is `39499795` (APOE × diet umbrella) — MeDi works only in subset
+  (APOE ε4 subgroup question with mixed-by-status results); kept as
+  inconclusive.
+- **(b) Preclinical/mech-dominated review labeled `supports`:** `30682676`
+  (biomarker-only meta) flipped to inconclusive on second pass. `36529364`
+  (neuroimaging biomarker review) already flipped in first pass.
+- **(c) Missed primary with significant secondary:** `34153553` is the
+  cleanest case for the question scope: cognition trajectory (secondary)
+  positive, but MCI/dementia/AD incidence (primary for this question) null.
+  Flipped to inconclusive. `41259881` exhibits the inverse pattern: AD
+  outcome (which IS the primary question outcome) sig, but dementia/MCI
+  outcomes null — kept as supports because the AD-incidence outcome is
+  the on-target endpoint.
 
 ## Highest-confidence flips for this question
 
@@ -79,6 +103,9 @@ boundary corrections.
   cognition trajectory result.
 - `36529364` supports → inconclusive — abstract says "inconclusive or
   no associations" for hippocampal volume.
+- `30682676` supports → inconclusive — biomarker-only meta (tau/Aβ),
+  no clinical endpoint. Strict-bar rule: biomarker-only studies do not
+  count as `supports` for incidence questions.
 
 These are stance corrections rather than direction reversals — the
 question's overall consensus picture is unchanged.
@@ -86,11 +113,123 @@ question's overall consensus picture is unchanged.
 
 ---
 
+## signal_types (annotation layer)
+
+Pattern tags applied to each pmid. Tags identify caveats that make a paper
+weaker evidence than its stance label suggests. Tags are NOT direct stance
+overrides — they're metadata for stratified eval scoring and UI filtering.
+
+### Tag vocabulary (Q15)
+
+Existing tags used:
+- `biomarker_only` — outcome is a biomarker (imaging, microbiome, fluid
+  biomarker), not a clinical AD/dementia diagnosis or cognitive score
+- `hedged_meta` — meta or SR with mixed primary studies; pooled or
+  vote-counted result + a "but evidence is heterogeneous/limited" caveat
+- `narrative_review` — non-meta SR or review that integrates findings
+  qualitatively
+- `broad_scope_review` — review covers many diseases/factors with AD as
+  one of several outcomes; AD-specific signal not the main focus
+- `split_outcome` — multi-outcome study where some outcomes are
+  significant and others null; stance depends on which outcome you read
+- `missed_primary_sig_secondary` — primary endpoint null/missed but
+  secondary endpoint significant
+- `regional_heterogeneity` — effect varies by geographic / ethnic
+  population
+- `subgroup_apoe_split` — effect varies by APOE genotype
+- `wrong_population` — population is not "cognitively normal adults"
+  (e.g., MCI, AD, prodromal AD)
+- `combo_intervention` — multimodal intervention (diet + exercise +
+  cognitive training etc.) where the MeDi-specific contribution can't
+  be isolated
+- `case_series_underpowered` — sample size too small to detect realistic
+  effect (n < ~100)
+- `comparator_only` — paper's main contribution is comparing/citing
+  other studies, not an independent finding
+- `uncontrolled_observational` — observational with no control group
+  comparison appropriate to the question
+- `pilot_positive` — pilot/feasibility study with positive but
+  exploratory result
+
+New tag proposed (Q15-specific):
+- `subjective_endpoint` — clinical outcome is self-reported / subjective
+  (e.g., subjective cognitive function questionnaire) rather than a
+  clinician-adjudicated AD/dementia diagnosis or validated cognitive test
+  battery. Distinct from `biomarker_only` (which is imaging/lab) and
+  from `split_outcome` (which is multi-endpoint mixed). Rationale: a
+  paper can be statistically rigorous on a subjective endpoint and still
+  not directly answer an incident-AD question.
+
+### Per-pmid tags
+
+| PMID | Year | Stance (proposed) | Tags |
+|------|------|-------------------|------|
+| `18786971` | 2008 | supports | `broad_scope_review` |
+| `24164735` | 2014 | supports | (clean meta — no caveats) |
+| `25698435` | 2015 | inconclusive | `broad_scope_review`, `narrative_review` |
+| `25770254` | 2015 | supports | `narrative_review`, `hedged_meta` |
+| `28697569` | 2017 | supports | `narrative_review` |
+| `30689586` | 2019 | inconclusive | `narrative_review`, `hedged_meta` |
+| `34153553` | 2021 | inconclusive [FLIP] | `split_outcome`, `missed_primary_sig_secondary` |
+| `26887612` | 2016 | supports | `narrative_review`, `wrong_population` (partial — mean age >65 at-risk, not all cog-normal) |
+| `30682676` | 2018 | inconclusive [FLIP] | `biomarker_only` |
+| `34835984` | 2021 | inconclusive | `hedged_meta`, `narrative_review` |
+| `31240575` | 2019 | supports | `narrative_review` |
+| `39797935` | 2025 | supports | (clean meta — no caveats) |
+| `29574441` | 2018 | inconclusive | `biomarker_only`, `case_series_underpowered` |
+| `38311314` | 2024 | supports | `regional_heterogeneity`, `hedged_meta` |
+| `29728772` | 2018 | supports | `narrative_review`, `comparator_only` |
+| `32427314` | 2020 | supports | `hedged_meta` |
+| `34392373` | 2022 | inconclusive | `narrative_review`, `hedged_meta` |
+| `33336232` | 2021 | supports | `narrative_review` |
+| `36529364` | 2022 | inconclusive [FLIP] | `biomarker_only`, `hedged_meta` |
+| `38961421` | 2024 | inconclusive | `combo_intervention`, `wrong_population`, `pilot_positive` |
+| `39861466` | 2025 | supports | `narrative_review`, `hedged_meta` |
+| `40744415` | 2025 | supports | `regional_heterogeneity` |
+| `41259881` | 2025 | supports | `split_outcome` |
+| `39499795` | 2025 | inconclusive | `subgroup_apoe_split`, `hedged_meta` |
+| `40378769` | 2025 | inconclusive | `combo_intervention`, `biomarker_only`, `case_series_underpowered` |
+| `41599807` | 2026 | inconclusive [FLIP] | `wrong_population`, `biomarker_only`, `case_series_underpowered`, `uncontrolled_observational` |
+| `29147948` | 2017 | supports | `subjective_endpoint` |
+
+### Tag distribution (count of pmids with each tag)
+
+- `narrative_review`: 11
+- `hedged_meta`: 9
+- `biomarker_only`: 5
+- `case_series_underpowered`: 3
+- `combo_intervention`: 2
+- `regional_heterogeneity`: 2
+- `split_outcome`: 2
+- `wrong_population`: 3 (1 partial, 2 full)
+- `broad_scope_review`: 2
+- `subgroup_apoe_split`: 1
+- `missed_primary_sig_secondary`: 1
+- `comparator_only`: 1
+- `uncontrolled_observational`: 1
+- `pilot_positive`: 1
+- `subjective_endpoint`: 1 (new tag)
+
+### Coverage
+
+- 27 / 27 pmids tagged (100%).
+- 2 pmids carry no caveat tags (`24164735`, `39797935` — both clean
+  AD-incidence metas with sig HR).
+- The high concentration of `narrative_review` and `hedged_meta` reflects
+  the structure of the MeDi-AD literature: many overlapping SRs and
+  umbrella reviews citing the same underlying primary cohorts. UI-side
+  paper-type filtering (per CLAUDE.md TODO #2) would substantially
+  collapse these.
+
+---
+
 ## Abstracts (n=27)
 
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
-### PMID 18786971 — current stance: `inconclusive`
+### PMID 18786971 — current stance: `supports` [FLIP from inconclusive → supports]
+
+**Evidence span:** > Greater adherence to a Mediterranean diet is associated with a significant improvement in health status, as seen by a significant reduction in overall mortality (9%), mortality from cardiovascular diseases (9%), incidence of or mortality from cancer (6%), and incidence of Parkinson's disease and Alzheimer's disease (13%).
 
 **Golden note:** Broad mortality/chronic disease meta — cognition not primary.
 
@@ -104,6 +243,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24164735 — current stance: `supports`
 
+**Evidence span:** > Among cognitively normal individuals, higher adherence to the MeDi was associated with a reduced risk of MCI (HR = 0.73; 95% CI, 0.56-0.96; p = 0.02) and AD (HR = 0.64; 95% CI, 0.46-0.89; p = 0.007).
+
 **Golden note:** MeDi-MCI/AD meta — protective association.
 
 **Association of mediterranean diet with mild cognitive impairment and Alzheimer's disease: a systematic review and meta-analysis.**
@@ -115,6 +256,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 25698435 — current stance: `inconclusive`
+
+**Evidence span:** > Mediterranean diet decreased the risk of conversion to Alzheimer's dementia.
 
 **Golden note:** Modifiable predictors of MCI→dementia — broad mixed factors.
 
@@ -128,6 +271,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25770254 — current stance: `supports`
 
+**Evidence span:** > The results suggest that better adherence to a Mediterranean diet is associated with less cognitive decline, dementia, or Alzheimer disease, as shown by 4 of 6 cross-sectional studies, 6 of 12 longitudinal studies, 1 trial, and 3 meta-analyses.
+
 **Golden note:** Dietary patterns review — MeDi protective.
 
 **Dietary patterns, cognitive decline, and dementia: a systematic review.**
@@ -139,6 +284,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 28697569 — current stance: `supports`
+
+**Evidence span:** > In particular, higher adherence to a Mediterranean-type diet was associated with decreased cognitive decline.
 
 **Golden note:** Dietary patterns review — protective for late-life cognitive disorders.
 
@@ -152,6 +299,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30689586 — current stance: `inconclusive`
 
+**Evidence span:** > Of 38 studies, the Mediterranean diet was the most investigated with evidence supporting protection against cognitive decline among older adults.
+
 **Golden note:** Dietary patterns review — efficacy uncertain framing.
 
 **Dietary Patterns and Cognitive Health in Older Adults: A Systematic Review.**
@@ -162,7 +311,9 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 34153553 — current stance: `supports`
+### PMID 34153553 — current stance: `inconclusive` [FLIP from supports → inconclusive]
+
+**Evidence span:** > Results of the pooled analysis of longitudinal studies revealed that high adherence to MeDi reduced the risk of global cognitive decline in non-demented older adults. However, no significant associations between MeDi adherence and the incidence of mobility problems, MCI, and dementia were found.
 
 **Golden note:** MeDi adherence-cognition meta — positive.
 
@@ -176,6 +327,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26887612 — current stance: `supports`
 
+**Evidence span:** > Despite the methodological limitations, the finding that 50 of the 64 reviewed studies revealed an association between diet and AD incidence offers promising implications for diet as a modifiable risk factor for AD.
+
 **Golden note:** AD-diet review — MeDi protective overall.
 
 **Alzheimer's disease and diet: a systematic review.**
@@ -186,7 +339,9 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 30682676 — current stance: `supports`
+### PMID 30682676 — current stance: `inconclusive` [FLIP from supports → inconclusive]
+
+**Evidence span:** > Meta-analysis revealed a small but significant effect of diet on AD biomarkers (β = 0.11 [95% CI 0.04-0.17], p = 0.002).
 
 **Golden note:** MeDi-AD biomarker meta — favorable biomarkers.
 
@@ -200,6 +355,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34835984 — current stance: `inconclusive`
 
+**Evidence span:** > The Mediterranean diet showed promising results, whereas the role of the DASH diet was not clear.
+
 **Golden note:** Nutrition RCT review — heterogeneous, inconsistent.
 
 **Effects of Nutrition on Cognitive Function in Adults with or without Cognitive Impairment: A Systematic Review of Randomized Controlled Clinical Trials.**
@@ -211,6 +368,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 31240575 — current stance: `supports`
+
+**Evidence span:** > This literature review indicated that adherence to a healthy dietary pattern has neuroprotective effects on AD prevention, while unhealthy diet can cause neurodegenerative effects in AD etiology.
 
 **Golden note:** Dietary pattern-AD review — MeDi protective.
 
@@ -224,6 +383,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39797935 — current stance: `supports`
 
+**Evidence span:** > The combined HR for cognitive impairment among those adhering to the Mediterranean diet was 0.82 (95% CI 0.75-0.89); for dementia, the HR was 0.89 (95% CI 0.83-0.95); and for AD, the HR was 0.70 (95% CI 0.60-0.82), indicating substantial protective effects.
+
 **Golden note:** MeDi-cognitive impairment/dementia/AD meta — reduces risk.
 
 **The role of the Mediterranean diet in reducing the risk of cognitive impairement, dementia, and Alzheimer's disease: a meta-analysis.**
@@ -235,6 +396,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29574441 — current stance: `inconclusive`
+
+**Evidence span:** > Adherence to a Mediterranean-style diet (MeDi) and insulin sensitivity were both positively associated with MRI-based cortical thickness (diet: βs≥0.26, insulin sensitivity βs≥0.58, P≤0.008).
 
 **Golden note:** MRI biomarker cross-sectional — descriptive, lifestyle/vascular.
 
@@ -248,6 +411,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38311314 — current stance: `supports`
 
+**Evidence span:** > Higher MIND diet adherence was protective of dementia in 7 of 10 cohorts.
+
 **Golden note:** MIND diet review — positive (MeDi-derived).
 
 **The Mediterranean-Dietary Approaches to Stop Hypertension Intervention for Neurodegenerative Delay (MIND) Diet for the Aging Brain: A Systematic Review.**
@@ -259,6 +424,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29728772 — current stance: `supports`
+
+**Evidence span:** > The PREDIMED study confirmed reductions in CVD-related mortality with a MedDiet; a meta-analysis in over 4.7 million people showed reduced mortality, CVD-related mortality, and reduced risk of Parkinson's and Alzheimer's disease.
 
 **Golden note:** Implementing MeDi outside Mediterranean — positive RCT review.
 
@@ -272,6 +439,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32427314 — current stance: `supports`
 
+**Evidence span:** > For the recalculated meta-analyses, quality of evidence was moderate for inverse associations between higher adherence to the Mediterranean diet (SRR: 0.63; 95% CI: 0.48, 0.82; n = 4 primary studies) and higher fish intake (SRR: 0.72; 95% CI: 0.59, 0.89; n = 6) and Alzheimer disease.
+
 **Golden note:** Umbrella prospective — MeDi reduces neurodegen incidence.
 
 **Dietary Factors and Neurodegenerative Disorders: An Umbrella Review of Meta-Analyses of Prospective Studies.**
@@ -283,6 +452,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34392373 — current stance: `inconclusive`
+
+**Evidence span:** > Findings were mixed, with some studies reporting a significant positive relationship between adherence to various "healthy" dietary patterns and neurocognition, but others reporting no such relationship.
 
 **Golden note:** Mid-life dietary patterns — concurrent neurocognition mixed.
 
@@ -296,6 +467,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33336232 — current stance: `supports`
 
+**Evidence span:** > Thus, 1) adherence to a Mediterranean diet (GRADE 1B); 2) high-level of consumption of mono- or poly- unsaturated fatty acids combined to a low consumption of saturated fatty acids (GRADE 1B); 3) high consumption of fruits and vegetables (GRADE 1B); 4) higher vitamin D intake (GRADE 1C) than the recommended daily allowance.
+
 **Golden note:** GRADE recommendation — MeDi recommended.
 
 **Nutrition to Prevent or Treat Cognitive Impairment in Older Adults: A GRADE Recommendation.**
@@ -306,7 +479,9 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 36529364 — current stance: `supports`
+### PMID 36529364 — current stance: `inconclusive` [FLIP from supports → inconclusive]
+
+**Evidence span:** > Four studies reported on hippocampal volume, with inconclusive or no associations seen with MedDiet adherence. Two studies found a significant association between higher MedDiet adherence and lower WMHV, while two other studies found no significant associations.
 
 **Golden note:** MeDi neuroimaging biomarker review — favorable.
 
@@ -320,6 +495,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38961421 — current stance: `inconclusive`
 
+**Evidence span:** > These results suggest that dietary intervention as part of multimodal lifestyle interventions is feasible and results in improved dietary quality in a population with prodromal AD.
+
 **Golden note:** MIND-ADmini multimodal — diet quality improved, no cognitive primary.
 
 **Nutrition guidance within a multimodal intervention improves diet quality in prodromal Alzheimer's disease: Multimodal Preventive Trial for Alzheimer's Disease (MIND-ADmini).**
@@ -331,6 +508,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39861466 — current stance: `supports`
+
+**Evidence span:** > The findings suggest that adherence to the Mediterranean and Nordic diets is generally associated with improved cognitive function and delayed cognitive decline and that adherence to both these diets can improve cognitive function.
 
 **Golden note:** MeDi/Nordic diet adherence systematic review — protective.
 
@@ -344,6 +523,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40744415 — current stance: `supports`
 
+**Evidence span:** > Among 92,849 participants with 21,478 cases, higher baseline scores of the 4 dietary patterns were associated with 4%‒9% lower ADRD risk (for aMED, HR 0.91, 95% CI: 0.87, 0.95; for DASH, HR 0.96, 95% CI: 0.92, 1.01; for HEI-2015, HR 0.94, 95% CI: 0.90, 0.98; for MIND, HR 0.91, 95% CI: 0.87, 0.96) over the follow-up.
+
 **Golden note:** Multiethnic cohort — diet patterns lower ADRD risk across groups.
 
 **Dietary patterns and risk of Alzheimer's disease and related dementias across 5 racial and ethnic groups in the Multiethnic Cohort Study.**
@@ -355,6 +536,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41259881 — current stance: `supports`
+
+**Evidence span:** > Higher MD adherence was associated with reduced risk or prevalence of Alzheimer's disease (odds ratios = 0.92), mild cognitive impairment (RR = 0.93), depression (RR = 0.96), and Parkinson's disease (RR = 0.90), with moderate certainty of evidence.
 
 **Golden note:** Italian guidelines MeDi neurological prevention meta — positive.
 
@@ -368,6 +551,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39499795 — current stance: `inconclusive`
 
+**Evidence span:** > Both observational studies and clinical trials yielded inconclusive results attributed to both practical limitations associated with longitudinal follow-up and issues of methodological quality.
+
 **Golden note:** APOE × dietary patterns umbrella — interaction-focused, mixed.
 
 **APOE ε4 and Dietary Patterns in Relation to Cognitive Function: An Umbrella Review of Systematic Reviews.**
@@ -380,6 +565,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40378769 — current stance: `inconclusive`
 
+**Evidence span:** > In this group of older adults at risk for dementia, we find no conclusive evidence whether a multi-modal lifestyle intervention improves brain imaging markers of neurodegeneration and small vessel disease.
+
 **Golden note:** AgeWell.de multi-modal MRI — descriptive imaging.
 
 **Exploring the effect of multi-modal intervention against cognitive decline on atrophy and small vessel disease imaging markers in the AgeWell.de imaging study.**
@@ -390,7 +577,9 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 41599807 — current stance: `supports`
+### PMID 41599807 — current stance: `inconclusive` [FLIP from supports → inconclusive]
+
+**Evidence span:** > A structured, non-restrictive MIND intervention was feasible, improved dietary adherence, and accompanied higher diversity and compositional remodeling of the GM in ALZ's disease.
 
 **Golden note:** MIND pattern + MeDi adherence in AD — positive.
 
@@ -403,6 +592,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29147948 — current stance: `supports`
+
+**Evidence span:** > In a multivariate model, compared with men having a MD score in the lowest quintile, those in the highest quintile had a 36% lower odds of a poor SCF score (odds ratio 0.64, 95% CI 0.55-0.75; P, trend < 0.001) and a 24% lower odds of a moderate SCF score (OR 0.76, 95% CI 0.70-0.83; P, trend < 0.001).
 
 **Golden note:** MeDi + subjective cognitive function in men prospective — positive.
 

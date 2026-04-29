@@ -5,8 +5,8 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=28 PMIDs.
 
 **Current S/C/I**: 22 / 1 / 5
-**Proposed S/C/I**: ~18 / 2 / 8
-**Net flips**: ~7 (mostly S→I scope/mechanism, plus the VALAD I→C flip)
+**Proposed S/C/I**: 13 / 2 / 13
+**Net flips**: 14 (mostly S→I scope/mechanism, plus the VALAD I→C flip; +3 added on second pass: `1328575`, `40898264`, `11848687`)
 
 ---
 
@@ -25,12 +25,13 @@ n=28 PMIDs.
 | `41073371` | 2025 | **inconclusive → supports** | Pooled estimates significant: HHV OR 1.24 (CI 1.02–1.51) for AD risk. Note "inconclusive" was reading from the abstract's *background*, not the result. |
 | `41275158` | 2025 | **inconclusive → supports** | HHV-6 meta — pooled OR 1.81 (CI 1.16–2.84, p=0.009) for AD risk. Sensitivity analysis OR 2.78. Significant positive. |
 | `41953111` | 2026 | **supports → inconclusive** | HSV-2 dementia meta. Conclusion: *"no clear association between HSV-2 and Alzheimer's disease."* Pooled ORs cross null across multiple methods; only one HR analysis borderline (1.37, CI 1.00–1.89). Headline is null. |
+| `1328575` | 1992 | **supports → inconclusive** | Itzhaki landmark, but the abstract itself reports HSV-1 thymidine kinase gene in **14/21 SDAT cases AND 9/15 elderly normals** — no significant AD-specific elevation stated. Conclusion: *"the presence of Herpes simplex virus type 1 DNA is a region-dependent feature of the aged brain"* — i.e., it's in aged brains generally, not AD-specifically. This is a foundational mechanism/pathology paper, not an epidemiological supports. |
+| `40898264` | 2025 | **supports → inconclusive** | Herpesviruses+antiviral meta. Conclusion verbatim: *"the present review of the scientific literature **generally shows little evidence of an association between herpesviruses and risk of dementia**. However, the review shows evidence of an association between antiviral treatment and a decreased risk of dementia."* The herpesvirus-dementia arm (the question's main hypothesis) is explicitly downplayed by the authors; HSV1/2 HR 1.36 (CI 1.01–1.83) and VZV HR 1.12 (CI 1.00–1.25) are borderline at the null. Mixed signal between herpesvirus arm (~null) and antiviral arm (sig protective). |
+| `11848687` | 2002 | **supports → inconclusive** | Itzhaki/CMV-in-VaD paper. The paper is **about CMV in vascular dementia, not HSV in AD** (title: "Cytomegalovirus is present in a very high proportion of brains from vascular dementia patients"). HSV-1+APOE4 is mentioned only as a prior finding in the intro. Conclusion: *"Further studies are needed to reveal whether or not the association of CMV with VaD is causal."* This does not support HSV→AD. Scope drift + tentative conclusion. |
 
 ## Confirmed (no change)
 
-- `1328575` (1992 Itzhaki landmark HSV-1 DNA in AD brains) — **supports ✓**
 - `26401558` (2015 herpesviridae meta, OR 1.38 sig) — **supports ✓**
-- `11848687` (2002 CMV in vascular dementia, mostly off-topic for HSV/AD but defensible) — **supports ✓** (borderline; about VaD not AD)
 - `33657269` (2021 multi-country, antiherpetic ≠ reduced dementia) — **contradicts ✓**
 - `32280095` (2020 meta, HSV-1 OR 1.34 sig) — **supports ✓**
 - `15207442` (2004 small DEBATE study, viral burden ↔ MMSE) — **inconclusive ✓**
@@ -38,13 +39,20 @@ n=28 PMIDs.
 - `30427305` (2018 HHV-6 autophagy mechanism) — **inconclusive ✓**
 - `37639023` (2023 VZV meta, HR 1.11 sig) — **supports ✓**
 - `37801540` (2023 SR — substantiates HSV-1↔AD relationship) — **supports ✓**
-- `40898264` (2025 herpesviruses+antiviral meta, HSV1/2 HR 1.36 sig, antiviral HR 0.88 sig) — **supports ✓**
 - `41269248` (2025 vaccinations meta, HZ vaccine RR 0.53 sig for AD) — **supports ✓**
 - `40551502` (2025 HZ vaccine meta, HR 0.71 sig) — **supports ✓**
 - `40140230` (2025 HSV-1 meta, OR 1.39 sig) — **supports ✓**
 - `41490027` (2026 VZV meta, RR 1.12 sig) — **supports ✓**
 - `41467972` (2025 anti-herpetic meta, aHR 0.77 sig) — **supports ✓**
 - `40934136` (2025 HSV meta, OR 1.32 sig) — **supports ✓**
+
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+- **`2172499`** (1990 sera, n=19+21) — already proposed S→I, but per the strict bar the abstract reports anti-HSV-1 antibodies were **higher in controls** than in AD patients (statistically significant difference in the *opposite* direction from the question). Could push to `contradicts` as a "statistically significant negative finding pointing the wrong way." Defensible either way; flagging as **policy issue (b)-adjacent / (c)-adjacent** — small-n biomarker study with a directionally contradicting signal that the authors framed as autoimmune rather than viral. Cross-question question: should small-n studies whose primary finding contradicts the question's hypothesis be `contradicts` regardless of N, or should N gate the bar?
+
+- **`37904465`** (HZ-dementia meta) — the proposed flip S→I is a clean instance of **policy issue (a): subgroup-positive in parent-null meta**. Pooled HZV-dementia RR 1.04 (p=.70) is null; only the HZ-ophthalmicus subgroup is significant (RR 6.26). Currently `supports` riding entirely on the subgroup. The flip to `inconclusive` is correct, but flagging the pattern: when a meta-analysis's headline pooled result is null and only a pre-specified subgroup is positive, the strict-bar default should be `inconclusive`, not `supports`.
+
+- **`16595160`** (TAP2 SNP), **`29676229`** (systems-biology gene-mining), **`25376108`** (cell-line antiviral activity), **`30427305`** (HHV-6 autophagy mechanism), **`40442743`** (oxidative stress mechanism), **`38549138`** (CMV-neuro SR with no pooled estimate, conclusion explicitly hedges) — all flagged as **policy issue (b): preclinical/mech-dominated papers labeled `supports`**. Of these, `25376108`, `16595160`, `29676229`, `40442743`, `38549138` are already in the proposed-flips table (S→I). `30427305` is already `inconclusive`. The pattern is widespread on this question because herpesvirus-AD has a large mechanism literature; cross-question policy: should the corpus filter exclude `Comparative Study` / non-RCT non-observational papers from the candidate pool entirely, or should the stance bar treat any mechanism-only paper as `inconclusive` by default?
 
 ## Cross-cutting issues
 
@@ -55,6 +63,13 @@ n=28 PMIDs.
   (`41275158`, `30427305`), and HSV-2 (`41953111`) are tangential to the
   HSV-and-Alzheimer's question. The question should either be broadened to
   "herpesviruses and AD" or these should move to `excluded`.
+- **Mechanism-paper stance inflation.** Six of the original `supports`
+  labels were on papers with no clinical efficacy data (mechanism, in vitro,
+  bioinformatics, gene-association, oxidative-stress markers). After this
+  pass, all six are flipped or already non-supports. The corpus filter or
+  stance prompt should treat mechanism-only papers as `inconclusive` by
+  default rather than reading "supports the viral hypothesis" as `supports`
+  for the clinical question.
 
 ## Highest-confidence flips for this question
 
@@ -63,8 +78,97 @@ n=28 PMIDs.
   contradicting RCT in the antiviral arm and was sitting as `inconclusive`.
 - `37904465` supports → inconclusive — pooled HZV-dementia RR 1.04 (p=.70)
   was labeled `supports`.
+- `40898264` supports → inconclusive — meta conclusion verbatim says
+  *"generally shows little evidence of an association between herpesviruses
+  and risk of dementia"* yet was labeled `supports`. The antiviral arm hits,
+  but the herpesvirus arm (the question's primary hypothesis) is null.
+- `1328575` supports → inconclusive — Itzhaki landmark, but the abstract
+  shows HSV-1 DNA in 14/21 AD AND 9/15 normal aged brains (no AD-specific
+  elevation reported); conclusion explicitly says it's a feature of aged
+  brains generally.
+- `11848687` supports → inconclusive — paper is about CMV in vascular
+  dementia, not HSV in AD; conclusion is tentative ("further studies needed").
 
-Both are unambiguous mislabels.
+These five are unambiguous mislabels. Plus `2172499` is at minimum I, and
+arguably `contradicts`.
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q4)
+
+- `mechanism_only` — paper has no clinical/epidemiological endpoint (in vitro,
+  cell line, gene-association/SNP, bioinformatics, oxidative-stress markers).
+  Distinct from `preclinical_dominated` (which is for reviews/metas pooling
+  preclinical evidence); `mechanism_only` tags primary mechanism studies
+  themselves. Q4 is mechanism-heavy because of the antimicrobial-protection
+  hypothesis literature.
+- `scope_drift_virus` — paper studies a herpesvirus other than the question's
+  primary target (HSV-1). Q4's question is HSV↔AD; tag covers HSV-2, HZV/VZV,
+  HHV-6, CMV, EBV. Distinct from `wrong_population` (which is about human
+  cohort mismatch — wrong age, wrong disease); `scope_drift_virus` is about
+  the pathogen being adjacent rather than on-target. Useful because this
+  question has heavy scope drift across the herpesviridae family and a UI
+  filter or cross-question policy may want to separate them.
+- `landmark_no_group_difference` — historically influential paper (cited as
+  supportive in downstream literature) whose own abstract reports no
+  AD-specific elevation versus controls. The "supports" label rides on
+  citation reputation, not the paper's own numbers. Applies to `1328575`
+  (Itzhaki 1992, HSV-1 DNA in 14/21 SDAT AND 9/15 normal aged brains).
+- `directionally_opposite_finding` — small-n primary study whose statistically
+  significant signal points *opposite* to the question's hypothesis (e.g.,
+  marker higher in controls than cases). Currently labeled `supports` or
+  `inconclusive` by reputation/framing, but the data are arguably `contradicts`.
+  Applies to `2172499` (anti-HSV-1 antibodies higher in controls than AD).
+
+### Tag assignments
+
+- `25376108` — `mechanism_only` (Aβ-vs-HSV-1 cell-line antiviral assay, no clinical data)
+- `1328575` — `landmark_no_group_difference`, `mechanism_only` (HSV-1 DNA
+  PCR in postmortem brain; reports presence in both AD and aged-normal,
+  no AD-specific elevation in abstract)
+- `11848687` — `scope_drift_virus`, `wrong_population` (paper is about CMV
+  in vascular dementia, not HSV in AD; HSV/APOE4 is mentioned only as prior
+  finding in intro)
+- `2172499` — `directionally_opposite_finding`, `mechanism_only` (small
+  sera study n=19+21; anti-HSV-1 antibodies higher in controls than AD)
+- `15207442` — (none — small-n DEBATE substudy but already correctly
+  labeled `inconclusive`; mixed across pathogens flagged in golden note)
+- `30427305` — `mechanism_only`, `scope_drift_virus` (HHV-6, not HSV;
+  autophagy/ER-stress in cell lines)
+- `37904465` — `subgroup_positive`, `scope_drift_virus` (HZV; pooled
+  HZV-dementia RR 1.04 p=.70 null, only HZ-ophthalmicus subgroup RR 6.26 sig)
+- `38549138` — `narrative_review`, `scope_drift_virus` (CMV-neurological SR,
+  no pooled estimate, conclusion explicitly hedges "direct cause-effect
+  relationship is not fully understood")
+- `37639023` — `scope_drift_virus` (VZV-dementia meta; clean within its
+  scope but tangential to HSV→AD question)
+- `40898264` — `hedged_meta` (authors verbatim: "generally shows little
+  evidence of an association between herpesviruses and risk of dementia";
+  borderline CIs touching null on herpesvirus arm; antiviral arm carries the
+  signal)
+- `41269248` — `scope_drift_virus` (HZ vaccine + influenza + pneumococcal +
+  Tdap meta; HSV not assessed)
+- `40442743` — `mechanism_only` (oxidative-stress / inflammation / apoptosis
+  serum markers; no cognitive endpoint despite "RCT" type label)
+- `40551502` — `scope_drift_virus` (HZ vaccine cohort meta; HSV not assessed)
+- `41073371` — `scope_drift_virus` (HHV result is the "supports" signal for
+  AD; HHV is a broad family — not a clean HSV-1 read)
+- `41490027` — `scope_drift_virus` (VZV; clean meta within its scope)
+- `41275158` — `scope_drift_virus` (HHV-6, not HSV; clean meta within scope)
+- `41953111` — `scope_drift_virus`, `hedged_meta` (HSV-2; pooled ORs cross
+  null across multiple methods, conclusion: "no clear association between
+  HSV-2 and Alzheimer's disease")
+- `16595160` — `mechanism_only` (TAP2 SNP genotype association; indirect
+  genetic-susceptibility framing, no direct HSV→AD epidemiology)
+- `29676229` — `mechanism_only`, `narrative_review` (systems-biology gene
+  mining + drug-discovery; no primary epidemiology)
+- All other pmids — untagged (strong/canonical examples within their stance bucket)
+
+Untagged: `26401558`, `33657269`, `32280095`, `33317741`, `37801540`,
+`41405855`, `40140230`, `41467972`, `40934136`.
 
 ---
 
@@ -73,6 +177,8 @@ Both are unambiguous mislabels.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 25376108 — current stance: `supports`
+
+**Evidence span:** > Our data suggest that Aβ peptides represent a novel class of antimicrobial peptides that protect against neurotropic enveloped virus infections such as HSV-1.
 
 **Golden note:** Aβ peptides display antiviral activity against HSV-1 — supports antimicrobial-protection hypothesis.
 
@@ -86,6 +192,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 1328575 — current stance: `supports`
 
+**Evidence span:** > Using the highly sensitive polymerase chain reaction, we have detected the viral thymidine kinase gene in post-mortem brain from 14/21 cases of senile dementia of the Alzheimer type and 9/15 elderly normals... Thus, the presence of Herpes simplex virus type 1 DNA is a region-dependent feature of the aged brain.
+
 **Golden note:** Itzhaki 1992 — HSV-1 DNA in AD brains. Landmark observation.
 
 **Herpes simplex virus type 1 DNA is present in specific regions of brain from aged people with and without senile dementia of the Alzheimer type.**
@@ -97,6 +205,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 26401558 — current stance: `supports`
+
+**Evidence span:** > There was an increased risk for AD when herpesviridae is present in the brain compared to controls [OR 1.38; 95% CI 1.14-1.66].
 
 **Golden note:** Meta-analysis — herpesviruses increase AD risk.
 
@@ -110,6 +220,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 11848687 — current stance: `supports`
 
+**Evidence span:** > We have found that a very high proportion of the VaD patients, 93% (14/15), but not of age-matched normals, 34% (10/29), harbor CMV DNA (P = 0.0002); the proportions of the patients harboring the other viruses in brain do not differ significantly from those of the normals.
+
 **Golden note:** Itzhaki — HSV-1 + APOE4 strong AD risk factor; CMV in vascular dementia.
 
 **Cytomegalovirus is present in a very high proportion of brains from vascular dementia patients.**
@@ -121,6 +233,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 2172499 — current stance: `supports`
+
+**Evidence span:** > Antiviral antibody titers showed no significant differences except for antibodies to herpes simplex virus-1, which were increased in control group.
 
 **Golden note:** Antibodies to viruses elevated in AD — early supportive observation.
 
@@ -134,6 +248,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33657269 — current stance: `contradicts`
 
+**Evidence span:** > Short-term antiherpetic medication is not markedly associated with incident dementia. Because neither dementia subtype nor herpes subtype modified the association, the small but significant decrease in dementia incidence with antiherpetic administration may reflect confounding and misclassification.
+
 **Golden note:** Multi-country cohort — antiherpetic medication NOT associated with reduced dementia.
 
 **Antiherpetic medication and incident dementia: Observational cohort studies in four countries.**
@@ -145,6 +261,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32280095 — current stance: `supports`
+
+**Evidence span:** > Herpes simplex virus-1 (OR:1.34, 95% CI = 1.02-1.75; I2 = 0%), and the Herpesviridae family (OR:1.41, 95% CI = 1.15-1.74; I2 = 12%) infection were associated with a higher risk of AD.
 
 **Golden note:** Infectious agents-AD meta — significant association including HSV.
 
@@ -158,6 +276,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15207442 — current stance: `inconclusive`
 
+**Evidence span:** > Viral burden of herpes virus and cytomegalovirus was associated with cognitive impairment in home-dwelling elderly.
+
 **Golden note:** Infectious burden + cognition in elderly — mixed across pathogens.
 
 **Cognitive impairment and infectious burden in the elderly.**
@@ -169,6 +289,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33317741 — current stance: `supports`
+
+**Evidence span:** > The pooled OR suggested that HSV-1 infection is a risk factor of AD: pooled OR 1.40 (95% CI: 1.13-1.75; I2 = 3%, P = 0.42).
 
 **Golden note:** HSV-1/AD systematic review meta — significant association.
 
@@ -182,6 +304,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30427305 — current stance: `inconclusive`
 
+**Evidence span:** > Understanding how HHV-6A/B infection regulates autophagy could be of particular interest, as it has been recently shown that this virus may be involved in Alzheimer's disease in which a dysregulation of autophagy may also play a role.
+
 **Golden note:** HHV-6 lytic infection autophagy mechanism — mechanistic only.
 
 **Impact of HHV-6A and HHV-6B lytic infection on autophagy and endoplasmic reticulum stress.**
@@ -193,6 +317,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37904465 — current stance: `supports`
+
+**Evidence span:** > In the outcome of the incidence of HZV, the pooled analysis showed no statistically significant difference between the dementia group and the No dementia group (RR = 1.04% CI = 0.86-1.25, P = .70).
 
 **Golden note:** Herpes Zoster meta — increased dementia risk.
 
@@ -206,6 +332,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38549138 — current stance: `supports`
 
+**Evidence span:** > Despite significant research into the potential links between CMV infection and various neurological disorders, the direct cause-effect relationship is not fully understood and several gaps in knowledge persist.
+
 **Golden note:** CMV-neurological systematic review — implicated.
 
 **Association between cytomegalovirus infection and neurological disorders: A systematic review.**
@@ -217,6 +345,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37639023 — current stance: `supports`
+
+**Evidence span:** > VZV infection was associated with an increased risk of dementia (HR = 1.11, 95% CI: 1.02-1.21).
 
 **Golden note:** VZV-dementia meta — positive association.
 
@@ -230,6 +360,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37801540 — current stance: `supports`
 
+**Evidence span:** > The quantitative data derived from the studies in this report substantiate a relationship between infection with HSV-1 and AD.
+
 **Golden note:** HSV-AD systematic review — positive associations.
 
 **The Association Between Herpes Simplex Virus and Alzheimer's Disease: A Systematic Review.**
@@ -241,6 +373,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40898264 — current stance: `supports`
+
+**Evidence span:** > The present review of the scientific literature generally shows little evidence of an association between herpesviruses and risk of dementia. However, the review shows evidence of an association between antiviral treatment and a decreased risk of dementia.
 
 **Golden note:** Herpesviruses + antiviral treatment meta — antiviral protective.
 
@@ -254,6 +388,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41269248 — current stance: `supports`
 
+**Evidence span:** > Vaccination against herpes zoster was associated with a reduced risk of any dementia (RR 0.76, 95% CI 0.69-0.83) and Alzheimer's disease (RR 0.53, 95% CI 0.44-0.64).
+
 **Golden note:** Vaccinations + dementia meta — protective (HZ vaccine signal).
 
 **Association between vaccinations and risk of dementia: a systematic review and meta-analysis.**
@@ -265,6 +401,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41405855 — current stance: `inconclusive`
+
+**Evidence span:** > At 78 weeks, the LSM change in the 11-item ADAS-Cognitive Subscale score was 10.86 (95% CI, 8.80 to 12.91) in the valacyclovir group vs 6.92 (95% CI, 4.88 to 8.97) in the placebo group, indicating greater cognitive worsening with valacyclovir than placebo (between-group difference, 3.93 [95% CI, 1.03 to 6.83]; P = .01).
 
 **Golden note:** VALAD valacyclovir RCT — early report, outcomes mixed.
 
@@ -278,6 +416,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40442743 — current stance: `supports`
 
+**Evidence span:** > AD patients infected with HSV-1 or CMV demonstrated distinct alterations in inflammatory, oxidative stress, antioxidant profiles, and apoptosis markers, which may have beneficial implications for circulatory biomarkers and potentially cognitive outcomes in AD.
+
 **Golden note:** HSV-1/CMV coinfection — oxidative stress mechanisms in AD.
 
 **Oxidative stress, inflammation, and apoptosis in Alzheimer's disease associated with HSV-1 and CMV coinfection.**
@@ -289,6 +429,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40551502 — current stance: `supports`
+
+**Evidence span:** > Pooled analysis of adjusted HRs indicated that HZ vaccination could reduce dementia risk by 29% (HR = 0.71, 95% CI: 0.66-0.76, I2 = 97.15%).
 
 **Golden note:** HZ vaccination meta — reduced dementia risk.
 
@@ -302,6 +444,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41073371 — current stance: `inconclusive`
 
+**Evidence span:** > The analysis demonstrated that infections with cytomegalovirus (CMV) (odds ratio [OR] = 1.41; 95% confidence interval [CI]: 1.03, 1.93), severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (OR = 1.88; 95% CI: 1.53, 2.32), hepatitis C virus (HCV) (OR = 1.39; 95% CI: 1.14, 1.69), and human herpesvirus (HHV) (OR = 1.24; 95% CI: 1.02, 1.51) were associated with an increased risk of AD.
+
 **Golden note:** Viral infections-neurodegenerative meta — 'inconclusive'.
 
 **Viral infections and the risk of neurodegenerative diseases: a comprehensive meta-analysis and systematic review.**
@@ -313,6 +457,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40140230 — current stance: `supports`
+
+**Evidence span:** > The results of the meta-analysis indicated that HSV-1 infection is a risk factor for AD (OR = 1.39, 95% CI = (1.14-1.69), P < 0.05)).
 
 **Golden note:** Herpesviruses-AD case-control meta — positive association.
 
@@ -326,6 +472,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41490027 — current stance: `supports`
 
+**Evidence span:** > Meta-analysis showed: (1) herpes zoster patients had significantly higher AD risk (RR = 1.12, 95% CI: 1.01-1.24, p = 0.04); (2) patients receiving antiviral treatment had lower AD risk (RR = 0.55, 95% CI: 0.37-0.82, p = 0.003); (3) vaccinated individuals had lower AD risk (RR = 0.72, 95% CI: 0.68-0.78, p < 0.0001).
+
 **Golden note:** VZV-AD comprehensive meta — implicates VZV.
 
 **Association between varicella-zoster virus and Alzheimer's disease: A systematic review and meta-analysis of comprehensive evidence from infection, treatment to prevention.**
@@ -337,6 +485,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41467972 — current stance: `supports`
+
+**Evidence span:** > To demonstrate the effects of anti-herpetic medications in various clinical scenarios, the meta-analysis compared: diagnosed and treated versus diagnosed but untreated (aHR=0.77, 95% CI: 0.67-0.89); treated versus untreated regardless of diagnosis (aHR=0.90, 95% CI: 0.87-0.94); and diagnosed and treated versus neither diagnosed nor treated (aHR=0.87, 95% CI: 0.78-0.97).
 
 **Golden note:** Anti-herpetic treatment meta — reduces dementia risk.
 
@@ -350,6 +500,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41275158 — current stance: `inconclusive`
 
+**Evidence span:** > The pooled analysis revealed a significant association between HHV-6 infection and increased risk of Alzheimer's [OR = 1.81, 95% CI: 1.16-2.84, p = 0.009], with moderate heterogeneity (I² = 60%).
+
 **Golden note:** HHV-6/AD meta — inconsistent reports.
 
 **Human herpesvirus 6 (HHV-6) infection and risk of Alzheimer's disease: a systematic review and meta-analysis.**
@@ -361,6 +513,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41953111 — current stance: `supports`
+
+**Evidence span:** > Overall, the available evidence indicates no clear association between HSV-2 and Alzheimer's disease and only one of the two meta-analytic methods shows evidence of a potential relationship with all-cause dementia.
 
 **Golden note:** HSV-2/dementia meta — positive association.
 
@@ -374,6 +528,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40934136 — current stance: `supports`
 
+**Evidence span:** > The findings indicated a 32% higher likelihood of AD in individuals with HSV infection in case-control studies (OR = 1.32; 95% CI: 1.12, 1.55; I2 = 22.7%) and a 20% increased risk in cohort studies (HR = 1.20; 95% CI: 1.10, 1.31; I2 = 11.0%).
+
 **Golden note:** HSV-AD systematic review meta — relationship implicated.
 
 **Herpes Simplex Virus Infection and Risk of Alzheimer's Disease: A Systematic Review and Meta-Analysis.**
@@ -386,6 +542,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16595160 — current stance: `supports`
 
+**Evidence span:** > These findings are consistent with the hypothesis that human genetic variants facilitating the access of HSV-1 to the brain might result in susceptibility to AD.
+
 **Golden note:** TAP2 genotype + HSV-1 + APOE4 in AD — supports mechanistic hypothesis.
 
 **A TAP2 genotype associated with Alzheimer's disease in APOE4 carriers.**
@@ -397,6 +555,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29676229 — current stance: `supports`
+
+**Evidence span:** > Our study demonstrated the role of viral etiology in AD pathogenesis by elucidating interaction of oxidative stress and inflammation causing candidate genes with common viruses along with the identification of potential AD drug candidates.
 
 **Golden note:** Viral-induced oxidative/inflammatory response in AD pathogenesis — supports viral hypothesis.
 

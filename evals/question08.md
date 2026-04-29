@@ -29,20 +29,38 @@ get *worse*). This question's labels need significant correction.
 ## Confirmed (no change)
 
 - `26684775` (ADvance surgical safety report, descriptive, no efficacy primary) — **inconclusive ✓**
-- `34083732` (NBM-DBS systematic review, mostly preclinical/animal) — **inconclusive ✓**
-- `36411282` (connectomic neuromod meta, n=242) — **inconclusive ✓** (overall pooled DBS effect 0.11 NS, but ≥65 subgroup SMD 0.95 sig — genuinely mixed)
 - `38141755` (DBS targets review, descriptive across fornix/NBM/VS) — **inconclusive ✓** (*"definitive conclusions regarding the utility of DBS for AD cannot be made"*)
 - `37204563` (recent DBS trials review) — **inconclusive ✓**
 
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+These entries match recurring policy categories flagged across questions. They are
+left at their current label but tagged for a future cross-question policy pass.
+
+| PMID | Year | Current | Policy category | Note |
+|------|------|---------|-----------------|------|
+| `36411282` | 2022 | `inconclusive` | (a) Subgroup-positive in null pooled effect | Connectomic neuromod meta, n=242. Overall pooled DBS effect 0.11 NS (p=0.63). ≥65 subgroup SMD 0.95 sig (p=0.004), <65 favors baseline NS (p=0.65). Currently `inconclusive` (genuinely mixed). Strict bar would also accept `inconclusive` here, but this is the same pattern as ADvance subgroup analyses — a positive subgroup signal in a null parent meta. Worth tagging for consistent treatment with `34151817` (which we are flipping supports→inconclusive). |
+| `34083732` | 2021 | `inconclusive` | (b) Preclinical/mech-dominated review | NBM-DBS systematic review. Conclusion explicitly notes the "translation of these outcomes to current clinical practice is hampered" because animal studies used intact NBM, and calls for more preclinical work *before* further human exploration. The `inconclusive` label is consistent with the strict bar (preclinical-dominated, not clinical efficacy evidence), so no flip — but flag for the cross-question policy decision on how to treat preclinical-heavy reviews. |
+
 ## Cross-cutting issues
 
-- **`27567810` and `34151817` are the same trial** (ADvance Phase II, n=42).
-  They appear as 2 separate `supports`/`inconclusive` votes but represent
-  one study. After flips, both are correctly labeled (contradicts +
-  inconclusive subgroup analysis), but for substudy filtering they should
-  be tagged.
-- **`26684775`** is also from ADvance — same cohort, surgical safety
-  reporting. Three PMIDs from the same trial.
+- **`27567810`, `34151817`, and `26684775` are all from the ADvance trial**
+  (Phase II, n=42). Three PMIDs from one study, currently appearing as
+  three separate votes (1 supports, 2 inconclusive). After flips, the
+  three are labeled contradicts (primary endpoint paper) + inconclusive
+  (post-hoc age subgroup) + inconclusive (surgical safety) — a more
+  accurate representation but still triple-counted for retrieval P/R
+  unless tagged for substudy filtering.
+- **Policy issue (a) — subgroup-positive in null parent — appears twice**
+  in this question: `34151817` (ADvance age × treatment subgroup, parent
+  ITT null) and `36411282` (connectomic meta, ≥65 subgroup positive in
+  null pooled effect). One is flipped (supports→inconclusive), one is
+  already inconclusive. Same underlying pattern; consistent treatment
+  matters for cross-question policy.
+- **Policy issue (b) — preclinical-dominated review** appears in
+  `34083732`. Currently `inconclusive` (correct), but flagged for the
+  cross-question policy on how preclinical-heavy reviews should be
+  surfaced.
 - **No `contradicts` in the current labeling** is striking given that
   the pivotal phase II missed primary endpoints AND multiple metas show
   pooled null/worsening. The current label set significantly misrepresents
@@ -64,6 +82,33 @@ significant cognitive effect, or the study lacks the design to support a
 positive claim.
 
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q8)
+
+- `biomarker_only` — clinical study reporting only biomarker/imaging endpoints (e.g., PET glucose metabolism), no clinical efficacy primary
+- `safety_only` — paper reports only surgical/procedural safety, AEs, or feasibility; no efficacy outcome
+- `uncontrolled_observational` — prospective clinical study with no sham/placebo/randomization, efficacy claims rest on within-subject change
+
+### Tag assignments
+
+- `27567810` — `same_cohort_duplicate` (ADvance parent paper; cohort also reported in `34151817` and `26684775`). Note: still the strongest single contradicts signal in this set; tagging is for downstream substudy filtering only.
+- `22566505` — `biomarker_only`, `pilot_positive` (n=5 phase I open-label; PET glucose metabolism endpoint, "correlations with clinical outcomes" but no clinical primary)
+- `26684775` — `same_cohort_duplicate`, `safety_only` (ADvance surgical safety report; cohort also reported in `27567810` and `34151817`)
+- `25721941` — `narrative_review` (covers rTMS, tDCS, transcranial EM, DBS; hedged "might improve or at least stabilize"; no pooled estimate for DBS)
+- `34083732` — `preclinical_dominated` (NBM-DBS systematic review explicitly notes translation to clinical practice is hampered; calls for more preclinical work before further human studies)
+- `37123370` — (none — clean canonical contradicts; pooled SMD 0.116 NS, fornix-DBS subgroup also NS)
+- `36411282` — `subgroup_positive` (overall DBS pooled effect 0.11 NS; ≥65 subgroup SMD 0.95 sig — positive subgroup in null parent meta)
+- `38141755` — `narrative_review` (descriptive systematic review across fornix/NBM/VS; "definitive conclusions regarding the utility of DBS for AD cannot be made"; no pooled estimate)
+- `34151817` — `same_cohort_duplicate`, `subgroup_positive` (ADvance age × treatment moderator; ITT null, post-hoc age subgroup; cohort also reported in `27567810` and `26684775`)
+- `38088070` — (none — clean canonical contradicts; DBS WMD on ADAS-Cog +7.40, p<0.00001, indicating worsening)
+- `40243219` — `uncontrolled_observational`, `comparator_only` (n=20 prospective non-randomized; no sham/placebo arm; compares fornix vs NBM as the only contrast)
+- `37204563` — `narrative_review` (descriptive overview of DBS trials in dementia; "cognitive outcomes uncertain"; no pooled estimate)
+- All other pmids — untagged (none in this question)
+
 ---
 
 ## Abstracts (n=12)
@@ -71,6 +116,8 @@ positive claim.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 27567810 — current stance: `inconclusive`
+
+**Evidence span:** > There were no significant differences in the primary cognitive outcomes (ADAS-Cog 13, CDR-SB) in the "on" versus "off" stimulation group at 12 months for the whole cohort.
 
 **Golden note:** ADvance Phase II — primary endpoint missed, subgroup signal in older patients.
 
@@ -84,6 +131,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22566505 — current stance: `supports`
 
+**Evidence span:** > In similar cortical regions, higher baseline metabolism prior to DBS and increased metabolism after 1 year of DBS were correlated with better outcomes in global cognition, memory, and quality of life.
+
 **Golden note:** Fornix DBS Phase I — increased cerebral metabolism after 1 year.
 
 **Increased cerebral metabolism after 1 year of deep brain stimulation in Alzheimer disease.**
@@ -95,6 +144,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 26684775 — current stance: `inconclusive`
+
+**Evidence span:** > At 90 days after surgery, bilateral fornix DBS was well tolerated by patients with mild, probable AD.
 
 **Golden note:** ADvance surgical safety report — descriptive, no efficacy primary.
 
@@ -108,6 +159,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25721941 — current stance: `supports`
 
+**Evidence span:** > it has been demonstrated that DBS of fornix/hypothalamus and nucleus basalis of Meynert might improve or at least stabilize cognitive functioning in AD.
+
 **Golden note:** Neurostimulation review — DBS one of several promising approaches in AD.
 
 **Neurostimulation in Alzheimer's disease: from basic research to clinical applications.**
@@ -119,6 +172,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34083732 — current stance: `inconclusive`
+
+**Evidence span:** > However, the clinical effects are highly variable, which questions the suggested basic principles underlying these clinical trials.
 
 **Golden note:** NBM-DBS review — clinical effects 'highly variable'.
 
@@ -132,6 +187,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37123370 — current stance: `inconclusive`
 
+**Evidence span:** > DBS had no impact on the cognitive ability in patients with AD [0.116 SMD, 95% confidence interval (CI), -0.236 to 0.469, p = 0.518]. According to subgroup analysis, the fornix-DBS did not improve cognitive function in patients with AD (0.145 SMD, 95%CI, -0.246 to 0.537, p = 0.467).
+
 **Golden note:** DBS-AD systematic review/meta — modest, heterogeneous.
 
 **Deep brain stimulation for the treatment of Alzheimer's disease: A systematic review and meta-analysis.**
@@ -143,6 +200,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36411282 — current stance: `inconclusive`
+
+**Evidence span:** > On fixed-effect meta-analysis, non-invasive neuromodulation favored baseline, with effect size -0.40(95% [CI], -0.73, -0.06, p = 0.02), while that of DBS was 0.11(95% [CI] -0.34, 0.56, p = 0.63), in favor of DBS.
 
 **Golden note:** Connectomic neuromodulation review — cognitive outcome unclear.
 
@@ -156,6 +215,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38141755 — current stance: `inconclusive`
 
+**Evidence span:** > Because of varying study parameters, varying outcome measures, varying study durations, and limited cohort sizes, definitive conclusions regarding the utility of DBS for AD cannot be made.
+
 **Golden note:** DBS systematic review of targets — efficacy varies; no consistent benefit.
 
 **Deep Brain Stimulation as an Emerging Therapy for Cognitive Decline in Alzheimer Disease: Systematic Review of Evidence and Current Targets.**
@@ -167,6 +228,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34151817 — current stance: `supports`
+
+**Evidence span:** > However, the selected clinical measures did not differentiate between the "on" and "off" groups in the intent to treat (ITT) population.
 
 **Golden note:** DBS-f age-moderator analysis — older patients showed better outcomes (subgroup positive).
 
@@ -180,6 +243,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38088070 — current stance: `inconclusive`
 
+**Evidence span:** > DBS did not reverse the progression of cognitive decline (WMD of ADAS-Cog score in single-arm studies: 7.40, p < 0.00001).
+
 **Golden note:** rTMS/tDCS/DBS meta — DBS efficacy mixed.
 
 **Efficacy analysis of three brain stimulation techniques for Alzheimer's disease: a meta-analysis of repeated transcranial magnetic stimulation, transcranial direct current stimulation, and deep brain stimulation.**
@@ -192,6 +257,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40243219 — current stance: `supports`
 
+**Evidence span:** > Early on, DBS significantly improved cognitive function and quality of life.
+
 **Golden note:** Fornix vs NBM bilateral DBS comparison — both effective in severe AD.
 
 **Efficacy and Safety of Bilateral Deep Brain Stimulation (DBS) for Severe Alzheimer's Disease: A Comparative Analysis of Fornix Versus Basal Ganglia of Meynert.**
@@ -203,6 +270,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37204563 — current stance: `inconclusive`
+
+**Evidence span:** > The population investigated is small and heterogeneous, published results from clinical trials are under-represented, severe adverse events not negligible, and cognitive outcomes uncertain.
 
 **Golden note:** Recent DBS trials in dementia review — descriptive.
 

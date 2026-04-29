@@ -6,8 +6,8 @@ n=23 PMIDs.
 
 **Current S/C/I**: 17 / 1 / 5
 **Proposed S/C/I**: 9 / 3 / 11
-**Net flips**: ~12 (heavy demotion of mechanism/biomarker/narrative papers
-labeled `supports`)
+**Net flips**: 12 (heavy demotion of mechanism/biomarker/narrative papers
+labeled `supports`; ELAD primary-missed lifted to contradicts)
 
 The current corpus is unanimously enthusiastic on GLP-1 RAs (17/23
 supports). The actual primary clinical evidence (RCT cognitive endpoints
@@ -36,9 +36,31 @@ populations using dementia incidence as outcome.
 | `39952607` | 2025 | **supports → inconclusive** | SGLT2 vs GLP-1 head-to-head, n=221,883 pairs. SGLT2 was *better* than GLP-1 for dementia (HR 0.92 favoring SGLT2). The question is "do GLP-1 RAs reduce dementia"; this study shows GLP-1 RAs are *worse than SGLT2*, not that they fail vs no-treatment. Comparator framing — same issue as Q3 metformin comparators. |
 | `40017057` | 2025 | **inconclusive → supports** | Antidiabetic-cognition meta. Verbatim: *"Glucagon-like peptide-1 receptor agonists (GLP-1 RA) versus placebo reduced dementia risk by 53% in three RCTs (n = 15,820, RR = 0.47[0.25, 0.86]) and 27% in three case-control studies."* Significantly positive on GLP-1 RAs specifically in pooled RCTs. |
 
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+- `41326666` (ELAD) — **policy (c) missed_primary_sig_secondary**. Strict bar →
+  `contradicts` (adequately-powered RCT primary missed). Flagged because
+  secondary ADAS-Exec was significant (P=0.01 unadjusted), so this also has
+  a "split outcome" character. Flip stands; flagging for cross-question
+  consistency with similar mixed-outcome RCTs.
+- `39952607` (SGLT2 vs GLP-1 head-to-head) — **comparator_only**. Same
+  policy issue as Q3 metformin-comparator papers: a head-to-head trial that
+  shows GLP-1 inferior to a different active agent doesn't directly answer
+  "do GLP-1 RAs reduce dementia vs no treatment." Flipped to inconclusive
+  here as the strict-bar reading; flagging for cross-question consistency.
+- `31518224` (exenatide pilot, n=21, early-terminated) — **underpowered_null**.
+  Reads as null ("no differences or trends compared to placebo") but the
+  authors explicitly disclaim drawing firm conclusions due to early
+  termination. Strict bar would point toward `contradicts` if powered;
+  staying `inconclusive` because underpowered.
+- `37077141` (small meta, 5 RCTs, n=184) — **pilot_positive / pooled-small**.
+  MD 2.16 is statistically significant in the pool, but n=184 across 5 RCTs
+  is a thin evidence base. Keeping `supports` because the pooled effect is
+  significant; flagging because a single Q4 exercise–like reanalysis with
+  fewer trials would land here as inconclusive.
+
 ## Confirmed (no change)
 
-- `31518224` (exenatide pilot, n=21, early-terminated) — **inconclusive ✓** (small/early-terminated; *"no differences or trends compared to placebo for clinical and cognitive measures"* — could → contradicts but underpowered)
 - `39780249` (evoke/evoke+ design paper, results pending) — **inconclusive ✓**
 - `36821780` (2023 newer GLDs meta — GLP-1 RA RR 0.72 sig for dementia) — **supports ✓**
 - `37302139` (2023 antidiabetics NMA — GLP-1 RA OR 0.34 sig) — **supports ✓**
@@ -48,7 +70,6 @@ populations using dementia incidence as outcome.
 - `39302577` (TriNetX retrospective T2D + GLP-1 — sig dementia/AD reduction) — **supports ✓** (defensible despite RD magnitudes being small)
 - `38565814` (long-acting exenatide MCI proof-of-concept, n=32) — **contradicts ✓** (primary endpoint missed; gender × treatment interaction with women on exenatide getting *worse*)
 - `39716328` (2024 NMA antidiabetics — GLP-1 RA OR 0.58 sig observational, RCT pooled null) — **supports ✓** (defensible; observational sig)
-- `37077141` (GLP-1 RA cognitive function meta, 5 articles n=184) — **supports ✓** (small but pooled MD 2.16 sig)
 
 ## Cross-cutting issues
 
@@ -79,11 +100,43 @@ populations using dementia incidence as outcome.
 
 ---
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Untagged = strong/canonical; tagged = some caveat.
+
+- `41326666` — `missed_primary_sig_secondary` (ELAD: cerebral glucose primary P=0.14; ADAS-Exec secondary P=0.01)
+- `38746639` — `hedged_meta` (SR cognitive null but conclusion hedges with "potential metabolic and neuroprotective benefits")
+- `40189519` — none (clean NMA null on GLP-1 RAs for AD prevention)
+- `29235507` — `biomarker_only` (BBB glucose transfer T_max only, no cognitive primary)
+- `30099030` — `biomarker_only` (fMRI DMN connectivity; explicit no cognitive group difference)
+- `30938196` — `preclinical_dominated`, `narrative_review` (SR but mostly preclinical mechanism)
+- `35054924` — `narrative_review`, `broad_scope_review` (covers Parkinson's/depression/addiction/lipotoxicity, not AD-specific efficacy)
+- `37771725` — `preclinical_dominated` (animal-only meta, 26 rodent studies)
+- `25418147` — `preclinical_dominated`, `narrative_review` (2014; clinical trials "recently started" at writing)
+- `39358806` — `biomarker_only` (EXSCEL post-hoc proteomics; no cognitive primary)
+- `39952607` — `comparator_only` (SGLT2 vs GLP-1 head-to-head; no placebo arm)
+- `40017057` — none (RCT-pooled RR 0.47 sig; canonical positive)
+- `31518224` — `underpowered_null`, `pilot_positive` (early-terminated; null trend disclaimed by authors)
+- `38565814` — `pilot_positive`, `subgroup_apoe_split` (proof-of-concept n=32; women on exenatide worsened — sex-subgroup interaction)
+- `37077141` — `pilot_positive` (5 small RCTs, n=184 total; pooled sig but thin base)
+- `39716328` — `split_outcome` (observational pooled sig OR 0.58; RCT pooled null — class signal differs by design)
+- `33080602` — `hedged_meta` (concludes "no particular antidiabetic drug can currently be recommended")
+- `39780249` — none (design paper, results pending; correctly inconclusive)
+- `36821780` — none (clean observational meta, RR 0.72 sig)
+- `37302139` — none (NMA, GLP-1 RA OR 0.34 sig)
+- `40193122` — none (clean RCT meta on cardioprotective agents; GLP-1 OR 0.55 sig)
+- `37231200` — `narrative_review` (SR but heterogeneous outcomes — stroke, MACE, cognition, neuropathy mixed)
+- `39302577` — none (TriNetX retrospective; large n with sig RDs)
+
+---
+
 ## Abstracts (n=23)
 
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 29235507 — current stance: `supports`
+
+**Evidence span:** > The GLP-1 analog treatment, compared to placebo, highly significantly raised the T max estimates of cerebral cortex from 0.72 to 1.1 umol/g/min, equal to T max estimates in healthy volunteers.
 
 **Golden note:** GLP-1 analog in AD — improves blood-brain glucose transfer.
 
@@ -97,6 +150,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31518224 — current stance: `inconclusive`
 
+**Evidence span:** > Exenatide treatment produced no differences or trends compared to placebo for clinical and cognitive measures, MRI cortical thickness and volume, or biomarkers in CSF, plasma, and plasma neuronal extracellular vesicles (EV) except for a reduction of Aβ42 in EVs.
+
 **Golden note:** Exenatide pilot in AD — no significant clinical benefit.
 
 **A Pilot Study of Exenatide Actions in Alzheimer's Disease.**
@@ -108,6 +163,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 30099030 — current stance: `supports`
+
+**Evidence span:** > At time point 2, we observed significant improvement in intrinsic connectivity within the default mode network (DMN) in the active group relative to placebo. There were no detectable cognitive differences between study groups after this duration of treatment.
 
 **Golden note:** Liraglutide in AD-risk persons — beneficial neural correlates.
 
@@ -121,6 +178,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30938196 — current stance: `supports`
 
+**Evidence span:** > Based on the preclinical studies, GLP-1 modifying agents are promising targets for neuroprotection. On the other hand, the number of clinical studies that investigate GLP-1 as a treatment is low and further clinical trials are needed for a benchside to bedside translation of recent findings.
+
 **Golden note:** GLP-1 neuroprotection systematic review.
 
 **GLP-1's role in neuroprotection: a systematic review.**
@@ -132,6 +191,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39780249 — current stance: `inconclusive`
+
+**Evidence span:** > evoke and evoke+ are the first large-scale trials to investigate the disease-modifying potential of semaglutide in participants with early-stage symptomatic AD, including exploration of effects on AD biomarkers and neuroinflammation.
 
 **Golden note:** evoke/evoke+ design paper — semaglutide phase 3, results pending.
 
@@ -145,6 +206,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35054924 — current stance: `supports`
 
+**Evidence span:** > In Alzheimer's disease, GLP-1 analogs can improve the brain's glucose metabolism by improving glucose transport across the blood-brain barrier.
+
 **Golden note:** GLP-1a beyond traditional use review — neuroprotective.
 
 **GLP-1a: Going beyond Traditional Use.**
@@ -156,6 +219,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36821780 — current stance: `supports`
+
+**Evidence span:** > Five studies found that users versus nonusers of GLP-1RAs were associated with a significant reduction in the risk of all-cause dementia (RR, 0.72; 95% CI, 0.54-0.97).
 
 **Golden note:** Newer glucose-lowering drugs + dementia meta — GLP-1 RAs reduce risk.
 
@@ -169,6 +234,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37302139 — current stance: `supports`
 
+**Evidence span:** > Compared with non-user, SGLT-2i (OR 0.41 [95% CI 0.22-0.76]), GLP-1RA (OR 0.34 [95% CI 0.14-0.85]), thiazolidinedione (OR 0.60 [95% CI 0.51-0.69]), and DPP-4i (OR 0.78 [95% CI 0.61-0.99]) users had a decreased risk of dementia, whereas sulfonylurea (OR 1.43 [95% CI 1.11-1.82]) increased dementia risk.
+
 **Golden note:** Antidiabetics cognition meta in T2DM — GLP-1 RAs delay cognitive impairment.
 
 **Comparison on cognitive outcomes of antidiabetic agents for type 2 diabetes: A systematic review and network meta-analysis.**
@@ -180,6 +247,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33080602 — current stance: `inconclusive`
+
+**Evidence span:** > Intranasal insulin, pioglitazone, metformin, and liraglutide are promising drugs that could be useful in the treatment of AD. However, many questions remain to be answered in future studies, so no particular antidiabetic drug can currently be recommended to treat AD.
 
 **Golden note:** Antidiabetic AD/MCI systematic review — modest, exploratory.
 
@@ -193,6 +262,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40193122 — current stance: `supports`
 
+**Evidence span:** > Among drug classes, GLP-1RAs were associated with a statistically significant reduction in dementia (OR, 0.55 [95% CI, 0.35-0.86]), but not SGLT2is (OR, 1.20 [95% CI, 0.67-2.17]; P value for heterogeneity = .04).
+
 **Golden note:** Cardioprotective glucose-lowering meta — GLP-1/SGLT2 reduce dementia.
 
 **Cardioprotective Glucose-Lowering Agents and Dementia Risk: A Systematic Review and Meta-Analysis.**
@@ -204,6 +275,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 38746639 — current stance: `supports`
+
+**Evidence span:** > Two RCTs with amyloid-β and tau biomarker endpoints did not observe an end of treatment difference between the placebo and treated groups. In three RCTs with cognitive endpoints, there was no end of treatment difference between placebo and treated groups.
 
 **Golden note:** Clinical evidence GLP-1 RA in AD systematic review — favorable.
 
@@ -217,6 +290,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37771725 — current stance: `supports`
 
+**Evidence span:** > The results showed that, in terms of behavioral tests, GLP-1 RAs could improve the learning and memory abilities of AD rodents; in terms of pathology, GLP-1 RAs could reduce Aβ deposition and phosphorylated tau levels in the brains of AD rodents.
+
 **Golden note:** GLP-1 RAs in preclinical AD models meta — neuroprotective.
 
 **Glucagon-like peptide 1 (GLP-1) receptor agonists in experimental Alzheimer's disease models: a systematic review and meta-analysis of preclinical studies.**
@@ -228,6 +303,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37231200 — current stance: `supports`
+
+**Evidence span:** > Exenatide, dulaglutide and liraglutide improved general cognition but no significant effect on diabetic peripheral neuropathy has been reported with GLP-1 RAs.
 
 **Golden note:** GLP-1 RA + neurological complications of diabetes review — beneficial.
 
@@ -241,6 +318,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39302577 — current stance: `supports`
 
+**Evidence span:** > In the T2D cohorts, GLP-1RA treatment was associated with significantly lower incidences of several systemic and metabolic conditions as compared to those without GLP-1RA, specifically, dementia (Risk Difference (RD): -0.010, p < 0.001), AD (RD: -0.003, p < 0.001), PD (RD: -0.002, p < 0.001), and pancreatic cancer (RD: -0.003, p < 0.001).
+
 **Golden note:** T2D/obesity + GLP-1 retrospective cohort — improves dementia/AD outcomes.
 
 **Comparative outcomes of systemic diseases in people with type 2 diabetes, or obesity alone treated with and without GLP-1 receptor agonists: a retrospective cohort study from the Global Collaborative Network : Author list.**
@@ -252,6 +331,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39358806 — current stance: `supports`
+
+**Evidence span:** > EQW affected FCN2 (Cohen's d -0.019), PAI-1 (Cohen's d -0.033), sVCAM-1 (Cohen's d 0.035) and a cytokine-cytokine cluster (Cohen's d 0.037) significantly compared with placebo.
 
 **Golden note:** EXSCEL post-hoc — exenatide reduces AD-associated inflammation proteins.
 
@@ -265,6 +346,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38565814 — current stance: `contradicts`
 
+**Evidence span:** > No significant between-group effects of exenatide on ADAS-Cog11 score (p = 0.17) were detected. A gender interaction with treatment was observed (p = 0.04), due to worsening of the ADAS-Cog11 score in women randomized to exenatide (p = 0.018).
+
 **Golden note:** Long-acting exenatide in MCI proof-of-concept — did NOT prevent cognitive decline.
 
 **Long-acting exenatide does not prevent cognitive decline in mild cognitive impairment: a proof-of-concept clinical trial.**
@@ -276,6 +359,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39716328 — current stance: `supports`
+
+**Evidence span:** > Compared with non-users, SGLT-2i (OR = 0.56, 95%CI, 0.45 to 0.69), glucagon-like peptide-1 receptor agonist (GLP-1RA) (OR = 0.58, 95%CI, 0.46 to 0.73), thiazolidinedione (TZD) (OR = 0.68, 95%CI, 0.57 to 0.81) and metformin (OR = 0.89, 95%CI, 0.80 to 0.99) treatments were all associated with reduced risk of dementia in patients with T2D.
 
 **Golden note:** Antidiabetic agents + dementia network meta — GLP-1 RAs protective.
 
@@ -289,6 +374,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40189519 — current stance: `supports`
 
+**Evidence span:** > Neither GLP-1 receptor agonists nor other SGLT2 inhibitors showed significant preventive effects for any of the investigated neurodegenerative conditions.
+
 **Golden note:** GLP-1/SGLT2 prophylactic benefit on neurodegen network meta.
 
 **The pharmacodynamics-based prophylactic benefits of GLP-1 receptor agonists and SGLT2 inhibitors on neurodegenerative diseases: evidence from a network meta-analysis.**
@@ -300,6 +387,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40017057 — current stance: `inconclusive`
+
+**Evidence span:** > Glucagon-like peptide-1 receptor agonists (GLP-1 RA) versus placebo reduced dementia risk by 53% in three RCTs (n = 15,820, RR = 0.47[0.25, 0.86]) and 27% in three case-control studies (n = 312,856, RR = 0.73[0.54, 0.99], I2 = 96%).
 
 **Golden note:** Diabetes meds cognition meta — mixed by class.
 
@@ -313,6 +402,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41326666 — current stance: `inconclusive`
 
+**Evidence span:** > The primary outcome showed no significant differences in cerebral glucose metabolism (difference = -0.17; 95% confidence interval: -0.39 to 0.06; P = 0.14) between the two groups.
+
 **Golden note:** ELAD phase 2b liraglutide in mild-mod AD — primary endpoint missed; biomarker secondary.
 
 **Liraglutide in mild to moderate Alzheimer's disease: a phase 2b clinical trial.**
@@ -324,6 +415,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37077141 — current stance: `supports`
+
+**Evidence span:** > In this review, we showed that GLP-1 receptor agonists can effectively change cognitive function, BMI and blood glucose levels in patients with AD.
 
 **Golden note:** GLP-1 RA cognitive function in AD meta — improves cognition.
 
@@ -337,6 +430,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25418147 — current stance: `supports`
 
+**Evidence span:** > Clinical trials in patients with cognitive impairment and AD testing the effects of GLP-1 analogs have recently started.
+
 **Golden note:** GLP-1 mimetics review for AD — neuroprotective.
 
 **[Glucagon-like peptide-1 (GLP-1) mimetics: a new treatment for Alzheimer's disease?].**
@@ -348,6 +443,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39952607 — current stance: `supports`
+
+**Evidence span:** > SGLT2 inhibitors were associated with a significantly lower incidence of overall dementia compared to GLP-1 receptor agonists (2.7 % vs. 3.6 %; HR, 0.92; 95 % CI, 0.89-0.95).
 
 **Golden note:** SGLT2 vs GLP-1 in T2D — both reduce dementia.
 

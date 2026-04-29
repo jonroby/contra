@@ -6,11 +6,11 @@ for the bar definitions).
 n=17 PMIDs.
 
 **Current S/C/I**: 1 / 3 / 13
-**Proposed S/C/I**: 1 / 6 / 10
-**Net flips**: 3 (all I → C)
+**Proposed S/C/I**: 1 / 7 / 9
+**Net flips**: 4 (all I → C)
 
 `expected_consensus: "mostly negative"` is well-supported by the data — with
-the proposed flips the count becomes 6 contradicts vs 1 supports.
+the proposed flips the count becomes 7 contradicts vs 1 supports.
 
 ---
 
@@ -20,52 +20,77 @@ the proposed flips the count becomes 6 contradicts vs 1 supports.
 |------|------|-------------------|--------|
 | `18044984` | 2007 | **inconclusive → contradicts** | SR of 8 RCTs; conclusion verbatim: *"The use of ChEIs in MCI was not associated with any delay in the onset of AD or dementia."* All point estimates non-sig. Meets "evidence does not support" bar. |
 | `15326237` | 2004 | **inconclusive → contradicts** | 24-week donepezil RCT in MCI, n=270. *"Primary efficacy measures... did not show significant treatment effects in the ITT population."* Adequately-powered RCT primary endpoint missed. |
-| `19176895` | 2009 | **inconclusive → contradicts** | 48-week donepezil RCT in MCI, n=821 (large multicenter). *"The dual primary efficacy endpoint was not reached."* Adequately-powered RCT primary endpoint missed. The trivial ADAS-Cog secondary signal does not rescue the primary failure. |
+| `19176895` | 2009 | **inconclusive → contradicts** | 48-week donepezil RCT in MCI, n=821 (large multicenter). *"The dual primary efficacy endpoint was not reached."* Adequately-powered RCT primary endpoint missed. One of two co-primaries (modified ADAS-Cog) hit; CDR-SB (functional co-primary) was null. A dual endpoint is not "rescued" by hitting just one half. |
+| `16856114` | 2006 | **inconclusive → contradicts** | Cochrane review of donepezil in MCI. Conclusion verbatim: *"There is no evidence to support the use of donepezil for patients with MCI. The putative benefits are minor, short lived and associated with significant side effects."* Plus the second included study reported HR 0.84 (CI 0.57–1.25, p=0.4) for AD onset at 3 years — primary missed. The "evidence does not support" trigger language is as clean here as in `18044984`. |
 
-### Borderline
+### Borderline (not flipped, but flagged for cross-question policy decisions)
 
 | PMID | Year | Status | Notes |
 |------|------|--------|-------|
-| `15829527` | 2005 | **inconclusive (keep)** | Petersen/NEJM, n=769, 3-year. Primary endpoint (HR 0.80, p=0.42) **missed at 36mo** but transient benefit at 12mo + APOE4 subgroup signal throughout the 3 years. Could be `contradicts` under a strict bar (primary missed); `inconclusive` defensible because of the early signal. Document as a borderline call. |
+| `15829527` | 2005 | **inconclusive (keep)** | Petersen/NEJM, n=769, 3-year. Primary endpoint (HR 0.80, p=0.42) **missed at 36mo** but transient benefit at 12mo + APOE4 subgroup signal throughout the 3 years. Strict-bar reading favors `contradicts` (adequately-powered RCT, primary endpoint missed at the named timepoint). `inconclusive` is defensible because of the pre-specified 12mo signal and APOE4 subgroup. Decision depends on **policy**: do regression-to-null patterns where an early significant signal does not hold at the primary timepoint count as `contradicts` or `inconclusive`? Apply uniformly across all 20 questions. |
+| `19528519` | 2009 | **supports (keep)** | Depression-positive subgroup of the Petersen ADCS trial. The bar's `supports` slot requires a *significant positive primary clinical finding* or a *meta-analysis pooled effect favoring the intervention* — a pre-specified subgroup analysis of a parent trial whose overall primary missed at 36mo does not cleanly meet either. Strict-bar reading favors `inconclusive` ("subgroup-dependent" mixed signal). `supports` is defensible only if the policy is to honor pre-specified-ish subgroup signals as supports. Decide once, apply uniformly. |
+| `30565793` | 2018 | **contradicts (keep, second-review flagged)** | Gait/falls RCT in MCI, n=60. Primary (gait speed) non-sig; two of three dual-task gait cost (DTC) secondaries hit (p=0.048, p=0.037). Conclusion: *"Donepezil treatment improved dual-task gait speed and DTC."* Strict-bar reading: missed primary + significant functional secondaries = `inconclusive` (genuinely mixed signal), not `contradicts`. The current `contradicts` understates the DTC results. Recommend re-evaluation; the call here depends on whether motor-cognitive interaction is a meaningful "functional" outcome under this question's frame. |
 
 ## Confirmed (no change)
 
 - `32096857` (2020 USPSTF) — **contradicts ✓**
 - `24043661` (2013 meta, MMSE/ADAS-Cog/ADL all null) — **contradicts ✓**
-- `30565793` (2018 gait/falls RCT) — **contradicts ✓** *but* the abstract
-  reports a **significant** dual-task gait DTC improvement on donepezil
-  (10.25% vs 1.75%, p=0.048). Gait-speed primary was non-sig; functional
-  dual-task DTC was sig. Note in golden ("no functional benefit")
-  understates the result. **Flagged for second review** — could argue
-  `inconclusive`.
-- `19528519` (2009 ADCS subgroup analysis: depression-positive subjects) —
-  **supports ✓** (subgroup-positive in a parent trial that overall did not
-  delay progression at 36mo; the `supports` here is a pre-specified-ish
-  subgroup signal)
-- `16856114` (2006 Cochrane: "no evidence to support use") —
-  **inconclusive ✓** (could argue `contradicts`; defensible either way given
-  Cochrane's hedged conclusion)
 - `27567841`, `26876309`, `37353809` (subtype/predictor analyses) —
   **inconclusive ✓**
 - `19001543` (fMRI pilot) — **inconclusive ✓**
 - `17330176` (2007 meta; small risk reduction with high adverse events) —
-  **inconclusive ✓**
+  **inconclusive ✓** (borderline; "questionable efficacy:risk ratio" hedge
+  could read as `contradicts`, but the 24% RR reduction is real)
 - `26091818`, `39939901` (atrophy outcome only) — **inconclusive ✓**
 - `19949165` (open-label safety extension) — **inconclusive ✓**
+
+(`15829527`, `19528519`, `30565793` moved to the Borderline section above.)
 
 ## Cross-cutting issues
 
 - **`15829527` is the parent Petersen trial; `27567841`, `26876309`,
   `19528519` are all secondary analyses of this one cohort.** Should be
-  tagged as substudies for the planned UI filter.
-- After flips: 6 contradicts vs 1 supports — the "mostly negative" expected
+  tagged as substudies for the planned UI filter. Note: this means the
+  one remaining `supports` vote (`19528519`) is itself a substudy of a
+  parent trial whose primary endpoint missed.
+- After flips: 7 contradicts vs 1 supports — the "mostly negative" expected
   consensus is now properly reflected.
+- **Cross-question policy questions raised here** (need to be settled
+  uniformly across all 20 questions):
+  1. Does a pre-specified subgroup signal in a parent-null trial qualify as
+     `supports`, or is it `inconclusive`? (`19528519` hinges on this.)
+  2. Does an adequately-powered RCT with a significant early-timepoint
+     signal that does not hold at the named primary timepoint count as
+     `contradicts` or `inconclusive`? (`15829527` hinges on this.)
+  3. Does a missed primary with significant secondary functional outcomes
+     count as `contradicts` or `inconclusive`? (`30565793` hinges on this.)
 
 ## Highest-confidence flips for this question
 
-All three proposed flips are highest-confidence — large RCTs with primary
-endpoints explicitly missed plus an SR with "not associated with any delay"
-language. No interpretive ambiguity.
+All four proposed flips are high-confidence — two large RCTs with primary
+endpoints explicitly missed (`15326237`, `19176895`), plus two systematic
+reviews with "evidence does not support" / "not associated with any delay"
+language (`18044984`, `16856114`). No interpretive ambiguity in any of the
+four conclusion statements.
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+- `15829527` — `same_cohort_duplicate` (Petersen ADCS parent), `missed_primary_sig_secondary` (12-mo signal didn't hold at 36-mo named primary)
+- `27567841` — `same_cohort_duplicate` (Petersen ADCS substudy), `subgroup_positive` (APOE4/BCHE-K pharmacogenomic subgroup of parent-null)
+- `26876309` — `same_cohort_duplicate` (Petersen-adjacent, NCT00403520), `subgroup_positive`
+- `19528519` — `same_cohort_duplicate` (Petersen ADCS substudy), `subgroup_positive` (depression-positive subgroup of parent-null trial)
+- `30565793` — `missed_primary_sig_secondary` (gait-speed primary missed; DTC secondaries hit p=0.048, p=0.037)
+- `19176895` — `missed_primary_sig_secondary` (dual co-primary not reached; modified ADAS-Cog hit but CDR-SB null)
+- `19001543` — `pilot_positive`-adjacent (fMRI pilot, biomarker-only, no cognitive primary)
+- `19949165` — (none — open-label safety extension, correctly inconclusive)
+- `26091818`, `39939901` — (atrophy-only outcomes; correctly inconclusive)
+- `37353809` — `subgroup_positive` (MRI-subtype-restricted treatment response)
+- `17330176` — `hedged_meta` (24% RR reduction but authors call efficacy:risk ratio "questionable")
+- `16856114` — (none — Cochrane "no evidence to support" is clean contradicts)
+- All other pmids — untagged
 
 ---
 
@@ -74,6 +99,8 @@ language. No interpretive ambiguity.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 18044984 — current stance: `inconclusive`
+
+**Evidence span:** > The use of ChEIs in MCI was not associated with any delay in the onset of AD or dementia.
 
 **Golden note:** Systematic review of ChEIs in MCI — small effects, marginal.
 
@@ -87,6 +114,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15326237 — current stance: `inconclusive`
 
+**Evidence span:** > Primary efficacy measures of the NYU Paragraph Recall test and the ADCS CGIC-MCI did not show significant treatment effects in the ITT population.
+
 **Golden note:** 24-week donepezil RCT in MCI — limited efficacy on primary, mixed.
 
 **Efficacy of donepezil in mild cognitive impairment: a randomized placebo-controlled trial.**
@@ -98,6 +127,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32096857 — current stance: `contradicts`
+
+**Evidence span:** > There is no empirical evidence, however, that screening for cognitive impairment improves patient or caregiver outcomes or causes harm. It remains unclear whether interventions for patients or caregivers provide clinically important benefits for older adults with earlier detected cognitive impairment or their caregivers.
 
 **Golden note:** USPSTF review — insufficient/no benefit of pharmacologic treatment for MCI.
 
@@ -111,6 +142,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19176895 — current stance: `inconclusive`
 
+**Evidence span:** > The dual primary efficacy endpoint was not reached. We noted a small, but significant, decrease in modified ADAS-Cog scores in favor of donepezil at study endpoint.
+
 **Golden note:** 48-week donepezil RCT in MCI — modest benefit, not definitive.
 
 **Donepezil treatment of patients with MCI: a 48-week randomized, placebo-controlled trial.**
@@ -122,6 +155,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 24043661 — current stance: `contradicts`
+
+**Evidence span:** > Cognitive enhancers did not improve cognition or function among patients with mild cognitive impairment and were associated with a greater risk of gastrointestinal harms. Our findings do not support the use of cognitive enhancers for mild cognitive impairment.
 
 **Golden note:** Meta-analysis: cognitive enhancers in MCI lack efficacy.
 
@@ -135,6 +170,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16856114 — current stance: `inconclusive`
 
+**Evidence span:** > There is no evidence to support the use of donepezil for patients with MCI. The putative benefits are minor, short lived and associated with significant side effects.
+
 **Golden note:** Cochrane review of donepezil for MCI — uncertain benefit.
 
 **Donepezil for mild cognitive impairment.**
@@ -146,6 +183,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19528519 — current stance: `supports`
+
+**Evidence span:** > Kaplan-Meier analysis showed that among the depressed subjects, the proportion progressing to AD was lower for the donepezil group than the combined vitamin E and placebo groups at 1.7 years (p = 0.023), at 2.2 years (p = 0.025), and remained marginally lower at 2.7 years (p = 0.070).
 
 **Golden note:** Donepezil delays progression to AD in MCI subjects with depression — subgroup positive.
 
@@ -159,6 +198,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30565793 — current stance: `contradicts`
 
+**Evidence span:** > After 6 months, the donepezil group experienced an improvement in dual-task gait speed (range 4-11 cm/s), although this was not statistically significant.
+
 **Golden note:** Donepezil for gait/falls in MCI RCT — no functional benefit.
 
 **Donepezil for gait and falls in mild cognitive impairment: a randomized controlled trial.**
@@ -170,6 +211,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19001543 — current stance: `inconclusive`
+
+**Evidence span:** > Despite the limitations inherent to a pilot study of a small sample, our results point to specific cortical substrates underlying the actions of donepezil, which can be tested in future studies.
 
 **Golden note:** fMRI pilot — donepezil affects cortical activation in MCI; no clinical primary.
 
@@ -183,6 +226,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27567841 — current stance: `inconclusive`
 
+**Evidence span:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
+
 **Golden note:** BCHE/APOE genotype modulates donepezil response in MCI — pharmacogenetic, mixed.
 
 **Butyrylcholinesterase K and Apolipoprotein E-ɛ4 Reduce the Age of Onset of Alzheimer's Disease, Accelerate Cognitive Decline, and Modulate Donepezil Response in Mild Cognitively Impaired Subjects.**
@@ -194,6 +239,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 26876309 — current stance: `inconclusive`
+
+**Evidence span:** > Only Hp, but not BF volume was a useful predictor of cognitive decline in suspected prodromal AD patients. Both Hp and BF volumes were poor predictors of treatment response, questioning previous approaches on predicting treatment response without placebo control.
 
 **Golden note:** Hippocampal/BF volume predictors of donepezil response in prodromal AD.
 
@@ -207,6 +254,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37353809 — current stance: `inconclusive`
 
+**Evidence span:** > Donepezil-treated MCI individuals showed slower atrophy rates compared to the placebo group, but only if they belonged to the minimal atrophy or hippocampal-sparing subtypes.
+
 **Golden note:** Differential donepezil response by MRI subtypes in MCI — heterogeneity finding.
 
 **Differential response to donepezil in MRI subtypes of mild cognitive impairment.**
@@ -218,6 +267,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 17330176 — current stance: `inconclusive`
+
+**Evidence span:** > The use of ChEI resulted in approximately 24% reduction of risk of conversion from MCI to dementia at the cost of more than 50% increase of adverse events and more than 130% increase of adverse events leading to drug discontinuation, as compared to placebo.
 
 **Golden note:** Meta-analysis ChEIs in MCI — modest, uncertain.
 
@@ -231,6 +282,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26091818 — current stance: `inconclusive`
 
+**Evidence span:** > Pooled anti-dementia drugs showed superior protective outcomes compared with placebo regarding %TBV/y (SMD=-0.21, 95%CI=-0.37 to -0.04, P=.01, N=4, n=624) and %VV/y (SMD=-0.79, 95%CI=-1.40 to -0.19, P=.01, N=3, n=851). However, %HV/y failed to show difference between both groups.
+
 **Golden note:** Anti-dementia meds vs brain atrophy meta in MCI/AD — atrophy outcome only.
 
 **Protection against Brain Atrophy by Anti-dementia Medication in Mild Cognitive Impairment and Alzheimer's Disease: Meta-Analysis of Longitudinal Randomized Placebo-Controlled Trials.**
@@ -242,6 +295,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19949165 — current stance: `inconclusive`
+
+**Evidence span:** > These findings support the safety of donepezil in patients with aMCI. When compared with other studies, however, the data suggest that patients with Alzheimer's tolerate donepezil better than patients with MCI.
 
 **Golden note:** Open-label extension safety — no efficacy claim.
 
@@ -255,6 +310,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39939901 — current stance: `inconclusive`
 
+**Evidence span:** > Higher doses of donepezil (10 mg) significantly reduce hippocampal atrophy in Alzheimer's disease and mild cognitive impairment, suggesting potential neuroprotective effects.
+
 **Golden note:** AChEI hippocampal atrophy meta — atrophy outcome, mixed populations.
 
 **Efficacy of acetylcholinesterase inhibitors on reducing hippocampal atrophy rate: a systematic review and meta-analysis.**
@@ -266,6 +323,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 15829527 — current stance: `inconclusive`
+
+**Evidence span:** > Although donepezil therapy was associated with a lower rate of progression to Alzheimer's disease during the first 12 months of treatment, the rate of progression to Alzheimer's disease after three years was not lower among patients treated with donepezil than among those given placebo.
 
 **Golden note:** Petersen 2005 NEJM vit-E + donepezil for MCI — donepezil reduced progression to AD at 12mo but not 36mo. Classic mixed.
 

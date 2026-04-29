@@ -25,13 +25,25 @@ large observational metas say protective**.
 | `15699299` | 2005 | **supports → contradicts** | Cache County prospective. The study has a baseline cross-sectional component (statin use associated with lower prevalence, OR 0.44 sig) AND a prospective incidence component (HR 1.19 NS for dementia, HR 1.19 NS for AD). Verbatim: *"Statin use at baseline **did not predict incidence** of dementia or AD."* The current `supports` label is anchoring on the cross-sectional baseline finding; the prospective primary outcome is null. The conclusion: *"we found **no association** between statin use and subsequent onset of dementia or AD."* |
 | `39963242` | 2025 | **inconclusive → supports** | 2025 cohort meta of 35 cohort studies, n=6.3M patients. Verbatim: *"statin use was associated with a reduced risk of dementia (HR: 0.79, 95% CI: 0.71-0.88)"* and *"a 29% decrease in the risk of AD among statin users (HR: 0.71, 95% CI: 0.60-0.85)."* Significantly positive pooled observational effect. The conclusion ("statin use is associated with a reduced incidence of dementia and AD, which might be modified by ages") is positive, not inconclusive. |
 
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+- `29914039` (2018 SR/meta — observational sig but single RCT null) —
+  **policy (b)/hedged_meta**: prospective-study pooled effects are
+  significant (statin → dementia RR 0.77 [0.63-0.95]; AD RR 0.86
+  [0.80-0.92]), but the meta explicitly notes "the single RCT on statins
+  and dementia incidence showed no association" and conclusion uses
+  "might reduce." Defensibly inconclusive given the observational/RCT
+  split within the meta itself; flagged as the same pattern as
+  `23225700` — hedged-meta with sig pooled effect but cautionary
+  conclusion. Also touches policy (c) at the meta level: the included
+  RCT primary missed but observational secondary signals are sig.
+
 ## Confirmed (no change)
 
 - `34167639` (ASPREE n=18,846 ≥65, 4.7-yr follow-up) — **contradicts ✓** (*"statin use was not associated with dementia, MCI, or declines"* — well-powered prospective null)
 - `24247674` (statins/cognition SR — narrative, mixed direction) — **inconclusive ✓**
 - `23225700` (observational meta — pooled sig but explicitly addresses confounding) — **inconclusive ✓** (defensible because conclusion explicitly cautions: *"this benefit observed in both disease states should be interpreted with caution as observational studies are subject to bias"*)
 - `20859546` (2010 SR — sparse RCT data) — **inconclusive ✓**
-- `29914039` (2018 SR/meta — observational sig but single RCT null) — **inconclusive ✓**
 - `27473843` (TOP-COG Down syndrome pilot, n=21) — **inconclusive ✓** (pilot exempt)
 
 ## Cross-cutting issues
@@ -60,6 +72,23 @@ large observational metas say protective**.
   patients is not "inconclusive" in the technical sense; it's a
   significantly positive pooled effect with an observational caveat.
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Untagged = strong/canonical; tagged = some caveat.
+
+- `15699299` — `split_outcome` (cross-sectional prevalence sig but prospective incidence null; current `supports` mislabels by anchoring on baseline component)
+- `23225700` — `hedged_meta` (pooled sig observational effect but conclusion explicitly cautions about confounding/indication bias)
+- `29914039` — `hedged_meta`, `rct_obs_split` (within-meta divergence: observational pooled sig, single included RCT null; conclusion uses "might reduce")
+- `20859546` — `narrative_review`, `broad_scope_review` (covers multiple vascular risk factors; statins only 2 studies; dementia never primary outcome in included trials)
+- `24247674` — `narrative_review` (broad SR with mixed quality evidence; "relationship remains unknown")
+- `27473843` — `pilot_positive`, `wrong_population` (n=21 feasibility pilot in Down syndrome — not the older-adults primary-prevention question)
+- `39963242` — `observational_only` (35-cohort meta, no RCT data; pooled sig but susceptible to indication bias the Cochrane reviews flag)
+- All other pmids — untagged (`26727124`, `19370582` are canonical Cochrane RCT-pooled nulls; `34167639` is ASPREE well-powered prospective null)
+
+### Proposed new tags (Q13)
+
+- `rct_obs_split` — within a single meta-analysis, included RCT(s) show null while pooled observational arm shows significant effect; conclusion straddles both
+- `observational_only` — meta-analysis or review pools only observational/cohort evidence with no RCT data; vulnerable to indication bias even when pooled effect is significant
 
 ---
 
@@ -68,6 +97,8 @@ large observational metas say protective**.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 26727124 — current stance: `inconclusive`
+
+**Evidence span:** > There is good evidence that statins given in late life to people at risk of vascular disease do not prevent cognitive decline or dementia.
 
 **Golden note:** Cochrane review 2016 — insufficient evidence statins prevent dementia.
 
@@ -81,6 +112,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15699299 — current stance: `supports`
 
+**Evidence span:** > Although statin use might be less frequent in those with prevalent dementia, we found no association between statin use and subsequent onset of dementia or AD.
+
 **Golden note:** Cache County prospective — statin use associated with reduced incident AD/dementia.
 
 **Do statins reduce risk of incident dementia and Alzheimer disease? The Cache County Study.**
@@ -92,6 +125,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 24247674 — current stance: `inconclusive`
+
+**Evidence span:** > Larger and better-designed studies are needed to draw unequivocal conclusions about the effect of statins on cognition. Published data do not suggest an adverse effect of statins on cognition; however, the strength of available evidence is limited, particularly with regard to high-dose statins.
 
 **Golden note:** Statins/cognition systematic review — relationship remains unknown.
 
@@ -105,6 +140,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19370582 — current stance: `inconclusive`
 
+**Evidence span:** > There is good evidence from RCTs that statins given in late life to individuals at risk of vascular disease have no effect in preventing AD or dementia.
+
 **Golden note:** Cochrane 2009 — insufficient evidence for prevention.
 
 **Statins for the prevention of dementia.**
@@ -116,6 +153,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 23225700 — current stance: `inconclusive`
+
+**Evidence span:** > These pooled results suggest that statins may provide a slight benefit in the prevention of AD and all-type dementia. This benefit observed in both disease states should be interpreted with caution as observational studies are subject to bias.
 
 **Golden note:** Observational meta — benefit inconclusive with confounding concerns.
 
@@ -129,6 +168,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20859546 — current stance: `inconclusive`
 
+**Evidence span:** > Statins (2 studies) and intensified control of type II DM (1 study) appear to have no effect on prevention of cognitive decline.
+
 **Golden note:** CV risk factor RCT review — sparse RCT data on prevention.
 
 **Treatment of cardiovascular risk factors to prevent cognitive decline and dementia: a systematic review.**
@@ -140,6 +181,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29914039 — current stance: `inconclusive`
+
+**Evidence span:** > In prospective studies, treatment of hyperlipidemia with statins, but not nonstatin lipid-lowering agents, was associated with reduced risk of dementia (n = 17; RR, 0.77; 95% CI, 0.63-0.95) and AD (n = 13; RR, 0.86; 95% CI, 0.80-0.92). The single RCT on statins and dementia incidence showed no association.
 
 **Golden note:** Vascular risk factor treatment meta — uncertain on AD/dementia incidence.
 
@@ -153,6 +196,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27473843 — current stance: `inconclusive`
 
+**Evidence span:** > TOP-COG was a feasibility/pilot, double-blind RCT of 12 months simvastatin 40 mg versus placebo for the primary prevention of dementia in Alzheimer disease in Down syndrome adults aged 50 years or older.
+
 **Golden note:** TOP-COG Down syndrome statin pilot RCT — small, exploratory.
 
 **Towards onset prevention of cognition decline in adults with Down syndrome (The TOP-COG study): A pilot randomised controlled trial.**
@@ -165,6 +210,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39963242 — current stance: `inconclusive`
 
+**Evidence span:** > Thirty-five cohort studies involving 6,306,043 participants were pooled and indicated that statin use was associated with a reduced risk of dementia (HR: 0.79, 95% CI: 0.71-0.88). Similarly, an analysis of 19 studies comprising 1,237,341 participants demonstrated a 29% decrease in the risk of AD among statin users (HR: 0.71, 95% CI: 0.60-0.85).
+
 **Golden note:** 2025 cohort meta — effect unclear.
 
 **The role of statins in dementia or Alzheimer's disease incidence: a systematic review and meta-analysis of cohort studies.**
@@ -176,6 +223,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34167639 — current stance: `contradicts`
+
+**Evidence span:** > In adults ≥65 years of age, statin therapy was not associated with incident dementia, MCI, or declines in individual cognition domains.
 
 **Golden note:** ASPREE secondary analysis (n=18,846 ≥65, well-powered) — statin/cognition association uncertain, primary suggests null.
 

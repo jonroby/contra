@@ -5,8 +5,8 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=22 PMIDs.
 
 **Current S/C/I**: 9 / 2 / 11
-**Proposed S/C/I**: 6 / 3 / 13
-**Net flips**: 7 (4 S→I, 1 S→C, 2 I→S)
+**Proposed S/C/I**: 6 / 4 / 12
+**Net flips**: 8 (4 S→I, 1 S→C, 1 I→C, 2 I→S)
 
 `expected_consensus: "mostly negative"` is partly correct — the two
 pivotal RCTs (NOURISH AD and VCO-AD) are properly flagged as
@@ -26,20 +26,22 @@ broad reviews) that confuses the picture.
 | `32652024` | 2020 | **supports → inconclusive** | MCT alone in **frail elderly** (n=64, mean age 85.5, BMI 18.6, secondary outcome cognition). Same population concern as above — frail nursing home elderly, not AD. Off-target. |
 | `32597927` | 2020 | **inconclusive → supports** | KD-AD systematic review, 10 RCTs. Verbatim: *"The use of ketoneurotherapeutics proved effective in improving general cognition using the Alzheimer's Disease Assessment Scale-Cognitive, in interventions of either duration. In addition, long-term ketogenic therapy improved episodic and secondary memory."* Pooled positive on cognition. The note "modest, inconsistent" undersells the conclusion. |
 | `38943982` | 2024 | **inconclusive → supports** | KD-AD meta of 10 RCTs, n=691. MMSE +1.25 (p=0.002) and ADAS-Cog -3.43 (p=0.008), both significant. Verbatim: *"the KD can enhance the mental state and cognitive function of those with AD."* Significantly positive pooled effect. |
+| `28807434` | 2017 | **inconclusive → contradicts** | Network meta of nutrition strategies in AD, including MCT. Verbatim: *"Isolated nutrient supplementations show no convincing evidence of providing a significant benefit on clinical manifestations or neuropathology of AD."* And: *"The other nutrients supplementation did not show any significant effect on any outcome measures"* (with MCT explicitly among "other nutrients"). Strict bar criterion met: meta-analysis concluding "evidence does not support." |
 
-### Borderline
+### Borderline (not flipped, but flagged for cross-question policy decisions)
 
-| PMID | Year | Status | Notes |
-|------|------|--------|-------|
-| `28807434` | 2017 | **inconclusive (keep)** | Network meta of nutrition strategies. Verbatim: *"Isolated nutrient supplementations show no convincing evidence of providing a significant benefit on clinical manifestations or neuropathology of AD."* Could → `contradicts` for the broad nutrition question but MCT is one of many; keep `inconclusive` because the conclusion is class-level. |
-| `32290868` | 2020 | **inconclusive (keep)** | KD translational review. *"Most of the published articles showed a significant improvement of cognitive outcomes."* Could → `supports` but it's a narrative + RCT mixed review; keep `inconclusive` for methodological mixing. |
+| PMID | Year | Current | Policy issue | Notes |
+|------|------|---------|--------------|-------|
+| `15123336` | 2004 | `supports` | (a) subgroup-positive in exploratory/null parent | Reger 2004 β-OHB acute, n=20, single-dose crossover, explicitly exploratory ("Additional research is warranted"). Headline acute ADAS-Cog benefit was driven by APOE4-negative subgroup only ("MCT treatment facilitated performance on the ADAS-cog for 4- subjects, but not for 4+ subjects"). Whole-sample primary not separately reported as significant. Under strict bar this is canonically `inconclusive` (small N, exploratory pilot), but it's a foundational pilot for the MCT-AD literature so is currently `supports` by tradition. Flag, don't flip — depends on cross-question rule for "subgroup positive in exploratory parent." |
+| `33622392` | 2021 | `supports` (proposed → `inconclusive`) | (c) missed primary, significant secondary | Cognitive primary ACE-III not significant (p=0.24); secondary ADCS-ADL (p=0.0067) and QOL-AD (p=0.023) hit. Already proposed for S→I flip on the strict bar. Listed here too so cross-question policy on "primary missed, secondary hit" can be applied uniformly. |
+| `26811674` | 2016 | `supports` (proposed → `contradicts`) | Borderline pilot vs null-conclusion | Open-label pilot, n=22, headline conclusion is "Axona did not improve cognitive function." Under strict bar, pilot/feasibility studies are canonically `inconclusive`; but the verbatim conclusion is starkly null. Reviewer's S→C is defensible because the null-conclusion language is direct, but a defensible alternative target is `inconclusive` (pilot, n=22). Flagged as a cross-question policy choice: when a small pilot's verbatim conclusion is null, do we route to `contradicts` (privileging the conclusion) or `inconclusive` (privileging the design tier)? |
+| `32290868` | 2020 | `inconclusive` | (b) preclinical/mech-dominated review | KD translational review. Half the included studies are animal (11 preclinical, 11 human). Conclusion is hedged ("might be promising"). Stays `inconclusive` either way; flagged because under strict bar (b), preclinical-dominated reviews labeled `supports` should drop to `inconclusive` — here the label already is `inconclusive` so no flip needed, but useful as an exemplar of the policy. |
 
 ## Confirmed (no change)
 
-- `15123336` (Reger 2004 β-OHB acute, n=20, exploratory) — **supports ✓** (defensible; APOE4-negative subgroup positive on ADAS-Cog acutely)
 - `33103819` (BENEFIC kMCT MCI 6 mo, n=83) — **supports ✓** (multiple cognitive measures sig improved)
-- `31694759` (MCT crossover in mild-mod AD APOE4-negative, n=53, 30 d) — **supports ✓** (ADAS-Cog-C sig improvement)
-- `31870908` (2019 MCT meta, 12 records, n=422) — **supports ✓** (ADAS-Cog trend, combined ADAS+MMSE SMD=-0.289 sig)
+- `31694759` (MCT crossover in mild-mod AD APOE4-negative, n=53, 30 d) — **supports ✓** (ADAS-Cog-C sig improvement; population is pre-specified APOE4-/-, not a post-hoc subgroup of a null parent)
+- `31870908` (2019 MCT meta, 12 records, n=422) — **supports ✓** (ADAS-Cog significant, combined ADAS+MMSE SMD=-0.289 sig)
 - `32310169` (AC-1204/NOURISH AD RCT, n=413, 26 wk) — **contradicts ✓** (pivotal negative trial; primary endpoint not met)
 - `37980665` (VCO-AD Sri Lanka RCT, n=120, 24 wk) — **contradicts ✓** (no significant difference vs canola oil control; APOE4 carriers showed MMSE benefit)
 - `30006299` (caprylidene rCBF pilot, biomarker) — **inconclusive ✓**
@@ -60,19 +62,79 @@ broad reviews) that confuses the picture.
 - **Intervention conflation**: ~half the corpus is "ketogenic diet" rather
   than MCT/coconut oil specifically. The question is about MCT/coconut
   oil; broad KD reviews should arguably be excluded or tagged.
-- After flips: 6 supports, 3 contradicts, 13 inconclusive — the
+- After flips: 6 supports, 4 contradicts, 12 inconclusive — the
   "mostly negative" expected consensus is partly justified by the two
-  pivotal phase 3 / large RCTs (NOURISH AD and VCO-AD), but the meta
-  layer (`32597927`, `38943982`, `31870908`) does show signal in the
+  pivotal phase 3 / large RCTs (NOURISH AD and VCO-AD) plus the
+  network meta `28807434`, but the MCT-focused meta layer
+  (`32597927`, `38943982`, `31870908`) does show signal in the
   positive direction. The picture is genuinely contested.
+
+## Cross-question policy questions surfaced here
+
+- **(a) Subgroup-positive in exploratory/null parent.** `15123336` (Reger
+  2004) and arguably the Axona pilot `26811674`: APOE4-negative subgroups
+  show benefit while whole-sample primary is null or absent. Decision
+  needed: do exploratory pilots that report only subgroup-positive results
+  get `supports` or `inconclusive`?
+- **(b) Preclinical-dominated review.** `32290868` is half-animal,
+  half-human studies. Already `inconclusive`, so flagged only as an
+  exemplar — no flip required for this question.
+- **(c) Missed primary, significant secondary.** `33622392` (modified KD
+  AD crossover): cognitive primary ACE-III missed (p=0.24); ADCS-ADL and
+  QOL-AD secondaries hit. Already proposed for S→I flip; flagged as
+  policy exemplar.
+- **Pilot vs null-conclusion (novel-ish).** `26811674` (Axona pilot) is
+  n=22 open-label, but its verbatim conclusion is "did not improve
+  cognitive function." Does the verbatim null-conclusion language
+  override the pilot/feasibility design tier? The reviewer routed S→C;
+  defensible alternative is S→I.
 
 ## Highest-confidence flips for this question
 
-- `26811674` supports → contradicts (Axona "did not improve cognitive function" — direct mislabel)
+- `26811674` supports → contradicts (Axona "did not improve cognitive function" — direct mislabel; alternative target `inconclusive` if pilot tier is privileged)
 - `33622392` supports → inconclusive (cognitive primary ACE-III not sig; current label overstates)
 - `38943982` inconclusive → supports (pooled MMSE and ADAS-Cog both sig)
+- `28807434` inconclusive → contradicts (network meta: "no convincing evidence of significant benefit")
 - `28552878` and `32652024` supports → inconclusive (frail elderly, not AD population)
 
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q9)
+
+- `combined_intervention` — active intervention bundles MCT/coconut oil with one or more co-actives (e.g., leucine + vitamin D, Mediterranean diet), confounding the MCT-specific effect
+- `biomarker_only` — primary endpoint is a biomarker (rCBF, plasma markers) rather than a clinical cognitive endpoint
+- `broad_scope_review` — systematic review covers multiple diseases/interventions where MCT/coconut-oil-in-AD is one slice; pooled estimate not specific to the question
+- `subgroup_positive_prespecified` — population restricted by pre-specified stratifier (e.g., APOE4-negative as inclusion criterion, not post-hoc subgroup); weaker than parent-trial-positive but stronger than post-hoc subgroup_positive
+
+### Annotations
+
+- `15123336` — `subgroup_positive`, `pilot_positive` (Reger 2004 acute crossover, n=20, exploratory; ADAS-Cog benefit driven by APOE4-negative subgroup only)
+- `33622392` — `missed_primary_sig_secondary`, `pilot_positive` (n=26 crossover; ACE-III primary p=0.24, ADCS-ADL/QOL secondaries hit)
+- `33103819` — (none — clean canonical example; BENEFIC kMCT MCI 6mo, n=83, multiple cognitive measures sig)
+- `31694759` — `subgroup_positive_prespecified` (population pre-specified APOE4-/-, not post-hoc; primary ADAS-Cog-C significant in the restricted population)
+- `30056419` — `pilot_positive`, `combined_intervention` (n=44, 21 days only, qualitative; coconut oil bundled with Mediterranean diet)
+- `31870908` — `hedged_meta` (authors: "risk of bias of existing studies necessitates future trials"; SMD significant but trend on ADAS-Cog alone)
+- `26811674` — `pilot_positive` (n=22 open-label pilot; verbatim "did not improve cognitive function" — see borderline section for pilot-vs-null-conclusion policy issue)
+- `32597927` — (none — clean canonical example; KD-AD SR of 10 RCTs, ADAS-Cog improvement noted)
+- `32290868` — `preclinical_dominated`, `narrative_review` (11 animal + 11 human studies; conclusion hedged "might be promising")
+- `30006299` — `biomarker_only`, `pilot_positive`, `subgroup_positive` (n=16 caprylidene rCBF pilot; rCBF endpoint only; APOE4-negative subgroup)
+- `33354711` — `narrative_review` (63 entries; "no statistical analysis was carried out"; broad neurological scope)
+- `32310169` — (none — clean canonical example; NOURISH AD RCT, n=413, primary endpoint not met, p=0.25)
+- `32757903` — `broad_scope_review`, `narrative_review` (24 RCTs across CNS diseases; only 2 AD studies; primary topic is epilepsy)
+- `38943982` — (none — clean canonical example; KD-AD meta of 10 RCTs, n=691, MMSE p=0.002 and ADAS-Cog p=0.008)
+- `28807434` — (none — clean canonical example; network meta concluding "no convincing evidence" for isolated nutrient supplementation)
+- `36846143` — `narrative_review` (qualitative AAN-tier critical appraisal; mixed evidence stratified by APOE4 status — Class B for APOE4-, Class U for APOE4+)
+- `28552878` — `wrong_population`, `combined_intervention` (n=38 frail nursing-home elderly, mean age 86.6, MMSE ~17 — not AD specifically; MCT bundled with leucine + vitamin D3)
+- `32652024` — `wrong_population` (n=64 frail nursing-home elderly, mean age 85.5, BMI 18.6 — not AD specifically; cognition was secondary outcome to muscle function)
+- `33906081` — `same_cohort_duplicate`, `biomarker_only` (secondary analysis of BENEFIC `33103819` cohort; cardiometabolic/inflammatory markers, not cognition)
+- `33621313` — `narrative_review`, `broad_scope_review` (17 studies across MCI/MS/AD/PD; only 5 AD studies; qualitative recommendations)
+- `37980665` — `subgroup_positive` (VCO-AD primary null overall; APOE4+ MMSE benefit p=0.021 reported as subgroup signal — note: stance is `contradicts` per primary, subgroup tag flags the secondary supports signal)
+- `39584279` — `narrative_review`, `broad_scope_review` (lifestyle interventions broadly; MCT/KD one of many interventions; "inconsistent effects on cognitive function")
+- All other pmids — untagged
 
 ---
 
@@ -81,6 +143,8 @@ broad reviews) that confuses the picture.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 15123336 — current stance: `supports`
+
+**Evidence span:** > On cognitive testing, MCT treatment facilitated performance on the Alzheimer's Disease Assessment Scale-Cognitive Subscale (ADAS-cog) for 4- subjects, but not for 4+ subjects (P=0.04).
 
 **Golden note:** Reger β-hydroxybutyrate acute study — cognitive improvement in memory-impaired adults.
 
@@ -94,6 +158,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33622392 — current stance: `supports`
 
+**Evidence span:** > Compared with usual diet, patients on the ketogenic diet increased their mean within-individual ADCS-ADL (+ 3.13 ± 5.01 points, P = 0.0067) and QOL-AD (+ 3.37 ± 6.86 points, P = 0.023) scores; the ACE-III also increased, but not significantly (+ 2.12 ± 8.70 points, P = 0.24).
+
 **Golden note:** Modified ketogenic diet RCT in AD — improved daily function/QoL.
 
 **Randomized crossover trial of a modified ketogenic diet in Alzheimer's disease.**
@@ -105,6 +171,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33103819 — current stance: `supports`
+
+**Evidence span:** > Free and cued recall (Trial 1; P = .047), verbal fluency (categories; P = .024), Boston Naming Test (total correct answers; P = .033), and the Trail-Making Test (total errors; P = .017) improved significantly in the kMCT group compared to placebo.
 
 **Golden note:** BENEFIC ketogenic drink in MCI — improved cognition over 6 months.
 
@@ -118,6 +186,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31694759 — current stance: `supports`
 
+**Evidence span:** > This study showed a significant (p < 0.01) reduction in ADAS-Cog-C scores between the MCT (2.62 points below baseline) and placebo interventions (2.57 points above baseline).
+
 **Golden note:** MCT RCT in mild-mod AD APOE4-negative — improved cognition (subgroup).
 
 **Medium-chain triglycerides improved cognition and lipid metabolomics in mild to moderate Alzheimer's disease patients with APOE4-/-: A double-blind, randomized, placebo-controlled crossover trial.**
@@ -129,6 +199,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 30056419 — current stance: `supports`
+
+**Evidence span:** > After intervention with coconut oil, improvements in episodic, temporal orientation, and semantic memory were observed, and it seems that the positive effect is more evident in women with mild-moderate state, although other improvements in males and severe state were also shown.
 
 **Golden note:** Coconut oil + Mediterranean diet pilot in AD — cognitive improvement.
 
@@ -142,6 +214,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31870908 — current stance: `supports`
 
+**Evidence span:** > showed a trend towards cognitive improvement on ADAS-Cog [MD = -0.539; 95% CI (-1.239, -0.161), I2 = 0 %], and significantly improved cognition on a combined measure (ADAS-Cog with MMSE) [SMD = -0.289; 95 % CI (-0.551, -0.027), I2 = 0 %].
+
 **Golden note:** MCT meta in AD — may improve cognition, modest effect.
 
 **Medium Chain Triglycerides induce mild ketosis and may improve cognition in Alzheimer's disease. A systematic review and meta-analysis of human studies.**
@@ -153,6 +227,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 26811674 — current stance: `supports`
+
+**Evidence span:** > Axona did not improve cognitive function in our sample of AD patients, even in those patients without the ApoE4 allele.
 
 **Golden note:** MCT (Axona) Japanese AD pilot — benefits, tolerable.
 
@@ -166,6 +242,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32597927 — current stance: `inconclusive`
 
+**Evidence span:** > The use of ketoneurotherapeutics proved effective in improving general cognition using the Alzheimer's Disease Assessment Scale-Cognitive, in interventions of either duration. In addition, long-term ketogenic therapy improved episodic and secondary memory.
+
 **Golden note:** Ketogenic RCT systematic review — modest, inconsistent.
 
 **To Keto or Not to Keto? A Systematic Review of Randomized Controlled Trials Assessing the Effects of Ketogenic Therapy on Alzheimer Disease.**
@@ -177,6 +255,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32290868 — current stance: `inconclusive`
+
+**Evidence span:** > The KD or MCT intake might be promising ways to alter cognitive symptoms in AD, especially at the prodromal stage of the disease.
 
 **Golden note:** Ketogenic-AD translational review — promising but unproven.
 
@@ -190,6 +270,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30006299 — current stance: `inconclusive`
 
+**Evidence span:** > Daily ingestion of caprylidene over 45 days was associated with increased blood flow in specific brain regions in patients lacking an apolipoprotein ɛ4 allele.
+
 **Golden note:** Caprylidene + cerebral blood flow pilot — biomarker secondary.
 
 **Changes in regional cerebral blood flow associated with a 45 day course of the ketogenic agent, caprylidene, in patients with mild to moderate Alzheimer's disease: Results of a randomized, double-blinded, pilot study.**
@@ -201,6 +283,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33354711 — current stance: `inconclusive`
+
+**Evidence span:** > Although scientific literature on the subject is scarce and there has tended to be a lack of scientific rigor, the studies reviewed confirmed the effectiveness of this diet in improving the cognitive symptomatology of the aforementioned diseases.
 
 **Golden note:** KD-cognition systematic review — mixed for AD.
 
@@ -214,6 +298,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32310169 — current stance: `contradicts`
 
+**Evidence span:** > The AC-1204 formulation of caprylic triglyceride failed to improve cognition or functional ability in subjects with mild-to-moderate AD.
+
 **Golden note:** AC-1204 (Axona reformulation) RCT in mild-mod AD — primary endpoint NOT met.
 
 **A Placebo-Controlled, Parallel-Group, Randomized Clinical Trial of AC-1204 in Mild-to-Moderate Alzheimer's Disease.**
@@ -225,6 +311,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32757903 — current stance: `inconclusive`
+
+**Evidence span:** > MCT did not significantly change regional cerebral blood flow (rCBF) in patients with AD, but MAD significantly improved memory at 6 weeks (p = .03).
 
 **Golden note:** KD in CNS diseases systematic review — broad, mixed.
 
@@ -238,6 +326,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38943982 — current stance: `inconclusive`
 
+**Evidence span:** > Meta-analysis results showed that KD could effectively improve the mental state of the elderly (NM scale) [MD = 7.56, 95%CI (3.02, 12.10), P = 0.001], MMSE [MD = 1.25, 95%CI (0.46, 2.04), P = 0.002], and ADAS-Cog [MD = -3.43, 95%CI (-5.98, -0.88), P = 0.008].
+
 **Golden note:** KD-AD cognition meta — clinical effect 'uncertain'.
 
 **Effects of ketogenic diet on cognitive function of patients with Alzheimer's disease: a systematic review and meta-analysis.**
@@ -249,6 +339,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 28807434 — current stance: `inconclusive`
+
+**Evidence span:** > Isolated nutrient supplementations show no convincing evidence of providing a significant benefit on clinical manifestations or neuropathology of AD.
 
 **Golden note:** Network meta nutrition AD — MCT/ketogenic among many interventions.
 
@@ -262,6 +354,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36846143 — current stance: `inconclusive`
 
+**Evidence span:** > We found class "B" evidence (probably effective) for cognitive improvement in subjects with mild cognitive impairment and subjects with mild-to-moderate Alzheimer's disease negative for the apolipoprotein ε4 allele (APOε4-). We found class "U" evidence (unproven) for cognitive stabilization in individuals with mild-to-moderate Alzheimer's disease positive for the apolipoprotein ε4 allele (APOε4+).
+
 **Golden note:** Ketogenic interventions critical appraisal in MCI/AD/PD — mostly small studies.
 
 **Ketogenic interventions in mild cognitive impairment, Alzheimer's disease, and Parkinson's disease: A systematic review and critical appraisal.**
@@ -273,6 +367,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 28552878 — current stance: `supports`
+
+**Evidence span:** > The combined supplementation of MCTs (6 g), L-leucine-rich amino acids, and cholecalciferol may improve cognitive function in frail elderly individuals.
 
 **Golden note:** MCT + leucine + vit D3 RCT in frail elderly — cognitive benefit.
 
@@ -286,6 +382,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32652024 — current stance: `supports`
 
+**Evidence span:** > Supplementation with 6 g MCTs/d may improve the cognition of frail elderly individuals.
+
 **Golden note:** MCT (C8/C10) RCT in frail elderly — improved MMSE.
 
 **Medium-Chain Triglycerides (8:0 and 10:0) Increase Mini-Mental State Examination (MMSE) Score in Frail Elderly Adults in a Randomized Controlled Trial.**
@@ -297,6 +395,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33906081 — current stance: `inconclusive`
+
+**Evidence span:** > Under these study conditions, 30 g/d of kMCT taken for six months and up to 2-hour before post-intervention testing had minimal effect on an extensive profile of circulating cardiometabolic and inflammatory markers as compared to a placebo calorie-matched drink.
 
 **Golden note:** kMCT 6-month MCI — cardiometabolic/inflammatory markers, not cognitive primary.
 
@@ -310,6 +410,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33621313 — current stance: `inconclusive`
 
+**Evidence span:** > Based on available evidence, exogenous ketogenic agents may be more feasible than dietary interventions in NDD from a compliance and adherence perspective; more research is required to confirm this.
+
 **Golden note:** Ketogenic neurodegen review — limited evidence quality.
 
 **The Efficacy of Ketogenic Therapies in the Clinical Management of People with Neurodegenerative Disease: A Systematic Review.**
@@ -322,6 +424,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37980665 — current stance: `contradicts`
 
+**Evidence span:** > Overall, VCO did not improve cognition in individuals with mild-to-moderate AD following a 24-week intervention, compared to canola oil.
+
 **Golden note:** VCO-AD Sri Lanka RCT — virgin coconut oil did NOT improve cognition vs placebo.
 
 **Effect of Virgin Coconut Oil Supplementation on Cognition of Individuals with Mild-to-Moderate Alzheimer's Disease in Sri Lanka (VCO-AD Study): A Randomized Placebo-Controlled Trial.**
@@ -333,6 +437,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39584279 — current stance: `inconclusive`
+
+**Evidence span:** > Modified diets, such as Atkins and ketogenic, displayed inconsistent effects on cognitive function but influenced other health-related parameters.
 
 **Golden note:** Lifestyle interventions AD systematic review — broad, MCT one of many.
 

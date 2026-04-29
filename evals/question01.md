@@ -58,6 +58,27 @@ n=22 PMIDs.
   - `19573486` (2009 parent), `19276559` (2009 BDNF substudy),
     `21875410` (2011 GDNF substudy) — same German multicenter 10-week trial.
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+- `41770546` — `pilot_positive` (CVLT-II p=0.05; pilot n=80; coprimaries missed but trend in lithium direction)
+- `41260370` — `preclinical_dominated`, `narrative_review`
+- `38364914` — `preclinical_dominated`
+- `38253184` — (none — clean NMA supports)
+- `36049127` — `same_cohort_duplicate` (Brazilian Lithium-MCI cohort)
+- `30947755` — `same_cohort_duplicate` (Brazilian Lithium-MCI cohort, 2-yr primary)
+- `21525519` — `same_cohort_duplicate` (Brazilian Lithium-MCI cohort, 12-mo)
+- `19573486` — (none — clean parent-trial null contradicts)
+- `19276559` — `same_cohort_duplicate`, `missed_primary_sig_secondary` (BDNF substudy of 19573486 parent-null trial; sig BDNF + ADAS-Cog signal in substudy contradicts parent's overall null)
+- `21875410` — `same_cohort_duplicate` (GDNF substudy of 19573486)
+- `37732619` — `missed_primary_sig_secondary`-adjacent (BDNF biomarker substudy of agitation trial)
+- `24919696` — `narrative_review` (SR with no pooled estimate; "all 4 small RCTs positive" but unpooled)
+- `22746245` — `pilot_positive` (microdose, single-arm-design-leaning, n small)
+- `17401045` — (none — clean cohort supports, but small n=66 vs 48)
+- All other pmids — untagged (strong/canonical examples for their stance)
+
 ## Highest-confidence flips for this question
 
 - `41177743` supports → contradicts (meta concludes "evidence does not support")
@@ -74,6 +95,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41770546 — current stance: `inconclusive`
 
+**Evidence span:** > Among 80 participants (mean [SD] age, lithium: 72.93 [8.77] years; placebo: 71.22 [6.47] years; 56% female), none of the 6 coprimary outcomes met the prespecified significance threshold.
+
 **Golden note:** Pilot RCT of low-dose lithium in MCI — feasibility/safety primary, only preliminary efficacy.
 
 **Low-Dose Lithium for Mild Cognitive Impairment: A Pilot Randomized Clinical Trial.**
@@ -85,6 +108,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41177743 — current stance: `supports`
+
+**Evidence span:** > However, current evidence does not support consistent cognitive or functional benefits in AD dementia.
 
 **Golden note:** Meta-analysis of lithium in AD dementia, frequentist + Bayesian; positive efficacy framing.
 
@@ -98,6 +123,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41260370 — current stance: `supports`
 
+**Evidence span:** > Long-term low-dose lithium treatment demonstrates inconsistent effects on lowering intracerebral amyloid deposition and reversing AD-related cognitive deficits in preclinical and clinical trials.
+
 **Golden note:** Systematic review of lithium effects on amyloid/tau/cognition; favorable.
 
 **The effects of Lithium on Beta-amyloid deposition and tau phosphorylation: A systematic review.**
@@ -109,6 +136,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 38364914 — current stance: `supports`
+
+**Evidence span:** > A total of 17 preclinical studies were included in the meta-analysis. Our analysis showed that lithium treatment has neuroprotective effects in diseases.
 
 **Golden note:** Meta-analysis on AD + Parkinson's — neuroprotective effects of lithium.
 
@@ -122,6 +151,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38743015 — current stance: `supports`
 
+**Evidence span:** > The results of this systematic review and meta-analysis do not support a significant association between lithium use and the risk of MNCD.
+
 **Golden note:** Meta-analysis: lithium use associated with reduced major neurocognitive disorder risk.
 
 **Lithium Exposure and Risk of Major Neurocognitive Disorders: A Systematic Review and Meta-analysis.**
@@ -133,6 +164,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 38657568 — current stance: `supports`
+
+**Evidence span:** > The forest plot results showed that taking lithium therapy reduced the risk of AD (RR 0.59, 95% confidence interval [CI]: 0.44-0.78) and is also protective in reducing the risk of dementia (RR 0.66, 95% CI: 0.56-0.77).
 
 **Golden note:** Meta-analysis: lithium therapy lowers dementia/AD risk.
 
@@ -146,6 +179,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38253184 — current stance: `inconclusive`
 
+**Evidence span:** > On the Mini-Mental State Examination, lithium significantly outperformed donanemab, aducanumab and placebo. On the Alzheimer's Disease Assessment Scale-cognitive subscale, the efficacy of all active drugs was significantly higher than placebo.
+
 **Golden note:** Network meta-analysis comparing lithium to anti-amyloids; results 'elusive'.
 
 **Comparative efficacy, tolerability and acceptability of donanemab, lecanemab, aducanumab and lithium on cognitive function in mild cognitive impairment and Alzheimer's disease: A systematic review and network meta-analysis.**
@@ -157,6 +192,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36049127 — current stance: `inconclusive`
+
+**Evidence span:** > We found statistically significant differences in current mean Mini Mental State Examination score according to previous treatment group (25.5 [SD, 5.3] vs. 18.3 [SD, 10.9], p = 0.04). The lithium group also had better performance in the phonemic Verbal Fluency Test than the control group (34.4 [SD, 14.4] vs. 11.6 [SD, 10.10], p < 0.001).
 
 **Golden note:** 13-year follow-up of MCI lithium trial — observational re-evaluation.
 
@@ -170,6 +207,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37732619 — current stance: `inconclusive`
 
+**Evidence span:** > BDNF levels did not change significantly and were not associated with improvement in overall neuropsychiatric symptoms or in cognitive function.
+
 **Golden note:** BDNF biomarker effects of lithium in AD with agitation; not cognitive endpoint.
 
 **Effects of lithium on serum Brain-Derived Neurotrophic Factor in Alzheimer's patients with agitation.**
@@ -181,6 +220,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 35961514 — current stance: `supports`
+
+**Evidence span:** > Network meta-analysis demonstrated that lithium was significantly more effective than aducanumab in the primary outcome.
 
 **Golden note:** Network meta-analysis lithium vs aducanumab on cognitive decline.
 
@@ -194,6 +235,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31954065 — current stance: `supports`
 
+**Evidence span:** > BD increases the risk of dementia (odds ratio (OR): 2.96 [95% CI: 2.09-4.18], P < 0.001), and treatment with lithium decreases the risk of dementia in BD (OR: 0.51 [95% CI: 0.36-0.72], P < 0.0001).
+
 **Golden note:** Meta-analysis: lithium associated with lower dementia risk in bipolar disorder.
 
 **Risk of dementia in bipolar disorder and the interplay of lithium: a systematic review and meta-analyses.**
@@ -205,6 +248,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 31156177 — current stance: `inconclusive`
+
+**Evidence span:** > There was no significant difference in cognitive function scores between the GSK-3 inhibitors and placebo groups [standardized mean difference (SMD) = -0.25, p = 0.11, I2 = 55% ]. A sensitivity analysis revealed that the lithium subgroup was more effective on cognitive function scores than placebo for AD and MCI (lithium subgroup: SMD = -0.41, p = 0.04; tideglusib subgroup: SMD = -0.02, p = 0.89).
 
 **Golden note:** GSK-3 inhibitor RCT meta-analysis (lithium is GSK-3 inhibitor); efficacy 'unknown'.
 
@@ -218,6 +263,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30947755 — current stance: `supports`
 
+**Evidence span:** > Long-term lithium attenuates cognitive and functional decline in amnestic MCI, and modifies Alzheimer's disease-related CSF biomarkers.
+
 **Golden note:** RCT of long-term lithium in amnestic MCI — clinical/biological effects positive.
 
 **Clinical and biological effects of long-term lithium treatment in older adults with amnestic mild cognitive impairment: randomised clinical trial.**
@@ -229,6 +276,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 26402004 — current stance: `supports`
+
+**Evidence span:** > Lithium significantly decreased cognitive decline as compared to placebo (standardized mean difference = -0.41, 95% confidence interval = -0.81 to -0.02, p = 0.04, I2 = 47% , 3 studies, n = 199).
 
 **Golden note:** First meta-analysis of RCTs of lithium in AD/MCI — positive.
 
@@ -242,6 +291,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24919696 — current stance: `supports`
 
+**Evidence span:** > All four small randomized clinical trials of lithium for Alzheimer's dementia have found at least some clinical or biological benefits versus placebo.
+
 **Golden note:** Systematic review of trace-dose lithium for dementia prevention — positive.
 
 **Standard and trace-dose lithium: a systematic review of dementia prevention and other behavioral benefits.**
@@ -253,6 +304,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 22746245 — current stance: `supports`
+
+**Evidence span:** > In the evaluation phase, the treated group showed no decreased performance in the mini-mental state examination test, in opposition to the lower scores observed for the control group during the treatment, with significant differences starting three months after the beginning of the treatment, and increasing progressively.
 
 **Golden note:** Microdose lithium stabilized cognitive impairment in AD patients.
 
@@ -266,6 +319,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 21525519 — current stance: `supports`
 
+**Evidence span:** > Lithium treatment was associated with a significant decrease in CSF concentrations of P-tau (P = 0.03) and better performance on the cognitive subscale of the Alzheimer's Disease Assessment Scale and in attention tasks.
+
 **Golden note:** RCT long-term lithium in aMCI — disease-modifying focus, positive.
 
 **Disease-modifying properties of long-term lithium treatment for amnestic mild cognitive impairment: randomised controlled trial.**
@@ -277,6 +332,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 21875410 — current stance: `inconclusive`
+
+**Evidence span:** > However, we could not show a difference in GDNF concentrations between the patients after the treatment with lithium or placebo (serum, mean ± standard deviation: 434.3 ± 117.9 pg/ml versus 543.8 ± 250.0 pg/ml, p = 0.178; CSF, 62.3 ± 37.4 pg/ml versus 72.8 ± 43.9 pg/ml, p = 0.511).
 
 **Golden note:** GDNF biomarker study in AD on lithium; not cognitive endpoint.
 
@@ -290,6 +347,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19573486 — current stance: `contradicts`
 
+**Evidence span:** > Lithium treatment did not lead to change in global cognitive performance as measured by the ADAS-Cog subscale (P = .11) or in depressive symptoms.
+
 **Golden note:** 10-week lithium AD RCT — short-term, GSK-3/tau focus, canonical null result.
 
 **Lithium trial in Alzheimer's disease: a randomized, single-blind, placebo-controlled, multicenter 10-week study.**
@@ -301,6 +360,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19276559 — current stance: `inconclusive`
+
+**Evidence span:** > In AD patients treated with lithium, a significant increase of BDNF serum levels, and additionally a significant decrease of ADAS-Cog sum scores in comparison to placebo-treated patients, were found.
 
 **Golden note:** BDNF biomarker increase in early AD on lithium; not cognitive endpoint.
 
@@ -314,6 +375,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18181229 — current stance: `inconclusive`
 
+**Evidence span:** > Lithium treatment in elderly people with AD has relatively few side effects and those that were apparently due to treatment were mild and reversible. Nonetheless discontinuation rates are high.
+
 **Golden note:** Feasibility/tolerability study; no efficacy claim.
 
 **A feasibility and tolerability study of lithium in Alzheimer's disease.**
@@ -325,6 +388,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 17401045 — current stance: `supports`
+
+**Evidence span:** > Alzheimer's disease was diagnosed in 3 patients (5%) on lithium and in 16 patients (33%) who were not on lithium (P<0.001).
 
 **Golden note:** Cohort: lower AD prevalence in BD patients on long-term lithium.
 

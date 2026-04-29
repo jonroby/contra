@@ -5,8 +5,8 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=22 PMIDs.
 
 **Current S/C/I**: 7 / 1 / 14
-**Proposed S/C/I**: 6 / 0 / 16
-**Net flips**: 4
+**Proposed S/C/I**: 5 / 0 / 17
+**Net flips**: 5 (4 original + 1 added by reviewer)
 
 Q17 is one of the most genuinely contested questions in the corpus
 because the evidence really *is* split: observational data and the
@@ -14,6 +14,12 @@ because the evidence really *is* split: observational data and the
 RCTs in late-life initiation show null or harm. Most current labels
 reflect this complexity correctly. A few flips bring borderline papers
 into stricter alignment.
+
+**Reviewer note (second pass):** All 4 originally proposed flips
+confirmed. One additional flip added: `20840280` (narrative
+"critical-period" review with no new clinical data) → `inconclusive`.
+Borderline cases (`32057896`, `19160224`) flagged but kept as
+`inconclusive` since each has a defensible mixed/out-of-scope reason.
 
 ---
 
@@ -25,6 +31,7 @@ into stricter alignment.
 | `10997480` | 2000 | **supports → inconclusive** | Estrogen + cerebral blood flow mechanism, n=12 women, 6-week pilot. Mechanism/biomarker (CBF) only, no cognitive primary, very small sample. Per strict bar, mechanism + small/pilot → `inconclusive`. |
 | `39422947` | 2024 | **supports → inconclusive** | Phytoestrogen + AD meta. The findings are direction-mixed: *"Combination MHT should probably be prescribed for less than 5 years after menopause to reduce risk for AD, while estrogen alone should not be prescribed to women over 60."* The pooled findings show **increased AD risk** with combination MHT in some groups and no association with estrogen alone for younger women. Direction-mixed result; current `supports` overstates. → `inconclusive`. |
 | `41618732` | 2026 | **inconclusive ✓** (keep, but note explicit null) | Long-term KEEPS amyloid PET/MRI 10 years post-trial, n=266. Verbatim: *"Aβ and structural MRI biomarkers were **not different** in the oCEE and tE2 groups compared to placebo. Apolipoprotein E ε4 status did not modify the findings."* Well-powered biomarker-null. Keep `inconclusive` (biomarker-only) but flag as a strong null for the timing-window hypothesis. |
+| `20840280` | 2010 | **supports → inconclusive** (added by reviewer) | Narrative review proposing the "critical period" hypothesis. No new clinical data; reviews mechanistic/in-vivo studies suggesting "positive effects of estrogen are most robust in young women and in older women who had initiated ET around the time of menopause." Per strict bar, narrative review without primary clinical efficacy data → `inconclusive` rather than `supports`. The hypothesis is supported elsewhere by `40220453` (timing-window meta, RR 0.70 sig); this paper itself is a hypothesis-framing review. |
 
 ## Confirmed (no change)
 
@@ -32,7 +39,6 @@ into stricter alignment.
 - `34339416` (MHT umbrella — mixed across outcomes) — **inconclusive ✓**
 - `19160224` (Cochrane HRT for cognition in dementia — explicitly says "not indicated for women with AD"; out of scope for prevention question) — **inconclusive ✓**
 - `19468050` (HT and cognition SR — mixed by formulation/age) — **inconclusive ✓**
-- `20840280` (critical-period hypothesis review) — **supports ✓** (defensible — argues timing-window protective effect)
 - `36834617` (HRT risk factor or therapeutic? — debate framing) — **inconclusive ✓**
 - `32910516` (estrogen + brain structure SR — descriptive imaging) — **inconclusive ✓**
 - `38501109` (MHT cognition meta — timing-near-menopause sig improves verbal memory; late-life null/worsens) — **inconclusive ✓**
@@ -47,6 +53,26 @@ into stricter alignment.
 - `37393661` (early menopause/POI → increased dementia meta) — **supports ✓**
 - `17368974` (WHI risks commentary) — **inconclusive ✓**
 
+## Borderline (kept as-is, flagged)
+
+- **`32057896`** (time-response meta, 2020) — **policy (c) candidate**.
+  Pooled OR 1.08 (95% CI 1.03–1.14) sig *increase* in AD risk overall
+  with MHT; combined estrogen+progestogen drives this. Could be argued
+  as `contradicts` for the broad question. Kept as `inconclusive`
+  because the same paper identifies a non-linear time-response with
+  the timing-window hypothesis preserved (direction shifts after 5
+  years), making this genuinely mixed within one paper.
+- **`19160224`** (Cochrane HRT for cognition in dementia, 2009) —
+  Concludes "HRT or ERT for cognitive improvement or maintenance is
+  not indicated for women with AD." This is a meta concluding "no
+  efficacy" — meets `contradicts` bar — BUT scope is treatment of
+  established AD, not prevention near menopause. Kept as
+  `inconclusive` (out-of-scope for the prevention question), with
+  note that it would be `contradicts` for a treatment-focused query.
+- **`34339416`** (umbrella review, 2021) — "ET and EPT had opposite
+  effects for ... Alzheimer disease." Single sentence, formulation-
+  dependent direction; defensible as `inconclusive`.
+
 ## Cross-cutting issues
 
 - **The timing-window hypothesis is the central tension**: observational
@@ -60,7 +86,21 @@ into stricter alignment.
 - **KEEPS substudies appear twice**: `27163830` (2016 amyloid PET) and
   `41618732` (2026 long-term PET/MRI follow-up) both report on the
   same KEEPS cohort. Same-cohort substudies should be tagged.
-- After flips: 6/0/16 — slight shift toward more `inconclusive`, but
+- **Down syndrome cohort appears twice**: `14520653` (2003) and
+  `16926067` (2006) both from the New York State DD service system
+  cohort, same first authors. Same-cohort findings.
+- **Recurring policy issues touched by Q17:**
+  - **(b) preclinical/mech-dominated review labeled `supports`** —
+    `20840280` (critical-period review) was a `supports` based on
+    in-vivo neurobiology mechanism evidence, not clinical efficacy.
+    Flipped to `inconclusive`.
+  - **(c) missed primary with significant secondary** — `27163830`
+    KEEPS-AD: parent KEEPS missed cognitive primary, but this
+    biomarker substudy reports significant amyloid reduction.
+    Currently `contradicts` is wrong (substudy result is positive,
+    not negative); flipped to `inconclusive` since it's biomarker-
+    only and labeled a pilot.
+- After flips: 5/0/17 — slight shift toward more `inconclusive`, but
   the genuinely contested nature of this question is preserved.
 
 ## Highest-confidence flips for this question
@@ -70,7 +110,139 @@ into stricter alignment.
   current label and note both misread this as a contradicting finding.
 - `10997480` supports → inconclusive — n=12 mechanism/CBF pilot,
   no cognitive primary.
+- `20840280` supports → inconclusive — narrative review proposing
+  the critical-period hypothesis; no new clinical efficacy data,
+  argues from mechanistic in-vivo studies.
 
+## signal_types (annotation layer)
+
+Tags reflect *paper-level caveats* that affect how each pmid should
+be weighted in a strict-bar reading of the literature. Tags do not
+change stance labels — they document why a label is what it is, or
+flag papers that should be down-weighted in headline counts.
+
+### Proposed new tags (Q17)
+
+- **`timing_window_subgroup`** — paper's primary finding is in a
+  pre-defined timing-window subgroup (e.g., MHT initiation within
+  5 years of menopause), distinct from a general MHT effect. Used
+  when the timing-window subgroup is the answer to the question
+  but the parent finding may differ. Q17 specifically asks about
+  near-menopause initiation, so timing-window subgroup positives
+  here are the *primary* relevant finding, not a `subgroup_positive`
+  caveat. (Distinct from generic `subgroup_positive` because the
+  subgroup matches the question's scope.)
+- **`indirect_endogenous_estrogen`** — paper studies *endogenous*
+  estrogen variation (age at menopause, bioavailable estradiol,
+  POI) rather than *exogenous* hormone replacement. Supports the
+  estrogen-loss hypothesis but does not directly answer whether
+  HRT reduces AD risk. Useful caveat for Q17 specifically.
+- **`down_syndrome_cohort`** — finding is in Down syndrome
+  population (early menopause, early AD onset). Mechanistically
+  informative but population is not "women initiating HRT near
+  menopause" in the typical sense.
+- **`out_of_scope_treatment_not_prevention`** — paper addresses
+  treatment of established AD, not primary prevention near
+  menopause. Relevant for Q17 because some retrieved papers are
+  treatment trials in AD patients.
+
+### Tag assignments
+
+- `9496988` (Yaffe 1998 meta) — `hedged_meta`, `narrative_review`
+  (mechanism + meta blend; conclusion: "we do not recommend estrogen
+  for the prevention or treatment ... until adequate trials have
+  been completed").
+- `34339416` (umbrella review 2021) — `hedged_meta`,
+  `broad_scope_review`, `split_outcome` (ET vs EPT have opposite
+  effects on AD).
+- `19160224` (Cochrane HRT in dementia 2009) — `hedged_meta`,
+  `out_of_scope_treatment_not_prevention`, `wrong_population`
+  (women with established AD, not near-menopause).
+- `27163830` (KEEPS-AD amyloid 2016) — `pilot_positive`,
+  `biomarker_only`, `same_cohort_duplicate` (KEEPS), `subgroup_apoe_split`,
+  `missed_primary_sig_secondary` (parent KEEPS cognitive primary
+  null; this substudy reports sig amyloid reduction).
+- `19468050` (HT and cognition SR 2009) — `hedged_meta`,
+  `split_outcome` (ET helpful, CEE+MPA harmful).
+- `20840280` (critical-period review 2010) — `narrative_review`,
+  `mechanism_only`, `preclinical_dominated`.
+- `10997480` (CBF mechanism 2000) — `pilot_positive`,
+  `biomarker_only`, `mechanism_only`, `short_duration` (6 weeks),
+  `case_series_underpowered` (n=12).
+- `36834617` (HRT debate review 2023) — `narrative_review`,
+  `hedged_meta`, `broad_scope_review`.
+- `32910516` (estrogen + brain structure 2020) — `biomarker_only`,
+  `observational_only`, `uncontrolled_observational` (cross-sectional
+  voxelwise on self-reported HT use).
+- `38501109` (MHT cognition meta 2024) — `hedged_meta`,
+  `split_outcome`, `timing_window_subgroup` (midlife verbal memory
+  improved; late-life null/worse).
+- `32057896` (time-response meta 2020) — `hedged_meta`,
+  `split_outcome`, `timing_window_subgroup`,
+  `directionally_opposite_finding` (overall pooled OR 1.08 *increase*,
+  but timing-window protective).
+- `15511602` (n=10wk RCT 2005) — `pilot_positive`, `short_duration`,
+  `case_series_underpowered`, `subgroup_positive` (only "years since
+  menopause" stratification reaches sig).
+- `14520653` (DS menopause→AD 2003) — `down_syndrome_cohort`,
+  `indirect_endogenous_estrogen`, `same_cohort_duplicate` (NY State
+  DD cohort), `observational_only`.
+- `16926067` (DS bioavailable E2 2006) — `down_syndrome_cohort`,
+  `indirect_endogenous_estrogen`, `same_cohort_duplicate` (NY State
+  DD cohort), `observational_only`.
+- `23418430` (APOE-ε4 telomere mid-life 2013) — `biomarker_only`,
+  `mechanism_only`, `subgroup_apoe_split`, `case_series_underpowered`
+  (n=63).
+- `33110037` (cognitive complaints + GM volume 2020) — `biomarker_only`,
+  `uncontrolled_observational`, `case_series_underpowered` (n=44),
+  `tangential_stratification`.
+- `34342862` (HT in postmenop AD SR 2021) — `hedged_meta`,
+  `split_outcome`, `out_of_scope_treatment_not_prevention` (mixes
+  observational on prevention with trials in AD patients).
+- `40220453` (MHT timing meta 2025, n=7.7M) — `timing_window_subgroup`,
+  `split_outcome` (estrogen alone protective in subgroup;
+  combination/progestogen-only increases risk).
+- `39422947` (phytoestrogen meta 2024) — `hedged_meta`,
+  `split_outcome`, `timing_window_subgroup`,
+  `directionally_opposite_finding` (combination MHT *increases* AD
+  risk; estrogen alone neutral for younger, harmful for older).
+- `41618732` (KEEPS long-term 2026) — `biomarker_only`,
+  `same_cohort_duplicate` (KEEPS), `landmark_no_group_difference`.
+- `37393661` (POI/early menopause meta 2023) — `hedged_meta`,
+  `indirect_endogenous_estrogen`, `observational_only` (sensitivity
+  analysis loses sig after one cohort excluded — flagged as fragile).
+- `17368974` (WHI risks commentary 2007) — `commentary`,
+  `narrative_review`.
+
+### Tag distribution (22 pmids, multi-tag)
+
+- `hedged_meta`: 9
+- `split_outcome`: 7
+- `biomarker_only`: 6
+- `narrative_review`: 5
+- `same_cohort_duplicate`: 4
+- `timing_window_subgroup`: 4 (new tag)
+- `observational_only`: 4
+- `case_series_underpowered`: 4
+- `mechanism_only`: 3
+- `indirect_endogenous_estrogen`: 3 (new tag)
+- `pilot_positive`: 3
+- `out_of_scope_treatment_not_prevention`: 3 (new tag)
+- `subgroup_apoe_split`: 2
+- `directionally_opposite_finding`: 2
+- `down_syndrome_cohort`: 2 (new tag)
+- `uncontrolled_observational`: 2
+- `short_duration`: 2
+- `broad_scope_review`: 2
+- `wrong_population`: 1
+- `missed_primary_sig_secondary`: 1
+- `preclinical_dominated`: 1
+- `subgroup_positive`: 1
+- `tangential_stratification`: 1
+- `landmark_no_group_difference`: 1
+- `commentary`: 1
+
+All 22 pmids tagged (≥1 tag each).
 
 ---
 
@@ -79,6 +251,8 @@ into stricter alignment.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 9496988 — current stance: `inconclusive`
+
+**Evidence span:** > Studies conducted in women, however, have substantial methodologic problems and have produced conflicting results. Given the known risks of estrogen therapy, we do not recommend estrogen for the prevention or treatment of Alzheimer disease or other dementias until adequate trials have been completed.
 
 **Golden note:** Yaffe 1998 review — observational supports, controlled trials don't.
 
@@ -92,6 +266,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34339416 — current stance: `inconclusive`
 
+**Evidence span:** > ET and EPT had opposite effects for endometrial cancer, endometrial hyperplasia, and Alzheimer disease.
+
 **Golden note:** MHT umbrella review — mixed across outcomes.
 
 **Menopausal hormone therapy and women's health: An umbrella review.**
@@ -103,6 +279,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19160224 — current stance: `inconclusive`
+
+**Evidence span:** > Currently, HRT or ERT for cognitive improvement or maintenance is not indicated for women with AD.
 
 **Golden note:** Cochrane HRT for cognition in dementia — insufficient evidence.
 
@@ -116,6 +294,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27163830 — current stance: `contradicts`
 
+**Evidence span:** > Women (age = 52-65) randomized to transdermal 17β-estradiol (n = 21) had lower PiB SUVR compared to placebo (n = 30) after adjusting for age [odds ratio (95% CI) = 0.31(0.11-0.83)].
+
 **Golden note:** KEEPS-AD RCT — recently postmenopausal women on transdermal estradiol; no effect on amyloid deposition. Pivotal test of timing-window hypothesis, primary missed.
 
 **Early Postmenopausal Transdermal 17β-Estradiol Therapy and Amyloid-β Deposition.**
@@ -127,6 +307,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 19468050 — current stance: `inconclusive`
+
+**Evidence span:** > There is some evidence for a beneficial effect of estrogen alone on verbal memory in younger naturally post-menopausal women... There is stronger evidence of a detrimental effect of conjugated equine estrogen plus medroxyprogesterone acetate on verbal memory in younger and older post-menopausal women.
 
 **Golden note:** HT and cognition — discrepant trial information.
 
@@ -140,6 +322,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20840280 — current stance: `supports`
 
+**Evidence span:** > Consistent with the "critical period" hypothesis, these studies suggest that the positive effects of estrogen are most robust in young women and in older women who had initiated ET around the time of menopause.
+
 **Golden note:** Critical-period hypothesis — early initiation may reduce AD risk.
 
 **Estrogen therapy and Alzheimer's dementia.**
@@ -151,6 +335,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 10997480 — current stance: `supports`
+
+**Evidence span:** > Twelve healthy menopausal women experiencing daily hot flushes and not on ERT were recruited to participate in a clinical study. There was a global improvement in CBF associated with ERT, an average gain of 22% over baseline.
 
 **Golden note:** Estrogen + CBF mechanism review — proposes protective mechanism.
 
@@ -164,6 +350,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36834617 — current stance: `inconclusive`
 
+**Evidence span:** > The literature suggests that estrogens have a clear role in modulating dementia risk, with reliable evidence showing that HRT can have both a beneficial and a deleterious effect.
+
 **Golden note:** 'HRT risk factor or therapeutic option?' — debate framing.
 
 **Is Hormone Replacement Therapy a Risk Factor or a Therapeutic Option for Alzheimer's Disease?**
@@ -175,6 +363,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32910516 — current stance: `inconclusive`
+
+**Evidence span:** > Undesirable side effects of hormone variations emphasize a role for hormone therapy (HT) where possible benefits include a delay in the onset of dementia-yet findings are inconsistent.
 
 **Golden note:** Estrogen + brain structure review — findings inconsistent.
 
@@ -188,6 +378,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38501109 — current stance: `inconclusive`
 
+**Evidence span:** > When initiated specifically in midlife or close to menopause onset, estrogen therapy was associated with improved verbal memory (SMD=0.394, 95% CI 0.014, 0.774; P=0.046), while late-life initiation had no effects.
+
 **Golden note:** MHT cognition meta — controversial.
 
 **Systematic review and meta-analysis of the effects of menopause hormone therapy on cognition.**
@@ -199,6 +391,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32057896 — current stance: `inconclusive`
+
+**Evidence span:** > Pooled results with random effect model showed a significant association between hormone therapy and Alzheimer's disease (OR 1.08, 95 % CI 1.03-1.14, I2: 69 %). However, the association appears to shift in direct after five years in the context of Alzheimer's disease, adding further weight to the critical window or timing hypothesis.
 
 **Golden note:** MHT-AD/dementia/PD time-response meta — controversial.
 
@@ -212,6 +406,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15511602 — current stance: `inconclusive`
 
+**Evidence span:** > Results indicate that while little overall beneficial effect of estrogen was found, years since menopause was significantly related to change in executive functioning in the estrogen but not the placebo group, such that more recently postmenopausal women demonstrated greater positive change than older women.
+
 **Golden note:** Reproductive events modify ERT cognitive effects — moderator framing.
 
 **Reproductive events modify the effects of estrogen replacement therapy on cognition in healthy postmenopausal women.**
@@ -223,6 +419,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 14520653 — current stance: `supports`
+
+**Evidence span:** > Women with early onset of menopause (46 years or younger) had earlier onset and increased risk of Alzheimer's disease (AD) compared with women with onset of menopause after 46 years (rate ratio, 2.7; 95% confidence interval [CI], 1.2-5.9).
 
 **Golden note:** Earlier menopause → earlier AD onset in Down syndrome — supports estrogen-loss hypothesis.
 
@@ -236,6 +434,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16926067 — current stance: `supports`
 
+**Evidence span:** > Women who had low levels of bioavailable E2 at baseline were four times as likely to develop AD (HR=4.1, 95% CI: 1.2-13.9) and developed AD, on average, 3 years earlier, than those with high levels of bioavailable E2.
+
 **Golden note:** Bioavailable estradiol delays AD onset in DS — supports timing.
 
 **Bioavailable estradiol and age at onset of Alzheimer's disease in postmenopausal women with Down syndrome.**
@@ -247,6 +447,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 23418430 — current stance: `inconclusive`
+
+**Evidence span:** > APOE-ε4 carriers who went off their HT regimen exhibited TL shortening, as predicted for the at-risk population. APOE-ε4 carriers who remained on HT, however, did not exhibit comparable signs of cell aging.
 
 **Golden note:** APOE-ε4 + accelerated cell aging in mid-life women — implication for HT.
 
@@ -260,6 +462,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33110037 — current stance: `inconclusive`
 
+**Evidence span:** > Increased levels of cognitive complaints were associated with lower gray-matter volume in the right medial temporal lobe (r = -0.445, P < 0.002, R = 0.2).
+
 **Golden note:** Cognitive complaints + GM volume in younger postmenop — descriptive.
 
 **Cognitive complaints are associated with smaller right medial temporal gray-matter volume in younger postmenopausal women.**
@@ -271,6 +475,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 34342862 — current stance: `inconclusive`
+
+**Evidence span:** > Both observational and controlled clinical trials had methodological issues and discrepancies in inclusion criteria and HT protocols. These inconsistencies made it difficult to establish an association between HT and AD.
 
 **Golden note:** HT in postmenop AD systematic review — conflicting.
 
@@ -284,6 +490,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40220453 — current stance: `supports`
 
+**Evidence span:** > Pooled estimates showed that MHT use for 3-5 years (cohort, RR = 0.56, 95% CI: 0.34-0.93) or initiation within 5 years of menopause (cohort, RR = 0.70, 95% CI: 0.49-0.99) reduced the risk of AD.
+
 **Golden note:** MHT duration/timing/route/formulation meta — protective association overall.
 
 **Association between duration, initiation time, routes, and formulations of menopausal hormone therapy use and Alzheimer disease in women: A systematic review and meta-analysis.**
@@ -295,6 +503,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39422947 — current stance: `supports`
+
+**Evidence span:** > Combination MHT should probably be prescribed for less than 5 years after menopause to reduce risk for AD, while estrogen alone should not be prescribed to women over 60.
 
 **Golden note:** (Phyto)estrogen + AD — modified by age + duration; supports timing window.
 
@@ -308,6 +518,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41618732 — current stance: `inconclusive`
 
+**Evidence span:** > Aβ and structural MRI biomarkers were not different in the oCEE and tE2 groups compared to placebo. Apolipoprotein E ε4 status did not modify the findings.
+
 **Golden note:** Long-term amyloid PET/MRI HT trial — biomarker-only.
 
 **Long-term amyloid PET and MRI outcomes in a menopausal hormone therapy trial.**
@@ -320,6 +532,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37393661 — current stance: `supports`
 
+**Evidence span:** > Women with EM demonstrated a greater risk of dementia of any type than women of normal age at menopause (OR 1.37, 95 % CI 1.22-1.54; I2 93%). Increased risk of dementia was also found in women with POI (OR 1.18, 95 % CI 1.15-1.21; I2 0%).
+
 **Golden note:** Early menopause / POI → increased dementia risk meta — supports estrogen-loss hypothesis.
 
 **Early menopause and premature ovarian insufficiency are associated with increased risk of dementia: A systematic review and meta-analysis of observational studies.**
@@ -331,6 +545,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 17368974 — current stance: `inconclusive`
+
+**Evidence span:** > Therefore the reported overall cardiovascular risks in WHI, in both treatment arms, should be regarded as irrelevant to menopause management.
 
 **Golden note:** WHI risks / menopause management commentary.
 

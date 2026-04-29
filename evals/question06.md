@@ -7,6 +7,7 @@ n=17 PMIDs.
 **Current S/C/I**: 9 / 1 / 7
 **Proposed S/C/I**: 6 / 3 / 8
 **Net flips**: 5
+**Borderline (flagged, not flipped)**: 3
 
 ---
 
@@ -20,12 +21,13 @@ n=17 PMIDs.
 | `22162476` | 2011 | **supports → inconclusive** | 2011 SR of 8 studies (n=328), mostly **healthy subjects**. Only 3 studies in MCI/AD. Conclusion is hedged: *"current limited clinical experience suggests potential beneficial cognitive effects."* Mostly off-target population (healthy adults), and the SR explicitly frames as "potential" / "preliminary." |
 | `34101779` | 2021 | **supports → inconclusive** | Secondary analysis of NCT01767909 — i.e., the **same trial** as Craft 2020 (`32568367`), whose primary endpoint failed. Reports WMH reduction. The study is being labeled `supports` based on a secondary biomarker outcome of a trial that overall did not meet its primary cognitive endpoint. Substudy framing applies. |
 
-### Borderline
+## Borderline (not flipped, but flagged for cross-question policy decisions)
 
-| PMID | Year | Status | Notes |
-|------|------|--------|-------|
-| `33719017` | 2021 | **inconclusive (keep)** | Glulisine phase 2, n=35. *"No significant difference in ADAS-Cog13, CDR-SOB, or FAQ scores between treatment groups."* Primary endpoint missed but small/exploratory. Could → `contradicts` under strict bar; `inconclusive` defensible because of small N + the abstract framing as "ability to detect significance was limited." |
-| `23507773` | 2013 | **supports (keep, flagged)** | Sex/APOE responder re-analysis of `21911655` (Craft 2011 pilot, n=104). Subgroup-positive in a parent trial that was overall positive. Same-cohort substudy — should be tagged for the UI paper-type filter, not flipped on stance alone. |
+| PMID | Year | Status | Policy category | Notes |
+|------|------|--------|-----------------|-------|
+| `33719017` | 2021 | **inconclusive (keep)** | (c) missed primary | Glulisine phase 2, n=35. *"No significant difference in ADAS-Cog13, CDR-SOB, or FAQ scores between treatment groups."* Primary endpoint missed but small/exploratory. Could → `contradicts` under strict bar; `inconclusive` defensible because of small N + the abstract framing as "ability to detect significance was limited." Tracking as policy (c)-adjacent: missed primary in underpowered trial. |
+| `23507773` | 2013 | **supports (keep, flagged)** | (a) subgroup analysis | Sex/APOE responder re-analysis of `21911655` (Craft 2011 pilot, n=104). Note: parent trial Craft 2011 was POSITIVE, not null, so this is the inverse of canonical policy (a). Same-cohort substudy — should be tagged for the UI paper-type filter, not flipped on stance alone. |
+| `29392460` | 2018 | **supports (keep, flagged)** | (a) subgroup-restricted positive | 2018 SR of 7 RCTs, n=293. Conclusion: *"Intranasal insulin improved story recall performance of apoe4 (-) patients with AD or MCI. Other cognitive functions were not affected, but there were some positive results in functional status and daily activity."* Headline benefit is restricted to APOE4-negative subgroup on one cognitive measure. Not a parent-null trial (it's an SR), but the same logic applies: subgroup-only positive on a single measure is `inconclusive` under the strict bar. Reviewer kept `supports` because story-recall pooling within APOE4(-) was sig — but the broader cognition stance is null. Flagged for the same policy decision as Q2: how to treat subgroup-only positive findings in SRs/metas. |
 
 ## Confirmed (no change)
 
@@ -34,7 +36,6 @@ n=17 PMIDs.
 - `32568367` (Craft 2020 phase 2/3 multisite, n=289, 12 mo) — **contradicts ✓** (primary endpoint not met in ITT; the pivotal negative trial)
 - `28372335` (regular vs detemir pilot, n=36, 4 mo) — **inconclusive ✓** (regular insulin sig memory benefit, detemir null — mixed across formulations)
 - `21694461` (vit D2 + insulin combo, n=32) — **inconclusive ✓** (combo intervention, abstract notes ADAS-Cog improvement may be regression to mean)
-- `29392460` (2018 SR, 7 studies, n=293) — **supports ✓** (defensible — pooled story recall improved, but only APOE4-negative)
 - `30958348` (EV biomarker substudy of Craft 2011) — **inconclusive ✓**
 - `35079029` (CSF neuroinflammation biomarker substudy of Craft 2020) — **inconclusive ✓**
 - `37379265` (2023 meta, 29 studies, n=1,726) — **supports ✓** (AD/MCI subgroup global cognition SMD=0.22, p<0.00001)
@@ -53,6 +54,27 @@ n=17 PMIDs.
 - After flips: 6 supports, 3 contradicts, 8 inconclusive — the "contested"
   consensus label fits much better than the current 9/1/7.
 
+## Cross-question policy questions
+
+Three recurring policy questions encountered (also flagged in Q2):
+
+- **(a) Subgroup-positive findings**: How to label findings whose headline
+  benefit is restricted to a pre-specified subgroup? Q6 instances:
+  `23507773` (sex/APOE responders within Craft 2011 — but note parent trial
+  was POSITIVE; this is the inverse of the Q2-canonical case),
+  `29392460` (SR where pooled benefit is restricted to APOE4(-) on story recall).
+  Strict bar arguably routes to `inconclusive` (genuinely mixed signal).
+- **(b) Preclinical/mech-dominated review labeled `supports`**: No clear Q6
+  instances — the SRs/metas in this question (`22162476`, `29392460`,
+  `36172480`, `37379265`, `41436338`) are clinical-data-based, not animal/mech.
+- **(c) Missed primary with significant secondary**: `33719017` (glulisine
+  phase 2) — primary missed (ADAS-Cog13/CDR-SOB/FAQ all null), no significant
+  secondaries either, but small sample (n=35) and limited power. Currently
+  `inconclusive`; under strict bar could be `contradicts` (RCT primary
+  missed). Defensible as `inconclusive` because abstract explicitly frames
+  as underpowered. Worth deciding policy: do underpowered missed-primary
+  RCTs count as `contradicts` or `inconclusive`?
+
 ## Highest-confidence flips for this question
 
 - `41436338` inconclusive → contradicts ("evidence does not support routine clinical use")
@@ -62,6 +84,41 @@ Both are unambiguous note-vs-conclusion mismatches; the most recent meta in
 the field concludes against use and the 2022 meta finds null pooled effect.
 
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q6)
+
+- `subgroup_apoe_split` — APOE-moderated effect where treatment helps one APOE subgroup and harms the other (genuinely bidirectional, not just subgroup-restricted positive)
+- `short_duration` — RCT duration <30 days, raising durability questions even if primary endpoint hits
+- `combo_intervention` — multi-agent intervention (vit D + insulin, INI + empagliflozin, etc.) where the contribution of intranasal insulin alone cannot be isolated
+- `biomarker_substudy` — substudy of a parent trial reporting biomarker (CSF, EV, imaging) outcomes rather than the parent's primary cognitive endpoint
+
+### Per-pmid tags
+
+- `21911655` (Craft 2011 pilot, supports) — `pilot_positive` (n=104 pilot RCT; primary delayed memory hit at 20 IU but secondary cog measures only sig in younger participants subgroup)
+- `17942819` (Reger 2007, supports) — `pilot_positive` (n=24, 21 days; primary hit but very small n and short)
+- `25374101` (detemir RCT, supports) — `subgroup_apoe_split`, `short_duration` (21 days; APOE4+ improved while APOE4- worsened on primary memory composite — bidirectional moderation)
+- `32568367` (Craft 2020, contradicts) — (none — clean canonical contradicts; the pivotal multi-site negative trial)
+- `28372335` (regular vs detemir pilot, inconclusive) — `pilot_positive`, `comparator_only` (3-arm with placebo so not strictly comparator-only, but cross-formulation comparison drives mixed signal; n=36 pilot)
+- `23507773` (sex/APOE responder analysis, supports) — `same_cohort_duplicate`, `subgroup_positive` (post-hoc responder re-analysis of Craft 2011 pilot cohort `21911655`; sex×APOE subgroup analysis)
+- `22162476` (2011 SR, supports) — `wrong_population`, `narrative_review` (8 studies n=328, mostly healthy subjects; only 3 in MCI/AD; conclusion hedged "potential beneficial effects")
+- `21694461` (vit D2 + insulin combo, inconclusive) — `combo_intervention`, `pilot_positive` (n=32; ADAS-Cog improvement may be regression to mean per authors; combined intervention)
+- `29392460` (2018 SR, supports) — `subgroup_positive`, `hedged_meta` (n=293 across 7 RCTs; benefit restricted to APOE4(-) on story recall only; "other cognitive functions were not affected")
+- `34101779` (WMH substudy, supports) — `same_cohort_duplicate`, `biomarker_substudy` (secondary analysis of NCT01767909 = Craft 2020 `32568367`; WMH outcome, not primary cognitive endpoint of parent-null trial)
+- `30958348` (EV biomarkers, inconclusive) — `same_cohort_duplicate`, `biomarker_substudy` (substudy of Craft 2011 pilot `21911655`; exploratory EV biomarker correlations)
+- `35079029` (CSF neuroinflammation, inconclusive) — `same_cohort_duplicate`, `biomarker_substudy` (substudy of Craft 2020 `32568367`; CSF inflammation markers; abstract describes the parent cohort as "showed benefit" which is misleading vs. ITT)
+- `33719017` (glulisine phase 2, inconclusive) — `underpowered_null`, `missed_primary_sig_secondary` (n=35; primary ADAS-Cog13/CDR-SOB/FAQ all null; abstract explicitly notes "ability to detect significance was limited"; no sig secondaries — primarily underpowered_null)
+- `36172480` (2022 meta, supports→contradicts) — `hedged_meta`, `subgroup_positive` (16 RCTs n=899; pooled cognitive SMD non-sig; ADCS-ADL functional and APOE4(-) verbal memory subgroup are the only sig results)
+- `37379265` (2023 meta, supports) — (none — clean canonical supports for AD/MCI subgroup; SMD=0.22 p<0.00001 across n=12 AD/MCI studies, pooled n=1,726)
+- `41057918` (INI + empagliflozin factorial, inconclusive) — `combo_intervention`, `pilot_positive`, `short_duration` (4 weeks; primary outcome was TRAEs not cognition; cognition is secondary; factorial 2×2 limits attribution to INI alone)
+- `41436338` (2025 meta, inconclusive→contradicts) — (none — clean canonical contradicts; "evidence does not support its routine clinical use" across 5 RCTs n=540)
+
+All other pmids — untagged (none remaining; all 17 pmids addressed above).
+
+
 ---
 
 ## Abstracts (n=17)
@@ -69,6 +126,8 @@ the field concludes against use and the 2022 meta finds null pooled effect.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 21911655 — current stance: `supports`
+
+**Evidence span:** > Treatment with 20 IU of insulin improved delayed memory (P < .05), and both doses of insulin (20 and 40 IU) preserved caregiver-rated functional ability (P < .01).
 
 **Golden note:** Craft 2011 pilot RCT — intranasal insulin improved cognition/function in MCI/AD.
 
@@ -82,6 +141,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17942819 — current stance: `supports`
 
+**Evidence span:** > The insulin-treated group retained more verbal information after a delay compared with the placebo-assigned group (p = 0.0374). Insulin-treated subjects also showed improved attention (p = 0.0108) and functional status (p = 0.0410).
+
 **Golden note:** Reger 2007 — intranasal insulin improves cognition + Aβ modulation in early AD.
 
 **Intranasal insulin improves cognition and modulates beta-amyloid in early AD.**
@@ -93,6 +154,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 25374101 — current stance: `supports`
+
+**Evidence span:** > This effect was moderated by APOE status (p < 0.05), reflecting improvement for APOE-ε4 carriers (p < 0.02), and worsening for non-carriers (p < 0.02).
 
 **Golden note:** Insulin detemir intranasal — improved cognition in MCI/early AD.
 
@@ -106,6 +169,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32568367 — current stance: `contradicts`
 
+**Evidence span:** > In this study, no cognitive or functional benefits were observed with intranasal insulin treatment over a 12-month period among the primary intention-to-treat cohort.
+
 **Golden note:** Craft 2020 multi-site RCT — primary endpoint NOT met. The pivotal negative trial.
 
 **Safety, Efficacy, and Feasibility of Intranasal Insulin for the Treatment of Mild Cognitive Impairment and Alzheimer Disease Dementia: A Randomized Clinical Trial.**
@@ -117,6 +182,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 28372335 — current stance: `inconclusive`
+
+**Evidence span:** > The regular insulin treated group had better memory after two and four months compared with placebo (p < 0.03). No significant effects were observed for the detemir-assigned group compared with the placebo group, or for daily functioning for either group.
 
 **Golden note:** Pilot trial regular vs detemir — mixed effects across formulations.
 
@@ -130,6 +197,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23507773 — current stance: `supports`
 
+**Evidence span:** > On delayed story memory, men and women showed cognitive improvement when taking 20 IU of intranasal insulin, but only men showed cognitive improvement for the 40 IU dose.
+
 **Golden note:** Sex/APOE responder analysis — specific subgroups benefited.
 
 **Sex and ApoE genotype differences in treatment response to two doses of intranasal insulin in adults with mild cognitive impairment or Alzheimer's disease.**
@@ -141,6 +210,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 22162476 — current stance: `supports`
+
+**Evidence span:** > The current limited clinical experience suggests potential beneficial cognitive effects of intranasal insulin.
 
 **Golden note:** Systematic review — intranasal insulin improves cognition.
 
@@ -154,6 +225,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 21694461 — current stance: `inconclusive`
 
+**Evidence span:** > ADAS-cog improved by a median (IR) of 9 (1-11) with nasal insulin after placebo high-dose vitamin D (p = 0.02), but may represent regression to the mean as WLS-R LM did not change.
+
 **Golden note:** Vit D2 + intranasal insulin RCT in AD — combo intervention, small.
 
 **A randomized controlled trial of high-dose vitamin D2 followed by intranasal insulin in Alzheimer's disease.**
@@ -165,6 +238,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29392460 — current stance: `supports`
+
+**Evidence span:** > Intranasal insulin improved story recall performance of apoe4 (-) patients with AD or MCI. Other cognitive functions were not affected, but there were some positive results in functional status and daily activity.
 
 **Golden note:** Systematic review intranasal insulin AD/MCI — beneficial.
 
@@ -178,6 +253,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34101779 — current stance: `supports`
 
+**Evidence span:** > Intranasal insulin treatment for 12 months reduced white matter hyperintensity volume progression and supports insulin's potential as a therapeutic option for Alzheimer's disease.
+
 **Golden note:** Intranasal insulin reduces WMH progression with cognitive improvement.
 
 **Intranasal Insulin Reduces White Matter Hyperintensity Progression in Association with Improvements in Cognition and CSF Biomarker Profiles in Mild Cognitive Impairment and Alzheimer's Disease.**
@@ -189,6 +266,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 30958348 — current stance: `inconclusive`
+
+**Evidence span:** > There were no EV biomarker changes from baseline in any of the treatment groups.
 
 **Golden note:** EV biomarkers track cognitive change post-intranasal insulin — exploratory.
 
@@ -202,6 +281,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35079029 — current stance: `inconclusive`
 
+**Evidence span:** > The insulin-treated group had increased CSF interferon-γ (p = 0.032) and eotaxin (p = 0.049), and reduced interleukin-6 (p = 0.048) over the 12 month trial compared to placebo.
+
 **Golden note:** Intranasal insulin modulates CSF neuroinflammation — biomarker, not cognitive primary.
 
 **Intranasal insulin modulates cerebrospinal fluid markers of neuroinflammation in mild cognitive impairment and Alzheimer's disease: a randomized trial.**
@@ -213,6 +294,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 33719017 — current stance: `inconclusive`
+
+**Evidence span:** > There were no enhancing effects of intranasal glulisine on cognition, function, or mood, but the ability to detect significance was limited by the number of subjects successfully enrolled and the study duration.
 
 **Golden note:** Glulisine phase 2 — small, exploratory.
 
@@ -226,6 +309,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36172480 — current stance: `supports`
 
+**Evidence span:** > The pooled standard mean difference (SMD) showed no significant difference between IN insulin and placebo groups; however, statistical results suggested a difference between study groups in the effects of ADCS-ADL; AD patients with APOE4 (-) also showed improved performance in verbal memory; other cognitions did not improve significantly.
+
 **Golden note:** Meta-analysis intranasal insulin MCI/dementia — improves cognition.
 
 **Efficacy of intranasal insulin in improving cognition in mild cognitive impairment or dementia: a systematic review and meta-analysis.**
@@ -237,6 +322,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 37379265 — current stance: `supports`
+
+**Evidence span:** > Patients with AD/MCI treated with INI were more likely to show an improvement in global cognition (SMD = 0.22, 95% CI: 0.05-0.38 p = <0.00001, N = 12 studies).
 
 **Golden note:** Systematic review/meta intranasal insulin in humans — overall positive.
 
@@ -250,6 +337,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41057918 — current stance: `inconclusive`
 
+**Evidence span:** > INI and empagliflozin treatment was safe with promising effects on cognition, fluid, and imaging biomarkers. A longer and larger trial is needed to confirm these results.
+
 **Golden note:** Phase 2A/B intranasal insulin + empagliflozin factorial — mixed.
 
 **A phase 2A/B randomized trial of metabolic modulators intranasal insulin and empagliflozin for MCI and early AD.**
@@ -261,6 +350,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41436338 — current stance: `inconclusive`
+
+**Evidence span:** > Intranasal insulin was generally well tolerated but did not produce meaningful improvements in cognitive, functional, or biomarker outcomes in patients with MCI or mild-to-moderate AD. Current evidence does not support its routine clinical use.
 
 **Golden note:** 2025 meta of RCTs — net mixed, includes Craft 2020 negative.
 

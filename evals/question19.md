@@ -8,6 +8,11 @@ n=20 PMIDs.
 **Proposed S/C/I**: 4 / 9 / 7
 **Net flips**: ~9 (the heaviest re-labeling load of any question)
 
+**Review status (post-audit)**: All 10 originally-proposed flips confirmed.
+No additional clean flips found beyond the 10 in the table. Three entries
+flagged as borderline (subgroup-positive in parent-null trial pattern; see
+Borderline section).
+
 Q19 has the largest correction load in the entire eval set. The
 question asks whether APOE genotype **modifies** ChEI response — i.e.,
 is there a treatment × genotype interaction? Most current `supports`
@@ -38,13 +43,34 @@ literature is dominated by null interaction findings.
 - `8618881` (Poirier 1995 — ε4 predicts poor ChEI outcome on tacrine) — **supports ✓** (foundational study; >80% non-ε4 improved vs 60% of ε4 carriers worsened)
 - `11173877` (APOE: NO influence on galantamine, n=1528) — **contradicts ✓** (well-powered null)
 - `18401173` (donepezil + APOE n=51) — **inconclusive ✓** (small, ε4 carriers slightly more responsive p=0.03 — borderline)
-- `18334913` (APOE ε4 + BCHE-K synergistic on placebo MCI→AD progression) — **supports ✓** (defensible — about treatment response in InDDEx rivastigmine trial)
-- `27567841` (BCHE-K + APOE-ε4 modulate donepezil response in aMCI) — **supports ✓** (sig benefit at 3-yr follow-up in genotype carriers)
 - `22012848` (APOE ε4 modulates BChE CSF — biomarker only) — **inconclusive ✓**
 - `12566177` (CMRglc/CSF biomarkers — biomarker focus) — **inconclusive ✓**
-- `23051684` (rivastigmine ± memantine + APOE n=146) — **supports ✓** (defensible — moderately severe ε4 carriers showed higher responder rates with combo)
 - `30041236` (AChEI + APOE-ε4 meta — null pooled) — **contradicts ✓**
 - `24479631` (BCHE + ApoE on cortical thickness — descriptive) — **inconclusive ✓**
+
+## Borderline (kept as `supports`, flagged for policy review)
+
+These three remain `supports` but exhibit recurring policy issue (a)
+**subgroup-positive in parent-null trial**. Not flipping under "verbatim
+mismatch only" rule, but worth a future stricter pass:
+
+- `27567841` (BCHE-K + APOE-ε4 modulate donepezil response in aMCI) —
+  post-hoc analysis of Petersen et al. vitamin E/donepezil aMCI trial
+  whose primary endpoint was largely null on donepezil long-term. The
+  "benefit at 3-yr follow-up in APOE-ε4/BCHE-K* carriers" is a
+  prespecified-genotype subgroup finding within a null parent. Policy
+  issue (a).
+- `23051684` (rivastigmine ± memantine + APOE n=146) — abstract states
+  *"There were no significant differences on MMSE, NPI, ADAS-cog,
+  ADCS-ADL, CDR-SB, NPI and FAB"* (primary endpoints null), then notes
+  ε4 carriers with moderately severe AD had higher ADCS-ADL responder
+  rates with combo. Subgroup-positive within a null primary. Policy
+  issue (a). Conservative reading: should arguably be `inconclusive`.
+- `18334913` (APOE ε4 + BCHE-K synergistic on MCI→AD progression in
+  InDDEx) — placebo-arm analysis from InDDEx rivastigmine trial. Speaks
+  to genotype as a progression predictor, not to ChEI treatment response
+  modification (which is the actual question). Off-target for Q19.
+  Conservative reading: `inconclusive`.
 
 ## Cross-cutting issues
 
@@ -73,6 +99,99 @@ literature is dominated by null interaction findings.
   or "does not affect" language for APOE × ChEI; should be `contradicts`
   under the strict bar.
 
+## signal_types (annotation layer)
+
+Tags below describe structural/methodological caveats of each entry,
+independent of the stance label. Multi-tag where applicable. Untagged
+entries are clean primary-RCT/meta findings on the modification question.
+
+### Proposed new tags (Q19)
+
+- `null_interaction_with_main_effect_positive` — pooled or single-trial
+  RCT showing the drug works overall but explicitly testing the APOE
+  interaction term and finding it non-significant. Distinguishes "drug
+  works, modifier doesn't" from "drug doesn't work" — both common in
+  this literature but mean very different things.
+- `interaction_test_only` — paper's primary design is the interaction
+  test (treatment × genotype), not a stance on whether the drug works.
+  Useful to flag because supports/contradicts here is about the
+  modifier question, not drug efficacy.
+
+### Tagged entries
+
+- `8618881` — `interaction_test_only`. Foundational positive but n=40
+  tacrine trial subgroup; small. (Kept as `supports` — direction is
+  unambiguous in the abstract.)
+- `9777427` — `split_outcome`, `short_duration`, `interaction_test_only`.
+  Short-term null with hand-waved long-term hint.
+- `11173877` — `interaction_test_only`, `null_interaction_with_main_effect_positive`.
+  Galantamine works overall, ε4 doesn't modify; well-powered (n=1528).
+- `18401173` — `pilot_positive`, `underpowered_null`, `interaction_test_only`.
+  n=51, p=0.03 borderline.
+- `18334913` — `wrong_population`, `tangential_stratification`,
+  `subgroup_positive_prespecified`. Predicts MCI→AD progression in placebo
+  arm; not a ChEI-response-modification finding.
+- `10599773` — `interaction_test_only`, `null_interaction_with_main_effect_positive`,
+  `hedged_meta`. Pooled 4 RCTs n=959.
+- `22986607` — `interaction_test_only`, `class_positive_drug_null`. CYP2D6
+  effect found, APOE specifically null (label was anchored on CYP2D6).
+- `15289797` — `interaction_test_only`, `directionally_opposite_finding`.
+  Title says "differential" but both subgroups responded similarly.
+- `27567841` — `subgroup_positive_prespecified`, `combo_intervention`,
+  `wrong_population`. Post-hoc on Petersen aMCI trial whose donepezil arm
+  was largely null long-term. Policy issue (a).
+- `22012848` — `biomarker_only`, `mechanism_only`. CSF BuChE phenotype.
+- `12566177` — `biomarker_only`, `pilot_positive`. n=11 + n=16,
+  CMRglc/CSF only, no clinical endpoint.
+- `26402762` — `interaction_test_only`, `null_interaction_with_main_effect_positive`.
+  Pooled 3 phase-III RCTs.
+- `27282366` — `interaction_test_only`, `hedged_meta`,
+  `null_interaction_with_main_effect_positive`. Meta n=1266.
+- `17132969` — `interaction_test_only`, `uncontrolled_observational`.
+  Open-label nonrandomized but explicit null on interaction.
+- `15636076` — `pilot_positive`, `uncontrolled_observational`,
+  `subgroup_positive`. n=84 retrospective, p=0.032 in ε4 homozygotes
+  only (small subgroup of small study).
+- `16254428` — `interaction_test_only`, `null_interaction_with_main_effect_positive`,
+  `split_outcome`. Cognition null, behavioral subscale subgroup-positive
+  for noncarriers.
+- `27716659` — `underpowered_null`, `interaction_test_only`,
+  `uncontrolled_observational`. n=42 naturalistic.
+- `23051684` — `subgroup_positive_prespecified`, `combo_intervention`,
+  `landmark_no_group_difference`. Primary endpoints null; ε4 subgroup
+  positive on ADCS-ADL with combo only. Policy issue (a).
+- `30041236` — `hedged_meta`. 30-study meta, pooled null.
+- `24479631` — `biomarker_only`, `descriptive_utilization`. Cortical
+  thickness + NPS, no efficacy outcome.
+
+### Tag distribution (Q19)
+
+- `interaction_test_only`: 11
+- `null_interaction_with_main_effect_positive`: 6
+- `subgroup_positive_prespecified`: 3
+- `pilot_positive`: 3
+- `uncontrolled_observational`: 3
+- `biomarker_only`: 3
+- `underpowered_null`: 2
+- `hedged_meta`: 3
+- `combo_intervention`: 2
+- `wrong_population`: 2
+- `split_outcome`: 2
+- `mechanism_only`: 1
+- `descriptive_utilization`: 1
+- `directionally_opposite_finding`: 1
+- `landmark_no_group_difference`: 1
+- `short_duration`: 1
+- `subgroup_positive`: 1
+- `tangential_stratification`: 1
+- `class_positive_drug_null`: 1
+
+19 of 20 pmids tagged (only `8618881` minimally tagged with one
+structural tag). The dominant signature is `interaction_test_only` +
+`null_interaction_with_main_effect_positive` — the literature is
+mostly well-conducted RCTs/metas where the drug works overall but APOE
+does not modify the response. This is the structural reason for the
+heavy re-labeling load.
 
 ---
 
@@ -81,6 +200,8 @@ literature is dominated by null interaction findings.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 8618881 — current stance: `supports`
+
+**Evidence span:** > Results showed that > 80% of apoE4-negative AD patients showed marked improvement after 30 weeks as measured by the AD assessment scale (ADAS), whereas 60% of apoE4 carriers had ADAS scores that were worse compared to baseline.
 
 **Golden note:** Poirier 1995 — ε4 predicts cholinergic deficits and lower ChEI treatment outcome.
 
@@ -94,6 +215,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 9777427 — current stance: `supports`
 
+**Evidence span:** > While ApoE genotype did not modify response to therapy in the short term, there are indications that it may affect response over the longer term (up to 12 months).
+
 **Golden note:** Gender + APOE genotype as predictors of anticholinesterase response — ε4 modifies outcome.
 
 **Effect of gender and apolipoprotein E genotype on response to anticholinesterase therapy in Alzheimer's disease.**
@@ -105,6 +228,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 11173877 — current stance: `contradicts`
+
+**Evidence span:** > Galantamine produced cognitive and functional improvement that were not affected by epsilon 4 allele count.
 
 **Golden note:** APOE genotype: NO influence on galantamine efficacy. Clear negative.
 
@@ -118,6 +243,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18401173 — current stance: `inconclusive`
 
+**Evidence span:** > ApoE epsilon4 carriers with AD showed a mean 1.1-point increase from the baseline score of 23.9 on the 70-point Alzheimer's Disease Assessment Scale-Cognitive Component at 48 weeks, while the ApoE epsilon4 noncarrier group showed a 3.1-point increase from the baseline score of 22.5 (p = 0.03).
+
 **Golden note:** Donepezil + ApoE — described as 'matter of controversy', mixed results.
 
 **Effect of ApoE genotype on response to donepezil in patients with Alzheimer's disease.**
@@ -129,6 +256,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 18334913 — current stance: `supports`
+
+**Evidence span:** > In MCI, the risk of cognitive decline, hippocampal volumetric loss and progression to AD seems to be the greatest in individuals who carry at least one copy of both the BCHE-K and APOE epsilon4 alleles.
 
 **Golden note:** Synergistic APOE ε4 + BCHE-K predicts MCI→AD progression on rivastigmine.
 
@@ -142,6 +271,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 10599773 — current stance: `supports`
 
+**Evidence span:** > The interaction of APOE genotype and the metrifonate effect on cognitive performance were not significant (p = 0.25). The findings from these studies of up to 26 weeks' duration do not clearly support an interaction between APOE genotype and metrifonate treatment effects.
+
 **Golden note:** Metrifonate + APOE genotype interaction detected.
 
 **Metrifonate treatment of AD: influence of APOE genotype.**
@@ -153,6 +284,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 22986607 — current stance: `supports`
+
+**Evidence span:** > However, the frequency of APOE ε4 carriers and noncarriers showed no difference between the 2 groups (P > 0.05). We did not find the relationship between APOE ε4 status and the efficacy of donepezil in our study.
 
 **Golden note:** CYP2D6*10 + APOE polymorphisms affect donepezil efficacy.
 
@@ -166,6 +299,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15289797 — current stance: `supports`
 
+**Evidence span:** > Non-APOE epsilon4 carriers showed a less favorable course under either placebo or rivastigmine, but both genotype-defined subgroups showed quantitatively similar responses to therapy (both P<0.05 vs placebo).
+
 **Golden note:** Differential rivastigmine response in ε4 carriers vs non-carriers.
 
 **Differential qualitative responses to rivastigmine in APOE epsilon 4 carriers and noncarriers.**
@@ -177,6 +312,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 27567841 — current stance: `supports`
+
+**Evidence span:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
 
 **Golden note:** BCHE-K + APOE-ε4 modulate donepezil response in aMCI.
 
@@ -190,6 +327,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22012848 — current stance: `inconclusive`
 
+**Evidence span:** > APOE4-dependent outcome of BCHE-K genotype as AD risk factor arises through a differential phenotypic modulation of BuChE.
+
 **Golden note:** APOE ε4 modulates BChE CSF phenotype — biomarker, not direct treatment outcome.
 
 **Apolipoprotein ε4 modulates phenotype of butyrylcholinesterase in CSF of patients with Alzheimer's disease.**
@@ -201,6 +340,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 12566177 — current stance: `inconclusive`
+
+**Evidence span:** > The CSF-tau changes were mainly seen in ApoE epsilon4 carriers. This study shows that the two long-term cholinesterase inhibitor treatments exert different effects on biological markers for AD.
 
 **Golden note:** CMRglc/CSF biomarkers + APOE in long-term ChEI — biomarker focus.
 
@@ -214,6 +355,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26402762 — current stance: `inconclusive`
 
+**Evidence span:** > No appreciable interaction between donepezil response and APOE-ɛ4 carrier status or copy number was detected. Within this population, APOE genotype had no statistically significant effect on cognitive response to donepezil treatment.
+
 **Golden note:** APOE-ε4 + donepezil response — 'inconsistent results across studies'.
 
 **APOE-ɛ4 Carrier Status and Donepezil Response in Patients with Alzheimer's Disease.**
@@ -225,6 +368,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 27282366 — current stance: `inconclusive`
+
+**Evidence span:** > No independent effect of APOE polymorphism on donepezil clinical responses was found (OR 1.08, 95 % CI 0.85-1.38; p = 0.53).
 
 **Golden note:** CYP2D6/APOE + donepezil systematic review — controversy persists.
 
@@ -238,6 +383,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17132969 — current stance: `supports`
 
+**Evidence span:** > The results of the analysis of this study indicate that the presence of at least one APOE epsilon4 allele does not determine a difference in the response to treatment with rivastigmine.
+
 **Golden note:** Rivastigmine efficacy related to ε4 — modifier effect.
 
 **Relationship between the efficacy of rivastigmine and apolipoprotein E (epsilon4) in patients with mild to moderately severe Alzheimer disease.**
@@ -249,6 +396,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 15636076 — current stance: `inconclusive`
+
+**Evidence span:** > The significant number of responders was observed among apoE4 homozygous patients (71%; chi2 = 6.89; p = 0.032).
 
 **Golden note:** Galanthamine retrospective + APOE — no clear effect.
 
@@ -262,6 +411,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16254428 — current stance: `inconclusive`
 
+**Evidence span:** > ApoE epsilon4 genotype does not affect galantamine-related improvements in cognition, global rating, function and behavior.
+
 **Golden note:** Korean galantamine RCT + ε4 — small, mixed.
 
 **Effect of the apolipoprotein E epsilon4 allele on the efficacy and tolerability of galantamine in the treatment of Alzheimer's disease.**
@@ -273,6 +424,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 27716659 — current stance: `inconclusive`
+
+**Evidence span:** > The study results indicated the good response pattern was influenced by the concentration of donepezil, but not by APOE and CYP2D6 polymorphisms.
 
 **Golden note:** Donepezil + APOE/CYP2D6 naturalistic — mixed.
 
@@ -286,6 +439,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23051684 — current stance: `supports`
 
+**Evidence span:** > However, patients with moderately severe AD (MMSE ≤15) who were APOE ε4 carriers showed higher responder rates on ADCS-ADL with memantine plus rivastigmine patch compared to rivastigmine patch monotherapy.
+
 **Golden note:** Rivastigmine ± memantine response affected by APOE genotype.
 
 **Response to rivastigmine transdermal patch or memantine plus rivastigmine patch is affected by apolipoprotein E genotype in Alzheimer patients.**
@@ -298,6 +453,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30041236 — current stance: `contradicts`
 
+**Evidence span:** > APOE ɛ4 carrier status had no significant influence on the treatment response to AChEIs in patients with AD. AChEIs had a positive therapeutic effect compared with placebo regardless of APOE ε4 carrier status.
+
 **Golden note:** AChEI cognitive response + APOE-ε4 meta — limited differential effect.
 
 **Effect of Apolipoprotein E ɛ4 Carrier Status on Cognitive Response to Acetylcholinesterase Inhibitors in Patients with Alzheimer's Disease: A Systematic Review and Meta-Analysis.**
@@ -309,6 +466,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 24479631 — current stance: `inconclusive`
+
+**Evidence span:** > The current findings show that, similar to ApoE-ε4 non-carriers, BChE-K carriers are protected from the pathological detriments of AD that affect frontal cortical thickness and neuropsychiatric symptoms.
 
 **Golden note:** BCHE + ApoE on cortical thickness/NPS — descriptive imaging.
 

@@ -36,15 +36,22 @@ labeled.
 - `38669527` (urinary AD7c-NTP biomarker n=40) — **inconclusive ✓**
 - `40454205` (umbrella exercise + cog dysfunction) — **supports ✓** (aerobic MD 2.95 for AD)
 
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+- **`33523004`** (Yu cycling RCT) — explicitly cites *"lack of power"*
+  as the reason for the null primary; primary endpoint missed is the
+  CLAUDE.md-defined trigger for `contradicts`, so stance kept. Fits
+  `underpowered_null` caveat — the trial was self-described as a
+  "pilot" and authors attribute the null to power, not to absence of
+  effect. No cross-question policy change required (CLAUDE.md is
+  explicit on this).
+- **`41790706`** — population mismatch (MCI not AD) and combo
+  intervention (aerobic + mind-body), where aerobic-alone is non-sig
+  on 2 of 3 cognitive scales. Flipped S→I above; flagging here
+  because the headline of the paper itself argues mind-body > aerobic.
+
 ## Cross-cutting issues
 
-- **Population mismatch in some studies**: `41790706` mixes structured
-  aerobic with mind-body (Tai Chi, yoga, dance) in an MCI population
-  rather than AD. The aerobic component alone is null on MMSE.
-- **`33523004`** explicitly cites *"lack of power"* as the reason
-  for the null primary; this is a borderline `contradicts` that could
-  also be `inconclusive`. Keep as-is — primary endpoint missed is the
-  CLAUDE.md-defined trigger for `contradicts`.
 - After flips: 7/1/4 (composition shifts I→S and S→I, count unchanged).
   The "contested" expected consensus is partly justified by the
   pivotal RCT being null while pooled metas are positive — same
@@ -56,7 +63,30 @@ labeled.
   report significantly positive pooled MMSE/ADAS-Cog effects. The
   current `inconclusive` labels reflect the *background* framing of
   the abstracts, not the *results*.
+- `28157102` supports → inconclusive — n=10 uncontrolled biomarker
+  study, cognitive primary not met (Stroop only trend p=0.06).
+- `41790706` supports → inconclusive — aerobic-alone is non-sig on
+  MMSE and MoCA in this combo (mind-body + aerobic) MCI meta.
 
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Untagged = strong/canonical; tagged = some caveat.
+
+- `33523004` — `underpowered_null`, `pilot_positive` (authors call this a pilot RCT and attribute null primary to "lack of power"; secondary slowing-of-decline framing)
+- `27760869` — `non_durable_effect` (sig ADAS-Cog -1.71 at intervention end, not maintained at 6-mo follow-up; population is SIVCI not AD per se — wrong_population caveat too)
+- `34601135` — `split_outcome` (multi-domain meta; MMSE significance reached only for aerobic subgroup, not other modalities)
+- `40454205` — `broad_scope_review`, `class_positive_drug_null` (umbrella over MCI/dementia/AD/PD/stroke; aerobic+AD pooled MD 2.95 sig; Class IV evidence per authors due to small samples)
+- `28157102` — `biomarker_only`, `uncontrolled_observational`, `case_series_underpowered` (n=10, open-label, cognition primary trend only; flipped S→I)
+- `41790706` — `combo_intervention`, `wrong_population`, `split_outcome` (MCI not AD; aerobic-alone non-sig on MMSE/MoCA; flipped S→I)
+- `38669527` — `biomarker_only`, `combo_intervention` (urinary AD7c-NTP primary, with K-MMSE secondary; aerobic vs combined RAG arms, active control)
+- `32505710` — `methodology_only` (inter-individual variance secondary analysis of FIT-AD; no group-difference efficacy claim)
+- `39800395` — `hedged_meta` (abstract hedges "findings not entirely consistent" and notes high heterogeneity, but pooled effect significant; flipped I→S)
+- `36497772` — `hedged_meta` (abstract opens "findings conflicting" referring to background literature, but pooled MMSE effect significant; flipped I→S)
+- All other pmids (`15249848`, `36281092`) — untagged
+
+### Proposed new tags (Q16)
+
+- `non_durable_effect` — significant effect at intervention end that does not persist at follow-up (i.e., effect dissipates after intervention stops). Distinct from `short_duration` (which is about trial length) and from missed-primary patterns.
 
 ---
 
@@ -65,6 +95,8 @@ labeled.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 15249848 — current stance: `supports`
+
+**Evidence span:** > In a multiple regression model, high exercise level at the baseline assessment was negatively associated with, ie, was protective against, being in the group with the greatest amount of decline at the follow-up assessment, after adjusting for likely confounders (odds ratio = 0.39; 95% confidence interval, 0.19, 0.78).
 
 **Golden note:** MoVIES — exercise protective against cognitive decline (MMSE outcome).
 
@@ -78,6 +110,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33523004 — current stance: `contradicts`
 
+**Evidence span:** > ADAS-Cog did not differ between groups at 6 (p = 0.386) and 12 months (p = 0.856). Aerobic exercise did not show superior cognitive effects to stretching in our pilot trial, possibly due to the lack of power.
+
 **Golden note:** Yu aerobic cycling RCT in AD (n=96) — primary cognitive endpoint not met.
 
 **Cognitive Effects of Aerobic Exercise in Alzheimer's Disease: A Pilot Randomized Controlled Trial.**
@@ -89,6 +123,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 27760869 — current stance: `supports`
+
+**Evidence span:** > At the end of the intervention, the aerobic exercise training group had significantly improved ADAS-Cog performance compared with the usual care plus education group (-1.71 point difference, 95% confidence interval [CI] -3.15 to -0.26, p = 0.02).
 
 **Golden note:** Aerobic exercise + vascular CI RCT — improved everyday function.
 
@@ -102,6 +138,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34601135 — current stance: `supports`
 
+**Evidence span:** > Benefits were also found in the MMSE test, albeit significance was only reached for aerobic exercise (n = 187, MD=2.31 points, 95% CI 0.45-4.27).
+
 **Golden note:** Exercise meta in AD — multi-domain benefit.
 
 **Exercise interventions in Alzheimer's disease: A systematic review and meta-analysis of randomized controlled trials.**
@@ -113,6 +151,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36497772 — current stance: `inconclusive`
+
+**Evidence span:** > There was a significant effect of aerobic exercise on increasing mini-mental state examination (MMSE) score in AD patients [weighted mean difference (WMD), 1.50 (95% CI, 0.55 to 2.45), p = 0.002].
 
 **Golden note:** Aerobic exercise + AD cognition meta — findings conflicting.
 
@@ -126,6 +166,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 28157102 — current stance: `supports`
 
+**Evidence span:** > In this uncontrolled study, ten patients with mild AD participated in a 3-month, individualized, moderate-intensity aerobic training on a treadmill (Walking). There was a tendency toward improvement in the Stroop-color naming test (-10% completion time, p = 0.06).
+
 **Golden note:** 3-month aerobic training mild AD — improved brain energy metabolism.
 
 **A 3-Month Aerobic Training Program Improves Brain Energy Metabolism in Mild Alzheimer's Disease: Preliminary Results from a Neuroimaging Study.**
@@ -137,6 +179,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32505710 — current stance: `inconclusive`
+
+**Evidence span:** > There are true inter-individual differences in aerobic fitness and cognitive responses to aerobic exercise in older adults with mild-to-moderate dementia due to AD. These inter-individual differences likely underline the inconsistent cognitive benefits in human studies.
 
 **Golden note:** FIT-AD inter-individual differences — explains inconsistency.
 
@@ -150,6 +194,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36281092 — current stance: `supports`
 
+**Evidence span:** > Meta analysis of all articles: I2 = 91%, P ≤ .00001, (MD = 2.95, 95%CI [2.49, 3.40], P ≤ .00001).
+
 **Golden note:** Meta aerobic exercise + AD — improves cognition.
 
 **Meta analysis of aerobic exercise improving intelligence and cognitive function in patients with Alzheimer's disease.**
@@ -161,6 +207,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39800395 — current stance: `inconclusive`
+
+**Evidence span:** > For the Minimum Mental State Examination (MMSE) (SMD=0.95, 95% CI 0.58 to 1.32, Z=5.06, p<0.00001), Alzheimer's Disease Assessment Scale-Cognitive Section (ADAS-cog) (SMD=-0.67, 95% CI -1.15 to -0.2, Z=2.77, p=0.006).
 
 **Golden note:** Aerobic exercise + AD meta — findings not entirely consistent.
 
@@ -174,6 +222,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38669527 — current stance: `inconclusive`
 
+**Evidence span:** > This is the first study to investigate urine biomarker through exercise intervention. In future stuides, participants who have low cognitive function and low activity levels need to be recruited to observe more significant 'Exercise' effect.
+
 **Golden note:** Exercise + urinary AD7c-NTP biomarker — biomarker-focused.
 
 **Effects of Exercise on Urinary AD7c-NTP (Alzheimer-Associated Neuronal Thread Protein) Levels and Cognitive Function Among Active Korean Elderly: A Randomized Controlled Trial.**
@@ -186,6 +236,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40454205 — current stance: `supports`
 
+**Evidence span:** > Aerobic exercise (MD 2.95) was more effective for AD, while mind-body exercises (MD 1.68) benefitted PD patients.
+
 **Golden note:** Umbrella review exercise in cognitive dysfunction — beneficial.
 
 **Effects of exercise interventions on cognitive function in patients with cognitive dysfunction: an umbrella review of meta-analyses.**
@@ -197,6 +249,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41790706 — current stance: `supports`
+
+**Evidence span:** > Structured aerobic exercise showed non-significant effects on MMSE (MD = 0.37, P = .21) and MoCA (MD = -0.49, P = .26), with modest improvement on ADAS-Cog (MD = -1.41, P = .002).
 
 **Golden note:** Aerobic + mind-body in MCI meta — exercise improves cognition.
 

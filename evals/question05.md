@@ -5,47 +5,145 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=7 PMIDs.
 
 **Current S/C/I**: 0 / 2 / 5
-**Proposed S/C/I**: 0 / 2 / 5
-**Net flips**: 0
+**Proposed S/C/I**: 0 / 3 / 4
+**Net flips**: 1 (inconclusive → contradicts)
 
-This is a narrow question and the labels reflect that. Notes are accurate.
+The original reviewer proposed 0 flips. On second pass, one entry meets the
+strict bar for `contradicts`: a well-powered meta-analysis (n=13,003) that
+explicitly concludes no differential efficacy by APOE4 carrier status. The
+original review noted this exact issue but argued "the explicit 'no
+difference' framing is properly `inconclusive`" — that reasoning is
+inconsistent with the strict bar, which treats meta-analyses concluding
+"evidence does not support" as `contradicts`.
+
+Two additional entries are flagged for policy issue (a) — subgroup analyses
+where the parent trial program had mixed results (EMERGE positive, ENGAGE
+negative) — but they're already labeled `inconclusive`, so no flip needed.
 
 ---
+
+## Proposed flips
+
+| PMID | Year | Current → Proposed | Reason |
+|---|---|---|---|
+| 40316479 | 2025 | inconclusive → **contradicts** | Meta-analysis (n=13,003 across 7 mAB + 9 AChEI trials) explicitly concludes "efficacy did not differ by disease stage, concomitant AD medications, or APOE4 carrier status." A well-powered meta-analysis with explicit null on APOE4-specific benefit is the textbook strict-bar `contradicts` case. The original reviewer flagged this exact issue but kept `inconclusive` on the framing argument, which doesn't survive the strict bar. |
+
+---
+
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+### Policy issue (a) — subgroup-positive in parent-null trial
+
+- `39350371` (2024 Japanese subgroup of EMERGE/ENGAGE) — Currently
+  `inconclusive`. The abstract reports "A treatment effect was observed in
+  favor of aducanumab on the primary and secondary efficacy endpoints at
+  Week 78 in EMERGE, but not ENGAGE." This is the parent-trial split
+  (EMERGE+ / ENGAGE−); both trials were terminated early for futility. The
+  paper is also stratified by ethnicity rather than APOE specifically. The
+  current `inconclusive` label is consistent with the strict bar (it would
+  be wrong to call this `supports` based on EMERGE-only positivity), but
+  it's an instance of the recurring policy question across the golden set
+  — flag, don't flip.
+- `40545559` (2025 EMERGE re-analysis) — Currently `inconclusive`. Reports
+  positive findings within EMERGE only (the trial that hit), with
+  randomization stratified by APOE4 status. ENGAGE is not addressed in
+  this re-analysis. Conclusion: "Aducanumab meaningfully slowed disease
+  progression in participants with early AD." Currently `inconclusive`
+  which is consistent with the strict bar (parent program's high-dose
+  primary did not consistently hit; this is a one-trial re-analysis of
+  the positive arm), but flag as another instance of policy issue (a).
 
 ## Confirmed (no change)
 
 - `34807243` (EMERGE/ENGAGE ARIA — APOE4 carriers had *higher* ARIA-E rates,
   i.e. more harm not more benefit) — **contradicts ✓**
-- `36038268` (ARIA meta — APOE4 a predisposing factor for adverse imaging
-  events) — **contradicts ✓**
+- `36038268` (ARIA meta — directional but non-sig APOE4 differential on
+  ARIA, p=0.663 / 0.398) — **contradicts ✓**.
+  *Note for future review:* the original golden note frames this as "APOE4
+  a predisposing factor for adverse imaging events," but the meta found
+  the APOE4 vs noncarrier difference was NOT statistically significant.
+  An argument exists that this is `inconclusive` (null on APOE4
+  differential), but as ARIA-not-benefit it doesn't strongly bear on the
+  question either way. Conservatively kept at `contradicts` since
+  directionally it indicates more harm in carriers.
 - `37423541` (anti-Aβ phase 3 meta; APOE4 carriers have more ARIA, mixed
   cognitive across drugs) — **inconclusive ✓**
-- `40316479` (2025 anti-amyloid vs AChEI meta) — **inconclusive ✓**.
-  *Adjacent finding worth noting:* the abstract states *"efficacy did not
-  differ by disease stage, concomitant AD medications, or APOE4 carrier
-  status"* — that's evidence against APOE4-specific benefit. Could argue
-  `contradicts`, but the explicit "no difference" framing is properly
-  `inconclusive`.
 - `41109234` (2025 aducanumab neuropath case-control, n=5+12) —
   **inconclusive ✓** (too small for clean APOE4 carrier-vs-noncarrier
   comparison; all 5 treated participants carried at least one APOE ε4)
-- `39350371` (2024 Japanese subgroup of EMERGE/ENGAGE) — **inconclusive ✓**
-  (stratification by ethnicity, not specifically APOE)
-- `40545559` (2025 EMERGE re-analysis) — **inconclusive ✓**. Explicitly
-  stratified by APOE4 in randomization, but the abstract does not break
-  out carrier-vs-noncarrier *efficacy*. Note is accurate.
 
 ## Observations
 
 - The narrow question + small candidate pool (7) keeps quality high. **This
   is what good golden-set entries look like.**
 - Q5 demonstrates the value of narrowing — every paper directly addresses
-  the question, no scope drift, no comparator-framing issues. None of the
-  systematic problems that affect Q1–Q4 show up here.
+  the question, no scope drift, no comparator-framing issues. The one
+  proposed flip (40316479) is a strict-bar interpretation question, not
+  a misclassification of the underlying paper's content.
+- Policy issue (a) shows up twice (39350371, 40545559) but both already
+  land at `inconclusive`, so it's only a flag for cross-question
+  consistency, not a flip target here.
 
 ## Highest-confidence flips for this question
 
-None. No flips proposed.
+1. **40316479 inconclusive → contradicts** — well-powered (n=13,003)
+   meta-analysis explicitly concluding no differential efficacy by APOE4
+   carrier status. Strict-bar canonical `contradicts`.
+
+## Cross-question policy issues observed in Q5
+
+- **(a) Subgroup-positive in parent-null trial:** 2 instances (39350371,
+  40545559). Both already `inconclusive`, so flagged not flipped.
+- **(b) Preclinical-dominated review labeled `supports`:** Not observed
+  in Q5 (no `supports` labels at all in this question).
+- **(c) Missed primary with significant secondary:** Not observed in Q5.
+
+---
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q5)
+
+- `directional_nonsig` — `contradicts` (or `supports`) where the underlying
+  test was directional only and did NOT reach statistical significance; the
+  stance rests on direction of effect rather than a significant null/positive.
+- `case_series_underpowered` — autopsy/neuropath/clinical case-series with
+  n too small for any inferential claim (distinct from `pilot_positive`,
+  which implies a positive efficacy signal).
+- `tangential_stratification` — paper stratifies on a variable adjacent to
+  but distinct from the question's stratifier (e.g., ethnicity when the
+  question is APOE-specific), so it speaks only indirectly to the claim.
+
+### Per-pmid tags
+
+- `34807243` — `same_cohort_duplicate` (EMERGE/ENGAGE parent trials; same
+  cohort as 39350371 and 40545559). Note: this paper is the canonical
+  ARIA-by-APOE4 result, so within Q5 it's the primary representative of
+  that cohort even though it's flagged as a duplicate.
+- `36038268` — `directional_nonsig` (APOE4 vs noncarrier ARIA differential
+  was directional but p=0.663 / p=0.398, i.e. not significant; the
+  `contradicts` label rests on direction of harm, not a significant test;
+  flagged in the existing Confirmed-section note).
+- `39350371` — `same_cohort_duplicate`, `subgroup_positive`,
+  `tangential_stratification` (Japanese subgroup of EMERGE/ENGAGE; EMERGE
+  positive / ENGAGE negative; primary stratification is ethnicity, not
+  APOE; parent program terminated for futility).
+- `40545559` — `same_cohort_duplicate`, `subgroup_positive` (re-analysis
+  of EMERGE only — the one parent trial that hit; ENGAGE not addressed).
+- `41109234` — `case_series_underpowered` (n=5 treated, n=12 untreated
+  autopsy controls; all 5 treated carried APOE ε4 so no carrier-vs-noncarrier
+  comparison is possible).
+- `37423541` — (none — clean systematic review/meta on anti-Aβ mAbs;
+  reports mixed cognitive across drugs and elevated ARIA in ε4 carriers,
+  the inconclusive label is canonical).
+- `40316479` — (none — clean canonical example; well-powered meta n=13,003
+  with explicit null on APOE4 differential efficacy; this is the
+  strict-bar `contradicts` case).
+
+All other pmids — untagged. (No untagged remainder; all 7 listed above.)
 
 ---
 
@@ -54,6 +152,8 @@ None. No flips proposed.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 34807243 — current stance: `contradicts`
+
+**Evidence span:** > Incidence of ARIA-E was highest in aducanumab-treated participants who were apolipoprotein E ε4 allele carriers.
 
 **Golden note:** EMERGE/ENGAGE ARIA analysis — APOE4 carriers had ~2x higher ARIA-E rates; ε4 carriers experience more harm not more benefit.
 
@@ -67,6 +167,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37423541 — current stance: `inconclusive`
 
+**Evidence span:** > However, while cognitive effects were of small effect sizes, these drugs considerably increased risk of side effects such as Amyloid Related Imaging Abnormalities (ARIA), especially in APOE-ε4 carriers.
+
 **Golden note:** Anti-Aβ phase 3 meta — discusses APOE genotype effects, mixed across drugs.
 
 **Efficacy and safety of anti-amyloid-β monoclonal antibodies in current Alzheimer's disease phase III clinical trials: A systematic review and interactive web app-based meta-analysis.**
@@ -79,6 +181,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36038268 — current stance: `contradicts`
 
+**Evidence span:** > In subgroup analysis according to ApoE-4 carrier status, the incidences of ARIA-E and ARIA-H were higher in the ApoE-4 carrier group than those in the ApoE-4 noncarrier group, but there was no statistical significance (ApoE-4 carrier vs noncarrier, ARIA-E: 8.6% vs 6.9%, p = 0.663, and ARIA-H: 10.5% vs 6.6%, p = 0.398).
+
 **Golden note:** ARIA meta — APOE4 a predisposing factor for adverse imaging events, not a benefit modifier.
 
 **Incidence of Amyloid-Related Imaging Abnormalities in Patients With Alzheimer Disease Treated With Anti-β-Amyloid Immunotherapy: A Meta-analysis.**
@@ -89,9 +193,20 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 40316479 — current stance: `inconclusive`
+### PMID 40316479 — current stance: `inconclusive` [FLIP from inconclusive → contradicts]
+
+**Evidence span:** > Further analysis of mABs indicated that their efficacy did not differ by disease stage, concomitant AD medications, or APOE4 carrier status.
 
 **Golden note:** Anti-amyloid vs AChEI by genotype/stage — mixed across agents.
+
+**Flip rationale:** Conclusion explicitly states "efficacy did not differ
+by disease stage, concomitant AD medications, or APOE4 carrier status"
+across n=13,003 in the meta. A well-powered meta-analysis with explicit
+null on APOE4-specific differential benefit is the strict-bar
+`contradicts` case. The fact that lecanemab/donanemab/aducanumab as a
+class showed *some* slowing of decline vs. placebo is a different
+question — the question here is whether ε4 carriers benefit *more*, and
+the answer in this paper is explicitly no.
 
 **The efficacy and safety of anti-amyloid monoclonal antibody versus acetylcholinesterase inhibitor with an in-depth analysis across genotypes and disease stages: a systematic review and meta-analysis.**
 
@@ -102,6 +217,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41109234 — current stance: `inconclusive`
+
+**Evidence span:** > Aducanumab-treated participants comprised four males and one female, all carrying at least one APOE ∊4 allele, with two harbouring a PSEN1 mutation.
 
 **Golden note:** Aducanumab neuropath case-control retrospective — small, no clean APOE4 benefit comparison.
 
@@ -115,6 +232,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39350371 — current stance: `inconclusive`
 
+**Evidence span:** > A treatment effect was observed in favor of aducanumab on the primary and secondary efficacy endpoints at Week 78 in EMERGE, but not ENGAGE.
+
 **Golden note:** Japanese subgroup of EMERGE/ENGAGE — by ethnicity not specifically APOE-stratified.
 
 **Japanese Subgroup Analyses from EMERGE and ENGAGE, Phase 3 Clinical Trials of Aducanumab in Patients with Early Alzheimer's Disease.**
@@ -126,6 +245,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40545559 — current stance: `inconclusive`
+
+**Evidence span:** > Across multiple analyses aducanumab slowed cognitive decline, prolonged functional independence, and attenuated behavioral symptoms in participants with early AD.
 
 **Golden note:** EMERGE clinical-meaningfulness re-analysis — APOE-stratification not the focus.
 

@@ -5,10 +5,12 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=27 PMIDs.
 
 **Current S/C/I**: 7 / 1 / 19
-**Proposed S/C/I**: 10 / 1 / 16
+**Proposed S/C/I**: 7 / 3 / 17
 
-After the conservative reassessments noted below (withdrawing one flip and
-softening another), net flips ≈ **5**.
+After the second-pass review (added one additional clean flip
+`32719079` inconclusive → contradicts; flagged borderline entries for
+cross-question policy decisions), net flips = **6** (2 S→C, 2 I→S,
+1 C→I, 1 I→C).
 
 ---
 
@@ -21,6 +23,7 @@ softening another), net flips ≈ **5**.
 | `37830443` | 2023 | **inconclusive → supports** | NACC longitudinal, n=1393. Metformin associated with significant 3.2% absolute risk reduction (CI -6.2 to -0.2). Heterogeneity by subgroup but the overall effect is significant. Note "varies by subgroup" is true but obscures that the main effect is positive. |
 | `38705542` | 2024 | **inconclusive → supports** | Bayesian NMA of 16 studies, n=1,565,245. *"Dementia and AD risks were significantly lower with metformin and SGLT2i. Metformin displayed the lowest risk of dementia across diverse antidiabetics."* Significantly positive on metformin specifically. |
 | `40695613` | 2025 | **contradicts → inconclusive** *(borderline)* | Comparative cohort GLP-1 vs metformin, n=87,229 each. GLP-1 better than metformin (HR 0.90 for dementia). This says GLP-1 > metformin, **not** that metformin fails vs control. The `contradicts` framing of the question ("does metformin lower dementia risk") requires a metformin-vs-no-metformin comparator. This study has none. |
+| `32719079` | 2020 | **inconclusive → contradicts** *(added 2nd pass)* | Well-powered observational meta-analysis (n=285,966, 23 comparisons / 19 studies). Pooled OR 1.04 (95% CI 0.92–1.17) crossing null on neurodegenerative disease incidence. Verbatim conclusion: *"Metformin has failed to demonstrate a beneficial effect on NDs. In addition, it may increase the risk of PD development."* Strict bar: well-powered observational null on the primary association ⇒ `contradicts`. The note ("Meta acknowledges inconsistent metformin findings") understates a clear-failure conclusion. |
 
 ### Withdrawn / reconsidered
 
@@ -32,12 +35,46 @@ softening another), net flips ≈ **5**.
 ## Confirmed (no change)
 
 - `30149446` (2018 meta, HR 0.76 for dementia incidence sig) — **supports ✓**
-- `27250528` (2016 insulin-sensitizers meta, RR 0.78 for dementia, metformin RR 0.79 marginal p=0.064) — **supports ✓** (defensible; class-level positive)
-- `35445359` (2022 ADNI subgroup: T2D+metformin > T2D no-metformin on cognition) — **supports ✓**
 - `26890736` (2016 pilot RCT in non-diabetic aMCI) — **inconclusive ✓** (pilot exempt)
-- `33080602`, `40017057`, `33935082`, `38160357`, `38279266`, `37968954`, `39871536`, `40268162`, `40023730`, `32719079`, `37869901`, `28538088`, `33609776`, `41223766` — all **inconclusive ✓** (genuinely mixed, comparator framing, biomarker-only, or umbrella reviews that explicitly note inconsistency)
+- `33080602`, `40017057`, `33935082`, `38160357`, `38279266`, `37968954`, `39871536`, `40268162`, `40023730`, `37869901`, `28538088`, `33609776`, `41223766` — all **inconclusive ✓** (genuinely mixed, comparator framing, biomarker-only, or umbrella reviews that explicitly note inconsistency)
 - `36220195` (2022 VA cohort comparing SU/TZD/MET) — **inconclusive ✓** (uses MET as the *reference*; doesn't tell us MET vs no-MET)
 - `39716328` (2024 NMA, metformin OR 0.89 sig in observational arm but null in RCT arm) — could → `supports` if we count the observational signal; **keep `inconclusive`** because the RCT arm is null and the conclusion explicitly downgrades metformin to behind SGLT2i and GLP-1.
+
+## Borderline (not flipped, but flagged for cross-question policy decisions)
+
+These entries surface recurring policy issues identified across the golden
+set. Not flipped here pending a global policy decision.
+
+- `27250528` (2016, insulin-sensitizers meta) — **currently `supports`**.
+  Class-level RR 0.78 (0.64–0.95, p=0.015) is significant, but **metformin
+  alone is RR 0.79 (0.62–1.01, p=0.064), explicitly marginal/non-significant**.
+  Conclusion uses hedged language ("might provide protection"). Strict bar
+  for metformin specifically would say `inconclusive`. **Falls under policy
+  (a)/(c)** — class-positive but the metformin-specific endpoint did not
+  reach significance; question is "does metformin lower dementia risk", not
+  "do insulin sensitizers". Decision pending: count class-level results as
+  metformin evidence, or hold each drug to its own significance test?
+
+- `36090264` (2022, observational meta in DM) — **currently `supports`**.
+  Significant for cognitive impairment (aHR 0.92) and dementia (aHR 0.90),
+  **but null for AD specifically (aHR 1.10, 95% CI 0.95–1.28)**. Authors'
+  conclusion: "the use of metformin... for the prevention of dementia, but
+  not AD, is supported by the available evidence." **Falls under policy
+  (c)** — split outcome, hits one endpoint, misses another. For the Q3
+  framing ("dementia risk"), `supports` is defensible; if Q3 were "AD
+  risk", this would flip to `contradicts`. Flagged because the split is
+  not represented in the single-stance label.
+
+- `35445359` (2022, ADNI observational subgroup) — **currently `supports`**.
+  The "T2D + metformin vs T2D no-metformin" arm comes from an observational
+  cohort (ADNI), not a randomized parent. Within ADNI's MCI population,
+  authors compute T2D-positive subgroups and find metformin-treated patients
+  do better. **Falls under policy (a)-adjacent** — non-randomized subgroup
+  positive within a broader observational study; the parent ADNI cohort is
+  not a trial with a primary endpoint, so policy (a) doesn't apply cleanly,
+  but the comparator-subgroup nature is similar in flavor. Defensible as
+  `supports` under the dementia question; flagged for cross-question
+  consistency.
 
 ## Cross-cutting issues
 
@@ -50,12 +87,109 @@ softening another), net flips ≈ **5**.
   metformin reduce dementia risk?"* and treat comparator studies
   appropriately, OR move comparator-only papers to `excluded`.
 
+## Cross-question policy questions raised by Q3
+
+The borderline entries above all touch one of three recurring policy
+questions across the golden set:
+
+1. **(a) Subgroup-positive in parent-null context** — `35445359`
+   (ADNI observational subgroup) is comparator-subgroup-positive within a
+   non-randomized parent. Closest Q3 fit to policy (a). `27250528` is the
+   inverse flavor — a class-level positive where the metformin-specific
+   subset is non-significant.
+2. **(c) Split-outcome / mixed-endpoint** — `36090264` hits dementia
+   (aHR 0.90) but misses AD (aHR 1.10, NS). One paper, two stances depending
+   on which endpoint the question pins down.
+3. **(b) preclinical-dominated review** — does **not** appear as a
+   mislabel in Q3. `41223766` is preclinical-dominated but already labeled
+   `inconclusive` (correct), and `33609776` likewise. No Q3 paper labeled
+   `supports` rests on preclinical evidence.
+
 ## Highest-confidence flips for this question
 
 - `35297284` supports → contradicts ("no significant effect on improving cognitive function")
 - `35786654` supports → contradicts ("does not support... may increase the risk in Asians")
+- `32719079` inconclusive → contradicts ("Metformin has failed to demonstrate a beneficial effect on NDs"; n=285,966)
 
-Both are unambiguous note-vs-conclusion mismatches.
+All three are unambiguous note-vs-conclusion mismatches against well-powered
+designs.
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q3)
+
+- `metformin_as_reference` — observational study uses metformin as the
+  comparator/reference arm rather than as the intervention being evaluated;
+  cannot speak to metformin-vs-no-metformin.
+- `class_positive_drug_null` — pooled "drug class" estimate is significant
+  but the metformin-specific subset/branch is not (or only marginally) sig.
+- `split_outcome` — same study reports significant benefit on one endpoint
+  (e.g., dementia) but null on a related endpoint (e.g., AD specifically).
+- `regional_heterogeneity` — pooled effect is driven by one geographic
+  region/population subgroup; null in others.
+- `rct_obs_disagreement` — within a single NMA/review, the observational arm
+  shows benefit but the RCT arm is null (or vice versa).
+- `biomarker_only` — outcome is a fluid/imaging biomarker, not a clinical
+  cognitive endpoint.
+
+### Tagged pmids
+
+- `26890736` (2016 pilot aMCI RCT) — `pilot_positive`, `wrong_population`
+  (non-diabetic, but Q3 is about T2D). Co-primary clinical outcome partly
+  hit (SRT total recall, p=0.02); ADAS-cog null. Small n=80.
+- `27250528` (2016 insulin-sensitizers meta) — `class_positive_drug_null`,
+  `hedged_meta`. Class RR 0.78 sig but metformin RR 0.79 (p=0.064) marginal;
+  authors hedge "might provide protection."
+- `28538088` (2017 pilot AD crossover RCT) — `pilot_positive`,
+  `wrong_population` (non-diabetic AD/MCI). n=20, "trends" only, no sig
+  changes in CSF/imaging primary biomarkers.
+- `29790638` (2018 antidiabetic NMA) — `class_positive_drug_null`. Class
+  effect positive but metformin not separately sig vs placebo; pioglitazone
+  is the driver.
+- `33609776` (2021 nutrient-sensing review) — `preclinical_dominated`,
+  `narrative_review`. Authors explicitly note "clear lack of translation
+  from animal models to human populations."
+- `33935082` (2021 Korean dual-therapy cohort) — `comparator_only`,
+  `metformin_as_reference`. Compares Met+DPP4i, Met+TZD vs Met+SU; doesn't
+  isolate metformin effect.
+- `35445359` (2022 ADNI subgroup) — `subgroup_positive`. Metformin-treated
+  T2D subgroup within ADNI MCI population shows better cognitive performance;
+  parent ADNI is observational, not a trial with primary endpoint.
+- `36090264` (2022 obs meta in DM) — `split_outcome`. Sig for dementia
+  (aHR 0.90) and cognitive impairment (aHR 0.92), but null for AD specifically
+  (aHR 1.10, 95% CI 0.95-1.28).
+- `36220195` (2022 VA cohort) — `comparator_only`, `metformin_as_reference`.
+  Compares SU and TZD vs MET as reference; tells us about SU/TZD relative to
+  MET, not MET vs no-MET.
+- `37869901` (2023 umbrella review) — `regional_heterogeneity`. Metformin
+  effect significant only in US / Western populations; null in Eastern.
+- `38160357` (2024 metformin proteomics RCT) — `biomarker_only`,
+  `pilot_positive`, `wrong_population` (non-diabetic MCI). n=20, 8-week
+  proteomics-only readout, no clinical efficacy endpoint.
+- `38279266` (2024 autophagy review) — `narrative_review`. n=10 records,
+  heterogeneous interventions (metformin, resveratrol, masitinib, TPI-287);
+  explicitly notes "differences in sample power, intervention, patients
+  enrolled, assessment, and measure of outcomes prevents generalization."
+- `39716328` (2024 antidiabetic NMA) — `rct_obs_disagreement`,
+  `class_positive_drug_null`. Metformin OR 0.89 sig in observational arm
+  but RCT arm shows risks "comparable among anti-diabetic agents and
+  placebo"; conclusion downgrades metformin behind SGLT2i and GLP-1RA.
+- `40268162` (2025 SGLT2 vs metformin) — `comparator_only`,
+  `metformin_as_reference`. No placebo arm; SGLT2 better than metformin
+  doesn't establish metformin vs no-metformin.
+- `40695613` (2025 GLP-1 vs metformin, currently contradicts → flagged
+  inconclusive) — `comparator_only`, `metformin_as_reference`. No placebo;
+  GLP-1 > metformin head-to-head doesn't establish metformin null vs control.
+- `41223766` (2025 metformin CNS review) — `preclinical_dominated`,
+  `narrative_review`. Authors explicitly state "majority of available data
+  are preclinical."
+
+All other pmids — untagged (clean canonical examples within their stance):
+`30149446`, `32719079`, `35297284`, `35786654`, `37830443`, `38705542`,
+`37968954`, `39871536`, `33080602`, `40017057`, `40023730`.
 
 ---
 
@@ -64,6 +198,8 @@ Both are unambiguous note-vs-conclusion mismatches.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 30149446 — current stance: `supports`
+
+**Evidence span:** > Meta-analysis of three studies showed that cognitive impairment was significantly less prevalent in diabetic metformin (Odds ratio = 0.55, 95% CI 0.38 to 0.78), while six studies showed that dementia incidence was also significantly reduced (Hazard ratio = 0.76, 95% CI 0.39 to 0.88).
 
 **Golden note:** Meta-analysis — metformin reduced dementia risk in diabetes patients.
 
@@ -77,6 +213,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26890736 — current stance: `inconclusive`
 
+**Evidence span:** > After adjusting for baseline ADAS-cog, changes in total recall of the SRT favored the metformin group (9.7±8.5 versus 5.3±8.5; p = 0.02). Differences for other outcomes were not significant.
+
 **Golden note:** Pilot RCT in amnestic MCI — small, exploratory.
 
 **Metformin in Amnestic Mild Cognitive Impairment: Results of a Pilot Randomized Placebo Controlled Clinical Trial.**
@@ -88,6 +226,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 29790638 — current stance: `inconclusive`
+
+**Evidence span:** > Pioglitazone 15 to 30 mg demonstrated the greatest efficacy compared to placebo in network meta-analysis. No significant differences in acceptability were identified when comparing agents with each other and with placebo.
 
 **Golden note:** Network meta antidiabetic agents — mixed by drug class.
 
@@ -101,6 +241,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33080602 — current stance: `inconclusive`
 
+**Evidence span:** > Metformin and liraglutide showed promising results, but further research is needed as just 2 clinical trials involved each of these drugs.
+
 **Golden note:** Antidiabetic systematic review including metformin — modest evidence.
 
 **Antidiabetic Drugs in Alzheimer's Disease and Mild Cognitive Impairment: A Systematic Review.**
@@ -112,6 +254,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 27250528 — current stance: `supports`
+
+**Evidence span:** > The incidence rate of dementia was reduced with either metformin (RR 0.79, 95% CI 0.62-1.01, p = 0.064) or thiazolidinediones (RR 0.75, 95% CI 0.56-1.00, p = 0.050), both with a marginal trend toward significance.
 
 **Golden note:** Insulin-sensitizers meta — reduced dementia incidence (metformin a key contributor).
 
@@ -125,6 +269,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35297284 — current stance: `supports`
 
+**Evidence span:** > Results show that metformin has no significant effect on improving cognitive function or protecting against any dementia including vascular dementia and Alzheimer's disease, and cognitive impairment as well.
+
 **Golden note:** Meta-analysis — metformin improves cognition in T2D.
 
 **The effect of metformin on cognitive function: A systematic review and meta-analysis.**
@@ -136,6 +282,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36220195 — current stance: `inconclusive`
+
+**Evidence span:** > After at least 1 year of treatment, TZD monotherapy was associated with a 22% lower risk of all-cause dementia onset (HR 0.78, 95% CI 0.75 to 0.81), compared with MET monotherapy, and 11% lower for MET and TZD dual therapy (HR 0.89, 95% CI 0.86 to 0.93).
 
 **Golden note:** US veterans cohort — comparing SU/TZD/metformin, mixed.
 
@@ -149,6 +297,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35786654 — current stance: `supports`
 
+**Evidence span:** > The available evidence does not support the idea that metformin reduces risk of AD, and it may, in fact, increase the risk in Asians.
+
 **Golden note:** Observational meta — metformin reduces AD risk in T2DM.
 
 **Association Between Metformin and Alzheimer's Disease: A Systematic Review and Meta-Analysis of Clinical Observational Studies.**
@@ -160,6 +310,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 36090264 — current stance: `supports`
+
+**Evidence span:** > Moreover, the use of metformin by adults with diabetes for the prevention of dementia, but not AD, is supported by the available evidence.
 
 **Golden note:** Meta — metformin associated with reduced cognitive impairment in DM.
 
@@ -173,6 +325,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35445359 — current stance: `supports`
 
+**Evidence span:** > Our study-employing different strategies for data analysis from the global study ADNI-shows a beneficial effect of metformin treatment on cognitive performance, CSF biomarkers profile, and neuroanatomical measures in MCI due to AD patients.
+
 **Golden note:** ADNI subgroup — diabetic AD patients on metformin perform better.
 
 **Diabetic patients treated with metformin during early stages of Alzheimer's disease show a better integral performance: data from ADNI study.**
@@ -184,6 +338,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39716328 — current stance: `inconclusive`
+
+**Evidence span:** > Compared with non-users, SGLT-2i, GLP-1RA, TZD and metformin were associated with the reduced risk of dementia in patients with T2D. SGLT-2i, and GLP-1RA may serve as the optimal choice to improve the cognitive prognosis in patients with T2D.
 
 **Golden note:** Network meta antidiabetics — broad, mixed.
 
@@ -197,6 +353,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37830443 — current stance: `inconclusive`
 
+**Evidence span:** > Metformin was significantly associated with a lower risk of dementia in the overall population (RD, -3.2%; 95% CI, -6.2% to -0.2%).
+
 **Golden note:** Heterogeneous treatment effects — varies by subgroup.
 
 **Heterogeneous treatment effects of metformin on risk of dementia in patients with type 2 diabetes: A longitudinal observational study.**
@@ -208,6 +366,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40017057 — current stance: `inconclusive`
+
+**Evidence span:** > Metformin (n = 999,349, RR = 0.94[0.79, 1.13], I2 = 98.4%), sulfonylureas (RR = 0.98[0.78, 1.22], I2 = 83.3%), dipeptidyl peptidase-IV inhibitors (DPP-1V) (n = 192,802, RR = 0.86[0.65, 1.15], I2 = 92.9%) and insulin (n = 571,274, RR = 1.09[0.95, 1.25], I2 = 94.8%) were not.
 
 **Golden note:** Meta diabetes meds vs cognition — mixed by drug.
 
@@ -221,6 +381,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33935082 — current stance: `inconclusive`
 
+**Evidence span:** > Dual therapy with metformin (Met) + dipeptidyl peptidase-4 inhibitor (DPP-4i), Met + thiazolidinedione (TZD), and sulfonylurea (SU) + thiazolidinediones (TZD) were significantly associated with all-cause dementia (HR = 0.904, 0.804, and 0.962, respectively) and VaD (HR = 0.865, 0.725, and 0.911, respectively), compared with Met + SU.
+
 **Golden note:** Real-world second-line meds — drug-class differences.
 
 **The Association Between Second-Line Oral Antihyperglycemic Medication on Types of Dementia in Type 2 Diabetes: A Nationwide Real-World Longitudinal Study.**
@@ -232,6 +394,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 38160357 — current stance: `inconclusive`
+
+**Evidence span:** > Our pilot study is the first to investigate the effect of metformin on plasma and CSF proteins in non-diabetic patients with MCI and positive AD biomarkers and identifies several candidate plasma biomarkers for future clinical trials after confirmatory studies.
 
 **Golden note:** Metformin in non-diabetic MCI — biomarker study, no clinical primary.
 
@@ -245,6 +409,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38705542 — current stance: `inconclusive`
 
+**Evidence span:** > Dementia and AD risks were significantly lower with metformin and sodium glucose co-transporter-2 inhibitors (SGLT2i). Metformin displayed the lowest risk of dementia across diverse antidiabetics, whereas α-glucosidase inhibitors demonstrated the highest risk.
+
 **Golden note:** Bayesian network meta — different antidiabetic classes, mixed.
 
 **Risk of Dementia and Alzheimer's Disease Associated With Antidiabetics: A Bayesian Network Meta-Analysis.**
@@ -256,6 +422,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 38279266 — current stance: `inconclusive`
+
+**Evidence span:** > Differences in sample power, intervention, patients enrolled, assessment, and measure of outcomes prevents generalization of results.
 
 **Golden note:** Autophagy inducers including metformin — broad, indirect.
 
@@ -269,6 +437,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37968954 — current stance: `inconclusive`
 
+**Evidence span:** > The results of clinical studies on the use of metformin in AD are limited and contradictory.
+
 **Golden note:** Antidiabetic-AD systematic review (Russian).
 
 **[The role of antidiabetic drugs in the treatment of Alzheimer's disease: systematic review].**
@@ -280,6 +450,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39871536 — current stance: `inconclusive`
+
+**Evidence span:** > However, the inconsistency and low quality of current evidence point toward the need for accurate research to elucidate whether metformin's cognitive effects are protective, neutral, or context-dependent based on patient profiles.
 
 **Golden note:** Umbrella review — explicitly notes contradictory results.
 
@@ -293,6 +465,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40695613 — current stance: `contradicts`
 
+**Evidence span:** > GLP-1 RAs were more effective than metformin in reducing the risk of dementia-especially AD and non-vascular types-highlighting their potential as a preferred first-line treatment in T2DM.
+
 **Golden note:** GLP-1 vs metformin — GLP-1 better; implies metformin not optimal head-to-head.
 
 **Evaluating GLP-1 receptor agonists versus metformin as first-line therapy for reducing dementia risk in type 2 diabetes.**
@@ -304,6 +478,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40268162 — current stance: `inconclusive`
+
+**Evidence span:** > SGLT2is significantly reduced dementia risk and mortality compared to metformin in T2D patients.
 
 **Golden note:** SGLT2 vs metformin comparison — both effective, no clear winner.
 
@@ -317,6 +493,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40023730 — current stance: `inconclusive`
 
+**Evidence span:** > In terms of reducing Aβ deposition, metformin ranked highest in effectiveness, with the highest SUCRA score (84.6), followed by high-dose insulin detemir (SUCRA: 54.1).
+
 **Golden note:** Network meta of antidiabetics in AD — mixed.
 
 **Comparative efficacy and safety of antidiabetic agents in Alzheimer's disease: A network meta-analysis of randomized controlled trials.**
@@ -328,6 +506,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 32719079 — current stance: `inconclusive`
+
+**Evidence span:** > Metformin has failed to demonstrate a beneficial effect on NDs. In addition, it may increase the risk of PD development.
 
 **Golden note:** Meta acknowledges inconsistent metformin findings.
 
@@ -341,6 +521,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37869901 — current stance: `inconclusive`
 
+**Evidence span:** > When studies examining metformin were divided by country, the only significant effect was for the United States. Moreover, the effect of metformin was significant in Western but not Eastern populations.
+
 **Golden note:** Umbrella review on antidiabetic dementia risk — mixed.
 
 **Diabetes, antidiabetic medications and risk of dementia: A systematic umbrella review and meta-analysis.**
@@ -352,6 +534,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 28538088 — current stance: `inconclusive`
+
+**Evidence span:** > Metformin was associated with improved executive functioning, and trends suggested improvement in learning/memory and attention.
 
 **Golden note:** Pilot RCT crossover in AD — exploratory.
 
@@ -365,6 +549,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33609776 — current stance: `inconclusive`
 
+**Evidence span:** > While the risk of bias was relatively low in human studies, this risk in animal studies was largely unclear. Overall, there is a clear lack of translation from animal models to human populations.
+
 **Golden note:** Nutrient-sensing repurposed therapeutics review — broad, indirect.
 
 **Targeting impaired nutrient sensing with repurposed therapeutics to prevent or treat age-related cognitive decline and dementia: A systematic review.**
@@ -376,6 +562,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 41223766 — current stance: `inconclusive`
+
+**Evidence span:** > Clinical data, while promising, remain limited and heterogeneous, mainly suggesting potential cognitive benefits.
 
 **Golden note:** Metformin neurotransmission review — mechanistic, not clinical efficacy.
 

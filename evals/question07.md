@@ -5,14 +5,16 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=9 PMIDs.
 
 **Current S/C/I**: 9 / 0 / 0
-**Proposed S/C/I**: 5 / 0 / 4
-**Net flips**: 4
+**Proposed S/C/I**: 4 / 0 / 5
+**Net flips**: 5
 
 The question is currently labeled with an unanimously-positive corpus. The
 underlying evidence is two RCTs from a single Iranian group (Akhondzadeh)
 plus their replications and broad-narrative reviews. The narrative reviews
 should not count as `supports` — they are mechanism/coverage papers, not
-efficacy evidence.
+efficacy evidence. One additional clean flip identified: the 2020
+BMC meta-analysis (`33167948`) whose conclusion explicitly says
+"insufficient evidence to make any recommendations for clinical use."
 
 ---
 
@@ -24,19 +26,19 @@ efficacy evidence.
 | `29289576` | 2017 | **supports → inconclusive** | "Botanicals and phytochemicals active on cognitive decline" — saffron is one of 8+ botanicals discussed. Conclusion verbatim: *"the use of some phytochemicals and botanicals seems to be very promising... However, further well-designed clinical research is certainly needed to finally confirm the efficacy and safety profile."* Narrative, not specific to saffron. |
 | `35960461` | 2022 | **supports → inconclusive** | "Natural remedies for AD" — narrative SR of many natural products (Gingko, Melissa, Salvia, Ginseng, saffron). Saffron is one of several listed; not specific to saffron's effect. |
 | `39577115` | 2024 | **supports → inconclusive** | "Saffron and its major constituents against neurodegenerative diseases: A mechanistic review." Mechanism review of in vitro/in vivo + clinical signaling pathways. The clinical efficacy section is a small portion; bulk is preclinical mechanism. Per the strict bar, mechanism reviews are `inconclusive`. |
+| `33167948` | 2020 | **supports → inconclusive** | Saffron MCI/dementia SR/meta-analysis, 4 RCTs. Pooled ADAS-Cog and CDR-SB favor saffron, but the conclusion verbatim says: *"due to limited high-quality studies **there is insufficient evidence to make any recommendations for clinical use**."* Per the strict bar, a meta-analysis whose authors' own framing is "insufficient evidence" cannot count as `supports`; it's a mixed/hedged signal → `inconclusive`. The pooled point estimate is significant but the authors decline to translate that into clinical support. |
 
-### Borderline
+### Borderline (not flipped, but flagged for cross-question policy decisions)
 
-| PMID | Year | Status | Notes |
-|------|------|--------|-------|
-| `25163440` | 2014 | **supports (keep)** | Saffron vs memantine head-to-head, n=68, 12 mo, moderate-severe AD. Non-inferiority but **no placebo arm**. Comparator-framing concern (similar to Q3 metformin issues). The label is defensible because the prior trials establish saffron > placebo, and this shows saffron ≈ memantine; together it's evidence of efficacy. Tagged for second review. |
-| `32445136` | 2020 | **supports (keep, flagged)** | Saffron RCT SR. Findings positive but conclusion explicitly cautions: *"Promising results should be seen cautiously, since the evidence was derived from studies with potentially high risk of bias."* Keep `supports`, but the high-ROB caveat is important. |
+| PMID | Year | Status | Notes | Policy category |
+|------|------|--------|-------|-----------------|
+| `19838862` | 2009 | **supports (keep, flagged)** | Phase II Akhondzadeh saffron vs donepezil, n=54, 22wk, **no placebo arm**. Conclusion: *"This phase II study provides preliminary evidence of a possible therapeutic effect."* The strict bar lists "pilot / feasibility / proof-of-concept" as `inconclusive`. Phase II is exploratory by definition, and the authors explicitly hedge to "preliminary evidence." Cross-question issue: how should we treat phase II/comparator-only RCTs without a placebo arm? Currently kept as `supports` because the second Akhondzadeh trial (`20831681`) does have a placebo arm and replicates the signal, but on its own this is borderline. | (a)-adjacent: comparator-only/phase II framing |
+| `25163440` | 2014 | **supports (keep, flagged)** | Saffron vs memantine head-to-head, n=68, 12 mo, moderate-severe AD. Non-inferiority but **no placebo arm**. Comparator-framing concern (similar to Q3 metformin issues). The label is defensible because the prior trials establish saffron > placebo, and this shows saffron ≈ memantine; together it's evidence of efficacy. Tagged for second review. | (a)-adjacent: comparator-only |
+| `32445136` | 2020 | **supports (keep, flagged)** | Saffron RCT SR. Findings positive but conclusion explicitly cautions: *"Promising results should be seen cautiously, since the evidence was derived from studies with potentially high risk of bias."* Conclusion also says larger low-ROB RCTs *"are required to definitively assess the potential role of saffron as an MCI/AD treatment."* Stronger hedge than typical; consistent with `33167948` framing. Keep `supports`, but on a strict read this could fall into `inconclusive` alongside `33167948`. | (b)-adjacent: hedged SR conclusion |
 
 ## Confirmed (no change)
 
-- `19838862` (Akhondzadeh saffron vs donepezil, n=54, 22wk) — **supports ✓** (saffron similar efficacy to donepezil, phase II)
-- `20831681` (Akhondzadeh saffron vs placebo, n=46, 16wk) — **supports ✓** (significant ADAS-Cog and CDR vs placebo, p=0.04 each)
-- `33167948` (2020 saffron SR/meta, 4 RCTs) — **supports ✓** (significantly improves ADAS-Cog and CDR-SB vs placebo; conclusion notes "limited high-quality studies")
+- `20831681` (Akhondzadeh saffron vs placebo, n=46, 16wk) — **supports ✓** (significant ADAS-Cog and CDR vs placebo, p=0.04 each). The single placebo-controlled positive RCT in the corpus.
 
 ## Cross-cutting issues
 
@@ -48,9 +50,19 @@ efficacy evidence.
 - **Narrative reviews dominate**: 4 of 9 PMIDs are broad-coverage narrative
   reviews where saffron is one item among many. These shouldn't be counted
   as evidence for or against saffron specifically.
+- **Meta-analyses caveated by their own authors**: both `33167948` and
+  `32445136` pool positive point estimates but the authors' conclusions
+  explicitly decline to support clinical use ("insufficient evidence",
+  "high risk of bias"). On a strict read, when an SR/meta-analysis's own
+  authors hedge to "insufficient" or "definitive assessment requires more
+  RCTs," that's the literature's own consensus that the evidence base is
+  not yet adequate — it should not count as `supports`.
 - **Expected consensus = "mostly positive"** is largely supported, but the
   raw 9/0/0 exaggerates the strength of evidence. After narrative-review
-  demotions, 5/0/4 better reflects the actual primary-evidence base.
+  demotions and the 33167948 flip, 4/0/5 better reflects the actual
+  primary-evidence base. The remaining 4 `supports` reduce to **one
+  placebo-controlled RCT** (`20831681`, n=46, 16wk) plus three
+  comparator-only or SR papers built on it.
 - **No replication outside Iran**: a flag for the planned UI filter — all
   positive RCTs are from one country/research group.
 
@@ -60,7 +72,84 @@ efficacy evidence.
   or mechanistic reviews that should not count as primary efficacy
   evidence. None of them present a pooled effect size or RCT primary
   endpoint specific to saffron in AD.
+- `33167948` — saffron MCI/dementia meta-analysis whose conclusion
+  verbatim says "insufficient evidence to make any recommendations for
+  clinical use." When the authors of a pooled analysis decline to
+  recommend clinical use, the strict bar requires `inconclusive`.
 
+## Cross-question policy questions raised here
+
+- **Comparator-only / phase II RCTs as `supports`** (instances:
+  `19838862`, `25163440`). These trials show non-inferiority to a
+  reference drug but have no placebo arm. On their own they don't
+  establish efficacy; they only establish "as good as X." When the
+  reference drug's efficacy is itself well-established (e.g.,
+  donepezil, memantine), this is informative; when it isn't, it's
+  not. Recurrence of this issue across questions (Q2, Q3, Q7) suggests
+  a UI policy: tag comparator-only RCTs distinctly from
+  placebo-controlled RCTs.
+- **SRs/meta-analyses with positive pooled estimates but explicit
+  "insufficient evidence" conclusions** (instances: `33167948` flipped,
+  `32445136` flagged). The strict bar suggests these should be
+  `inconclusive`, but Contra-the-system would reasonably read the
+  positive forest plot as `supports`. Worth a policy decision: do we
+  trust the authors' own conclusion sentence, or the pooled effect
+  estimate?
+
+## signal_types (annotation layer)
+
+Optional pattern tags per pmid. Used to distinguish "strong" vs "weak" within
+a stance bucket. Untagged = strong/canonical; tagged = some caveat applies.
+
+### Proposed new tags (Q7)
+
+- `single_group_dependency` — paper (RCT or SR/meta) whose evidence base
+  derives entirely or primarily from one investigator group / one country,
+  raising independent-replication concerns. Applied here because every
+  positive RCT in this corpus traces back to the Akhondzadeh group at
+  Tehran University, and the SRs/meta-analyses pool those same trials.
+
+### Per-pmid tags
+
+- `19838862` (Akhondzadeh phase II vs donepezil, n=54, 22wk) —
+  `comparator_only`, `pilot_positive`, `single_group_dependency`
+  (phase II, no placebo arm; authors' own framing is "preliminary
+  evidence of a possible therapeutic effect")
+- `20831681` (Akhondzadeh placebo-controlled, n=46, 16wk) —
+  `single_group_dependency` (the one clean placebo-controlled positive
+  RCT, but small n and authors call for "larger confirmatory" RCTs;
+  remains the canonical supports anchor for this question)
+- `25163440` (saffron vs memantine, n=68, 12mo) — `comparator_only`,
+  `single_group_dependency` (head-to-head with no placebo arm; primary
+  interaction non-significant p=0.08, authors' framing is "comparable
+  with memantine")
+- `30136324` (Crocus sativus phytotherapy overview, 2018) —
+  `narrative_review`, `hedged_meta` (broad multi-indication review;
+  conclusion explicitly hedges to "further investigations are necessary")
+- `29289576` (botanicals/phytochemicals on cognitive decline, 2017) —
+  `narrative_review` (saffron is one of 8+ botanicals; not specific
+  to saffron in AD)
+- `33167948` (saffron MCI/dementia SR/meta-analysis, 2020) — `hedged_meta`,
+  `single_group_dependency` (pooled estimate favors saffron, but authors'
+  own conclusion is "insufficient evidence to make any recommendations
+  for clinical use"; pooled trials are dominated by Akhondzadeh group)
+- `32445136` (saffron RCT systematic review, 2020) — `hedged_meta`,
+  `single_group_dependency` (positive findings caveated as "promising
+  results should be seen cautiously, since the evidence was derived from
+  studies with potentially high risk of bias")
+- `35960461` (natural remedies SR, 2022) — `narrative_review` (saffron
+  one of many herbs; broad coverage rather than saffron-specific
+  efficacy synthesis)
+- `39577115` (saffron mechanistic review, 2024) — `narrative_review`,
+  `preclinical_dominated` (bulk of paper is in vitro / in vivo signaling
+  pathway evidence; clinical efficacy is a small section)
+
+All other pmids — untagged. (None — all 9 received at least one tag,
+because this question's evidence base is dominated by either narrative
+reviews, hedged SRs, comparator-only trials, or single-group-source
+issues. The closest thing to an untagged-canonical paper would be
+`20831681`, which I tagged only `single_group_dependency` — that single
+flag is the most material caveat for this paper.)
 
 ---
 
@@ -69,6 +158,8 @@ efficacy evidence.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 19838862 — current stance: `supports`
+
+**Evidence span:** > This phase II study provides preliminary evidence of a possible therapeutic effect of saffron extract in the treatment of patients with mild-to-moderate Alzheimer's disease.
 
 **Golden note:** Akhondzadeh 22-week RCT in mild-mod AD — positive on cognition.
 
@@ -82,6 +173,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20831681 — current stance: `supports`
 
+**Evidence span:** > After 16 weeks, saffron produced a significantly better outcome on cognitive function than placebo (ADAS-cog: F=4·12, d.f.=1, P=0·04; CDR: F=4·12, d.f.=1, P=0·04).
+
 **Golden note:** Akhondzadeh 16-week placebo-controlled RCT — positive vs placebo.
 
 **Saffron in the treatment of patients with mild to moderate Alzheimer's disease: a 16-week, randomized and placebo-controlled trial.**
@@ -93,6 +186,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 25163440 — current stance: `supports`
+
+**Evidence span:** > 1-year administration of saffron extract capsules showed to be comparable with memantine in reducing cognitive decline in patients with moderate to severe AD.
 
 **Golden note:** Saffron vs memantine head-to-head RCT — non-inferior in moderate-severe AD.
 
@@ -106,6 +201,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30136324 — current stance: `supports`
 
+**Evidence span:** > Although saffron and its components showed potential clinical applications, further investigations are necessary to confirm the effective use of "Red Gold" and its real applications in clinical practice.
+
 **Golden note:** Saffron phytotherapy overview — efficacy on AD discussed.
 
 **Phytotherapic use of the Crocus sativus L. (Saffron) and its potential applications: A brief overview.**
@@ -118,6 +215,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29289576 — current stance: `supports`
 
+**Evidence span:** > the use of some phytochemicals and botanicals seems to be very promising in order to delay the onset and progression of neurodegenerative and other age-related diseases. However, further well-designed clinical research is certainly needed to finally confirm the efficacy and safety profile of these compounds.
+
 **Golden note:** Botanicals/phytochemicals review — saffron has clinical evidence in AD.
 
 **Botanicals and phytochemicals active on cognitive decline: The clinical evidence.**
@@ -128,7 +227,9 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ---
 
-### PMID 33167948 — current stance: `supports`
+### PMID 33167948 — current stance: `supports` [FLIP from supports → inconclusive]
+
+**Evidence span:** > Saffron may have the potential to improve cognitive function and activities of daily living in patients with Alzheimer's disease and mild cognitive impairment (MCI). However, due to limited high-quality studies there is insufficient evidence to make any recommendations for clinical use.
 
 **Golden note:** Saffron MCI/dementia meta-analysis — improves cognition.
 
@@ -142,6 +243,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32445136 — current stance: `supports`
 
+**Evidence span:** > Saffron was shown to be equally effective to common symptomatic drugs for MCI/AD and resulted in no difference in the incidence of side effects, when compared with placebo or drugs.
+
 **Golden note:** Saffron cognitive function RCT systematic review — positive.
 
 **Effects of saffron (Crocus sativus L.) on cognitive function. A systematic review of RCTs.**
@@ -154,6 +257,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35960461 — current stance: `supports`
 
+**Evidence span:** > Data analysis showed that herbs like Gingko Biloba, Melissa Officinalis, Salvia officinalis, Ginseng and saffron alone or in combination with curcumin, low-fat diet, NuAD-Trail, and soy lecithin showed significant positive effects on AD.
+
 **Golden note:** Natural remedies AD review — saffron one of few with positive RCTs.
 
 **Natural remedies for Alzheimer's disease: A systematic review of randomized controlled trials.**
@@ -165,6 +270,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39577115 — current stance: `supports`
+
+**Evidence span:** > Saffron and its active metabolites crocin, crocetin, safranal, and picrocrocin have shown acceptable efficacy in managing NDDs like Alzheimer's disease, Parkinson's disease, Attention deficit hyperactivity disorder, depression, and other NDDs via modulating apoptotic... inflammatory... and oxidative strass... signaling pathways.
 
 **Golden note:** Saffron + constituents mechanistic review — supports neuroprotection.
 

@@ -5,9 +5,10 @@ Reviewed against the stricter bar in `.claude/CLAUDE.md` (see `question1.md`).
 n=9 PMIDs.
 
 **Current S/C/I**: 4 / 3 / 2
-**Proposed S/C/I**: 4 / 2 / 3 (after one major direction flip and one
-relabeling)
-**Net flips**: 3
+**Proposed S/C/I**: 4 / 2 / 3 (after one major direction flip and two
+relabelings)
+**Final S/C/I (after reviewer pass)**: 4 / 2 / 3
+**Net flips**: 3 (all confirmed)
 
 This question has a notable mislabel: the most-relevant
 meta-analysis on occupational aluminum exposure (`26247643`) reports
@@ -57,6 +58,105 @@ direction.
   question explicitly says "do not support a causative role"; the
   current label is a direct mislabel.**
 
+## Reviewer pass (Q18)
+
+All 3 originally proposed flips **confirmed**:
+
+- `26247643` supports → contradicts — meta OR 1.00 (CI 0.59-1.68); verbatim
+  conclusion "do not support a causative role." Clean meta-analysis-null
+  flip.
+- `39889875` contradicts → inconclusive — Al is in the narrative-review
+  positive list ("also associated with dementia"); the current
+  `contradicts` label inverts the abstract.
+- `18000416` contradicts → inconclusive — AD mortality WAS statistically
+  significantly elevated in 1 of 3 plants. Mixed direction across plants.
+
+No additional verbatim-mismatch flips identified.
+
+**Borderline (not flipped):**
+
+- `40749395` supports — environmental Al meta (Hedges' g 2.451 sig). The
+  abstract lists occupational settings as one exposure source but
+  the pooled effect mixes environmental (water/diet/soil) with occupational.
+  The question asks specifically about occupational Al; this is a
+  `wrong_population` / scope-mismatch flag, but the direction is supported
+  by sig pooled effect — keeping `supports`.
+- `37777128` supports — cognitive performance meta (processing speed,
+  working memory, attention, reaction time), not AD diagnosis. Outcome
+  scope mismatch but conclusion explicitly extends discourse to AD.
+  Sig pooled effect → keeping `supports` with caveat tag.
+- `12520766` supports — small Italian foundry case-control (n=64 vs 32)
+  with MMSE/CDT/P300 endpoints, not AD diagnosis. Author conclusion
+  speculative ("authors raise the question whether"). Borderline
+  pilot/proof-of-concept — keeping `supports` per existing review.
+
+**Recurring policy issues observed in Q18:**
+
+- (b) preclinical/mechanism-dominated review labeled `supports`: not
+  applicable here (the supports labels are empirical, not preclinical).
+- Outcome scope mismatch (`37777128`, `40749395`, `12520766`): not one
+  of the 3 cross-question categories, but already flagged in the
+  Cross-cutting issues section above. Tag as `wrong_population` /
+  `non_diagnostic_outcome`.
+
+**Final S/C/I after this pass: 4 / 2 / 3** (confirms reviewer's proposal).
+
+## signal_types (annotation layer)
+
+Tags annotate caveats orthogonal to the stance label. They do not change
+the stance; they describe *why* a researcher should read the entry with
+care.
+
+### Proposed new tags (Q18)
+
+- `non_diagnostic_outcome` — paper measures cognitive performance,
+  biomarkers, or mortality proxies rather than clinical AD diagnosis,
+  even though the question is framed around AD risk. Distinct from
+  `biomarker_only` (which implies no clinical endpoint at all);
+  `non_diagnostic_outcome` covers cases where the outcome IS clinical
+  but isn't AD diagnosis specifically (e.g., processing speed, P300
+  latency, all-cause dementia mortality at one of N plants).
+
+### Tags by PMID
+
+| PMID | Stance (final) | Tags |
+|------|----------------|------|
+| `27729011` | inconclusive | `broad_scope_review`, `hedged_meta` |
+| `25233067` | contradicts | `broad_scope_review` |
+| `12520766` | supports | `case_series_underpowered`, `non_diagnostic_outcome`, `pilot_positive` |
+| `26247643` | contradicts (FLIP) | `hedged_meta` |
+| `39889875` | inconclusive (FLIP) | `narrative_review`, `split_outcome` |
+| `18000416` | inconclusive (FLIP) | `subgroup_positive`, `non_diagnostic_outcome` |
+| `12602134` | inconclusive | `narrative_review`, `wrong_population` |
+| `37777128` | supports | `non_diagnostic_outcome`, `wrong_population` |
+| `40749395` | supports | `wrong_population` |
+
+**Tag distribution (9 pmids tagged, 16 tag-instances):**
+
+- `wrong_population`: 3 (12602134, 37777128, 40749395)
+- `non_diagnostic_outcome`: 3 (12520766, 18000416, 37777128)
+- `broad_scope_review`: 2 (27729011, 25233067)
+- `narrative_review`: 2 (39889875, 12602134)
+- `hedged_meta`: 2 (27729011, 26247643)
+- `case_series_underpowered`: 1 (12520766)
+- `pilot_positive`: 1 (12520766)
+- `split_outcome`: 1 (39889875)
+- `subgroup_positive`: 1 (18000416)
+
+Notes:
+
+- `wrong_population` here flags occupational-vs-environmental scope
+  mismatch (the question is specifically occupational Al exposure).
+- The two `supports` papers that survive review (`37777128`, `40749395`)
+  are both flagged with caveats — researchers reading the bucket should
+  see that the strongest "supports" evidence is on cognitive performance
+  generally or environmental exposure broadly, NOT occupational AD
+  diagnosis specifically.
+- `26247643` (the central occupational-AD meta, now correctly labeled
+  `contradicts`) is `hedged_meta` because the abstract explicitly hedges
+  ("a role for aluminum cannot be definitively excluded"). The hedge does
+  NOT change the stance — pooled OR 1.00 with CI straddling null is a
+  meta-analysis null finding.
 
 ---
 
@@ -65,6 +165,8 @@ direction.
 Stance labels reflect the **proposed** stance after this review, annotated with `[FLIP from <prev>]` where changed.
 
 ### PMID 27729011 — current stance: `inconclusive`
+
+**Evidence span:** > There is at least moderate evidence implicating the following risk factors: air pollution; aluminium; silicon; selenium; pesticides; vitamin D deficiency; and electric and magnetic fields.
 
 **Golden note:** Environmental risk factors systematic review — Al evidence limited and mixed.
 
@@ -78,6 +180,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25233067 — current stance: `contradicts`
 
+**Evidence span:** > Aluminum has been held responsible for human morbidity and mortality, but there is no consistent and convincing evidence to associate the Al found in food and drinking water at the doses and chemical forms presently consumed by people living in North America and Western Europe with increased risk for Alzheimer's disease (AD).
+
 **Golden note:** Comprehensive Al exposure systematic review — concludes evidence does NOT support Al causation.
 
 **Systematic review of potential health risks posed by pharmaceutical, occupational and consumer exposures to metallic and nanoscale aluminum, aluminum oxides, aluminum hydroxide and its soluble salts.**
@@ -89,6 +193,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 12520766 — current stance: `supports`
+
+**Evidence span:** > These findings suggest a role of aluminium in early neurotoxic effects that can be detected at a pre-clinical stage by P300, MMSE, MMSE-time, CDT-time and CDT score, considering a 10 micrograms/l cut-off level of serum aluminium, in aluminium foundry workers with concomitant high blood levels of iron.
 
 **Golden note:** Italian foundry workers case-control — neurotoxic effects, suggests role in AD.
 
@@ -102,6 +208,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26247643 — current stance: `supports`
 
+**Evidence span:** > Occupational aluminum exposure was not associated with AD (odds ratio, 1.00; 95% confidence interval, 0.59 to 1.68), even in sensitivity analysis excluding studies with low-quality assessment scores (odds ratio, 1.06; 95% confidence interval, 0.36 to 3.10). The findings of the present meta-analysis do not support a causative role of aluminum in the pathogenesis of AD.
+
 **Golden note:** Occupational Al exposure meta — found increased AD risk.
 
 **Occupational Exposure to Aluminum and Alzheimer Disease: A Meta-Analysis.**
@@ -113,6 +221,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 39889875 — current stance: `contradicts`
+
+**Evidence span:** > In a narrative review, we found that exposure to sulfur dioxide, proximity to roadways, ionizing radiation, aluminum, solvents, pesticides, and environmental tobacco smoke were also associated with dementia.
 
 **Golden note:** Recent umbrella review — Al not a confirmed environmental risk factor for dementia.
 
@@ -126,6 +236,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18000416 — current stance: `contradicts`
 
+**Evidence span:** > Statistically significant causes of death were lung cancer (three plants); bladder cancer; chronic obstructive lung disease (two plants each); cancers of the stomach, digestive system unspecified, rectum and rectosigmoid, pancreas, and larynx; Alzheimer's disease (one plant); and cerebrovascular disease (one plant).
+
 **Golden note:** Quebec Al smelter cohort mortality — no excess AD.
 
 **Mortality and cancer experience of Quebec aluminum reduction plant workers. Part 2: mortality of three cohorts hired on or before january 1, 1951.**
@@ -137,6 +249,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 12602134 — current stance: `inconclusive`
+
+**Evidence span:** > These epidemiological studies entail certain methodological limitations, and their results are not consistent, so the results available to date therefore not making it possible to clearly determine that any relationship exists between exposure to aluminum and the etiology of Alzheimer's disease.
 
 **Golden note:** Spanish review — drinking water focus, mixed conclusion.
 
@@ -150,6 +264,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37777128 — current stance: `supports`
 
+**Evidence span:** > We found significant worse performances in workers occupationally exposed to aluminum regarding processing speed, working memory, attention, and reaction time after exclusion of outliers.
+
 **Golden note:** Al exposure + cognitive performance meta — occupational Al associated with worse cognition.
 
 **Aluminum exposure and cognitive performance: A meta-analysis.**
@@ -161,6 +277,8 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 ---
 
 ### PMID 40749395 — current stance: `supports`
+
+**Evidence span:** > Although few studies confirmed Al-induced brain pathology as a direct cause of dementia, meta-analysis of four eligible studies revealed a strong association between Al exposure and AD (Hedges' g = 2.451), despite high heterogeneity across data sources and outcome measures.
 
 **Golden note:** Environmental Al + AD risk meta — found association.
 

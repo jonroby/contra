@@ -178,7 +178,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25376108 — current stance: `supports`
 
-**Evidence span:** > Our data suggest that Aβ peptides represent a novel class of antimicrobial peptides that protect against neurotropic enveloped virus infections such as HSV-1.
+**Stance justification:** > Our data suggest that Aβ peptides represent a novel class of antimicrobial peptides that protect against neurotropic enveloped virus infections such as HSV-1.
 
 **Golden note:** Aβ peptides display antiviral activity against HSV-1 — supports antimicrobial-protection hypothesis.
 
@@ -192,7 +192,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 1328575 — current stance: `supports`
 
-**Evidence span:** > Using the highly sensitive polymerase chain reaction, we have detected the viral thymidine kinase gene in post-mortem brain from 14/21 cases of senile dementia of the Alzheimer type and 9/15 elderly normals... Thus, the presence of Herpes simplex virus type 1 DNA is a region-dependent feature of the aged brain.
+**Stance justification:** > Using the highly sensitive polymerase chain reaction, we have detected the viral thymidine kinase gene in post-mortem brain from 14/21 cases of senile dementia of the Alzheimer type and 9/15 elderly normals... Thus, the presence of Herpes simplex virus type 1 DNA is a region-dependent feature of the aged brain.
 
 **Golden note:** Itzhaki 1992 — HSV-1 DNA in AD brains. Landmark observation.
 
@@ -206,7 +206,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26401558 — current stance: `supports`
 
-**Evidence span:** > There was an increased risk for AD when herpesviridae is present in the brain compared to controls [OR 1.38; 95% CI 1.14-1.66].
+**Stance justification:** > There was an increased risk for AD when herpesviridae is present in the brain compared to controls [OR 1.38; 95% CI 1.14-1.66].
 
 **Golden note:** Meta-analysis — herpesviruses increase AD risk.
 
@@ -220,7 +220,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 11848687 — current stance: `supports`
 
-**Evidence span:** > We have found that a very high proportion of the VaD patients, 93% (14/15), but not of age-matched normals, 34% (10/29), harbor CMV DNA (P = 0.0002); the proportions of the patients harboring the other viruses in brain do not differ significantly from those of the normals.
+**Stance justification:** > We have found that a very high proportion of the VaD patients, 93% (14/15), but not of age-matched normals, 34% (10/29), harbor CMV DNA (P = 0.0002); the proportions of the patients harboring the other viruses in brain do not differ significantly from those of the normals.
 
 **Golden note:** Itzhaki — HSV-1 + APOE4 strong AD risk factor; CMV in vascular dementia.
 
@@ -234,7 +234,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 2172499 — current stance: `supports`
 
-**Evidence span:** > Antiviral antibody titers showed no significant differences except for antibodies to herpes simplex virus-1, which were increased in control group.
+**Stance justification:** > Antiviral antibody titers showed no significant differences except for antibodies to herpes simplex virus-1, which were increased in control group.
 
 **Golden note:** Antibodies to viruses elevated in AD — early supportive observation.
 
@@ -248,7 +248,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33657269 — current stance: `contradicts`
 
-**Evidence span:** > Short-term antiherpetic medication is not markedly associated with incident dementia. Because neither dementia subtype nor herpes subtype modified the association, the small but significant decrease in dementia incidence with antiherpetic administration may reflect confounding and misclassification.
+**Stance justification:** > Short-term antiherpetic medication is not markedly associated with incident dementia. Because neither dementia subtype nor herpes subtype modified the association, the small but significant decrease in dementia incidence with antiherpetic administration may reflect confounding and misclassification.
 
 **Golden note:** Multi-country cohort — antiherpetic medication NOT associated with reduced dementia.
 
@@ -262,7 +262,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32280095 — current stance: `supports`
 
-**Evidence span:** > Herpes simplex virus-1 (OR:1.34, 95% CI = 1.02-1.75; I2 = 0%), and the Herpesviridae family (OR:1.41, 95% CI = 1.15-1.74; I2 = 12%) infection were associated with a higher risk of AD.
+**Stance justification:** > Herpes simplex virus-1 (OR:1.34, 95% CI = 1.02-1.75; I2 = 0%), and the Herpesviridae family (OR:1.41, 95% CI = 1.15-1.74; I2 = 12%) infection were associated with a higher risk of AD.
 
 **Golden note:** Infectious agents-AD meta — significant association including HSV.
 
@@ -276,7 +276,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15207442 — current stance: `inconclusive`
 
-**Evidence span:** > Viral burden of herpes virus and cytomegalovirus was associated with cognitive impairment in home-dwelling elderly.
+**Stance justification:** > Viral burden of herpes virus and cytomegalovirus was associated with cognitive impairment in home-dwelling elderly.
 
 **Golden note:** Infectious burden + cognition in elderly — mixed across pathogens.
 
@@ -290,7 +290,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33317741 — current stance: `supports`
 
-**Evidence span:** > The pooled OR suggested that HSV-1 infection is a risk factor of AD: pooled OR 1.40 (95% CI: 1.13-1.75; I2 = 3%, P = 0.42).
+**Stance justification:** > The pooled OR suggested that HSV-1 infection is a risk factor of AD: pooled OR 1.40 (95% CI: 1.13-1.75; I2 = 3%, P = 0.42).
 
 **Golden note:** HSV-1/AD systematic review meta — significant association.
 
@@ -304,7 +304,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30427305 — current stance: `inconclusive`
 
-**Evidence span:** > Understanding how HHV-6A/B infection regulates autophagy could be of particular interest, as it has been recently shown that this virus may be involved in Alzheimer's disease in which a dysregulation of autophagy may also play a role.
+**Stance justification:** > Understanding how HHV-6A/B infection regulates autophagy could be of particular interest, as it has been recently shown that this virus may be involved in Alzheimer's disease in which a dysregulation of autophagy may also play a role.
 
 **Golden note:** HHV-6 lytic infection autophagy mechanism — mechanistic only.
 
@@ -318,7 +318,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37904465 — current stance: `supports`
 
-**Evidence span:** > In the outcome of the incidence of HZV, the pooled analysis showed no statistically significant difference between the dementia group and the No dementia group (RR = 1.04% CI = 0.86-1.25, P = .70).
+**Stance justification:** > In the outcome of the incidence of HZV, the pooled analysis showed no statistically significant difference between the dementia group and the No dementia group (RR = 1.04% CI = 0.86-1.25, P = .70).
 
 **Golden note:** Herpes Zoster meta — increased dementia risk.
 
@@ -332,7 +332,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38549138 — current stance: `supports`
 
-**Evidence span:** > Despite significant research into the potential links between CMV infection and various neurological disorders, the direct cause-effect relationship is not fully understood and several gaps in knowledge persist.
+**Stance justification:** > Despite significant research into the potential links between CMV infection and various neurological disorders, the direct cause-effect relationship is not fully understood and several gaps in knowledge persist.
 
 **Golden note:** CMV-neurological systematic review — implicated.
 
@@ -346,7 +346,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37639023 — current stance: `supports`
 
-**Evidence span:** > VZV infection was associated with an increased risk of dementia (HR = 1.11, 95% CI: 1.02-1.21).
+**Stance justification:** > VZV infection was associated with an increased risk of dementia (HR = 1.11, 95% CI: 1.02-1.21).
 
 **Golden note:** VZV-dementia meta — positive association.
 
@@ -360,7 +360,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37801540 — current stance: `supports`
 
-**Evidence span:** > The quantitative data derived from the studies in this report substantiate a relationship between infection with HSV-1 and AD.
+**Stance justification:** > The quantitative data derived from the studies in this report substantiate a relationship between infection with HSV-1 and AD.
 
 **Golden note:** HSV-AD systematic review — positive associations.
 
@@ -374,7 +374,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40898264 — current stance: `supports`
 
-**Evidence span:** > The present review of the scientific literature generally shows little evidence of an association between herpesviruses and risk of dementia. However, the review shows evidence of an association between antiviral treatment and a decreased risk of dementia.
+**Stance justification:** > The present review of the scientific literature generally shows little evidence of an association between herpesviruses and risk of dementia. However, the review shows evidence of an association between antiviral treatment and a decreased risk of dementia.
 
 **Golden note:** Herpesviruses + antiviral treatment meta — antiviral protective.
 
@@ -388,7 +388,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41269248 — current stance: `supports`
 
-**Evidence span:** > Vaccination against herpes zoster was associated with a reduced risk of any dementia (RR 0.76, 95% CI 0.69-0.83) and Alzheimer's disease (RR 0.53, 95% CI 0.44-0.64).
+**Stance justification:** > Vaccination against herpes zoster was associated with a reduced risk of any dementia (RR 0.76, 95% CI 0.69-0.83) and Alzheimer's disease (RR 0.53, 95% CI 0.44-0.64).
 
 **Golden note:** Vaccinations + dementia meta — protective (HZ vaccine signal).
 
@@ -402,7 +402,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41405855 — current stance: `inconclusive`
 
-**Evidence span:** > At 78 weeks, the LSM change in the 11-item ADAS-Cognitive Subscale score was 10.86 (95% CI, 8.80 to 12.91) in the valacyclovir group vs 6.92 (95% CI, 4.88 to 8.97) in the placebo group, indicating greater cognitive worsening with valacyclovir than placebo (between-group difference, 3.93 [95% CI, 1.03 to 6.83]; P = .01).
+**Stance justification:** > At 78 weeks, the LSM change in the 11-item ADAS-Cognitive Subscale score was 10.86 (95% CI, 8.80 to 12.91) in the valacyclovir group vs 6.92 (95% CI, 4.88 to 8.97) in the placebo group, indicating greater cognitive worsening with valacyclovir than placebo (between-group difference, 3.93 [95% CI, 1.03 to 6.83]; P = .01).
 
 **Golden note:** VALAD valacyclovir RCT — early report, outcomes mixed.
 
@@ -416,7 +416,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40442743 — current stance: `supports`
 
-**Evidence span:** > AD patients infected with HSV-1 or CMV demonstrated distinct alterations in inflammatory, oxidative stress, antioxidant profiles, and apoptosis markers, which may have beneficial implications for circulatory biomarkers and potentially cognitive outcomes in AD.
+**Stance justification:** > AD patients infected with HSV-1 or CMV demonstrated distinct alterations in inflammatory, oxidative stress, antioxidant profiles, and apoptosis markers, which may have beneficial implications for circulatory biomarkers and potentially cognitive outcomes in AD.
 
 **Golden note:** HSV-1/CMV coinfection — oxidative stress mechanisms in AD.
 
@@ -430,7 +430,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40551502 — current stance: `supports`
 
-**Evidence span:** > Pooled analysis of adjusted HRs indicated that HZ vaccination could reduce dementia risk by 29% (HR = 0.71, 95% CI: 0.66-0.76, I2 = 97.15%).
+**Stance justification:** > Pooled analysis of adjusted HRs indicated that HZ vaccination could reduce dementia risk by 29% (HR = 0.71, 95% CI: 0.66-0.76, I2 = 97.15%).
 
 **Golden note:** HZ vaccination meta — reduced dementia risk.
 
@@ -444,7 +444,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41073371 — current stance: `inconclusive`
 
-**Evidence span:** > The analysis demonstrated that infections with cytomegalovirus (CMV) (odds ratio [OR] = 1.41; 95% confidence interval [CI]: 1.03, 1.93), severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (OR = 1.88; 95% CI: 1.53, 2.32), hepatitis C virus (HCV) (OR = 1.39; 95% CI: 1.14, 1.69), and human herpesvirus (HHV) (OR = 1.24; 95% CI: 1.02, 1.51) were associated with an increased risk of AD.
+**Stance justification:** > The analysis demonstrated that infections with cytomegalovirus (CMV) (odds ratio [OR] = 1.41; 95% confidence interval [CI]: 1.03, 1.93), severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (OR = 1.88; 95% CI: 1.53, 2.32), hepatitis C virus (HCV) (OR = 1.39; 95% CI: 1.14, 1.69), and human herpesvirus (HHV) (OR = 1.24; 95% CI: 1.02, 1.51) were associated with an increased risk of AD.
 
 **Golden note:** Viral infections-neurodegenerative meta — 'inconclusive'.
 
@@ -458,7 +458,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40140230 — current stance: `supports`
 
-**Evidence span:** > The results of the meta-analysis indicated that HSV-1 infection is a risk factor for AD (OR = 1.39, 95% CI = (1.14-1.69), P < 0.05)).
+**Stance justification:** > The results of the meta-analysis indicated that HSV-1 infection is a risk factor for AD (OR = 1.39, 95% CI = (1.14-1.69), P < 0.05)).
 
 **Golden note:** Herpesviruses-AD case-control meta — positive association.
 
@@ -472,7 +472,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41490027 — current stance: `supports`
 
-**Evidence span:** > Meta-analysis showed: (1) herpes zoster patients had significantly higher AD risk (RR = 1.12, 95% CI: 1.01-1.24, p = 0.04); (2) patients receiving antiviral treatment had lower AD risk (RR = 0.55, 95% CI: 0.37-0.82, p = 0.003); (3) vaccinated individuals had lower AD risk (RR = 0.72, 95% CI: 0.68-0.78, p < 0.0001).
+**Stance justification:** > Meta-analysis showed: (1) herpes zoster patients had significantly higher AD risk (RR = 1.12, 95% CI: 1.01-1.24, p = 0.04); (2) patients receiving antiviral treatment had lower AD risk (RR = 0.55, 95% CI: 0.37-0.82, p = 0.003); (3) vaccinated individuals had lower AD risk (RR = 0.72, 95% CI: 0.68-0.78, p < 0.0001).
 
 **Golden note:** VZV-AD comprehensive meta — implicates VZV.
 
@@ -486,7 +486,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41467972 — current stance: `supports`
 
-**Evidence span:** > To demonstrate the effects of anti-herpetic medications in various clinical scenarios, the meta-analysis compared: diagnosed and treated versus diagnosed but untreated (aHR=0.77, 95% CI: 0.67-0.89); treated versus untreated regardless of diagnosis (aHR=0.90, 95% CI: 0.87-0.94); and diagnosed and treated versus neither diagnosed nor treated (aHR=0.87, 95% CI: 0.78-0.97).
+**Stance justification:** > To demonstrate the effects of anti-herpetic medications in various clinical scenarios, the meta-analysis compared: diagnosed and treated versus diagnosed but untreated (aHR=0.77, 95% CI: 0.67-0.89); treated versus untreated regardless of diagnosis (aHR=0.90, 95% CI: 0.87-0.94); and diagnosed and treated versus neither diagnosed nor treated (aHR=0.87, 95% CI: 0.78-0.97).
 
 **Golden note:** Anti-herpetic treatment meta — reduces dementia risk.
 
@@ -500,7 +500,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41275158 — current stance: `inconclusive`
 
-**Evidence span:** > The pooled analysis revealed a significant association between HHV-6 infection and increased risk of Alzheimer's [OR = 1.81, 95% CI: 1.16-2.84, p = 0.009], with moderate heterogeneity (I² = 60%).
+**Stance justification:** > The pooled analysis revealed a significant association between HHV-6 infection and increased risk of Alzheimer's [OR = 1.81, 95% CI: 1.16-2.84, p = 0.009], with moderate heterogeneity (I² = 60%).
 
 **Golden note:** HHV-6/AD meta — inconsistent reports.
 
@@ -514,7 +514,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41953111 — current stance: `supports`
 
-**Evidence span:** > Overall, the available evidence indicates no clear association between HSV-2 and Alzheimer's disease and only one of the two meta-analytic methods shows evidence of a potential relationship with all-cause dementia.
+**Stance justification:** > Overall, the available evidence indicates no clear association between HSV-2 and Alzheimer's disease and only one of the two meta-analytic methods shows evidence of a potential relationship with all-cause dementia.
 
 **Golden note:** HSV-2/dementia meta — positive association.
 
@@ -528,7 +528,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40934136 — current stance: `supports`
 
-**Evidence span:** > The findings indicated a 32% higher likelihood of AD in individuals with HSV infection in case-control studies (OR = 1.32; 95% CI: 1.12, 1.55; I2 = 22.7%) and a 20% increased risk in cohort studies (HR = 1.20; 95% CI: 1.10, 1.31; I2 = 11.0%).
+**Stance justification:** > The findings indicated a 32% higher likelihood of AD in individuals with HSV infection in case-control studies (OR = 1.32; 95% CI: 1.12, 1.55; I2 = 22.7%) and a 20% increased risk in cohort studies (HR = 1.20; 95% CI: 1.10, 1.31; I2 = 11.0%).
 
 **Golden note:** HSV-AD systematic review meta — relationship implicated.
 
@@ -542,7 +542,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16595160 — current stance: `supports`
 
-**Evidence span:** > These findings are consistent with the hypothesis that human genetic variants facilitating the access of HSV-1 to the brain might result in susceptibility to AD.
+**Stance justification:** > These findings are consistent with the hypothesis that human genetic variants facilitating the access of HSV-1 to the brain might result in susceptibility to AD.
 
 **Golden note:** TAP2 genotype + HSV-1 + APOE4 in AD — supports mechanistic hypothesis.
 
@@ -556,7 +556,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29676229 — current stance: `supports`
 
-**Evidence span:** > Our study demonstrated the role of viral etiology in AD pathogenesis by elucidating interaction of oxidative stress and inflammation causing candidate genes with common viruses along with the identification of potential AD drug candidates.
+**Stance justification:** > Our study demonstrated the role of viral etiology in AD pathogenesis by elucidating interaction of oxidative stress and inflammation causing candidate genes with common viruses along with the identification of potential AD drug candidates.
 
 **Golden note:** Viral-induced oxidative/inflammatory response in AD pathogenesis — supports viral hypothesis.
 

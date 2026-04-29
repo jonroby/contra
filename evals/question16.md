@@ -96,7 +96,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15249848 — current stance: `supports`
 
-**Evidence span:** > In a multiple regression model, high exercise level at the baseline assessment was negatively associated with, ie, was protective against, being in the group with the greatest amount of decline at the follow-up assessment, after adjusting for likely confounders (odds ratio = 0.39; 95% confidence interval, 0.19, 0.78).
+**Stance justification:** > In a multiple regression model, high exercise level at the baseline assessment was negatively associated with, ie, was protective against, being in the group with the greatest amount of decline at the follow-up assessment, after adjusting for likely confounders (odds ratio = 0.39; 95% confidence interval, 0.19, 0.78).
 
 **Golden note:** MoVIES — exercise protective against cognitive decline (MMSE outcome).
 
@@ -110,7 +110,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33523004 — current stance: `contradicts`
 
-**Evidence span:** > ADAS-Cog did not differ between groups at 6 (p = 0.386) and 12 months (p = 0.856). Aerobic exercise did not show superior cognitive effects to stretching in our pilot trial, possibly due to the lack of power.
+**Stance justification:** > ADAS-Cog did not differ between groups at 6 (p = 0.386) and 12 months (p = 0.856). Aerobic exercise did not show superior cognitive effects to stretching in our pilot trial, possibly due to the lack of power.
 
 **Golden note:** Yu aerobic cycling RCT in AD (n=96) — primary cognitive endpoint not met.
 
@@ -124,7 +124,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27760869 — current stance: `supports`
 
-**Evidence span:** > At the end of the intervention, the aerobic exercise training group had significantly improved ADAS-Cog performance compared with the usual care plus education group (-1.71 point difference, 95% confidence interval [CI] -3.15 to -0.26, p = 0.02).
+**Stance justification:** > At the end of the intervention, the aerobic exercise training group had significantly improved ADAS-Cog performance compared with the usual care plus education group (-1.71 point difference, 95% confidence interval [CI] -3.15 to -0.26, p = 0.02).
 
 **Golden note:** Aerobic exercise + vascular CI RCT — improved everyday function.
 
@@ -138,7 +138,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34601135 — current stance: `supports`
 
-**Evidence span:** > Benefits were also found in the MMSE test, albeit significance was only reached for aerobic exercise (n = 187, MD=2.31 points, 95% CI 0.45-4.27).
+**Stance justification:** > Benefits were also found in the MMSE test, albeit significance was only reached for aerobic exercise (n = 187, MD=2.31 points, 95% CI 0.45-4.27).
 
 **Golden note:** Exercise meta in AD — multi-domain benefit.
 
@@ -152,7 +152,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36497772 — current stance: `inconclusive`
 
-**Evidence span:** > There was a significant effect of aerobic exercise on increasing mini-mental state examination (MMSE) score in AD patients [weighted mean difference (WMD), 1.50 (95% CI, 0.55 to 2.45), p = 0.002].
+**Stance justification:** > There was a significant effect of aerobic exercise on increasing mini-mental state examination (MMSE) score in AD patients [weighted mean difference (WMD), 1.50 (95% CI, 0.55 to 2.45), p = 0.002].
 
 **Golden note:** Aerobic exercise + AD cognition meta — findings conflicting.
 
@@ -166,7 +166,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 28157102 — current stance: `supports`
 
-**Evidence span:** > In this uncontrolled study, ten patients with mild AD participated in a 3-month, individualized, moderate-intensity aerobic training on a treadmill (Walking). There was a tendency toward improvement in the Stroop-color naming test (-10% completion time, p = 0.06).
+**Stance justification:** > In this uncontrolled study, ten patients with mild AD participated in a 3-month, individualized, moderate-intensity aerobic training on a treadmill (Walking). There was a tendency toward improvement in the Stroop-color naming test (-10% completion time, p = 0.06).
 
 **Golden note:** 3-month aerobic training mild AD — improved brain energy metabolism.
 
@@ -180,7 +180,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32505710 — current stance: `inconclusive`
 
-**Evidence span:** > There are true inter-individual differences in aerobic fitness and cognitive responses to aerobic exercise in older adults with mild-to-moderate dementia due to AD. These inter-individual differences likely underline the inconsistent cognitive benefits in human studies.
+**Stance justification:** > There are true inter-individual differences in aerobic fitness and cognitive responses to aerobic exercise in older adults with mild-to-moderate dementia due to AD. These inter-individual differences likely underline the inconsistent cognitive benefits in human studies.
 
 **Golden note:** FIT-AD inter-individual differences — explains inconsistency.
 
@@ -194,7 +194,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36281092 — current stance: `supports`
 
-**Evidence span:** > Meta analysis of all articles: I2 = 91%, P ≤ .00001, (MD = 2.95, 95%CI [2.49, 3.40], P ≤ .00001).
+**Stance justification:** > Meta analysis of all articles: I2 = 91%, P ≤ .00001, (MD = 2.95, 95%CI [2.49, 3.40], P ≤ .00001).
 
 **Golden note:** Meta aerobic exercise + AD — improves cognition.
 
@@ -208,7 +208,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39800395 — current stance: `inconclusive`
 
-**Evidence span:** > For the Minimum Mental State Examination (MMSE) (SMD=0.95, 95% CI 0.58 to 1.32, Z=5.06, p<0.00001), Alzheimer's Disease Assessment Scale-Cognitive Section (ADAS-cog) (SMD=-0.67, 95% CI -1.15 to -0.2, Z=2.77, p=0.006).
+**Stance justification:** > For the Minimum Mental State Examination (MMSE) (SMD=0.95, 95% CI 0.58 to 1.32, Z=5.06, p<0.00001), Alzheimer's Disease Assessment Scale-Cognitive Section (ADAS-cog) (SMD=-0.67, 95% CI -1.15 to -0.2, Z=2.77, p=0.006).
 
 **Golden note:** Aerobic exercise + AD meta — findings not entirely consistent.
 
@@ -222,7 +222,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38669527 — current stance: `inconclusive`
 
-**Evidence span:** > This is the first study to investigate urine biomarker through exercise intervention. In future stuides, participants who have low cognitive function and low activity levels need to be recruited to observe more significant 'Exercise' effect.
+**Stance justification:** > This is the first study to investigate urine biomarker through exercise intervention. In future stuides, participants who have low cognitive function and low activity levels need to be recruited to observe more significant 'Exercise' effect.
 
 **Golden note:** Exercise + urinary AD7c-NTP biomarker — biomarker-focused.
 
@@ -236,7 +236,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40454205 — current stance: `supports`
 
-**Evidence span:** > Aerobic exercise (MD 2.95) was more effective for AD, while mind-body exercises (MD 1.68) benefitted PD patients.
+**Stance justification:** > Aerobic exercise (MD 2.95) was more effective for AD, while mind-body exercises (MD 1.68) benefitted PD patients.
 
 **Golden note:** Umbrella review exercise in cognitive dysfunction — beneficial.
 
@@ -250,7 +250,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41790706 — current stance: `supports`
 
-**Evidence span:** > Structured aerobic exercise showed non-significant effects on MMSE (MD = 0.37, P = .21) and MoCA (MD = -0.49, P = .26), with modest improvement on ADAS-Cog (MD = -1.41, P = .002).
+**Stance justification:** > Structured aerobic exercise showed non-significant effects on MMSE (MD = 0.37, P = .21) and MoCA (MD = -0.49, P = .26), with modest improvement on ADAS-Cog (MD = -1.41, P = .002).
 
 **Golden note:** Aerobic + mind-body in MCI meta — exercise improves cognition.
 

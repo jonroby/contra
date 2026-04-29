@@ -148,7 +148,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18795985 — current stance: `supports`
 
-**Evidence span:** > A comparison of subjects randomized to 3 weeks of therapeutic versus placebo CPAP suggested no significant improvements in cognition. A comparison of pre- and posttreatment neuropsychological test scores after 3 weeks of therapeutic CPAP in both groups showed a significant improvement in cognition.
+**Stance justification:** > A comparison of subjects randomized to 3 weeks of therapeutic versus placebo CPAP suggested no significant improvements in cognition. A comparison of pre- and posttreatment neuropsychological test scores after 3 weeks of therapeutic CPAP in both groups showed a significant improvement in cognition.
 
 **Golden note:** Ancoli-Israel CPAP RCT in AD — improved cognition.
 
@@ -162,7 +162,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31881487 — current stance: `supports`
 
-**Evidence span:** > CPAP treatment may be effective in improving cognition in OSA patients with AD.
+**Stance justification:** > CPAP treatment may be effective in improving cognition in OSA patients with AD.
 
 **Golden note:** OSA-cognition-AD systematic review — treatment beneficial.
 
@@ -176,7 +176,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19968005 — current stance: `supports`
 
-**Evidence span:** > The results of this preliminary study raise the possibility that sustained, long-term CPAP treatment for patients with AD and OSA may result in lasting improvements in sleep and mood as well as a slowing of cognitive deterioration.
+**Stance justification:** > The results of this preliminary study raise the possibility that sustained, long-term CPAP treatment for patients with AD and OSA may result in lasting improvements in sleep and mood as well as a slowing of cognitive deterioration.
 
 **Golden note:** Sustained CPAP slows cognitive decline in AD+OSA preliminary study.
 
@@ -190,7 +190,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24828897 — current stance: `supports`
 
-**Evidence span:** > The median annual MMSE decline was significantly slower in the CPAP group (-0.7 (-1.7; +0.8)) than in the non-CPAP group (-2.2 (-3.3; -1.9); p=0.013).
+**Stance justification:** > The median annual MMSE decline was significantly slower in the CPAP group (-0.7 (-1.7; +0.8)) than in the non-CPAP group (-2.2 (-3.3; -1.9); p=0.013).
 
 **Golden note:** CPAP slows cognitive decline in mild-mod AD.
 
@@ -204,7 +204,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16696743 — current stance: `inconclusive`
 
-**Evidence span:** > These data provide evidence of the effectiveness of CPAP in reducing subjective daytime sleepiness in patients with AD with SDB.
+**Stance justification:** > These data provide evidence of the effectiveness of CPAP in reducing subjective daytime sleepiness in patients with AD with SDB.
 
 **Golden note:** CPAP reduces daytime sleepiness in mild-mod AD — sleepiness primary, not cognition.
 
@@ -218,7 +218,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30724333 — current stance: `supports`
 
-**Evidence span:** > Controlling for baseline differences, 1 year of CPAP adherence in MCI +OSA significantly improved cognition, compared with a nonadherent control group, and may slow the trajectory of cognitive decline.
+**Stance justification:** > Controlling for baseline differences, 1 year of CPAP adherence in MCI +OSA significantly improved cognition, compared with a nonadherent control group, and may slow the trajectory of cognitive decline.
 
 **Golden note:** CPAP adherence slows cognitive decline in MCI + apnea.
 
@@ -232,7 +232,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19699148 — current stance: `inconclusive`
 
-**Evidence span:** > In mild to moderate AD patients with OSA, the use of tCPAP resulted in deeper sleep after just one night, with improvements maintained for 3 weeks.
+**Stance justification:** > In mild to moderate AD patients with OSA, the use of tCPAP resulted in deeper sleep after just one night, with improvements maintained for 3 weeks.
 
 **Golden note:** CPAP deepens sleep in AD+OSA — sleep parameter primary, not cognition.
 
@@ -246,7 +246,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35523585 — current stance: `supports`
 
-**Evidence span:** > Nine out of 11 studies reported a protective effect of PAP therapy on MCI and AD incidence, e.g., delayed age at MCI onset, reduced MCI or AD incidence, slower cognitive decline, or progression to AD.
+**Stance justification:** > Nine out of 11 studies reported a protective effect of PAP therapy on MCI and AD incidence, e.g., delayed age at MCI onset, reduced MCI or AD incidence, slower cognitive decline, or progression to AD.
 
 **Golden note:** PAP + cognitive disorders systematic review — beneficial.
 
@@ -260,7 +260,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34546386 — current stance: `supports`
 
-**Evidence span:** > It revealed that cognitive functions of OSA patients with mild cognitive impairment (MCI) or AD were mildly but significantly improved after CPAP treatment (SMD 0.49, 95% CI 0.11-0.86), especially long-term CPAP treatment (SMD 0.56, 95% CI 0.10-1.02, p = 0.02).
+**Stance justification:** > It revealed that cognitive functions of OSA patients with mild cognitive impairment (MCI) or AD were mildly but significantly improved after CPAP treatment (SMD 0.49, 95% CI 0.11-0.86), especially long-term CPAP treatment (SMD 0.56, 95% CI 0.10-1.02, p = 0.02).
 
 **Golden note:** CPAP cognition meta in OSA + cognitive impairment — improves cognition.
 
@@ -274,7 +274,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33619666 — current stance: `supports`
 
-**Evidence span:** > A significant difference was found for the mean score change of the CDR since CPAP non-adherent patients showed a higher mean change of CDR compared to CPAP adherent patients. No significant differences were found for the mean change of MMSE.
+**Stance justification:** > A significant difference was found for the mean score change of the CDR since CPAP non-adherent patients showed a higher mean change of CDR compared to CPAP adherent patients. No significant differences were found for the mean change of MMSE.
 
 **Golden note:** CPAP + OSAS + AD/MCI retrospective — slows deterioration.
 
@@ -288,7 +288,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37924680 — current stance: `inconclusive`
 
-**Evidence span:** > Long-term, well-powered efficacy trials are required to understand whether CPAP could slow cognitive decline in individuals with MCI/AD, but its tolerability in this group remains uncertain.
+**Stance justification:** > Long-term, well-powered efficacy trials are required to understand whether CPAP could slow cognitive decline in individuals with MCI/AD, but its tolerability in this group remains uncertain.
 
 **Golden note:** CPAP adherence systematic review in MCI/AD — efficacy trials still needed.
 
@@ -302,7 +302,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37586145 — current stance: `inconclusive`
 
-**Evidence span:** > PAP therapy is challenging in patients with OSA and NDD, as evidenced by the considerable attrition and low adherence rates reported in this systematic review.
+**Stance justification:** > PAP therapy is challenging in patients with OSA and NDD, as evidenced by the considerable attrition and low adherence rates reported in this systematic review.
 
 **Golden note:** CPAP adherence in neurodegen — adherence focus, mixed.
 
@@ -316,7 +316,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32108738 — current stance: `supports`
 
-**Evidence span:** > Those in the mild cognitive impairment + CPAP group compared to the mild cognitive impairment - CPAP group demonstrated a significant improvement in psychomotor/cognitive processing speed, measured by the Digit Symbol Coding Test.
+**Stance justification:** > Those in the mild cognitive impairment + CPAP group compared to the mild cognitive impairment - CPAP group demonstrated a significant improvement in psychomotor/cognitive processing speed, measured by the Digit Symbol Coding Test.
 
 **Golden note:** 1-year CPAP adherence improves cognition in mild apnea + MCI.
 
@@ -330,7 +330,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32045010 — current stance: `supports`
 
-**Evidence span:** > Patients with OSA who received treatment (continuous positive airway pressure or surgery) exhibited a significantly reduced risk of AD compared with those without treatment (incidence rate ratio 0.23, 95% CI, 0.06-0.98).
+**Stance justification:** > Patients with OSA who received treatment (continuous positive airway pressure or surgery) exhibited a significantly reduced risk of AD compared with those without treatment (incidence rate ratio 0.23, 95% CI, 0.06-0.98).
 
 **Golden note:** OSA AD risk real-world — treated patients had lower AD risk.
 

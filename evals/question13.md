@@ -98,7 +98,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26727124 — current stance: `inconclusive`
 
-**Evidence span:** > There is good evidence that statins given in late life to people at risk of vascular disease do not prevent cognitive decline or dementia.
+**Stance justification:** > There is good evidence that statins given in late life to people at risk of vascular disease do not prevent cognitive decline or dementia.
 
 **Golden note:** Cochrane review 2016 — insufficient evidence statins prevent dementia.
 
@@ -112,7 +112,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15699299 — current stance: `supports`
 
-**Evidence span:** > Although statin use might be less frequent in those with prevalent dementia, we found no association between statin use and subsequent onset of dementia or AD.
+**Stance justification:** > Although statin use might be less frequent in those with prevalent dementia, we found no association between statin use and subsequent onset of dementia or AD.
 
 **Golden note:** Cache County prospective — statin use associated with reduced incident AD/dementia.
 
@@ -126,7 +126,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24247674 — current stance: `inconclusive`
 
-**Evidence span:** > Larger and better-designed studies are needed to draw unequivocal conclusions about the effect of statins on cognition. Published data do not suggest an adverse effect of statins on cognition; however, the strength of available evidence is limited, particularly with regard to high-dose statins.
+**Stance justification:** > Larger and better-designed studies are needed to draw unequivocal conclusions about the effect of statins on cognition. Published data do not suggest an adverse effect of statins on cognition; however, the strength of available evidence is limited, particularly with regard to high-dose statins.
 
 **Golden note:** Statins/cognition systematic review — relationship remains unknown.
 
@@ -140,7 +140,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19370582 — current stance: `inconclusive`
 
-**Evidence span:** > There is good evidence from RCTs that statins given in late life to individuals at risk of vascular disease have no effect in preventing AD or dementia.
+**Stance justification:** > There is good evidence from RCTs that statins given in late life to individuals at risk of vascular disease have no effect in preventing AD or dementia.
 
 **Golden note:** Cochrane 2009 — insufficient evidence for prevention.
 
@@ -154,7 +154,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23225700 — current stance: `inconclusive`
 
-**Evidence span:** > These pooled results suggest that statins may provide a slight benefit in the prevention of AD and all-type dementia. This benefit observed in both disease states should be interpreted with caution as observational studies are subject to bias.
+**Stance justification:** > These pooled results suggest that statins may provide a slight benefit in the prevention of AD and all-type dementia. This benefit observed in both disease states should be interpreted with caution as observational studies are subject to bias.
 
 **Golden note:** Observational meta — benefit inconclusive with confounding concerns.
 
@@ -168,7 +168,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20859546 — current stance: `inconclusive`
 
-**Evidence span:** > Statins (2 studies) and intensified control of type II DM (1 study) appear to have no effect on prevention of cognitive decline.
+**Stance justification:** > Statins (2 studies) and intensified control of type II DM (1 study) appear to have no effect on prevention of cognitive decline.
 
 **Golden note:** CV risk factor RCT review — sparse RCT data on prevention.
 
@@ -182,7 +182,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29914039 — current stance: `inconclusive`
 
-**Evidence span:** > In prospective studies, treatment of hyperlipidemia with statins, but not nonstatin lipid-lowering agents, was associated with reduced risk of dementia (n = 17; RR, 0.77; 95% CI, 0.63-0.95) and AD (n = 13; RR, 0.86; 95% CI, 0.80-0.92). The single RCT on statins and dementia incidence showed no association.
+**Stance justification:** > In prospective studies, treatment of hyperlipidemia with statins, but not nonstatin lipid-lowering agents, was associated with reduced risk of dementia (n = 17; RR, 0.77; 95% CI, 0.63-0.95) and AD (n = 13; RR, 0.86; 95% CI, 0.80-0.92). The single RCT on statins and dementia incidence showed no association.
 
 **Golden note:** Vascular risk factor treatment meta — uncertain on AD/dementia incidence.
 
@@ -196,7 +196,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27473843 — current stance: `inconclusive`
 
-**Evidence span:** > TOP-COG was a feasibility/pilot, double-blind RCT of 12 months simvastatin 40 mg versus placebo for the primary prevention of dementia in Alzheimer disease in Down syndrome adults aged 50 years or older.
+**Stance justification:** > TOP-COG was a feasibility/pilot, double-blind RCT of 12 months simvastatin 40 mg versus placebo for the primary prevention of dementia in Alzheimer disease in Down syndrome adults aged 50 years or older.
 
 **Golden note:** TOP-COG Down syndrome statin pilot RCT — small, exploratory.
 
@@ -210,7 +210,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39963242 — current stance: `inconclusive`
 
-**Evidence span:** > Thirty-five cohort studies involving 6,306,043 participants were pooled and indicated that statin use was associated with a reduced risk of dementia (HR: 0.79, 95% CI: 0.71-0.88). Similarly, an analysis of 19 studies comprising 1,237,341 participants demonstrated a 29% decrease in the risk of AD among statin users (HR: 0.71, 95% CI: 0.60-0.85).
+**Stance justification:** > Thirty-five cohort studies involving 6,306,043 participants were pooled and indicated that statin use was associated with a reduced risk of dementia (HR: 0.79, 95% CI: 0.71-0.88). Similarly, an analysis of 19 studies comprising 1,237,341 participants demonstrated a 29% decrease in the risk of AD among statin users (HR: 0.71, 95% CI: 0.60-0.85).
 
 **Golden note:** 2025 cohort meta — effect unclear.
 
@@ -224,7 +224,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34167639 — current stance: `contradicts`
 
-**Evidence span:** > In adults ≥65 years of age, statin therapy was not associated with incident dementia, MCI, or declines in individual cognition domains.
+**Stance justification:** > In adults ≥65 years of age, statin therapy was not associated with incident dementia, MCI, or declines in individual cognition domains.
 
 **Golden note:** ASPREE secondary analysis (n=18,846 ≥65, well-powered) — statin/cognition association uncertain, primary suggests null.
 

@@ -100,7 +100,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18044984 — current stance: `inconclusive`
 
-**Evidence span:** > The use of ChEIs in MCI was not associated with any delay in the onset of AD or dementia.
+**Stance justification:** > The use of ChEIs in MCI was not associated with any delay in the onset of AD or dementia.
 
 **Golden note:** Systematic review of ChEIs in MCI — small effects, marginal.
 
@@ -114,7 +114,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15326237 — current stance: `inconclusive`
 
-**Evidence span:** > Primary efficacy measures of the NYU Paragraph Recall test and the ADCS CGIC-MCI did not show significant treatment effects in the ITT population.
+**Stance justification:** > Primary efficacy measures of the NYU Paragraph Recall test and the ADCS CGIC-MCI did not show significant treatment effects in the ITT population.
 
 **Golden note:** 24-week donepezil RCT in MCI — limited efficacy on primary, mixed.
 
@@ -128,7 +128,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32096857 — current stance: `contradicts`
 
-**Evidence span:** > There is no empirical evidence, however, that screening for cognitive impairment improves patient or caregiver outcomes or causes harm. It remains unclear whether interventions for patients or caregivers provide clinically important benefits for older adults with earlier detected cognitive impairment or their caregivers.
+**Stance justification:** > There is no empirical evidence, however, that screening for cognitive impairment improves patient or caregiver outcomes or causes harm. It remains unclear whether interventions for patients or caregivers provide clinically important benefits for older adults with earlier detected cognitive impairment or their caregivers.
 
 **Golden note:** USPSTF review — insufficient/no benefit of pharmacologic treatment for MCI.
 
@@ -142,7 +142,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19176895 — current stance: `inconclusive`
 
-**Evidence span:** > The dual primary efficacy endpoint was not reached. We noted a small, but significant, decrease in modified ADAS-Cog scores in favor of donepezil at study endpoint.
+**Stance justification:** > The dual primary efficacy endpoint was not reached. We noted a small, but significant, decrease in modified ADAS-Cog scores in favor of donepezil at study endpoint.
 
 **Golden note:** 48-week donepezil RCT in MCI — modest benefit, not definitive.
 
@@ -156,7 +156,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24043661 — current stance: `contradicts`
 
-**Evidence span:** > Cognitive enhancers did not improve cognition or function among patients with mild cognitive impairment and were associated with a greater risk of gastrointestinal harms. Our findings do not support the use of cognitive enhancers for mild cognitive impairment.
+**Stance justification:** > Cognitive enhancers did not improve cognition or function among patients with mild cognitive impairment and were associated with a greater risk of gastrointestinal harms. Our findings do not support the use of cognitive enhancers for mild cognitive impairment.
 
 **Golden note:** Meta-analysis: cognitive enhancers in MCI lack efficacy.
 
@@ -170,7 +170,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16856114 — current stance: `inconclusive`
 
-**Evidence span:** > There is no evidence to support the use of donepezil for patients with MCI. The putative benefits are minor, short lived and associated with significant side effects.
+**Stance justification:** > There is no evidence to support the use of donepezil for patients with MCI. The putative benefits are minor, short lived and associated with significant side effects.
 
 **Golden note:** Cochrane review of donepezil for MCI — uncertain benefit.
 
@@ -184,7 +184,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19528519 — current stance: `supports`
 
-**Evidence span:** > Kaplan-Meier analysis showed that among the depressed subjects, the proportion progressing to AD was lower for the donepezil group than the combined vitamin E and placebo groups at 1.7 years (p = 0.023), at 2.2 years (p = 0.025), and remained marginally lower at 2.7 years (p = 0.070).
+**Stance justification:** > Kaplan-Meier analysis showed that among the depressed subjects, the proportion progressing to AD was lower for the donepezil group than the combined vitamin E and placebo groups at 1.7 years (p = 0.023), at 2.2 years (p = 0.025), and remained marginally lower at 2.7 years (p = 0.070).
 
 **Golden note:** Donepezil delays progression to AD in MCI subjects with depression — subgroup positive.
 
@@ -198,7 +198,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30565793 — current stance: `contradicts`
 
-**Evidence span:** > After 6 months, the donepezil group experienced an improvement in dual-task gait speed (range 4-11 cm/s), although this was not statistically significant.
+**Stance justification:** > After 6 months, the donepezil group experienced an improvement in dual-task gait speed (range 4-11 cm/s), although this was not statistically significant.
 
 **Golden note:** Donepezil for gait/falls in MCI RCT — no functional benefit.
 
@@ -212,7 +212,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19001543 — current stance: `inconclusive`
 
-**Evidence span:** > Despite the limitations inherent to a pilot study of a small sample, our results point to specific cortical substrates underlying the actions of donepezil, which can be tested in future studies.
+**Stance justification:** > Despite the limitations inherent to a pilot study of a small sample, our results point to specific cortical substrates underlying the actions of donepezil, which can be tested in future studies.
 
 **Golden note:** fMRI pilot — donepezil affects cortical activation in MCI; no clinical primary.
 
@@ -226,7 +226,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27567841 — current stance: `inconclusive`
 
-**Evidence span:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
+**Stance justification:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
 
 **Golden note:** BCHE/APOE genotype modulates donepezil response in MCI — pharmacogenetic, mixed.
 
@@ -240,7 +240,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26876309 — current stance: `inconclusive`
 
-**Evidence span:** > Only Hp, but not BF volume was a useful predictor of cognitive decline in suspected prodromal AD patients. Both Hp and BF volumes were poor predictors of treatment response, questioning previous approaches on predicting treatment response without placebo control.
+**Stance justification:** > Only Hp, but not BF volume was a useful predictor of cognitive decline in suspected prodromal AD patients. Both Hp and BF volumes were poor predictors of treatment response, questioning previous approaches on predicting treatment response without placebo control.
 
 **Golden note:** Hippocampal/BF volume predictors of donepezil response in prodromal AD.
 
@@ -254,7 +254,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37353809 — current stance: `inconclusive`
 
-**Evidence span:** > Donepezil-treated MCI individuals showed slower atrophy rates compared to the placebo group, but only if they belonged to the minimal atrophy or hippocampal-sparing subtypes.
+**Stance justification:** > Donepezil-treated MCI individuals showed slower atrophy rates compared to the placebo group, but only if they belonged to the minimal atrophy or hippocampal-sparing subtypes.
 
 **Golden note:** Differential donepezil response by MRI subtypes in MCI — heterogeneity finding.
 
@@ -268,7 +268,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17330176 — current stance: `inconclusive`
 
-**Evidence span:** > The use of ChEI resulted in approximately 24% reduction of risk of conversion from MCI to dementia at the cost of more than 50% increase of adverse events and more than 130% increase of adverse events leading to drug discontinuation, as compared to placebo.
+**Stance justification:** > The use of ChEI resulted in approximately 24% reduction of risk of conversion from MCI to dementia at the cost of more than 50% increase of adverse events and more than 130% increase of adverse events leading to drug discontinuation, as compared to placebo.
 
 **Golden note:** Meta-analysis ChEIs in MCI — modest, uncertain.
 
@@ -282,7 +282,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26091818 — current stance: `inconclusive`
 
-**Evidence span:** > Pooled anti-dementia drugs showed superior protective outcomes compared with placebo regarding %TBV/y (SMD=-0.21, 95%CI=-0.37 to -0.04, P=.01, N=4, n=624) and %VV/y (SMD=-0.79, 95%CI=-1.40 to -0.19, P=.01, N=3, n=851). However, %HV/y failed to show difference between both groups.
+**Stance justification:** > Pooled anti-dementia drugs showed superior protective outcomes compared with placebo regarding %TBV/y (SMD=-0.21, 95%CI=-0.37 to -0.04, P=.01, N=4, n=624) and %VV/y (SMD=-0.79, 95%CI=-1.40 to -0.19, P=.01, N=3, n=851). However, %HV/y failed to show difference between both groups.
 
 **Golden note:** Anti-dementia meds vs brain atrophy meta in MCI/AD — atrophy outcome only.
 
@@ -296,7 +296,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19949165 — current stance: `inconclusive`
 
-**Evidence span:** > These findings support the safety of donepezil in patients with aMCI. When compared with other studies, however, the data suggest that patients with Alzheimer's tolerate donepezil better than patients with MCI.
+**Stance justification:** > These findings support the safety of donepezil in patients with aMCI. When compared with other studies, however, the data suggest that patients with Alzheimer's tolerate donepezil better than patients with MCI.
 
 **Golden note:** Open-label extension safety — no efficacy claim.
 
@@ -310,7 +310,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39939901 — current stance: `inconclusive`
 
-**Evidence span:** > Higher doses of donepezil (10 mg) significantly reduce hippocampal atrophy in Alzheimer's disease and mild cognitive impairment, suggesting potential neuroprotective effects.
+**Stance justification:** > Higher doses of donepezil (10 mg) significantly reduce hippocampal atrophy in Alzheimer's disease and mild cognitive impairment, suggesting potential neuroprotective effects.
 
 **Golden note:** AChEI hippocampal atrophy meta — atrophy outcome, mixed populations.
 
@@ -324,7 +324,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15829527 — current stance: `inconclusive`
 
-**Evidence span:** > Although donepezil therapy was associated with a lower rate of progression to Alzheimer's disease during the first 12 months of treatment, the rate of progression to Alzheimer's disease after three years was not lower among patients treated with donepezil than among those given placebo.
+**Stance justification:** > Although donepezil therapy was associated with a lower rate of progression to Alzheimer's disease during the first 12 months of treatment, the rate of progression to Alzheimer's disease after three years was not lower among patients treated with donepezil than among those given placebo.
 
 **Golden note:** Petersen 2005 NEJM vit-E + donepezil for MCI — donepezil reduced progression to AD at 12mo but not 36mo. Classic mixed.
 

@@ -252,7 +252,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 9496988 — current stance: `inconclusive`
 
-**Evidence span:** > Studies conducted in women, however, have substantial methodologic problems and have produced conflicting results. Given the known risks of estrogen therapy, we do not recommend estrogen for the prevention or treatment of Alzheimer disease or other dementias until adequate trials have been completed.
+**Stance justification:** > Studies conducted in women, however, have substantial methodologic problems and have produced conflicting results. Given the known risks of estrogen therapy, we do not recommend estrogen for the prevention or treatment of Alzheimer disease or other dementias until adequate trials have been completed.
 
 **Golden note:** Yaffe 1998 review — observational supports, controlled trials don't.
 
@@ -266,7 +266,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34339416 — current stance: `inconclusive`
 
-**Evidence span:** > ET and EPT had opposite effects for endometrial cancer, endometrial hyperplasia, and Alzheimer disease.
+**Stance justification:** > ET and EPT had opposite effects for endometrial cancer, endometrial hyperplasia, and Alzheimer disease.
 
 **Golden note:** MHT umbrella review — mixed across outcomes.
 
@@ -280,7 +280,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19160224 — current stance: `inconclusive`
 
-**Evidence span:** > Currently, HRT or ERT for cognitive improvement or maintenance is not indicated for women with AD.
+**Stance justification:** > Currently, HRT or ERT for cognitive improvement or maintenance is not indicated for women with AD.
 
 **Golden note:** Cochrane HRT for cognition in dementia — insufficient evidence.
 
@@ -294,7 +294,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27163830 — current stance: `contradicts`
 
-**Evidence span:** > Women (age = 52-65) randomized to transdermal 17β-estradiol (n = 21) had lower PiB SUVR compared to placebo (n = 30) after adjusting for age [odds ratio (95% CI) = 0.31(0.11-0.83)].
+**Stance justification:** > Women (age = 52-65) randomized to transdermal 17β-estradiol (n = 21) had lower PiB SUVR compared to placebo (n = 30) after adjusting for age [odds ratio (95% CI) = 0.31(0.11-0.83)].
 
 **Golden note:** KEEPS-AD RCT — recently postmenopausal women on transdermal estradiol; no effect on amyloid deposition. Pivotal test of timing-window hypothesis, primary missed.
 
@@ -308,7 +308,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19468050 — current stance: `inconclusive`
 
-**Evidence span:** > There is some evidence for a beneficial effect of estrogen alone on verbal memory in younger naturally post-menopausal women... There is stronger evidence of a detrimental effect of conjugated equine estrogen plus medroxyprogesterone acetate on verbal memory in younger and older post-menopausal women.
+**Stance justification:** > There is some evidence for a beneficial effect of estrogen alone on verbal memory in younger naturally post-menopausal women... There is stronger evidence of a detrimental effect of conjugated equine estrogen plus medroxyprogesterone acetate on verbal memory in younger and older post-menopausal women.
 
 **Golden note:** HT and cognition — discrepant trial information.
 
@@ -322,7 +322,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20840280 — current stance: `supports`
 
-**Evidence span:** > Consistent with the "critical period" hypothesis, these studies suggest that the positive effects of estrogen are most robust in young women and in older women who had initiated ET around the time of menopause.
+**Stance justification:** > Consistent with the "critical period" hypothesis, these studies suggest that the positive effects of estrogen are most robust in young women and in older women who had initiated ET around the time of menopause.
 
 **Golden note:** Critical-period hypothesis — early initiation may reduce AD risk.
 
@@ -336,7 +336,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 10997480 — current stance: `supports`
 
-**Evidence span:** > Twelve healthy menopausal women experiencing daily hot flushes and not on ERT were recruited to participate in a clinical study. There was a global improvement in CBF associated with ERT, an average gain of 22% over baseline.
+**Stance justification:** > Twelve healthy menopausal women experiencing daily hot flushes and not on ERT were recruited to participate in a clinical study. There was a global improvement in CBF associated with ERT, an average gain of 22% over baseline.
 
 **Golden note:** Estrogen + CBF mechanism review — proposes protective mechanism.
 
@@ -350,7 +350,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36834617 — current stance: `inconclusive`
 
-**Evidence span:** > The literature suggests that estrogens have a clear role in modulating dementia risk, with reliable evidence showing that HRT can have both a beneficial and a deleterious effect.
+**Stance justification:** > The literature suggests that estrogens have a clear role in modulating dementia risk, with reliable evidence showing that HRT can have both a beneficial and a deleterious effect.
 
 **Golden note:** 'HRT risk factor or therapeutic option?' — debate framing.
 
@@ -364,7 +364,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32910516 — current stance: `inconclusive`
 
-**Evidence span:** > Undesirable side effects of hormone variations emphasize a role for hormone therapy (HT) where possible benefits include a delay in the onset of dementia-yet findings are inconsistent.
+**Stance justification:** > Undesirable side effects of hormone variations emphasize a role for hormone therapy (HT) where possible benefits include a delay in the onset of dementia-yet findings are inconsistent.
 
 **Golden note:** Estrogen + brain structure review — findings inconsistent.
 
@@ -378,7 +378,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38501109 — current stance: `inconclusive`
 
-**Evidence span:** > When initiated specifically in midlife or close to menopause onset, estrogen therapy was associated with improved verbal memory (SMD=0.394, 95% CI 0.014, 0.774; P=0.046), while late-life initiation had no effects.
+**Stance justification:** > When initiated specifically in midlife or close to menopause onset, estrogen therapy was associated with improved verbal memory (SMD=0.394, 95% CI 0.014, 0.774; P=0.046), while late-life initiation had no effects.
 
 **Golden note:** MHT cognition meta — controversial.
 
@@ -392,7 +392,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32057896 — current stance: `inconclusive`
 
-**Evidence span:** > Pooled results with random effect model showed a significant association between hormone therapy and Alzheimer's disease (OR 1.08, 95 % CI 1.03-1.14, I2: 69 %). However, the association appears to shift in direct after five years in the context of Alzheimer's disease, adding further weight to the critical window or timing hypothesis.
+**Stance justification:** > Pooled results with random effect model showed a significant association between hormone therapy and Alzheimer's disease (OR 1.08, 95 % CI 1.03-1.14, I2: 69 %). However, the association appears to shift in direct after five years in the context of Alzheimer's disease, adding further weight to the critical window or timing hypothesis.
 
 **Golden note:** MHT-AD/dementia/PD time-response meta — controversial.
 
@@ -406,7 +406,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15511602 — current stance: `inconclusive`
 
-**Evidence span:** > Results indicate that while little overall beneficial effect of estrogen was found, years since menopause was significantly related to change in executive functioning in the estrogen but not the placebo group, such that more recently postmenopausal women demonstrated greater positive change than older women.
+**Stance justification:** > Results indicate that while little overall beneficial effect of estrogen was found, years since menopause was significantly related to change in executive functioning in the estrogen but not the placebo group, such that more recently postmenopausal women demonstrated greater positive change than older women.
 
 **Golden note:** Reproductive events modify ERT cognitive effects — moderator framing.
 
@@ -420,7 +420,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 14520653 — current stance: `supports`
 
-**Evidence span:** > Women with early onset of menopause (46 years or younger) had earlier onset and increased risk of Alzheimer's disease (AD) compared with women with onset of menopause after 46 years (rate ratio, 2.7; 95% confidence interval [CI], 1.2-5.9).
+**Stance justification:** > Women with early onset of menopause (46 years or younger) had earlier onset and increased risk of Alzheimer's disease (AD) compared with women with onset of menopause after 46 years (rate ratio, 2.7; 95% confidence interval [CI], 1.2-5.9).
 
 **Golden note:** Earlier menopause → earlier AD onset in Down syndrome — supports estrogen-loss hypothesis.
 
@@ -434,7 +434,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16926067 — current stance: `supports`
 
-**Evidence span:** > Women who had low levels of bioavailable E2 at baseline were four times as likely to develop AD (HR=4.1, 95% CI: 1.2-13.9) and developed AD, on average, 3 years earlier, than those with high levels of bioavailable E2.
+**Stance justification:** > Women who had low levels of bioavailable E2 at baseline were four times as likely to develop AD (HR=4.1, 95% CI: 1.2-13.9) and developed AD, on average, 3 years earlier, than those with high levels of bioavailable E2.
 
 **Golden note:** Bioavailable estradiol delays AD onset in DS — supports timing.
 
@@ -448,7 +448,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23418430 — current stance: `inconclusive`
 
-**Evidence span:** > APOE-ε4 carriers who went off their HT regimen exhibited TL shortening, as predicted for the at-risk population. APOE-ε4 carriers who remained on HT, however, did not exhibit comparable signs of cell aging.
+**Stance justification:** > APOE-ε4 carriers who went off their HT regimen exhibited TL shortening, as predicted for the at-risk population. APOE-ε4 carriers who remained on HT, however, did not exhibit comparable signs of cell aging.
 
 **Golden note:** APOE-ε4 + accelerated cell aging in mid-life women — implication for HT.
 
@@ -462,7 +462,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33110037 — current stance: `inconclusive`
 
-**Evidence span:** > Increased levels of cognitive complaints were associated with lower gray-matter volume in the right medial temporal lobe (r = -0.445, P < 0.002, R = 0.2).
+**Stance justification:** > Increased levels of cognitive complaints were associated with lower gray-matter volume in the right medial temporal lobe (r = -0.445, P < 0.002, R = 0.2).
 
 **Golden note:** Cognitive complaints + GM volume in younger postmenop — descriptive.
 
@@ -476,7 +476,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34342862 — current stance: `inconclusive`
 
-**Evidence span:** > Both observational and controlled clinical trials had methodological issues and discrepancies in inclusion criteria and HT protocols. These inconsistencies made it difficult to establish an association between HT and AD.
+**Stance justification:** > Both observational and controlled clinical trials had methodological issues and discrepancies in inclusion criteria and HT protocols. These inconsistencies made it difficult to establish an association between HT and AD.
 
 **Golden note:** HT in postmenop AD systematic review — conflicting.
 
@@ -490,7 +490,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40220453 — current stance: `supports`
 
-**Evidence span:** > Pooled estimates showed that MHT use for 3-5 years (cohort, RR = 0.56, 95% CI: 0.34-0.93) or initiation within 5 years of menopause (cohort, RR = 0.70, 95% CI: 0.49-0.99) reduced the risk of AD.
+**Stance justification:** > Pooled estimates showed that MHT use for 3-5 years (cohort, RR = 0.56, 95% CI: 0.34-0.93) or initiation within 5 years of menopause (cohort, RR = 0.70, 95% CI: 0.49-0.99) reduced the risk of AD.
 
 **Golden note:** MHT duration/timing/route/formulation meta — protective association overall.
 
@@ -504,7 +504,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39422947 — current stance: `supports`
 
-**Evidence span:** > Combination MHT should probably be prescribed for less than 5 years after menopause to reduce risk for AD, while estrogen alone should not be prescribed to women over 60.
+**Stance justification:** > Combination MHT should probably be prescribed for less than 5 years after menopause to reduce risk for AD, while estrogen alone should not be prescribed to women over 60.
 
 **Golden note:** (Phyto)estrogen + AD — modified by age + duration; supports timing window.
 
@@ -518,7 +518,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41618732 — current stance: `inconclusive`
 
-**Evidence span:** > Aβ and structural MRI biomarkers were not different in the oCEE and tE2 groups compared to placebo. Apolipoprotein E ε4 status did not modify the findings.
+**Stance justification:** > Aβ and structural MRI biomarkers were not different in the oCEE and tE2 groups compared to placebo. Apolipoprotein E ε4 status did not modify the findings.
 
 **Golden note:** Long-term amyloid PET/MRI HT trial — biomarker-only.
 
@@ -532,7 +532,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37393661 — current stance: `supports`
 
-**Evidence span:** > Women with EM demonstrated a greater risk of dementia of any type than women of normal age at menopause (OR 1.37, 95 % CI 1.22-1.54; I2 93%). Increased risk of dementia was also found in women with POI (OR 1.18, 95 % CI 1.15-1.21; I2 0%).
+**Stance justification:** > Women with EM demonstrated a greater risk of dementia of any type than women of normal age at menopause (OR 1.37, 95 % CI 1.22-1.54; I2 93%). Increased risk of dementia was also found in women with POI (OR 1.18, 95 % CI 1.15-1.21; I2 0%).
 
 **Golden note:** Early menopause / POI → increased dementia risk meta — supports estrogen-loss hypothesis.
 
@@ -546,7 +546,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17368974 — current stance: `inconclusive`
 
-**Evidence span:** > Therefore the reported overall cardiovascular risks in WHI, in both treatment arms, should be regarded as irrelevant to menopause management.
+**Stance justification:** > Therefore the reported overall cardiovascular risks in WHI, in both treatment arms, should be regarded as irrelevant to menopause management.
 
 **Golden note:** WHI risks / menopause management commentary.
 

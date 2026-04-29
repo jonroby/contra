@@ -153,7 +153,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34807243 — current stance: `contradicts`
 
-**Evidence span:** > Incidence of ARIA-E was highest in aducanumab-treated participants who were apolipoprotein E ε4 allele carriers.
+**Stance justification:** > Incidence of ARIA-E was highest in aducanumab-treated participants who were apolipoprotein E ε4 allele carriers.
 
 **Golden note:** EMERGE/ENGAGE ARIA analysis — APOE4 carriers had ~2x higher ARIA-E rates; ε4 carriers experience more harm not more benefit.
 
@@ -167,7 +167,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37423541 — current stance: `inconclusive`
 
-**Evidence span:** > However, while cognitive effects were of small effect sizes, these drugs considerably increased risk of side effects such as Amyloid Related Imaging Abnormalities (ARIA), especially in APOE-ε4 carriers.
+**Stance justification:** > However, while cognitive effects were of small effect sizes, these drugs considerably increased risk of side effects such as Amyloid Related Imaging Abnormalities (ARIA), especially in APOE-ε4 carriers.
 
 **Golden note:** Anti-Aβ phase 3 meta — discusses APOE genotype effects, mixed across drugs.
 
@@ -181,7 +181,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36038268 — current stance: `contradicts`
 
-**Evidence span:** > In subgroup analysis according to ApoE-4 carrier status, the incidences of ARIA-E and ARIA-H were higher in the ApoE-4 carrier group than those in the ApoE-4 noncarrier group, but there was no statistical significance (ApoE-4 carrier vs noncarrier, ARIA-E: 8.6% vs 6.9%, p = 0.663, and ARIA-H: 10.5% vs 6.6%, p = 0.398).
+**Stance justification:** > In subgroup analysis according to ApoE-4 carrier status, the incidences of ARIA-E and ARIA-H were higher in the ApoE-4 carrier group than those in the ApoE-4 noncarrier group, but there was no statistical significance (ApoE-4 carrier vs noncarrier, ARIA-E: 8.6% vs 6.9%, p = 0.663, and ARIA-H: 10.5% vs 6.6%, p = 0.398).
 
 **Golden note:** ARIA meta — APOE4 a predisposing factor for adverse imaging events, not a benefit modifier.
 
@@ -195,7 +195,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40316479 — current stance: `inconclusive` [FLIP from inconclusive → contradicts]
 
-**Evidence span:** > Further analysis of mABs indicated that their efficacy did not differ by disease stage, concomitant AD medications, or APOE4 carrier status.
+**Stance justification:** > Further analysis of mABs indicated that their efficacy did not differ by disease stage, concomitant AD medications, or APOE4 carrier status.
 
 **Golden note:** Anti-amyloid vs AChEI by genotype/stage — mixed across agents.
 
@@ -218,7 +218,7 @@ the answer in this paper is explicitly no.
 
 ### PMID 41109234 — current stance: `inconclusive`
 
-**Evidence span:** > Aducanumab-treated participants comprised four males and one female, all carrying at least one APOE ∊4 allele, with two harbouring a PSEN1 mutation.
+**Stance justification:** > Aducanumab-treated participants comprised four males and one female, all carrying at least one APOE ∊4 allele, with two harbouring a PSEN1 mutation.
 
 **Golden note:** Aducanumab neuropath case-control retrospective — small, no clean APOE4 benefit comparison.
 
@@ -232,7 +232,7 @@ the answer in this paper is explicitly no.
 
 ### PMID 39350371 — current stance: `inconclusive`
 
-**Evidence span:** > A treatment effect was observed in favor of aducanumab on the primary and secondary efficacy endpoints at Week 78 in EMERGE, but not ENGAGE.
+**Stance justification:** > A treatment effect was observed in favor of aducanumab on the primary and secondary efficacy endpoints at Week 78 in EMERGE, but not ENGAGE.
 
 **Golden note:** Japanese subgroup of EMERGE/ENGAGE — by ethnicity not specifically APOE-stratified.
 
@@ -246,7 +246,7 @@ the answer in this paper is explicitly no.
 
 ### PMID 40545559 — current stance: `inconclusive`
 
-**Evidence span:** > Across multiple analyses aducanumab slowed cognitive decline, prolonged functional independence, and attenuated behavioral symptoms in participants with early AD.
+**Stance justification:** > Across multiple analyses aducanumab slowed cognitive decline, prolonged functional independence, and attenuated behavioral symptoms in participants with early AD.
 
 **Golden note:** EMERGE clinical-meaningfulness re-analysis — APOE-stratification not the focus.
 

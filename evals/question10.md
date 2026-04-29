@@ -70,7 +70,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37840487 — current stance: `inconclusive`
 
-**Evidence span:** > The intervention arm ameliorated 2.1 [1.0] MPI points (mean [SD], p = 0.016) compared to the control over the two-year intervention.
+**Stance justification:** > The intervention arm ameliorated 2.1 [1.0] MPI points (mean [SD], p = 0.016) compared to the control over the two-year intervention.
 
 **Golden note:** Remotely coached multimodal lifestyle intervention in AD — cocoa one of many components, can't isolate cocoa effect.
 

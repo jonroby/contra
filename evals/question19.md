@@ -201,7 +201,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 8618881 — current stance: `supports`
 
-**Evidence span:** > Results showed that > 80% of apoE4-negative AD patients showed marked improvement after 30 weeks as measured by the AD assessment scale (ADAS), whereas 60% of apoE4 carriers had ADAS scores that were worse compared to baseline.
+**Stance justification:** > Results showed that > 80% of apoE4-negative AD patients showed marked improvement after 30 weeks as measured by the AD assessment scale (ADAS), whereas 60% of apoE4 carriers had ADAS scores that were worse compared to baseline.
 
 **Golden note:** Poirier 1995 — ε4 predicts cholinergic deficits and lower ChEI treatment outcome.
 
@@ -215,7 +215,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 9777427 — current stance: `supports`
 
-**Evidence span:** > While ApoE genotype did not modify response to therapy in the short term, there are indications that it may affect response over the longer term (up to 12 months).
+**Stance justification:** > While ApoE genotype did not modify response to therapy in the short term, there are indications that it may affect response over the longer term (up to 12 months).
 
 **Golden note:** Gender + APOE genotype as predictors of anticholinesterase response — ε4 modifies outcome.
 
@@ -229,7 +229,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 11173877 — current stance: `contradicts`
 
-**Evidence span:** > Galantamine produced cognitive and functional improvement that were not affected by epsilon 4 allele count.
+**Stance justification:** > Galantamine produced cognitive and functional improvement that were not affected by epsilon 4 allele count.
 
 **Golden note:** APOE genotype: NO influence on galantamine efficacy. Clear negative.
 
@@ -243,7 +243,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18401173 — current stance: `inconclusive`
 
-**Evidence span:** > ApoE epsilon4 carriers with AD showed a mean 1.1-point increase from the baseline score of 23.9 on the 70-point Alzheimer's Disease Assessment Scale-Cognitive Component at 48 weeks, while the ApoE epsilon4 noncarrier group showed a 3.1-point increase from the baseline score of 22.5 (p = 0.03).
+**Stance justification:** > ApoE epsilon4 carriers with AD showed a mean 1.1-point increase from the baseline score of 23.9 on the 70-point Alzheimer's Disease Assessment Scale-Cognitive Component at 48 weeks, while the ApoE epsilon4 noncarrier group showed a 3.1-point increase from the baseline score of 22.5 (p = 0.03).
 
 **Golden note:** Donepezil + ApoE — described as 'matter of controversy', mixed results.
 
@@ -257,7 +257,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18334913 — current stance: `supports`
 
-**Evidence span:** > In MCI, the risk of cognitive decline, hippocampal volumetric loss and progression to AD seems to be the greatest in individuals who carry at least one copy of both the BCHE-K and APOE epsilon4 alleles.
+**Stance justification:** > In MCI, the risk of cognitive decline, hippocampal volumetric loss and progression to AD seems to be the greatest in individuals who carry at least one copy of both the BCHE-K and APOE epsilon4 alleles.
 
 **Golden note:** Synergistic APOE ε4 + BCHE-K predicts MCI→AD progression on rivastigmine.
 
@@ -271,7 +271,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 10599773 — current stance: `supports`
 
-**Evidence span:** > The interaction of APOE genotype and the metrifonate effect on cognitive performance were not significant (p = 0.25). The findings from these studies of up to 26 weeks' duration do not clearly support an interaction between APOE genotype and metrifonate treatment effects.
+**Stance justification:** > The interaction of APOE genotype and the metrifonate effect on cognitive performance were not significant (p = 0.25). The findings from these studies of up to 26 weeks' duration do not clearly support an interaction between APOE genotype and metrifonate treatment effects.
 
 **Golden note:** Metrifonate + APOE genotype interaction detected.
 
@@ -285,7 +285,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22986607 — current stance: `supports`
 
-**Evidence span:** > However, the frequency of APOE ε4 carriers and noncarriers showed no difference between the 2 groups (P > 0.05). We did not find the relationship between APOE ε4 status and the efficacy of donepezil in our study.
+**Stance justification:** > However, the frequency of APOE ε4 carriers and noncarriers showed no difference between the 2 groups (P > 0.05). We did not find the relationship between APOE ε4 status and the efficacy of donepezil in our study.
 
 **Golden note:** CYP2D6*10 + APOE polymorphisms affect donepezil efficacy.
 
@@ -299,7 +299,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15289797 — current stance: `supports`
 
-**Evidence span:** > Non-APOE epsilon4 carriers showed a less favorable course under either placebo or rivastigmine, but both genotype-defined subgroups showed quantitatively similar responses to therapy (both P<0.05 vs placebo).
+**Stance justification:** > Non-APOE epsilon4 carriers showed a less favorable course under either placebo or rivastigmine, but both genotype-defined subgroups showed quantitatively similar responses to therapy (both P<0.05 vs placebo).
 
 **Golden note:** Differential rivastigmine response in ε4 carriers vs non-carriers.
 
@@ -313,7 +313,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27567841 — current stance: `supports`
 
-**Evidence span:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
+**Stance justification:** > Among the carriers of APOE-ɛ4 and BCHE-K*, the benefit of donepezil was evident at the end of the three-year follow-up.
 
 **Golden note:** BCHE-K + APOE-ε4 modulate donepezil response in aMCI.
 
@@ -327,7 +327,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22012848 — current stance: `inconclusive`
 
-**Evidence span:** > APOE4-dependent outcome of BCHE-K genotype as AD risk factor arises through a differential phenotypic modulation of BuChE.
+**Stance justification:** > APOE4-dependent outcome of BCHE-K genotype as AD risk factor arises through a differential phenotypic modulation of BuChE.
 
 **Golden note:** APOE ε4 modulates BChE CSF phenotype — biomarker, not direct treatment outcome.
 
@@ -341,7 +341,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 12566177 — current stance: `inconclusive`
 
-**Evidence span:** > The CSF-tau changes were mainly seen in ApoE epsilon4 carriers. This study shows that the two long-term cholinesterase inhibitor treatments exert different effects on biological markers for AD.
+**Stance justification:** > The CSF-tau changes were mainly seen in ApoE epsilon4 carriers. This study shows that the two long-term cholinesterase inhibitor treatments exert different effects on biological markers for AD.
 
 **Golden note:** CMRglc/CSF biomarkers + APOE in long-term ChEI — biomarker focus.
 
@@ -355,7 +355,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26402762 — current stance: `inconclusive`
 
-**Evidence span:** > No appreciable interaction between donepezil response and APOE-ɛ4 carrier status or copy number was detected. Within this population, APOE genotype had no statistically significant effect on cognitive response to donepezil treatment.
+**Stance justification:** > No appreciable interaction between donepezil response and APOE-ɛ4 carrier status or copy number was detected. Within this population, APOE genotype had no statistically significant effect on cognitive response to donepezil treatment.
 
 **Golden note:** APOE-ε4 + donepezil response — 'inconsistent results across studies'.
 
@@ -369,7 +369,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27282366 — current stance: `inconclusive`
 
-**Evidence span:** > No independent effect of APOE polymorphism on donepezil clinical responses was found (OR 1.08, 95 % CI 0.85-1.38; p = 0.53).
+**Stance justification:** > No independent effect of APOE polymorphism on donepezil clinical responses was found (OR 1.08, 95 % CI 0.85-1.38; p = 0.53).
 
 **Golden note:** CYP2D6/APOE + donepezil systematic review — controversy persists.
 
@@ -383,7 +383,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17132969 — current stance: `supports`
 
-**Evidence span:** > The results of the analysis of this study indicate that the presence of at least one APOE epsilon4 allele does not determine a difference in the response to treatment with rivastigmine.
+**Stance justification:** > The results of the analysis of this study indicate that the presence of at least one APOE epsilon4 allele does not determine a difference in the response to treatment with rivastigmine.
 
 **Golden note:** Rivastigmine efficacy related to ε4 — modifier effect.
 
@@ -397,7 +397,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15636076 — current stance: `inconclusive`
 
-**Evidence span:** > The significant number of responders was observed among apoE4 homozygous patients (71%; chi2 = 6.89; p = 0.032).
+**Stance justification:** > The significant number of responders was observed among apoE4 homozygous patients (71%; chi2 = 6.89; p = 0.032).
 
 **Golden note:** Galanthamine retrospective + APOE — no clear effect.
 
@@ -411,7 +411,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 16254428 — current stance: `inconclusive`
 
-**Evidence span:** > ApoE epsilon4 genotype does not affect galantamine-related improvements in cognition, global rating, function and behavior.
+**Stance justification:** > ApoE epsilon4 genotype does not affect galantamine-related improvements in cognition, global rating, function and behavior.
 
 **Golden note:** Korean galantamine RCT + ε4 — small, mixed.
 
@@ -425,7 +425,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27716659 — current stance: `inconclusive`
 
-**Evidence span:** > The study results indicated the good response pattern was influenced by the concentration of donepezil, but not by APOE and CYP2D6 polymorphisms.
+**Stance justification:** > The study results indicated the good response pattern was influenced by the concentration of donepezil, but not by APOE and CYP2D6 polymorphisms.
 
 **Golden note:** Donepezil + APOE/CYP2D6 naturalistic — mixed.
 
@@ -439,7 +439,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23051684 — current stance: `supports`
 
-**Evidence span:** > However, patients with moderately severe AD (MMSE ≤15) who were APOE ε4 carriers showed higher responder rates on ADCS-ADL with memantine plus rivastigmine patch compared to rivastigmine patch monotherapy.
+**Stance justification:** > However, patients with moderately severe AD (MMSE ≤15) who were APOE ε4 carriers showed higher responder rates on ADCS-ADL with memantine plus rivastigmine patch compared to rivastigmine patch monotherapy.
 
 **Golden note:** Rivastigmine ± memantine response affected by APOE genotype.
 
@@ -453,7 +453,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30041236 — current stance: `contradicts`
 
-**Evidence span:** > APOE ɛ4 carrier status had no significant influence on the treatment response to AChEIs in patients with AD. AChEIs had a positive therapeutic effect compared with placebo regardless of APOE ε4 carrier status.
+**Stance justification:** > APOE ɛ4 carrier status had no significant influence on the treatment response to AChEIs in patients with AD. AChEIs had a positive therapeutic effect compared with placebo regardless of APOE ε4 carrier status.
 
 **Golden note:** AChEI cognitive response + APOE-ε4 meta — limited differential effect.
 
@@ -467,7 +467,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24479631 — current stance: `inconclusive`
 
-**Evidence span:** > The current findings show that, similar to ApoE-ε4 non-carriers, BChE-K carriers are protected from the pathological detriments of AD that affect frontal cortical thickness and neuropsychiatric symptoms.
+**Stance justification:** > The current findings show that, similar to ApoE-ε4 non-carriers, BChE-K carriers are protected from the pathological detriments of AD that affect frontal cortical thickness and neuropsychiatric symptoms.
 
 **Golden note:** BCHE + ApoE on cortical thickness/NPS — descriptive imaging.
 

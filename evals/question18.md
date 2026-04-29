@@ -166,7 +166,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27729011 — current stance: `inconclusive`
 
-**Evidence span:** > There is at least moderate evidence implicating the following risk factors: air pollution; aluminium; silicon; selenium; pesticides; vitamin D deficiency; and electric and magnetic fields.
+**Stance justification:** > There is at least moderate evidence implicating the following risk factors: air pollution; aluminium; silicon; selenium; pesticides; vitamin D deficiency; and electric and magnetic fields.
 
 **Golden note:** Environmental risk factors systematic review — Al evidence limited and mixed.
 
@@ -180,7 +180,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25233067 — current stance: `contradicts`
 
-**Evidence span:** > Aluminum has been held responsible for human morbidity and mortality, but there is no consistent and convincing evidence to associate the Al found in food and drinking water at the doses and chemical forms presently consumed by people living in North America and Western Europe with increased risk for Alzheimer's disease (AD).
+**Stance justification:** > Aluminum has been held responsible for human morbidity and mortality, but there is no consistent and convincing evidence to associate the Al found in food and drinking water at the doses and chemical forms presently consumed by people living in North America and Western Europe with increased risk for Alzheimer's disease (AD).
 
 **Golden note:** Comprehensive Al exposure systematic review — concludes evidence does NOT support Al causation.
 
@@ -194,7 +194,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 12520766 — current stance: `supports`
 
-**Evidence span:** > These findings suggest a role of aluminium in early neurotoxic effects that can be detected at a pre-clinical stage by P300, MMSE, MMSE-time, CDT-time and CDT score, considering a 10 micrograms/l cut-off level of serum aluminium, in aluminium foundry workers with concomitant high blood levels of iron.
+**Stance justification:** > These findings suggest a role of aluminium in early neurotoxic effects that can be detected at a pre-clinical stage by P300, MMSE, MMSE-time, CDT-time and CDT score, considering a 10 micrograms/l cut-off level of serum aluminium, in aluminium foundry workers with concomitant high blood levels of iron.
 
 **Golden note:** Italian foundry workers case-control — neurotoxic effects, suggests role in AD.
 
@@ -208,7 +208,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26247643 — current stance: `supports`
 
-**Evidence span:** > Occupational aluminum exposure was not associated with AD (odds ratio, 1.00; 95% confidence interval, 0.59 to 1.68), even in sensitivity analysis excluding studies with low-quality assessment scores (odds ratio, 1.06; 95% confidence interval, 0.36 to 3.10). The findings of the present meta-analysis do not support a causative role of aluminum in the pathogenesis of AD.
+**Stance justification:** > Occupational aluminum exposure was not associated with AD (odds ratio, 1.00; 95% confidence interval, 0.59 to 1.68), even in sensitivity analysis excluding studies with low-quality assessment scores (odds ratio, 1.06; 95% confidence interval, 0.36 to 3.10). The findings of the present meta-analysis do not support a causative role of aluminum in the pathogenesis of AD.
 
 **Golden note:** Occupational Al exposure meta — found increased AD risk.
 
@@ -222,7 +222,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39889875 — current stance: `contradicts`
 
-**Evidence span:** > In a narrative review, we found that exposure to sulfur dioxide, proximity to roadways, ionizing radiation, aluminum, solvents, pesticides, and environmental tobacco smoke were also associated with dementia.
+**Stance justification:** > In a narrative review, we found that exposure to sulfur dioxide, proximity to roadways, ionizing radiation, aluminum, solvents, pesticides, and environmental tobacco smoke were also associated with dementia.
 
 **Golden note:** Recent umbrella review — Al not a confirmed environmental risk factor for dementia.
 
@@ -236,7 +236,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18000416 — current stance: `contradicts`
 
-**Evidence span:** > Statistically significant causes of death were lung cancer (three plants); bladder cancer; chronic obstructive lung disease (two plants each); cancers of the stomach, digestive system unspecified, rectum and rectosigmoid, pancreas, and larynx; Alzheimer's disease (one plant); and cerebrovascular disease (one plant).
+**Stance justification:** > Statistically significant causes of death were lung cancer (three plants); bladder cancer; chronic obstructive lung disease (two plants each); cancers of the stomach, digestive system unspecified, rectum and rectosigmoid, pancreas, and larynx; Alzheimer's disease (one plant); and cerebrovascular disease (one plant).
 
 **Golden note:** Quebec Al smelter cohort mortality — no excess AD.
 
@@ -250,7 +250,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 12602134 — current stance: `inconclusive`
 
-**Evidence span:** > These epidemiological studies entail certain methodological limitations, and their results are not consistent, so the results available to date therefore not making it possible to clearly determine that any relationship exists between exposure to aluminum and the etiology of Alzheimer's disease.
+**Stance justification:** > These epidemiological studies entail certain methodological limitations, and their results are not consistent, so the results available to date therefore not making it possible to clearly determine that any relationship exists between exposure to aluminum and the etiology of Alzheimer's disease.
 
 **Golden note:** Spanish review — drinking water focus, mixed conclusion.
 
@@ -264,7 +264,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37777128 — current stance: `supports`
 
-**Evidence span:** > We found significant worse performances in workers occupationally exposed to aluminum regarding processing speed, working memory, attention, and reaction time after exclusion of outliers.
+**Stance justification:** > We found significant worse performances in workers occupationally exposed to aluminum regarding processing speed, working memory, attention, and reaction time after exclusion of outliers.
 
 **Golden note:** Al exposure + cognitive performance meta — occupational Al associated with worse cognition.
 
@@ -278,7 +278,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40749395 — current stance: `supports`
 
-**Evidence span:** > Although few studies confirmed Al-induced brain pathology as a direct cause of dementia, meta-analysis of four eligible studies revealed a strong association between Al exposure and AD (Hedges' g = 2.451), despite high heterogeneity across data sources and outcome measures.
+**Stance justification:** > Although few studies confirmed Al-induced brain pathology as a direct cause of dementia, meta-analysis of four eligible studies revealed a strong association between Al exposure and AD (Hedges' g = 2.451), despite high heterogeneity across data sources and outcome measures.
 
 **Golden note:** Environmental Al + AD risk meta — found association.
 

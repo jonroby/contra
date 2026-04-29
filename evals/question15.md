@@ -229,7 +229,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18786971 — current stance: `supports` [FLIP from inconclusive → supports]
 
-**Evidence span:** > Greater adherence to a Mediterranean diet is associated with a significant improvement in health status, as seen by a significant reduction in overall mortality (9%), mortality from cardiovascular diseases (9%), incidence of or mortality from cancer (6%), and incidence of Parkinson's disease and Alzheimer's disease (13%).
+**Stance justification:** > Greater adherence to a Mediterranean diet is associated with a significant improvement in health status, as seen by a significant reduction in overall mortality (9%), mortality from cardiovascular diseases (9%), incidence of or mortality from cancer (6%), and incidence of Parkinson's disease and Alzheimer's disease (13%).
 
 **Golden note:** Broad mortality/chronic disease meta — cognition not primary.
 
@@ -243,7 +243,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24164735 — current stance: `supports`
 
-**Evidence span:** > Among cognitively normal individuals, higher adherence to the MeDi was associated with a reduced risk of MCI (HR = 0.73; 95% CI, 0.56-0.96; p = 0.02) and AD (HR = 0.64; 95% CI, 0.46-0.89; p = 0.007).
+**Stance justification:** > Among cognitively normal individuals, higher adherence to the MeDi was associated with a reduced risk of MCI (HR = 0.73; 95% CI, 0.56-0.96; p = 0.02) and AD (HR = 0.64; 95% CI, 0.46-0.89; p = 0.007).
 
 **Golden note:** MeDi-MCI/AD meta — protective association.
 
@@ -257,7 +257,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25698435 — current stance: `inconclusive`
 
-**Evidence span:** > Mediterranean diet decreased the risk of conversion to Alzheimer's dementia.
+**Stance justification:** > Mediterranean diet decreased the risk of conversion to Alzheimer's dementia.
 
 **Golden note:** Modifiable predictors of MCI→dementia — broad mixed factors.
 
@@ -271,7 +271,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25770254 — current stance: `supports`
 
-**Evidence span:** > The results suggest that better adherence to a Mediterranean diet is associated with less cognitive decline, dementia, or Alzheimer disease, as shown by 4 of 6 cross-sectional studies, 6 of 12 longitudinal studies, 1 trial, and 3 meta-analyses.
+**Stance justification:** > The results suggest that better adherence to a Mediterranean diet is associated with less cognitive decline, dementia, or Alzheimer disease, as shown by 4 of 6 cross-sectional studies, 6 of 12 longitudinal studies, 1 trial, and 3 meta-analyses.
 
 **Golden note:** Dietary patterns review — MeDi protective.
 
@@ -285,7 +285,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 28697569 — current stance: `supports`
 
-**Evidence span:** > In particular, higher adherence to a Mediterranean-type diet was associated with decreased cognitive decline.
+**Stance justification:** > In particular, higher adherence to a Mediterranean-type diet was associated with decreased cognitive decline.
 
 **Golden note:** Dietary patterns review — protective for late-life cognitive disorders.
 
@@ -299,7 +299,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30689586 — current stance: `inconclusive`
 
-**Evidence span:** > Of 38 studies, the Mediterranean diet was the most investigated with evidence supporting protection against cognitive decline among older adults.
+**Stance justification:** > Of 38 studies, the Mediterranean diet was the most investigated with evidence supporting protection against cognitive decline among older adults.
 
 **Golden note:** Dietary patterns review — efficacy uncertain framing.
 
@@ -313,7 +313,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34153553 — current stance: `inconclusive` [FLIP from supports → inconclusive]
 
-**Evidence span:** > Results of the pooled analysis of longitudinal studies revealed that high adherence to MeDi reduced the risk of global cognitive decline in non-demented older adults. However, no significant associations between MeDi adherence and the incidence of mobility problems, MCI, and dementia were found.
+**Stance justification:** > Results of the pooled analysis of longitudinal studies revealed that high adherence to MeDi reduced the risk of global cognitive decline in non-demented older adults. However, no significant associations between MeDi adherence and the incidence of mobility problems, MCI, and dementia were found.
 
 **Golden note:** MeDi adherence-cognition meta — positive.
 
@@ -327,7 +327,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26887612 — current stance: `supports`
 
-**Evidence span:** > Despite the methodological limitations, the finding that 50 of the 64 reviewed studies revealed an association between diet and AD incidence offers promising implications for diet as a modifiable risk factor for AD.
+**Stance justification:** > Despite the methodological limitations, the finding that 50 of the 64 reviewed studies revealed an association between diet and AD incidence offers promising implications for diet as a modifiable risk factor for AD.
 
 **Golden note:** AD-diet review — MeDi protective overall.
 
@@ -341,7 +341,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30682676 — current stance: `inconclusive` [FLIP from supports → inconclusive]
 
-**Evidence span:** > Meta-analysis revealed a small but significant effect of diet on AD biomarkers (β = 0.11 [95% CI 0.04-0.17], p = 0.002).
+**Stance justification:** > Meta-analysis revealed a small but significant effect of diet on AD biomarkers (β = 0.11 [95% CI 0.04-0.17], p = 0.002).
 
 **Golden note:** MeDi-AD biomarker meta — favorable biomarkers.
 
@@ -355,7 +355,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34835984 — current stance: `inconclusive`
 
-**Evidence span:** > The Mediterranean diet showed promising results, whereas the role of the DASH diet was not clear.
+**Stance justification:** > The Mediterranean diet showed promising results, whereas the role of the DASH diet was not clear.
 
 **Golden note:** Nutrition RCT review — heterogeneous, inconsistent.
 
@@ -369,7 +369,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 31240575 — current stance: `supports`
 
-**Evidence span:** > This literature review indicated that adherence to a healthy dietary pattern has neuroprotective effects on AD prevention, while unhealthy diet can cause neurodegenerative effects in AD etiology.
+**Stance justification:** > This literature review indicated that adherence to a healthy dietary pattern has neuroprotective effects on AD prevention, while unhealthy diet can cause neurodegenerative effects in AD etiology.
 
 **Golden note:** Dietary pattern-AD review — MeDi protective.
 
@@ -383,7 +383,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39797935 — current stance: `supports`
 
-**Evidence span:** > The combined HR for cognitive impairment among those adhering to the Mediterranean diet was 0.82 (95% CI 0.75-0.89); for dementia, the HR was 0.89 (95% CI 0.83-0.95); and for AD, the HR was 0.70 (95% CI 0.60-0.82), indicating substantial protective effects.
+**Stance justification:** > The combined HR for cognitive impairment among those adhering to the Mediterranean diet was 0.82 (95% CI 0.75-0.89); for dementia, the HR was 0.89 (95% CI 0.83-0.95); and for AD, the HR was 0.70 (95% CI 0.60-0.82), indicating substantial protective effects.
 
 **Golden note:** MeDi-cognitive impairment/dementia/AD meta — reduces risk.
 
@@ -397,7 +397,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29574441 — current stance: `inconclusive`
 
-**Evidence span:** > Adherence to a Mediterranean-style diet (MeDi) and insulin sensitivity were both positively associated with MRI-based cortical thickness (diet: βs≥0.26, insulin sensitivity βs≥0.58, P≤0.008).
+**Stance justification:** > Adherence to a Mediterranean-style diet (MeDi) and insulin sensitivity were both positively associated with MRI-based cortical thickness (diet: βs≥0.26, insulin sensitivity βs≥0.58, P≤0.008).
 
 **Golden note:** MRI biomarker cross-sectional — descriptive, lifestyle/vascular.
 
@@ -411,7 +411,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38311314 — current stance: `supports`
 
-**Evidence span:** > Higher MIND diet adherence was protective of dementia in 7 of 10 cohorts.
+**Stance justification:** > Higher MIND diet adherence was protective of dementia in 7 of 10 cohorts.
 
 **Golden note:** MIND diet review — positive (MeDi-derived).
 
@@ -425,7 +425,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29728772 — current stance: `supports`
 
-**Evidence span:** > The PREDIMED study confirmed reductions in CVD-related mortality with a MedDiet; a meta-analysis in over 4.7 million people showed reduced mortality, CVD-related mortality, and reduced risk of Parkinson's and Alzheimer's disease.
+**Stance justification:** > The PREDIMED study confirmed reductions in CVD-related mortality with a MedDiet; a meta-analysis in over 4.7 million people showed reduced mortality, CVD-related mortality, and reduced risk of Parkinson's and Alzheimer's disease.
 
 **Golden note:** Implementing MeDi outside Mediterranean — positive RCT review.
 
@@ -439,7 +439,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32427314 — current stance: `supports`
 
-**Evidence span:** > For the recalculated meta-analyses, quality of evidence was moderate for inverse associations between higher adherence to the Mediterranean diet (SRR: 0.63; 95% CI: 0.48, 0.82; n = 4 primary studies) and higher fish intake (SRR: 0.72; 95% CI: 0.59, 0.89; n = 6) and Alzheimer disease.
+**Stance justification:** > For the recalculated meta-analyses, quality of evidence was moderate for inverse associations between higher adherence to the Mediterranean diet (SRR: 0.63; 95% CI: 0.48, 0.82; n = 4 primary studies) and higher fish intake (SRR: 0.72; 95% CI: 0.59, 0.89; n = 6) and Alzheimer disease.
 
 **Golden note:** Umbrella prospective — MeDi reduces neurodegen incidence.
 
@@ -453,7 +453,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34392373 — current stance: `inconclusive`
 
-**Evidence span:** > Findings were mixed, with some studies reporting a significant positive relationship between adherence to various "healthy" dietary patterns and neurocognition, but others reporting no such relationship.
+**Stance justification:** > Findings were mixed, with some studies reporting a significant positive relationship between adherence to various "healthy" dietary patterns and neurocognition, but others reporting no such relationship.
 
 **Golden note:** Mid-life dietary patterns — concurrent neurocognition mixed.
 
@@ -467,7 +467,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33336232 — current stance: `supports`
 
-**Evidence span:** > Thus, 1) adherence to a Mediterranean diet (GRADE 1B); 2) high-level of consumption of mono- or poly- unsaturated fatty acids combined to a low consumption of saturated fatty acids (GRADE 1B); 3) high consumption of fruits and vegetables (GRADE 1B); 4) higher vitamin D intake (GRADE 1C) than the recommended daily allowance.
+**Stance justification:** > Thus, 1) adherence to a Mediterranean diet (GRADE 1B); 2) high-level of consumption of mono- or poly- unsaturated fatty acids combined to a low consumption of saturated fatty acids (GRADE 1B); 3) high consumption of fruits and vegetables (GRADE 1B); 4) higher vitamin D intake (GRADE 1C) than the recommended daily allowance.
 
 **Golden note:** GRADE recommendation — MeDi recommended.
 
@@ -481,7 +481,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36529364 — current stance: `inconclusive` [FLIP from supports → inconclusive]
 
-**Evidence span:** > Four studies reported on hippocampal volume, with inconclusive or no associations seen with MedDiet adherence. Two studies found a significant association between higher MedDiet adherence and lower WMHV, while two other studies found no significant associations.
+**Stance justification:** > Four studies reported on hippocampal volume, with inconclusive or no associations seen with MedDiet adherence. Two studies found a significant association between higher MedDiet adherence and lower WMHV, while two other studies found no significant associations.
 
 **Golden note:** MeDi neuroimaging biomarker review — favorable.
 
@@ -495,7 +495,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38961421 — current stance: `inconclusive`
 
-**Evidence span:** > These results suggest that dietary intervention as part of multimodal lifestyle interventions is feasible and results in improved dietary quality in a population with prodromal AD.
+**Stance justification:** > These results suggest that dietary intervention as part of multimodal lifestyle interventions is feasible and results in improved dietary quality in a population with prodromal AD.
 
 **Golden note:** MIND-ADmini multimodal — diet quality improved, no cognitive primary.
 
@@ -509,7 +509,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39861466 — current stance: `supports`
 
-**Evidence span:** > The findings suggest that adherence to the Mediterranean and Nordic diets is generally associated with improved cognitive function and delayed cognitive decline and that adherence to both these diets can improve cognitive function.
+**Stance justification:** > The findings suggest that adherence to the Mediterranean and Nordic diets is generally associated with improved cognitive function and delayed cognitive decline and that adherence to both these diets can improve cognitive function.
 
 **Golden note:** MeDi/Nordic diet adherence systematic review — protective.
 
@@ -523,7 +523,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40744415 — current stance: `supports`
 
-**Evidence span:** > Among 92,849 participants with 21,478 cases, higher baseline scores of the 4 dietary patterns were associated with 4%‒9% lower ADRD risk (for aMED, HR 0.91, 95% CI: 0.87, 0.95; for DASH, HR 0.96, 95% CI: 0.92, 1.01; for HEI-2015, HR 0.94, 95% CI: 0.90, 0.98; for MIND, HR 0.91, 95% CI: 0.87, 0.96) over the follow-up.
+**Stance justification:** > Among 92,849 participants with 21,478 cases, higher baseline scores of the 4 dietary patterns were associated with 4%‒9% lower ADRD risk (for aMED, HR 0.91, 95% CI: 0.87, 0.95; for DASH, HR 0.96, 95% CI: 0.92, 1.01; for HEI-2015, HR 0.94, 95% CI: 0.90, 0.98; for MIND, HR 0.91, 95% CI: 0.87, 0.96) over the follow-up.
 
 **Golden note:** Multiethnic cohort — diet patterns lower ADRD risk across groups.
 
@@ -537,7 +537,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41259881 — current stance: `supports`
 
-**Evidence span:** > Higher MD adherence was associated with reduced risk or prevalence of Alzheimer's disease (odds ratios = 0.92), mild cognitive impairment (RR = 0.93), depression (RR = 0.96), and Parkinson's disease (RR = 0.90), with moderate certainty of evidence.
+**Stance justification:** > Higher MD adherence was associated with reduced risk or prevalence of Alzheimer's disease (odds ratios = 0.92), mild cognitive impairment (RR = 0.93), depression (RR = 0.96), and Parkinson's disease (RR = 0.90), with moderate certainty of evidence.
 
 **Golden note:** Italian guidelines MeDi neurological prevention meta — positive.
 
@@ -551,7 +551,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39499795 — current stance: `inconclusive`
 
-**Evidence span:** > Both observational studies and clinical trials yielded inconclusive results attributed to both practical limitations associated with longitudinal follow-up and issues of methodological quality.
+**Stance justification:** > Both observational studies and clinical trials yielded inconclusive results attributed to both practical limitations associated with longitudinal follow-up and issues of methodological quality.
 
 **Golden note:** APOE × dietary patterns umbrella — interaction-focused, mixed.
 
@@ -565,7 +565,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40378769 — current stance: `inconclusive`
 
-**Evidence span:** > In this group of older adults at risk for dementia, we find no conclusive evidence whether a multi-modal lifestyle intervention improves brain imaging markers of neurodegeneration and small vessel disease.
+**Stance justification:** > In this group of older adults at risk for dementia, we find no conclusive evidence whether a multi-modal lifestyle intervention improves brain imaging markers of neurodegeneration and small vessel disease.
 
 **Golden note:** AgeWell.de multi-modal MRI — descriptive imaging.
 
@@ -579,7 +579,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41599807 — current stance: `inconclusive` [FLIP from supports → inconclusive]
 
-**Evidence span:** > A structured, non-restrictive MIND intervention was feasible, improved dietary adherence, and accompanied higher diversity and compositional remodeling of the GM in ALZ's disease.
+**Stance justification:** > A structured, non-restrictive MIND intervention was feasible, improved dietary adherence, and accompanied higher diversity and compositional remodeling of the GM in ALZ's disease.
 
 **Golden note:** MIND pattern + MeDi adherence in AD — positive.
 
@@ -593,7 +593,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29147948 — current stance: `supports`
 
-**Evidence span:** > In a multivariate model, compared with men having a MD score in the lowest quintile, those in the highest quintile had a 36% lower odds of a poor SCF score (odds ratio 0.64, 95% CI 0.55-0.75; P, trend < 0.001) and a 24% lower odds of a moderate SCF score (OR 0.76, 95% CI 0.70-0.83; P, trend < 0.001).
+**Stance justification:** > In a multivariate model, compared with men having a MD score in the lowest quintile, those in the highest quintile had a 36% lower odds of a poor SCF score (odds ratio 0.64, 95% CI 0.55-0.75; P, trend < 0.001) and a 24% lower odds of a moderate SCF score (OR 0.76, 95% CI 0.70-0.83; P, trend < 0.001).
 
 **Golden note:** MeDi + subjective cognitive function in men prospective — positive.
 

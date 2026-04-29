@@ -127,7 +127,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 21911655 — current stance: `supports`
 
-**Evidence span:** > Treatment with 20 IU of insulin improved delayed memory (P < .05), and both doses of insulin (20 and 40 IU) preserved caregiver-rated functional ability (P < .01).
+**Stance justification:** > Treatment with 20 IU of insulin improved delayed memory (P < .05), and both doses of insulin (20 and 40 IU) preserved caregiver-rated functional ability (P < .01).
 
 **Golden note:** Craft 2011 pilot RCT — intranasal insulin improved cognition/function in MCI/AD.
 
@@ -141,7 +141,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 17942819 — current stance: `supports`
 
-**Evidence span:** > The insulin-treated group retained more verbal information after a delay compared with the placebo-assigned group (p = 0.0374). Insulin-treated subjects also showed improved attention (p = 0.0108) and functional status (p = 0.0410).
+**Stance justification:** > The insulin-treated group retained more verbal information after a delay compared with the placebo-assigned group (p = 0.0374). Insulin-treated subjects also showed improved attention (p = 0.0108) and functional status (p = 0.0410).
 
 **Golden note:** Reger 2007 — intranasal insulin improves cognition + Aβ modulation in early AD.
 
@@ -155,7 +155,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25374101 — current stance: `supports`
 
-**Evidence span:** > This effect was moderated by APOE status (p < 0.05), reflecting improvement for APOE-ε4 carriers (p < 0.02), and worsening for non-carriers (p < 0.02).
+**Stance justification:** > This effect was moderated by APOE status (p < 0.05), reflecting improvement for APOE-ε4 carriers (p < 0.02), and worsening for non-carriers (p < 0.02).
 
 **Golden note:** Insulin detemir intranasal — improved cognition in MCI/early AD.
 
@@ -169,7 +169,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32568367 — current stance: `contradicts`
 
-**Evidence span:** > In this study, no cognitive or functional benefits were observed with intranasal insulin treatment over a 12-month period among the primary intention-to-treat cohort.
+**Stance justification:** > In this study, no cognitive or functional benefits were observed with intranasal insulin treatment over a 12-month period among the primary intention-to-treat cohort.
 
 **Golden note:** Craft 2020 multi-site RCT — primary endpoint NOT met. The pivotal negative trial.
 
@@ -183,7 +183,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 28372335 — current stance: `inconclusive`
 
-**Evidence span:** > The regular insulin treated group had better memory after two and four months compared with placebo (p < 0.03). No significant effects were observed for the detemir-assigned group compared with the placebo group, or for daily functioning for either group.
+**Stance justification:** > The regular insulin treated group had better memory after two and four months compared with placebo (p < 0.03). No significant effects were observed for the detemir-assigned group compared with the placebo group, or for daily functioning for either group.
 
 **Golden note:** Pilot trial regular vs detemir — mixed effects across formulations.
 
@@ -197,7 +197,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 23507773 — current stance: `supports`
 
-**Evidence span:** > On delayed story memory, men and women showed cognitive improvement when taking 20 IU of intranasal insulin, but only men showed cognitive improvement for the 40 IU dose.
+**Stance justification:** > On delayed story memory, men and women showed cognitive improvement when taking 20 IU of intranasal insulin, but only men showed cognitive improvement for the 40 IU dose.
 
 **Golden note:** Sex/APOE responder analysis — specific subgroups benefited.
 
@@ -211,7 +211,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22162476 — current stance: `supports`
 
-**Evidence span:** > The current limited clinical experience suggests potential beneficial cognitive effects of intranasal insulin.
+**Stance justification:** > The current limited clinical experience suggests potential beneficial cognitive effects of intranasal insulin.
 
 **Golden note:** Systematic review — intranasal insulin improves cognition.
 
@@ -225,7 +225,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 21694461 — current stance: `inconclusive`
 
-**Evidence span:** > ADAS-cog improved by a median (IR) of 9 (1-11) with nasal insulin after placebo high-dose vitamin D (p = 0.02), but may represent regression to the mean as WLS-R LM did not change.
+**Stance justification:** > ADAS-cog improved by a median (IR) of 9 (1-11) with nasal insulin after placebo high-dose vitamin D (p = 0.02), but may represent regression to the mean as WLS-R LM did not change.
 
 **Golden note:** Vit D2 + intranasal insulin RCT in AD — combo intervention, small.
 
@@ -239,7 +239,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29392460 — current stance: `supports`
 
-**Evidence span:** > Intranasal insulin improved story recall performance of apoe4 (-) patients with AD or MCI. Other cognitive functions were not affected, but there were some positive results in functional status and daily activity.
+**Stance justification:** > Intranasal insulin improved story recall performance of apoe4 (-) patients with AD or MCI. Other cognitive functions were not affected, but there were some positive results in functional status and daily activity.
 
 **Golden note:** Systematic review intranasal insulin AD/MCI — beneficial.
 
@@ -253,7 +253,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34101779 — current stance: `supports`
 
-**Evidence span:** > Intranasal insulin treatment for 12 months reduced white matter hyperintensity volume progression and supports insulin's potential as a therapeutic option for Alzheimer's disease.
+**Stance justification:** > Intranasal insulin treatment for 12 months reduced white matter hyperintensity volume progression and supports insulin's potential as a therapeutic option for Alzheimer's disease.
 
 **Golden note:** Intranasal insulin reduces WMH progression with cognitive improvement.
 
@@ -267,7 +267,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30958348 — current stance: `inconclusive`
 
-**Evidence span:** > There were no EV biomarker changes from baseline in any of the treatment groups.
+**Stance justification:** > There were no EV biomarker changes from baseline in any of the treatment groups.
 
 **Golden note:** EV biomarkers track cognitive change post-intranasal insulin — exploratory.
 
@@ -281,7 +281,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35079029 — current stance: `inconclusive`
 
-**Evidence span:** > The insulin-treated group had increased CSF interferon-γ (p = 0.032) and eotaxin (p = 0.049), and reduced interleukin-6 (p = 0.048) over the 12 month trial compared to placebo.
+**Stance justification:** > The insulin-treated group had increased CSF interferon-γ (p = 0.032) and eotaxin (p = 0.049), and reduced interleukin-6 (p = 0.048) over the 12 month trial compared to placebo.
 
 **Golden note:** Intranasal insulin modulates CSF neuroinflammation — biomarker, not cognitive primary.
 
@@ -295,7 +295,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33719017 — current stance: `inconclusive`
 
-**Evidence span:** > There were no enhancing effects of intranasal glulisine on cognition, function, or mood, but the ability to detect significance was limited by the number of subjects successfully enrolled and the study duration.
+**Stance justification:** > There were no enhancing effects of intranasal glulisine on cognition, function, or mood, but the ability to detect significance was limited by the number of subjects successfully enrolled and the study duration.
 
 **Golden note:** Glulisine phase 2 — small, exploratory.
 
@@ -309,7 +309,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36172480 — current stance: `supports`
 
-**Evidence span:** > The pooled standard mean difference (SMD) showed no significant difference between IN insulin and placebo groups; however, statistical results suggested a difference between study groups in the effects of ADCS-ADL; AD patients with APOE4 (-) also showed improved performance in verbal memory; other cognitions did not improve significantly.
+**Stance justification:** > The pooled standard mean difference (SMD) showed no significant difference between IN insulin and placebo groups; however, statistical results suggested a difference between study groups in the effects of ADCS-ADL; AD patients with APOE4 (-) also showed improved performance in verbal memory; other cognitions did not improve significantly.
 
 **Golden note:** Meta-analysis intranasal insulin MCI/dementia — improves cognition.
 
@@ -323,7 +323,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37379265 — current stance: `supports`
 
-**Evidence span:** > Patients with AD/MCI treated with INI were more likely to show an improvement in global cognition (SMD = 0.22, 95% CI: 0.05-0.38 p = <0.00001, N = 12 studies).
+**Stance justification:** > Patients with AD/MCI treated with INI were more likely to show an improvement in global cognition (SMD = 0.22, 95% CI: 0.05-0.38 p = <0.00001, N = 12 studies).
 
 **Golden note:** Systematic review/meta intranasal insulin in humans — overall positive.
 
@@ -337,7 +337,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41057918 — current stance: `inconclusive`
 
-**Evidence span:** > INI and empagliflozin treatment was safe with promising effects on cognition, fluid, and imaging biomarkers. A longer and larger trial is needed to confirm these results.
+**Stance justification:** > INI and empagliflozin treatment was safe with promising effects on cognition, fluid, and imaging biomarkers. A longer and larger trial is needed to confirm these results.
 
 **Golden note:** Phase 2A/B intranasal insulin + empagliflozin factorial — mixed.
 
@@ -351,7 +351,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41436338 — current stance: `inconclusive`
 
-**Evidence span:** > Intranasal insulin was generally well tolerated but did not produce meaningful improvements in cognitive, functional, or biomarker outcomes in patients with MCI or mild-to-moderate AD. Current evidence does not support its routine clinical use.
+**Stance justification:** > Intranasal insulin was generally well tolerated but did not produce meaningful improvements in cognitive, functional, or biomarker outcomes in patients with MCI or mild-to-moderate AD. Current evidence does not support its routine clinical use.
 
 **Golden note:** 2025 meta of RCTs — net mixed, includes Craft 2020 negative.
 

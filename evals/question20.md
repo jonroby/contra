@@ -131,7 +131,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19017911 — current stance: `contradicts`
 
-**Evidence span:** > In this study, G. biloba at 120 mg twice a day was not effective in reducing either the overall incidence rate of dementia or AD incidence in elderly individuals with normal cognition or those with MCI.
+**Stance justification:** > In this study, G. biloba at 120 mg twice a day was not effective in reducing either the overall incidence rate of dementia or AD incidence in elderly individuals with normal cognition or those with MCI.
 
 **Golden note:** GEM trial — ginkgo did NOT reduce dementia incidence. Pivotal negative.
 
@@ -145,7 +145,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22959217 — current stance: `contradicts`
 
-**Evidence span:** > Long-term use of standardised ginkgo biloba extract in this trial did not reduce the risk of progression to Alzheimer's disease compared with placebo.
+**Stance justification:** > Long-term use of standardised ginkgo biloba extract in this trial did not reduce the risk of progression to Alzheimer's disease compared with placebo.
 
 **Golden note:** GuidAge RCT — ginkgo did NOT prevent AD in elderly with memory complaints. Pivotal negative.
 
@@ -159,7 +159,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29255909 — current stance: `inconclusive`
 
-**Evidence span:** > Evidence about effects of ω-3 fatty acids, soy, ginkgo biloba, folic acid alone or with other B vitamins, β-carotene, vitamin C, vitamin D plus calcium, and multivitamins or multi-ingredient supplements was either insufficient or low-strength, suggesting that these supplements did not reduce risk for cognitive decline.
+**Stance justification:** > Evidence about effects of ω-3 fatty acids, soy, ginkgo biloba, folic acid alone or with other B vitamins, β-carotene, vitamin C, vitamin D plus calcium, and multivitamins or multi-ingredient supplements was either insufficient or low-strength, suggesting that these supplements did not reduce risk for cognitive decline.
 
 **Golden note:** OTC supplements review — ginkgo insufficient evidence.
 
@@ -173,7 +173,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 11466162 — current stance: `supports`
 
-**Evidence span:** > Statistical analysis indicated significant improvements in speed of information processing working memory and executive processing attributable to the EGb.
+**Stance justification:** > Statistical analysis indicated significant improvements in speed of information processing working memory and executive processing attributable to the EGb.
 
 **Golden note:** 30-day ginkgo in healthy participants — neuropsychological improvements.
 
@@ -187,7 +187,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 12663701 — current stance: `inconclusive`
 
-**Evidence span:** > Figures for EGb 761 alone were similar but did not reach statistical significance (odds ratio = 0.38, 95% confidence interval = 0.08-1.76, p =.22).
+**Stance justification:** > Figures for EGb 761 alone were similar but did not reach statistical significance (odds ratio = 0.38, 95% confidence interval = 0.08-1.76, p =.22).
 
 **Golden note:** EPIDOS women elderly — ginkgo + AD onset, no clear protective association.
 
@@ -201,7 +201,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 9803773 — current stance: `supports`
 
-**Evidence span:** > The results also showed that 240 mg of EGb has typical cognitive activator CEEG profiles (responders) in more subjects (8 of 18) than 40 mg tacrine (3 of 18 subjects).
+**Stance justification:** > The results also showed that 240 mg of EGb has typical cognitive activator CEEG profiles (responders) in more subjects (8 of 18) than 40 mg tacrine (3 of 18 subjects).
 
 **Golden note:** Ginkgo vs tacrine pharmacology comparison — efficacy claim.
 
@@ -215,7 +215,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18690838 — current stance: `inconclusive`
 
-**Evidence span:** > This study will enable us to evaluate the efficacy of EGb761 in the prevention of AD, and to assess the usefulness of various baseline characteristics as predictors of conversion to AD in this population.
+**Stance justification:** > This study will enable us to evaluate the efficacy of EGb761 in the prevention of AD, and to assess the usefulness of various baseline characteristics as predictors of conversion to AD in this population.
 
 **Golden note:** GuidAge baseline/design paper — no efficacy data yet.
 
@@ -229,7 +229,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 24871648 — current stance: `supports`
 
-**Evidence span:** > The meta-analysis for assessing the prevention effect of Ginkgo against AD suggested that risk ratio (RR) is 1.06 (95% CI: 0.92 to 1.22) between Gingko and the placebo, with no significant heterogeneity across studies. Ginkgo may help established AD patients with cognitive symptoms but cannot prevent the neurodegenerative progression of the disease.
+**Stance justification:** > The meta-analysis for assessing the prevention effect of Ginkgo against AD suggested that risk ratio (RR) is 1.06 (95% CI: 0.92 to 1.22) between Gingko and the placebo, with no significant heterogeneity across studies. Ginkgo may help established AD patients with cognitive symptoms but cannot prevent the neurodegenerative progression of the disease.
 
 **Golden note:** Natural medicines + ginkgo meta — efficacy claim.
 
@@ -243,7 +243,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 10641953 — current stance: `inconclusive`
 
-**Evidence span:** > There is relatively compelling evidence that Ginkgo biloba (ginkgo) is effective in delaying the clinical course of dementias.
+**Stance justification:** > There is relatively compelling evidence that Ginkgo biloba (ginkgo) is effective in delaying the clinical course of dementias.
 
 **Golden note:** Herbal medications elderly review — ginkgo broadly discussed.
 
@@ -257,7 +257,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26058281 — current stance: `contradicts`
 
-**Evidence span:** > Meta-analysis of the two trials involving 5,889 participants indicated no significant difference in dementia rate between Ginkgo biloba and the placebo (347/2,951 vs. 330/2,938, odds ratio = 1.05, 95% CI 0.89-1.23). There is no convincing evidence from this review that demonstrated Ginkgo biloba in late-life can prevent the development of dementia.
+**Stance justification:** > Meta-analysis of the two trials involving 5,889 participants indicated no significant difference in dementia rate between Ginkgo biloba and the placebo (347/2,951 vs. 330/2,938, odds ratio = 1.05, 95% CI 0.89-1.23). There is no convincing evidence from this review that demonstrated Ginkgo biloba in late-life can prevent the development of dementia.
 
 **Golden note:** Ginkgo for dementia prevention meta in non-demented — no efficacy.
 
@@ -271,7 +271,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 15117063 — current stance: `supports`
 
-**Evidence span:** > The final examination revealed a statistically significant difference between the two groups for the VAS mental health and quality of life, as also for SIS Mood at the telephone interview in week 2.
+**Stance justification:** > The final examination revealed a statistically significant difference between the two groups for the VAS mental health and quality of life, as also for SIS Mood at the telephone interview in week 2.
 
 **Golden note:** Ginkgo in healthy elderly — positive short-term effect.
 
@@ -285,7 +285,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 18165850 — current stance: `inconclusive`
 
-**Evidence span:** > We present here the first comparative design and baseline data from GEM and Guidage, two of the largest dementia primary prevention trials to date.
+**Stance justification:** > We present here the first comparative design and baseline data from GEM and Guidage, two of the largest dementia primary prevention trials to date.
 
 **Golden note:** GEM vs GuidAge design comparison — methodology paper.
 

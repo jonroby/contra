@@ -117,7 +117,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 27567810 — current stance: `inconclusive`
 
-**Evidence span:** > There were no significant differences in the primary cognitive outcomes (ADAS-Cog 13, CDR-SB) in the "on" versus "off" stimulation group at 12 months for the whole cohort.
+**Stance justification:** > There were no significant differences in the primary cognitive outcomes (ADAS-Cog 13, CDR-SB) in the "on" versus "off" stimulation group at 12 months for the whole cohort.
 
 **Golden note:** ADvance Phase II — primary endpoint missed, subgroup signal in older patients.
 
@@ -131,7 +131,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 22566505 — current stance: `supports`
 
-**Evidence span:** > In similar cortical regions, higher baseline metabolism prior to DBS and increased metabolism after 1 year of DBS were correlated with better outcomes in global cognition, memory, and quality of life.
+**Stance justification:** > In similar cortical regions, higher baseline metabolism prior to DBS and increased metabolism after 1 year of DBS were correlated with better outcomes in global cognition, memory, and quality of life.
 
 **Golden note:** Fornix DBS Phase I — increased cerebral metabolism after 1 year.
 
@@ -145,7 +145,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 26684775 — current stance: `inconclusive`
 
-**Evidence span:** > At 90 days after surgery, bilateral fornix DBS was well tolerated by patients with mild, probable AD.
+**Stance justification:** > At 90 days after surgery, bilateral fornix DBS was well tolerated by patients with mild, probable AD.
 
 **Golden note:** ADvance surgical safety report — descriptive, no efficacy primary.
 
@@ -159,7 +159,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25721941 — current stance: `supports`
 
-**Evidence span:** > it has been demonstrated that DBS of fornix/hypothalamus and nucleus basalis of Meynert might improve or at least stabilize cognitive functioning in AD.
+**Stance justification:** > it has been demonstrated that DBS of fornix/hypothalamus and nucleus basalis of Meynert might improve or at least stabilize cognitive functioning in AD.
 
 **Golden note:** Neurostimulation review — DBS one of several promising approaches in AD.
 
@@ -173,7 +173,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34083732 — current stance: `inconclusive`
 
-**Evidence span:** > However, the clinical effects are highly variable, which questions the suggested basic principles underlying these clinical trials.
+**Stance justification:** > However, the clinical effects are highly variable, which questions the suggested basic principles underlying these clinical trials.
 
 **Golden note:** NBM-DBS review — clinical effects 'highly variable'.
 
@@ -187,7 +187,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37123370 — current stance: `inconclusive`
 
-**Evidence span:** > DBS had no impact on the cognitive ability in patients with AD [0.116 SMD, 95% confidence interval (CI), -0.236 to 0.469, p = 0.518]. According to subgroup analysis, the fornix-DBS did not improve cognitive function in patients with AD (0.145 SMD, 95%CI, -0.246 to 0.537, p = 0.467).
+**Stance justification:** > DBS had no impact on the cognitive ability in patients with AD [0.116 SMD, 95% confidence interval (CI), -0.236 to 0.469, p = 0.518]. According to subgroup analysis, the fornix-DBS did not improve cognitive function in patients with AD (0.145 SMD, 95%CI, -0.246 to 0.537, p = 0.467).
 
 **Golden note:** DBS-AD systematic review/meta — modest, heterogeneous.
 
@@ -201,7 +201,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36411282 — current stance: `inconclusive`
 
-**Evidence span:** > On fixed-effect meta-analysis, non-invasive neuromodulation favored baseline, with effect size -0.40(95% [CI], -0.73, -0.06, p = 0.02), while that of DBS was 0.11(95% [CI] -0.34, 0.56, p = 0.63), in favor of DBS.
+**Stance justification:** > On fixed-effect meta-analysis, non-invasive neuromodulation favored baseline, with effect size -0.40(95% [CI], -0.73, -0.06, p = 0.02), while that of DBS was 0.11(95% [CI] -0.34, 0.56, p = 0.63), in favor of DBS.
 
 **Golden note:** Connectomic neuromodulation review — cognitive outcome unclear.
 
@@ -215,7 +215,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38141755 — current stance: `inconclusive`
 
-**Evidence span:** > Because of varying study parameters, varying outcome measures, varying study durations, and limited cohort sizes, definitive conclusions regarding the utility of DBS for AD cannot be made.
+**Stance justification:** > Because of varying study parameters, varying outcome measures, varying study durations, and limited cohort sizes, definitive conclusions regarding the utility of DBS for AD cannot be made.
 
 **Golden note:** DBS systematic review of targets — efficacy varies; no consistent benefit.
 
@@ -229,7 +229,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 34151817 — current stance: `supports`
 
-**Evidence span:** > However, the selected clinical measures did not differentiate between the "on" and "off" groups in the intent to treat (ITT) population.
+**Stance justification:** > However, the selected clinical measures did not differentiate between the "on" and "off" groups in the intent to treat (ITT) population.
 
 **Golden note:** DBS-f age-moderator analysis — older patients showed better outcomes (subgroup positive).
 
@@ -243,7 +243,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38088070 — current stance: `inconclusive`
 
-**Evidence span:** > DBS did not reverse the progression of cognitive decline (WMD of ADAS-Cog score in single-arm studies: 7.40, p < 0.00001).
+**Stance justification:** > DBS did not reverse the progression of cognitive decline (WMD of ADAS-Cog score in single-arm studies: 7.40, p < 0.00001).
 
 **Golden note:** rTMS/tDCS/DBS meta — DBS efficacy mixed.
 
@@ -257,7 +257,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40243219 — current stance: `supports`
 
-**Evidence span:** > Early on, DBS significantly improved cognitive function and quality of life.
+**Stance justification:** > Early on, DBS significantly improved cognitive function and quality of life.
 
 **Golden note:** Fornix vs NBM bilateral DBS comparison — both effective in severe AD.
 
@@ -271,7 +271,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37204563 — current stance: `inconclusive`
 
-**Evidence span:** > The population investigated is small and heterogeneous, published results from clinical trials are under-represented, severe adverse events not negligible, and cognitive outcomes uncertain.
+**Stance justification:** > The population investigated is small and heterogeneous, published results from clinical trials are under-represented, severe adverse events not negligible, and cognitive outcomes uncertain.
 
 **Golden note:** Recent DBS trials in dementia review — descriptive.
 

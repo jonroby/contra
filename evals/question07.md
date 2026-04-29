@@ -159,7 +159,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 19838862 — current stance: `supports`
 
-**Evidence span:** > This phase II study provides preliminary evidence of a possible therapeutic effect of saffron extract in the treatment of patients with mild-to-moderate Alzheimer's disease.
+**Stance justification:** > This phase II study provides preliminary evidence of a possible therapeutic effect of saffron extract in the treatment of patients with mild-to-moderate Alzheimer's disease.
 
 **Golden note:** Akhondzadeh 22-week RCT in mild-mod AD — positive on cognition.
 
@@ -173,7 +173,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 20831681 — current stance: `supports`
 
-**Evidence span:** > After 16 weeks, saffron produced a significantly better outcome on cognitive function than placebo (ADAS-cog: F=4·12, d.f.=1, P=0·04; CDR: F=4·12, d.f.=1, P=0·04).
+**Stance justification:** > After 16 weeks, saffron produced a significantly better outcome on cognitive function than placebo (ADAS-cog: F=4·12, d.f.=1, P=0·04; CDR: F=4·12, d.f.=1, P=0·04).
 
 **Golden note:** Akhondzadeh 16-week placebo-controlled RCT — positive vs placebo.
 
@@ -187,7 +187,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 25163440 — current stance: `supports`
 
-**Evidence span:** > 1-year administration of saffron extract capsules showed to be comparable with memantine in reducing cognitive decline in patients with moderate to severe AD.
+**Stance justification:** > 1-year administration of saffron extract capsules showed to be comparable with memantine in reducing cognitive decline in patients with moderate to severe AD.
 
 **Golden note:** Saffron vs memantine head-to-head RCT — non-inferior in moderate-severe AD.
 
@@ -201,7 +201,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 30136324 — current stance: `supports`
 
-**Evidence span:** > Although saffron and its components showed potential clinical applications, further investigations are necessary to confirm the effective use of "Red Gold" and its real applications in clinical practice.
+**Stance justification:** > Although saffron and its components showed potential clinical applications, further investigations are necessary to confirm the effective use of "Red Gold" and its real applications in clinical practice.
 
 **Golden note:** Saffron phytotherapy overview — efficacy on AD discussed.
 
@@ -215,7 +215,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 29289576 — current stance: `supports`
 
-**Evidence span:** > the use of some phytochemicals and botanicals seems to be very promising in order to delay the onset and progression of neurodegenerative and other age-related diseases. However, further well-designed clinical research is certainly needed to finally confirm the efficacy and safety profile of these compounds.
+**Stance justification:** > the use of some phytochemicals and botanicals seems to be very promising in order to delay the onset and progression of neurodegenerative and other age-related diseases. However, further well-designed clinical research is certainly needed to finally confirm the efficacy and safety profile of these compounds.
 
 **Golden note:** Botanicals/phytochemicals review — saffron has clinical evidence in AD.
 
@@ -229,7 +229,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33167948 — current stance: `supports` [FLIP from supports → inconclusive]
 
-**Evidence span:** > Saffron may have the potential to improve cognitive function and activities of daily living in patients with Alzheimer's disease and mild cognitive impairment (MCI). However, due to limited high-quality studies there is insufficient evidence to make any recommendations for clinical use.
+**Stance justification:** > Saffron may have the potential to improve cognitive function and activities of daily living in patients with Alzheimer's disease and mild cognitive impairment (MCI). However, due to limited high-quality studies there is insufficient evidence to make any recommendations for clinical use.
 
 **Golden note:** Saffron MCI/dementia meta-analysis — improves cognition.
 
@@ -243,7 +243,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 32445136 — current stance: `supports`
 
-**Evidence span:** > Saffron was shown to be equally effective to common symptomatic drugs for MCI/AD and resulted in no difference in the incidence of side effects, when compared with placebo or drugs.
+**Stance justification:** > Saffron was shown to be equally effective to common symptomatic drugs for MCI/AD and resulted in no difference in the incidence of side effects, when compared with placebo or drugs.
 
 **Golden note:** Saffron cognitive function RCT systematic review — positive.
 
@@ -257,7 +257,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35960461 — current stance: `supports`
 
-**Evidence span:** > Data analysis showed that herbs like Gingko Biloba, Melissa Officinalis, Salvia officinalis, Ginseng and saffron alone or in combination with curcumin, low-fat diet, NuAD-Trail, and soy lecithin showed significant positive effects on AD.
+**Stance justification:** > Data analysis showed that herbs like Gingko Biloba, Melissa Officinalis, Salvia officinalis, Ginseng and saffron alone or in combination with curcumin, low-fat diet, NuAD-Trail, and soy lecithin showed significant positive effects on AD.
 
 **Golden note:** Natural remedies AD review — saffron one of few with positive RCTs.
 
@@ -271,7 +271,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39577115 — current stance: `supports`
 
-**Evidence span:** > Saffron and its active metabolites crocin, crocetin, safranal, and picrocrocin have shown acceptable efficacy in managing NDDs like Alzheimer's disease, Parkinson's disease, Attention deficit hyperactivity disorder, depression, and other NDDs via modulating apoptotic... inflammatory... and oxidative strass... signaling pathways.
+**Stance justification:** > Saffron and its active metabolites crocin, crocetin, safranal, and picrocrocin have shown acceptable efficacy in managing NDDs like Alzheimer's disease, Parkinson's disease, Attention deficit hyperactivity disorder, depression, and other NDDs via modulating apoptotic... inflammatory... and oxidative strass... signaling pathways.
 
 **Golden note:** Saffron + constituents mechanistic review — supports neuroprotection.
 

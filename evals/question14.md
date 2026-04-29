@@ -241,7 +241,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36449413 — current stance: `supports`
 
-**Evidence span:** > The adjusted least-squares mean change from baseline at 18 months was 1.21 with lecanemab and 1.66 with placebo (difference, -0.45; 95% confidence interval [CI], -0.67 to -0.23; P<0.001).
+**Stance justification:** > The adjusted least-squares mean change from baseline at 18 months was 1.21 with lecanemab and 1.66 with placebo (difference, -0.45; 95% confidence interval [CI], -0.67 to -0.23; P<0.001).
 
 **Golden note:** CLARITY-AD — landmark positive phase 3 in early AD.
 
@@ -255,7 +255,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 33865446 — current stance: `supports`
 
-**Evidence span:** > BAN2401-G000-201 did not meet the 12-month primary endpoint. However, prespecified 18-month Bayesian and frequentist analyses demonstrated reduction in brain amyloid accompanied by a consistent reduction of clinical decline across several clinical and biomarker endpoints.
+**Stance justification:** > BAN2401-G000-201 did not meet the 12-month primary endpoint. However, prespecified 18-month Bayesian and frequentist analyses demonstrated reduction in brain amyloid accompanied by a consistent reduction of clinical decline across several clinical and biomarker endpoints.
 
 **Golden note:** Phase 2b proof-of-concept positive.
 
@@ -269,7 +269,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36544184 — current stance: `supports`
 
-**Evidence span:** > Lecanemab treatment resulted in significant reduction in amyloid plaques and a slowing of clinical decline.
+**Stance justification:** > Lecanemab treatment resulted in significant reduction in amyloid plaques and a slowing of clinical decline.
 
 **Golden note:** Phase 2 OLE — sustained benefit on cognition + biomarkers.
 
@@ -283,7 +283,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38730496 — current stance: `inconclusive`
 
-**Evidence span:** > Lecanemab was generally well-tolerated, with the most common adverse events being infusion-related reactions, ARIA-H, ARIA-E.
+**Stance justification:** > Lecanemab was generally well-tolerated, with the most common adverse events being infusion-related reactions, ARIA-H, ARIA-E.
 
 **Golden note:** Updated phase 3 safety report — safety focus, no new efficacy claim.
 
@@ -297,7 +297,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38253184 — current stance: `inconclusive`
 
-**Evidence span:** > Although it is yet to be determined which is more effective between lithium or lecanemab or donanemab, lithium may be more effective than aducanumab. Aducanumab, lecanemab and donanemab do not appear to differ in their effectiveness on cognitive function.
+**Stance justification:** > Although it is yet to be determined which is more effective between lithium or lecanemab or donanemab, lithium may be more effective than aducanumab. Aducanumab, lecanemab and donanemab do not appear to differ in their effectiveness on cognitive function.
 
 **Golden note:** Network meta donanemab/lecanemab/aducanumab/lithium — comparative, mixed.
 
@@ -311,7 +311,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37874099 — current stance: `supports`
 
-**Evidence span:** > At month 18, adjusted mean change from baseline in EQ-5D-5L and QOL-AD by subject showed 49% and 56% less decline, respectively.
+**Stance justification:** > At month 18, adjusted mean change from baseline in EQ-5D-5L and QOL-AD by subject showed 49% and 56% less decline, respectively.
 
 **Golden note:** CLARITY-AD QoL secondary — improved health-related QoL.
 
@@ -325,7 +325,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36184326 — current stance: `inconclusive`
 
-**Evidence span:** > When pooled together, the data from high-clearance anti-amyloid immunotherapies trials confirm a statistically significant clinical effect of these drugs on cognitive decline after 18 months... However, this effect remains below the previously established minimal clinically relevant values.
+**Stance justification:** > When pooled together, the data from high-clearance anti-amyloid immunotherapies trials confirm a statistically significant clinical effect of these drugs on cognitive decline after 18 months... However, this effect remains below the previously established minimal clinically relevant values.
 
 **Golden note:** Anti-amyloid immunotherapy meta part 1 — efficacy modest, controversy.
 
@@ -339,7 +339,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37902139 — current stance: `supports`
 
-**Evidence span:** > Lecanemab therapy led to a substantial decrease in amyloid plaques and a noticeable slowing of clinical decline.
+**Stance justification:** > Lecanemab therapy led to a substantial decrease in amyloid plaques and a noticeable slowing of clinical decline.
 
 **Golden note:** Lecanemab systematic review — efficacy in slowing decline.
 
@@ -353,7 +353,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37213538 — current stance: `supports`
 
-**Evidence span:** > It is reported that lecanemab was beneficial to stabilize or slow down the decrease in CDR-SB (WMD: -0.45; 95% CI: -0.64, -0.25; p < 0.00001), ADCOMS (WMD: -0.05; 95% CI: -0.07, -0.03; p < 0.00001), ADAS-cog (WMD: -1.11; 95% CI: -1.64, -0.57; p < 0.0001).
+**Stance justification:** > It is reported that lecanemab was beneficial to stabilize or slow down the decrease in CDR-SB (WMD: -0.45; 95% CI: -0.64, -0.25; p < 0.00001), ADCOMS (WMD: -0.05; 95% CI: -0.07, -0.03; p < 0.00001), ADAS-cog (WMD: -1.11; 95% CI: -1.64, -0.57; p < 0.0001).
 
 **Golden note:** Lecanemab safety/efficacy RCT meta — beneficial.
 
@@ -367,7 +367,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39559868 — current stance: `inconclusive`
 
-**Evidence span:** > Through our early experience with lecanemab, we have recognized several areas of improvement which have clarified and enhanced the lecanemab infusion experience.
+**Stance justification:** > Through our early experience with lecanemab, we have recognized several areas of improvement which have clarified and enhanced the lecanemab infusion experience.
 
 **Golden note:** 71-patient regional center real-world experience — descriptive.
 
@@ -381,7 +381,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37295957 — current stance: `inconclusive`
 
-**Evidence span:** > The demonstration that lecanemab treatment delayed clinical progression in persons with mild symptoms due to AD is a major conceptual achievement, but a better appreciation of the magnitude and durability of benefits for individual patients will require extended observations from clinical practice settings.
+**Stance justification:** > The demonstration that lecanemab treatment delayed clinical progression in persons with mild symptoms due to AD is a major conceptual achievement, but a better appreciation of the magnitude and durability of benefits for individual patients will require extended observations from clinical practice settings.
 
 **Golden note:** 'Incremental step or paradigm shift' commentary — debate framing.
 
@@ -395,7 +395,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36482412 — current stance: `supports`
 
-**Evidence span:** > The conclusion of the primary analysis of the lecanemab Study 201 is strengthened by the consistently positive conclusions across multiple statistical models, across efficacy endpoints, and over time, despite missing data.
+**Stance justification:** > The conclusion of the primary analysis of the lecanemab Study 201 is strengthened by the consistently positive conclusions across multiple statistical models, across efficacy endpoints, and over time, despite missing data.
 
 **Golden note:** Phase 2 consistency-of-results analysis — robust to method.
 
@@ -409,7 +409,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38429615 — current stance: `supports`
 
-**Evidence span:** > Lecanemab (87.24%) may be the most promising way to slow down the decrease of Alzheimer's Disease Cooperative Study-Activities of Daily Living (ADCS-ADL) score.
+**Stance justification:** > Lecanemab (87.24%) may be the most promising way to slow down the decrease of Alzheimer's Disease Cooperative Study-Activities of Daily Living (ADCS-ADL) score.
 
 **Golden note:** Network meta of mAbs — beneficial cognitive/clinical effects.
 
@@ -423,7 +423,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40189473 — current stance: `supports`
 
-**Evidence span:** > For the primary endpoint, there was a slowing of decline with lecanemab in the CDR-SB at 18 months compared to placebo in the Asian region (adjusted mean difference: -0.349; 95 % confidence intervals: -0.773, 0.076; 24 % slowing of decline).
+**Stance justification:** > For the primary endpoint, there was a slowing of decline with lecanemab in the CDR-SB at 18 months compared to placebo in the Asian region (adjusted mean difference: -0.349; 95 % confidence intervals: -0.773, 0.076; 24 % slowing of decline).
 
 **Golden note:** CLARITY-AD Asian regional analysis — confirms benefit.
 
@@ -437,7 +437,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39638097 — current stance: `supports`
 
-**Evidence span:** > The meta-analysis showed that Lecanemab slowed the progression of cognitive impairment as measured by CDR-SB, ADCOMS, and ADASCog, and significantly reduced Amyloid burden on PET in centiloids.
+**Stance justification:** > The meta-analysis showed that Lecanemab slowed the progression of cognitive impairment as measured by CDR-SB, ADCOMS, and ADASCog, and significantly reduced Amyloid burden on PET in centiloids.
 
 **Golden note:** Lecanemab in mild AD systematic review/meta — efficacy.
 
@@ -451,7 +451,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 35320578 — current stance: `inconclusive`
 
-**Evidence span:** > Aβ plaques removal in the brain due to amyloid therapy is strongly correlated with a better clinical response in patients with early Alzheimer's disease and a higher ARIA-E rate for the treatment groups and clinical trials in this meta-analysis.
+**Stance justification:** > Aβ plaques removal in the brain due to amyloid therapy is strongly correlated with a better clinical response in patients with early Alzheimer's disease and a higher ARIA-E rate for the treatment groups and clinical trials in this meta-analysis.
 
 **Golden note:** ARIA-amyloid-clinical correlation meta — methodology.
 
@@ -465,7 +465,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 37040116 — current stance: `supports`
 
-**Evidence span:** > The bayesian posterior probability that the ED90 was superior to placebo was 97.5% at 12 months and 97.7% at 18 months.
+**Stance justification:** > The bayesian posterior probability that the ED90 was superior to placebo was 97.5% at 12 months and 97.7% at 18 months.
 
 **Golden note:** Bayesian re-analysis of phase 2b — confirms efficacy.
 
@@ -479,7 +479,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 36336488 — current stance: `inconclusive`
 
-**Evidence span:** > In the first part of this review, we underlined through a meta-analysis that the pooled data from high-clearance anti-amyloid immunotherapies trials demonstrated a significant but slight clinical effect after 18 months.
+**Stance justification:** > In the first part of this review, we underlined through a meta-analysis that the pooled data from high-clearance anti-amyloid immunotherapies trials demonstrated a significant but slight clinical effect after 18 months.
 
 **Golden note:** Anti-amyloid imm part 2 — implementation/ethics, not efficacy primary.
 
@@ -493,7 +493,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40011174 — current stance: `inconclusive`
 
-**Evidence span:** > Applying the criterion of amyloid positivity (post mortem report) and the clinical trial inclusion and exclusion criteria to this sample resulted in 83 (9 %), 275 (31 %), and 172 (19 %) participants eligible for treatment with aducanumab, lecanemab, and donanemab, respectively.
+**Stance justification:** > Applying the criterion of amyloid positivity (post mortem report) and the clinical trial inclusion and exclusion criteria to this sample resulted in 83 (9 %), 275 (31 %), and 172 (19 %) participants eligible for treatment with aducanumab, lecanemab, and donanemab, respectively.
 
 **Golden note:** Patient eligibility analysis — descriptive.
 
@@ -507,7 +507,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39432414 — current stance: `supports`
 
-**Evidence span:** > Lecanemab showed the most promise in brain amyloid reduction and decelerating cognitive decline compared to the other therapies.
+**Stance justification:** > Lecanemab showed the most promise in brain amyloid reduction and decelerating cognitive decline compared to the other therapies.
 
 **Golden note:** Anti-Aβ mAb systematic review — efficacy in AD.
 
@@ -521,7 +521,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38759015 — current stance: `inconclusive`
 
-**Evidence span:** > High certainty evidence indicated that donanemab (standardized mean difference [SMD] -0.239, 95% confidence interval [CI] -0.343 to -0.134) and lecanemab (SMD -0.194, 95% CI -0.279 to -0.108) moderately slowed the clinical progression in patients with amyloid pathology.
+**Stance justification:** > High certainty evidence indicated that donanemab (standardized mean difference [SMD] -0.239, 95% confidence interval [CI] -0.343 to -0.134) and lecanemab (SMD -0.194, 95% CI -0.279 to -0.108) moderately slowed the clinical progression in patients with amyloid pathology.
 
 **Golden note:** Pharm + nutritional early AD network meta — broad.
 
@@ -535,7 +535,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41355080 — current stance: `supports`
 
-**Evidence span:** > Across clinical and HRQoL endpoints, lecanemab-treated participants continued to benefit through 36 months. Separation between early and delayed start was maintained between 18 and 36 months.
+**Stance justification:** > Across clinical and HRQoL endpoints, lecanemab-treated participants continued to benefit through 36 months. Separation between early and delayed start was maintained between 18 and 36 months.
 
 **Golden note:** CLARITY-AD OLE 36-month — sustained benefit.
 
@@ -549,7 +549,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 38484213 — current stance: `contradicts`
 
-**Evidence span:** > The value of the outcome to participants is not defined in the absolute terms necessary for clinical decision-making, and the difference attributable to lecanemab was between 18% and 46% of estimates of the minimal clinically important difference on the Clinical Dementia Rating Scale Sum of Boxes.
+**Stance justification:** > The value of the outcome to participants is not defined in the absolute terms necessary for clinical decision-making, and the difference attributable to lecanemab was between 18% and 46% of estimates of the minimal clinically important difference on the Clinical Dementia Rating Scale Sum of Boxes.
 
 **Golden note:** 'Lecanemab Questions' commentary — critical, raises efficacy concerns.
 
@@ -563,7 +563,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40232258 — current stance: `supports`
 
-**Evidence span:** > The Clarity AD phase 3 trial, the AHEAD study, and the DIAN-TU-001 trials have reported positive study outcomes with robust efficacy and safety outcomes with minimal side effects.
+**Stance justification:** > The Clarity AD phase 3 trial, the AHEAD study, and the DIAN-TU-001 trials have reported positive study outcomes with robust efficacy and safety outcomes with minimal side effects.
 
 **Golden note:** Lecanemab safety/efficacy systematic review — positive.
 
@@ -577,7 +577,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41070709 — current stance: `supports`
 
-**Evidence span:** > Alzheimer's Disease Assessment Scale-Cognitive Subscale 14-item version (ADAS-cog14) scores improved significantly at both follow-ups, and plasma p-tau181 consistently declined.
+**Stance justification:** > Alzheimer's Disease Assessment Scale-Cognitive Subscale 14-item version (ADAS-cog14) scores improved significantly at both follow-ups, and plasma p-tau181 consistently declined.
 
 **Golden note:** China multi-center real-world — efficacy + biomarkers.
 
@@ -591,7 +591,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40308765 — current stance: `supports`
 
-**Evidence span:** > Meta-analysis results showed that in terms of clinical outcomes, Lecanemab/Donanemab outperformed the control group in ADCOMS, CDR-SB, ADAS-Cog 14, and amyloid burden on PET.
+**Stance justification:** > Meta-analysis results showed that in terms of clinical outcomes, Lecanemab/Donanemab outperformed the control group in ADCOMS, CDR-SB, ADAS-Cog 14, and amyloid burden on PET.
 
 **Golden note:** Re-evaluation lecanemab/donanemab — confirms benefit.
 
@@ -605,7 +605,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 40386876 — current stance: `inconclusive`
 
-**Evidence span:** > rTMS was significantly more effective than placebo/sham stimulation. In addition, rTMS was significantly more effective than aducanumab, lecanemab, and donanemab.
+**Stance justification:** > rTMS was significantly more effective than placebo/sham stimulation. In addition, rTMS was significantly more effective than aducanumab, lecanemab, and donanemab.
 
 **Golden note:** Anti-amyloid + rTMS network meta — lecanemab one of many.
 
@@ -619,7 +619,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41322352 — current stance: `inconclusive`
 
-**Evidence span:** > Lecanemab provides moderate benefits, while donanemab appears less effective.
+**Stance justification:** > Lecanemab provides moderate benefits, while donanemab appears less effective.
 
 **Golden note:** Symptomatic vs disease-modifying meta — comparative.
 
@@ -633,7 +633,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 39269842 — current stance: `inconclusive`
 
-**Evidence span:** > The PPV for ARIA-E was high (0.915), but that for ARIA hemorrhage was low (0.630). Infusion-related reactions had a high PPV of 0.910, but with a wide confidence interval.
+**Stance justification:** > The PPV for ARIA-E was high (0.915), but that for ARIA hemorrhage was low (0.630). Infusion-related reactions had a high PPV of 0.910, but with a wide confidence interval.
 
 **Golden note:** Adverse-events-as-unblinding meta — methodology.
 
@@ -647,7 +647,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41160347 — current stance: `inconclusive`
 
-**Evidence span:** > Lecanemab utilization followed US FDA-approved prescribing information. Disparities for minority and rural-based populations were observed suggesting opportunities to improve access for underserved populations.
+**Stance justification:** > Lecanemab utilization followed US FDA-approved prescribing information. Disparities for minority and rural-based populations were observed suggesting opportunities to improve access for underserved populations.
 
 **Golden note:** US real-world descriptive — utilization patterns.
 
@@ -661,7 +661,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41352683 — current stance: `inconclusive`
 
-**Evidence span:** > Both lecanemab and donanemab showed the greatest slowing of cognitive decline in White/Caucasian patients and apolipoprotein E4 (ApoE4) non-carriers.
+**Stance justification:** > Both lecanemab and donanemab showed the greatest slowing of cognitive decline in White/Caucasian patients and apolipoprotein E4 (ApoE4) non-carriers.
 
 **Golden note:** Patient characteristics + efficacy meta — subgroup.
 
@@ -675,7 +675,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41985900 — current stance: `supports` [FLIP from supports → contradicts]
 
-**Evidence span:** > The effect of amyloid-beta-targeting monoclonal antibodies on cognitive function and dementia severity at 18 months in people with mild cognitive impairment or mild dementia due to Alzheimer's disease is trivial, while on functional ability, it is small at best. Successful removal of amyloid from the brain does not seem to be associated with clinically meaningful effects in people with mild cognitive impairment or mild dementia due to Alzheimer's disease.
+**Stance justification:** > The effect of amyloid-beta-targeting monoclonal antibodies on cognitive function and dementia severity at 18 months in people with mild cognitive impairment or mild dementia due to Alzheimer's disease is trivial, while on functional ability, it is small at best. Successful removal of amyloid from the brain does not seem to be associated with clinically meaningful effects in people with mild cognitive impairment or mild dementia due to Alzheimer's disease.
 
 **Golden note:** Aβ-mAbs Cochrane-style review — disease-modifying potential.
 
@@ -689,7 +689,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41396015 — current stance: `inconclusive`
 
-**Evidence span:** > Overall lecanemab exhibited a manageable short-term safety profile with no measurable cognitive efficacy.
+**Stance justification:** > Overall lecanemab exhibited a manageable short-term safety profile with no measurable cognitive efficacy.
 
 **Golden note:** Real-world Eastern China — baseline + safety.
 
@@ -703,7 +703,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41428477 — current stance: `inconclusive`
 
-**Evidence span:** > Point estimates of Cohen's d effect sizes on CDR-SB were -0.34, -0.33, and -0.52 for lecanemab, donanemab, and Souvenaid™, respectively, with no statistically significant differences between drugs.
+**Stance justification:** > Point estimates of Cohen's d effect sizes on CDR-SB were -0.34, -0.33, and -0.52 for lecanemab, donanemab, and Souvenaid™, respectively, with no statistically significant differences between drugs.
 
 **Golden note:** Effect-size comparison lecanemab/donanemab/Souvenaid.
 
@@ -717,7 +717,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41478817 — current stance: `inconclusive`
 
-**Evidence span:** > The pooled ARIA incidence was 19% (95% CI: 16%-23%), which was significantly modulated by ApoE4 status (RR 1.45 for heterozygotes, 3.54 for homozygotes vs noncarriers) and the pooled symptomatic ARIA incidence was 3% (95% CI: 2%-4%).
+**Stance justification:** > The pooled ARIA incidence was 19% (95% CI: 16%-23%), which was significantly modulated by ApoE4 status (RR 1.45 for heterozygotes, 3.54 for homozygotes vs noncarriers) and the pooled symptomatic ARIA incidence was 3% (95% CI: 2%-4%).
 
 **Golden note:** Lecanemab safety meta — RCT vs RWE comparison.
 
@@ -731,7 +731,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41823189 — current stance: `supports`
 
-**Evidence span:** > Lecanemab significantly attenuated cognitive decline versus ADNI.
+**Stance justification:** > Lecanemab significantly attenuated cognitive decline versus ADNI.
 
 **Golden note:** China multicenter real-world — effectiveness confirmed.
 
@@ -745,7 +745,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41581261 — current stance: `inconclusive`
 
-**Evidence span:** > Our findings suggest that ARIA is a significant concern especially in patients who are ε4 homozygous.
+**Stance justification:** > Our findings suggest that ARIA is a significant concern especially in patients who are ε4 homozygous.
 
 **Golden note:** Regional center 2-year — mostly safety/AE.
 
@@ -759,7 +759,7 @@ Stance labels reflect the **proposed** stance after this review, annotated with 
 
 ### PMID 41689888 — current stance: `supports`
 
-**Evidence span:** > Lecanemab significantly reduced clinical decline on CDR-SB at 18 months compared to placebo in the ApoEε4 heterozygotes or non-carriers subgroup.
+**Stance justification:** > Lecanemab significantly reduced clinical decline on CDR-SB at 18 months compared to placebo in the ApoEε4 heterozygotes or non-carriers subgroup.
 
 **Golden note:** CLARITY-AD APOE non-carrier/heterozygote subgroup — meaningful delay.
 

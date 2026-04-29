@@ -22,8 +22,9 @@ import time
 from pathlib import Path
 
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
@@ -34,9 +35,18 @@ if os.getenv("BRAINTRUST_API_KEY"):
     braintrust.auto_instrument()
 
 from contra.db import resolve_url
+from contra.pipeline import run_query
 from contra.retrieval import Retriever
 
 DEFAULT_TARGET = os.getenv("CONTRA_TARGET", "railway")
+
+EXAMPLES = [
+    "Does lithium slow cognitive decline in Alzheimer's?",
+    "Do anti-amyloid antibodies improve clinical outcomes in Alzheimer's?",
+    "Is the Mediterranean diet protective against Alzheimer's?",
+    "Do statins reduce Alzheimer's risk?",
+    "Is there a causal link between herpes simplex virus and Alzheimer's?",
+]
 
 print(f"[startup] Loading Retriever (target={DEFAULT_TARGET})...")
 _t0 = time.time()
@@ -49,9 +59,30 @@ print(
 app = FastAPI(title="Contra")
 
 
+class QueryRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=500)
+
+
 @app.get("/api/health")
 def health() -> dict:
     return {"status": "ok", "papers": len(RETRIEVER.papers)}
+
+
+@app.get("/api/examples")
+def examples() -> dict:
+    return {"examples": EXAMPLES}
+
+
+@app.post("/api/query")
+def query(req: QueryRequest) -> dict:
+    question = req.question.strip()
+    if not question:
+        raise HTTPException(status_code=400, detail="Question is required.")
+    try:
+        result = run_query(question, target=DEFAULT_TARGET, retriever=RETRIEVER)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return result.as_dict()
 
 
 # Mount the built React app last so /api/* routes take precedence.

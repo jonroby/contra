@@ -1,5 +1,5 @@
 """
-Read all eval runs persisted by `cli/eval_local.py` and print a chronological
+Read all eval runs persisted by `cli/eval.py` and print a chronological
 table of headline metrics, with deltas vs the previous run.
 
 Run:
@@ -44,7 +44,7 @@ def _fmt(value: float | None) -> str:
 
 def _print_table(runs: list[dict]) -> None:
     if not runs:
-        print("No runs found in evals/runs/. Run cli/eval_local.py first.")
+        print("No runs found in evals/runs/. Run cli/eval.py first.")
         return
 
     header = (

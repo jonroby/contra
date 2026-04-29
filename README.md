@@ -142,10 +142,12 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
 - **Hybrid merge:** Reciprocal Rank Fusion (RRF), pool=200
 - **LLM:** gpt-4o-mini (extraction + synthesis)
 - **Enrichment:** OpenAlex API (citations, references, fields-of-study, OA links)
-- **Evals:** Braintrust (retrieval P/R, stance accuracy, and stance justification —
-  each golden PMID carries a verbatim quote from the abstract that anchors its
-  stance label, so the system can be scored on whether its classification is
-  supported by the same evidence a human reviewer used)
+- **Evals:** local terminal harness (`cli/eval.py`) that hits the local
+  FastAPI server, scores each response against `evals/golden.json`, and persists
+  every run to `evals/runs/` for trend tracking via `cli/eval_history.py`.
+  Three metrics today: retrieval P/R, stance accuracy. Stance justification
+  (each golden PMID carries a verbatim abstract quote anchoring its label) is
+  staged for an LLM-as-judge scorer; harness will reuse the same persistence.
 
 ---
 
@@ -190,7 +192,8 @@ contra/
 │
 ├── cli/                           # command-line tools (use `contra/`)
 │   ├── analyze.py                 # full pipeline CLI
-│   ├── eval.py                    # Braintrust evals (retrieval + stance)
+│   ├── eval.py                    # local eval harness (HTTP → FastAPI)
+│   ├── eval_history.py            # trend table over evals/runs/
 │   ├── query.py                   # retrieval comparison (vector vs BM25 vs hybrid)
 │   └── query_similar.py           # vector-only smoke test
 │
@@ -272,8 +275,16 @@ uv run python scripts/embed_and_load.py --input data/abstracts_filtered.json --t
 
 ### Run the eval
 
+Start the local server in one terminal, run the eval in another:
+
 ```bash
-uv run python cli/eval.py all  # writes results to Braintrust
+# terminal 1
+CONTRA_TARGET=local uv run uvicorn app:app --port 8000
+
+# terminal 2
+uv run python cli/eval.py            # full run, auto-saved to evals/runs/
+uv run python cli/eval.py --questions 1,19
+uv run python cli/eval_history.py          # see metric drift across runs
 ```
 
 ---
@@ -301,7 +312,6 @@ in the Space's **Logs** tab.
 
 - `RAILWAY_DATABASE_URL` — connection string for the deployed Postgres
 - `OPENAI_API_KEY` — for extraction + synthesis
-- `BRAINTRUST_API_KEY` — optional, enables production trace logging
 
 ---
 

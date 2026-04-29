@@ -118,7 +118,12 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
                           └──────────┬────────────┘
                                      ▼
                           ┌───────────────────────┐
-                          │ Gradio (HF Spaces)    │
+                          │ FastAPI /api/query    │  JSON
+                          └──────────┬────────────┘
+                                     ▼
+                          ┌───────────────────────┐
+                          │ React + Vite + TS     │  three-tab UI
+                          │ (served by FastAPI)   │  (HF Docker Space)
                           └───────────────────────┘
 ```
 
@@ -126,7 +131,10 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
 
 ## Tech stack
 
-- **Backend:** Python 3.12, Gradio (deployed on HuggingFace Spaces)
+- **Backend:** Python 3.12, FastAPI + uvicorn
+- **Frontend:** React 18 + TypeScript + Vite + Tailwind (no UI lib, no state manager)
+- **Deployment:** HuggingFace Spaces (Docker SDK) — multi-stage build serves the
+  React frontend and FastAPI from a single container at port 7860
 - **Database:** PostgreSQL 18 + pgvector (Railway)
 - **Embeddings:** SPECTER v1 (`allenai/specter`), 768-dim
 - **Vector index:** ivfflat, `lists=200`
@@ -156,7 +164,8 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
 
 ```
 contra/
-├── app.py                         # Gradio web UI (HF Spaces entrypoint)
+├── app.py                         # FastAPI entrypoint (HF Docker Space)
+├── Dockerfile                     # multi-stage: node builds frontend, python runs uvicorn
 ├── README.md
 ├── NOTES.md                       # design decisions, rejected alternatives, math
 │
@@ -167,6 +176,15 @@ contra/
 │   ├── pipeline.py                # run_query(): full end-to-end
 │   └── db.py                      # connection helpers (local | railway)
 │
+├── frontend/                      # React + Vite + TS + Tailwind
+│   ├── src/
+│   │   ├── App.tsx                # top-level page
+│   │   ├── components/            # FindingCard, Results
+│   │   └── types.ts               # API response types
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.ts             # /api proxy to :8000 in dev
+│
 ├── cli/                           # command-line tools (use `contra/`)
 │   ├── analyze.py                 # full pipeline CLI
 │   ├── eval.py                    # Braintrust evals (retrieval + stance)
@@ -174,7 +192,7 @@ contra/
 │   └── query_similar.py           # vector-only smoke test
 │
 ├── evals/
-│   └── golden.json                # hand-curated test set (5 questions)
+│   └── golden.json                # hand-curated 20-question test set
 │
 ├── scripts/                       # one-shot DB & data setup
 │   ├── fetch_abstracts.py
@@ -200,24 +218,57 @@ contra/
 ## Local development
 
 ```bash
-# 1. Install
+# 1. Install Python deps
 uv sync
 
-# 2. Configure .env
-cp .env.example .env  # fill in DATABASE_URL, RAILWAY_DATABASE_URL, OPENAI_API_KEY
+# 2. Install frontend deps
+cd frontend && npm install && cd ..
 
-# 3. (One-time) build the database
+# 3. Configure .env
+cp .env.example .env  # fill in DATABASE_URL, RAILWAY_DATABASE_URL, OPENAI_API_KEY
+```
+
+### Run the web app
+
+**Hot-reload dev mode** (recommended while editing UI):
+
+```bash
+# Terminal 1 — backend
+uv run uvicorn app:app --host 0.0.0.0 --port 8000
+
+# Terminal 2 — frontend dev server (proxies /api/* to :8000)
+cd frontend && npm run dev
+# Open http://localhost:5173
+```
+
+**Production-style** (FastAPI serves the built frontend):
+
+```bash
+cd frontend && npm run build && cd ..
+uv run uvicorn app:app --host 0.0.0.0 --port 8000
+# Open http://localhost:8000
+```
+
+### Run the CLI (no frontend needed)
+
+```bash
+uv run python cli/analyze.py "does lithium slow cognitive decline?"
+```
+
+### Build the database (one-time)
+
+```bash
 uv run python scripts/init_db.py --target local
 uv run python scripts/fetch_abstracts.py
 uv run python scripts/fetch_openalex.py
 uv run python scripts/filter_corpus.py
 uv run python scripts/embed_and_load.py --input data/abstracts_filtered.json --target local
+```
 
-# 4. Run the CLI
-uv run python cli/analyze.py "does lithium slow cognitive decline?"
+### Run the eval
 
-# 5. Or run the web UI
-CONTRA_TARGET=local uv run python app.py  # visits http://127.0.0.1:7860
+```bash
+uv run python cli/eval.py all  # writes results to Braintrust
 ```
 
 ---

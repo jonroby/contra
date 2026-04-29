@@ -28,12 +28,6 @@ from pydantic import BaseModel, Field
 
 load_dotenv()
 
-if os.getenv("BRAINTRUST_API_KEY"):
-    import braintrust
-
-    braintrust.init_logger(project="contra")
-    braintrust.auto_instrument()
-
 from contra.db import resolve_url
 from contra.pipeline import run_query
 from contra.retrieval import Retriever

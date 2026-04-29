@@ -29,6 +29,10 @@ Return a JSON object with these fields:
     - "supports": the paper's findings would lead someone to answer YES to the research question
     - "contradicts": the paper's findings would lead someone to answer NO
     - "inconclusive": the paper does not directly address the question, or findings are mixed/null
+- "stance_justification": a VERBATIM quote (or two) from the abstract that supports the chosen direction.
+    Copy the exact sentence(s) — do not paraphrase, summarize, or reformat.
+    Pick the sentence that most directly states the result driving the stance
+    (e.g., the primary endpoint, the pooled effect size, the conclusion line).
 - "intervention": what was tested (e.g., drug name, behavior, biomarker), or null if not applicable
 - "population": who was studied (e.g., "early-stage Alzheimer's patients, age 65+"), or null
 - "sample_size": integer, or null if not stated

@@ -142,7 +142,10 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
 - **Hybrid merge:** Reciprocal Rank Fusion (RRF), pool=200
 - **LLM:** gpt-4o-mini (extraction + synthesis)
 - **Enrichment:** OpenAlex API (citations, references, fields-of-study, OA links)
-- **Evals:** Braintrust (two experiments: retrieval P/R, stance accuracy)
+- **Evals:** Braintrust (retrieval P/R, stance accuracy, and stance justification —
+  each golden PMID carries a verbatim quote from the abstract that anchors its
+  stance label, so the system can be scored on whether its classification is
+  supported by the same evidence a human reviewer used)
 
 ---
 
@@ -208,7 +211,9 @@ contra/
 
 ## Roadmap
 
-- Hand-curate golden eval set with real disagreements (current set is system-seeded)
+- Score stance justification: each golden PMID has a verbatim abstract
+  quote anchoring its label; the system's extraction should point at the
+  same quote (or an overlapping one) to support its classification
 - Composite evidence-quality scoring (study design × recency × citation velocity)
 - React/Vite frontend
 - "Do contradicting papers cite each other?" feature (data is already in DB)

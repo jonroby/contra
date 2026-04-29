@@ -273,5 +273,32 @@ uv run python cli/eval.py all  # writes results to Braintrust
 
 ---
 
+## Deploy
+
+This repo has two git remotes:
+
+```
+origin  git@github.com:jonroby/contra.git
+space   https://huggingface.co/spaces/jonroby/contra
+```
+
+To deploy, push `main` to the `space` remote:
+
+```bash
+git push space main
+```
+
+HuggingFace builds the Docker image automatically on push. First build is
+~3–5 min; subsequent pushes are faster due to layer caching. Watch progress
+in the Space's **Logs** tab.
+
+**Required Space secrets** (set under Space Settings → Variables and secrets):
+
+- `RAILWAY_DATABASE_URL` — connection string for the deployed Postgres
+- `OPENAI_API_KEY` — for extraction + synthesis
+- `BRAINTRUST_API_KEY` — optional, enables production trace logging
+
+---
+
 See **[NOTES.md](./NOTES.md)** for architecture decisions, rejected alternatives,
 filter math, and the rationale behind each non-obvious choice.

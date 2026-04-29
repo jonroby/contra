@@ -19,13 +19,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install uv (project uses uv for dependency management)
 RUN pip install --no-cache-dir uv
 
-# Copy dependency files first for layer caching
-COPY pyproject.toml uv.lock* ./
+# Copy everything hatchling needs to build the local `contra` package
+# (pyproject declares package=true, so uv sync builds it editable).
+# README.md is required because pyproject sets readme = "README.md".
+COPY pyproject.toml uv.lock* README.md ./
+COPY contra/ ./contra/
+
+# Now sync dependencies (this also builds the local contra package)
 RUN uv sync --frozen --no-dev || uv sync --no-dev
 
-# Copy the application code
+# Copy the rest of the application code
 COPY app.py ./
-COPY contra/ ./contra/
 
 # Copy the built frontend from stage 1
 COPY --from=frontend-builder /app/frontend/dist ./frontend/dist

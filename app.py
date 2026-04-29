@@ -1,21 +1,30 @@
 """
-Contra — Gradio web UI.
+Contra — FastAPI backend serving the React frontend.
 
-Single text input → contradiction-aware answer over PubMed Alzheimer's papers.
-Loads the Retriever once at startup so each query just runs the LLM steps.
+Stage 1: minimal shell. Health endpoint + static-file mount for the built
+React app. Pipeline endpoints (`/api/query`) come in Stage 2.
 
 Run locally:
-    uv run python app.py
+    # build the frontend once
+    cd frontend && npm install && npm run build && cd ..
+    # run the backend
+    uv run uvicorn app:app --host 0.0.0.0 --port 8000
 
-Deploy: copy this file (and its dependencies) to a HuggingFace Space configured
-as a Gradio SDK app. Set RAILWAY_DATABASE_URL and OPENAI_API_KEY as Space secrets.
+For development with hot-reload, run the Vite dev server (`npm run dev`) on
+port 5173 — it proxies /api to localhost:8000.
+
+Deploy: HuggingFace Docker Space. The Dockerfile builds the frontend and
+runs uvicorn.
 """
 
 import os
 import time
+from pathlib import Path
 
-import gradio as gr
 from dotenv import load_dotenv
+from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
@@ -26,10 +35,9 @@ if os.getenv("BRAINTRUST_API_KEY"):
     braintrust.auto_instrument()
 
 from contra.db import resolve_url
-from contra.pipeline import PipelineResult, run_query
+from contra.pipeline import run_query
 from contra.retrieval import Retriever
 
-# Default to railway (deployed); set CONTRA_TARGET=local for dev.
 DEFAULT_TARGET = os.getenv("CONTRA_TARGET", "railway")
 
 EXAMPLES = [
@@ -40,110 +48,49 @@ EXAMPLES = [
     "Is there a causal link between herpes simplex virus and Alzheimer's?",
 ]
 
-# Load the retriever once. ~5s cold start; pays off after the first query.
 print(f"[startup] Loading Retriever (target={DEFAULT_TARGET})...")
 _t0 = time.time()
 RETRIEVER = Retriever(resolve_url(DEFAULT_TARGET))
-print(f"[startup] Retriever ready: {len(RETRIEVER.papers):,} papers in {time.time()-_t0:.1f}s")
+print(
+    f"[startup] Retriever ready: {len(RETRIEVER.papers):,} papers in "
+    f"{time.time() - _t0:.1f}s"
+)
+
+app = FastAPI(title="Contra")
 
 
-def _format_findings(findings: list[dict]) -> str:
-    """Render a list of findings as a Markdown block."""
-    if not findings:
-        return "_(none)_"
-    lines = []
-    for f in findings:
-        year = f.get("year") or "?"
-        title = (f.get("title") or "").strip()
-        claim = (f.get("claim") or "").strip()
-        pmid = f.get("pmid")
-        n = f.get("sample_size")
-        n_str = f"n={n}" if n else "n=?"
-        pop = f.get("population") or "—"
-        conf = f.get("confidence") or "?"
-        link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else None
-        title_md = f"**[{title}]({link})**" if link else f"**{title}**"
-        lines.append(
-            f"- [{year}] {title_md}  \n"
-            f"  _{claim}_  \n"
-            f"  <sub>{pop} · {n_str} · confidence: {conf}</sub>"
-        )
-    return "\n".join(lines)
+class QueryRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=500)
 
 
-def handle_query(question: str) -> tuple[str, str, str, str, str]:
-    """Gradio handler. Returns (summary_md, counts_md, supports_md, contradicts_md, inconclusive_md)."""
-    question = (question or "").strip()
+@app.get("/api/health")
+def health() -> dict:
+    return {"status": "ok", "papers": len(RETRIEVER.papers)}
+
+
+@app.get("/api/examples")
+def examples() -> dict:
+    return {"examples": EXAMPLES}
+
+
+@app.post("/api/query")
+def query(req: QueryRequest) -> dict:
+    question = req.question.strip()
     if not question:
-        return ("Please enter a research question.", "", "", "", "")
-
+        raise HTTPException(status_code=400, detail="Question is required.")
     try:
-        result: PipelineResult = run_query(
-            question, target=DEFAULT_TARGET, retriever=RETRIEVER
-        )
+        result = run_query(question, target=DEFAULT_TARGET, retriever=RETRIEVER)
     except Exception as e:
-        return (f"**Error:** {e}", "", "", "", "")
+        raise HTTPException(status_code=500, detail=str(e))
+    return result.as_dict()
 
-    counts_md = (
-        f"**Supports:** {len(result.supports)} · "
-        f"**Contradicts:** {len(result.contradicts)} · "
-        f"**Inconclusive:** {len(result.inconclusive)}  \n"
-        f"<sub>retrieval {result.metadata['timings'].get('retrieval_s', '?')}s · "
-        f"extraction {result.metadata['timings'].get('extraction_s', '?')}s · "
-        f"synthesis {result.metadata['timings'].get('synthesis_s', '?')}s</sub>"
+
+# Mount the built React app last so /api/* routes take precedence.
+FRONTEND_DIST = Path(__file__).parent / "frontend" / "dist"
+if FRONTEND_DIST.exists():
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
+else:
+    print(
+        f"[startup] WARNING: {FRONTEND_DIST} not found. "
+        "Run `cd frontend && npm run build` to build the React app."
     )
-
-    return (
-        f"### Summary\n\n{result.summary}",
-        counts_md,
-        _format_findings(result.supports),
-        _format_findings(result.contradicts),
-        _format_findings(result.inconclusive),
-    )
-
-
-with gr.Blocks(title="Contra — Alzheimer's Contradiction Detector") as demo:
-    gr.Markdown(
-        "# Contra\n"
-        "**Find where the Alzheimer's research disagrees.**  \n"
-        "Ask a research question. Contra retrieves relevant clinical studies, "
-        "classifies each as supporting or contradicting your question, and "
-        "summarizes where the evidence conflicts."
-    )
-
-    with gr.Row():
-        question = gr.Textbox(
-            label="Research question",
-            placeholder="e.g., Does lithium slow cognitive decline in Alzheimer's?",
-            lines=2,
-            scale=4,
-        )
-        submit = gr.Button("Search", variant="primary", scale=1)
-
-    gr.Examples(examples=EXAMPLES, inputs=question)
-
-    summary_out = gr.Markdown()
-    counts_out = gr.Markdown()
-
-    with gr.Tabs():
-        with gr.Tab("Supporting studies"):
-            supports_out = gr.Markdown()
-        with gr.Tab("Contradicting studies"):
-            contradicts_out = gr.Markdown()
-        with gr.Tab("Inconclusive"):
-            inconclusive_out = gr.Markdown()
-
-    submit.click(
-        fn=handle_query,
-        inputs=question,
-        outputs=[summary_out, counts_out, supports_out, contradicts_out, inconclusive_out],
-    )
-    question.submit(
-        fn=handle_query,
-        inputs=question,
-        outputs=[summary_out, counts_out, supports_out, contradicts_out, inconclusive_out],
-    )
-
-
-if __name__ == "__main__":
-    demo.launch()

@@ -34,6 +34,56 @@ do the papers on X disagree, and which evidence is stronger on each side?"**
 
 ---
 
+## What papers are included
+
+Contra does **not** search all of PubMed. The corpus is deliberately narrowed
+to papers that make testable clinical claims about humans, so that
+"supports / contradicts" labels are meaningful.
+
+Starting from 227,857 PubMed records matching the Alzheimer's MeSH search
+(1975–2026), three filters are applied in cascade (`scripts/filter_corpus.py`):
+
+**1. Excluded publication types** — these are not primary research:
+- Case Reports
+- Comment
+- Editorial
+- Letter
+- News
+- Biography
+- Historical Article
+
+**2. Excluded study subjects** — animal-only research is dropped:
+- Papers tagged with MeSH `Animals` or `Mice` but **not** `Humans`
+- (Mixed human + animal studies are kept.)
+
+**3. Required publication types** — at least one tag from the clinical-evidence
+tiers must be present:
+
+*Top tier (strongest evidence):*
+- Meta-Analysis
+- Systematic Review
+- Randomized Controlled Trial
+- Clinical Trial
+- Multicenter Study
+
+*Mid tier (still high-quality clinical evidence):*
+- Observational Study
+- Comparative Study
+- Validation Study
+- Evaluation Study
+
+**Result:** 21,148 papers (9.3% of the original 227k). A paper outside these
+tiers — e.g. a basic-science review, a preclinical mouse study, a conference
+abstract, or a non-English paper without a PubMed-indexed translation — will
+**not** appear in any Contra result, regardless of how relevant its content is.
+
+This is a deliberate trade-off: precision over recall. A literature search tool
+that includes everything dilutes the disagreement signal with editorials and
+animal studies. A tool that only includes RCTs misses real-world observational
+evidence. The mid-tier inclusion is the compromise.
+
+---
+
 ## Architecture
 
 ```
@@ -85,6 +135,7 @@ PubMed (NCBI E-utilities) ──▶ 227k abstracts (1975–2026)
 - **Hybrid merge:** Reciprocal Rank Fusion (RRF), pool=200
 - **LLM:** gpt-4o-mini (extraction + synthesis)
 - **Enrichment:** OpenAlex API (citations, references, fields-of-study, OA links)
+- **Evals:** Braintrust (two experiments: retrieval P/R, stance accuracy)
 
 ---
 
@@ -119,8 +170,12 @@ contra/
 │
 ├── cli/                           # command-line tools (use `contra/`)
 │   ├── analyze.py                 # full pipeline CLI
+│   ├── eval.py                    # Braintrust evals (retrieval + stance)
 │   ├── query.py                   # retrieval comparison (vector vs BM25 vs hybrid)
 │   └── query_similar.py           # vector-only smoke test
+│
+├── evals/
+│   └── golden.json                # hand-curated test set (5 questions)
 │
 ├── scripts/                       # one-shot DB & data setup
 │   ├── fetch_abstracts.py
@@ -134,18 +189,12 @@ contra/
 
 ---
 
-## Status
+## Roadmap
 
-- [x] Stage 1 — Data pipeline (227k abstracts)
-- [x] Stage 2 — Embedding + Postgres (21,148 papers, both DBs in sync)
-- [x] Stage 3 — Hybrid retrieval (RRF, pool=200)
-- [x] Stage 4 — LLM extraction + synthesis
-- [x] Stage 5 — Gradio web UI on HF Spaces
-- [x] OpenAlex enrichment — 97.7% coverage
-- [ ] **Next:** evals (`ranx` for retrieval, Ragas for generation) with hand-curated test set
-- [ ] Composite evidence-quality scoring (study design × recency × citation velocity)
-- [ ] React/Vite frontend (planned)
-- [ ] "Do contradicting papers cite each other?" feature (data is already in DB)
+- Hand-curate golden eval set with real disagreements (current set is system-seeded)
+- Composite evidence-quality scoring (study design × recency × citation velocity)
+- React/Vite frontend
+- "Do contradicting papers cite each other?" feature (data is already in DB)
 
 ---
 

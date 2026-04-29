@@ -1,6 +1,6 @@
 {
   "timestamp_utc": "20260429T144514Z",
-  "git_sha": "08c9ca9-dirty",
+  "git_sha": "08c9ca9",
   "api_url": "http://localhost:8000",
   "partial": false,
   "totals": {

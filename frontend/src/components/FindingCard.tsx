@@ -10,25 +10,42 @@ export function FindingCard({ finding }: { finding: Finding }) {
   const conf = finding.confidence ?? "?";
 
   return (
-    <li className="border-b border-slate-200 py-4 last:border-0">
-      <div className="text-sm text-slate-500">[{year}]</div>
+    <li className="border-b border-slate-200 py-5 last:border-0">
+      <div className="flex items-center gap-2 text-xs text-slate-500">
+        <span className="font-medium text-slate-600">{year}</span>
+        {finding.pmid && (
+          <>
+            <span className="text-slate-300">·</span>
+            <span>PMID {finding.pmid}</span>
+          </>
+        )}
+      </div>
       {link ? (
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-base font-medium text-indigo-700 hover:underline"
+          className="mt-1 block text-[15px] font-semibold text-accent-700 hover:text-accent-800 hover:underline"
         >
           {finding.title}
         </a>
       ) : (
-        <div className="text-base font-medium text-slate-900">
+        <div className="mt-1 text-[15px] font-semibold text-slate-900">
           {finding.title}
         </div>
       )}
-      <p className="mt-1 italic text-slate-700">{finding.claim}</p>
-      <div className="mt-1 text-xs text-slate-500">
-        {pop} · {n} · confidence: {conf}
+      <p className="mt-1.5 text-sm leading-relaxed text-slate-700">
+        {finding.claim}
+      </p>
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
+        <span>{pop}</span>
+        <span className="text-slate-300">·</span>
+        <span>{n}</span>
+        <span className="text-slate-300">·</span>
+        <span>
+          confidence{" "}
+          <span className="font-medium text-slate-700">{conf}</span>
+        </span>
       </div>
     </li>
   );

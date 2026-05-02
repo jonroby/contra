@@ -105,7 +105,7 @@ export default function App() {
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            className="h-10 w-10"
+            className="h-8 w-8"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -127,7 +127,7 @@ export default function App() {
               <path d="M9.5 12h4" />
             </g>
           </svg>
-          <span className="text-xl font-bold uppercase tracking-wide text-accent-600">
+          <span className="text-base font-bold uppercase tracking-wide text-accent-600">
             Contra
           </span>
         </div>

@@ -169,7 +169,7 @@ export default function App() {
               <div className="flex items-center gap-2 px-2 text-xs text-slate-500">
                 <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200 bg-slate-50 px-2 py-1 font-medium text-slate-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-                  Research agent
+                  Effort: Standard
                 </span>
               </div>
               <button
@@ -231,7 +231,7 @@ export default function App() {
                 >
                   <div className="mb-2 inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-                    Research agent
+                    Effort: Standard
                   </div>
                   <div className="text-sm leading-snug text-slate-800 group-hover:text-slate-900">
                     {ex}

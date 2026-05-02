@@ -132,20 +132,19 @@ export default function App() {
           </span>
         </div>
       </div>
-      <div className="mx-auto max-w-4xl px-6 py-16">
+      <div className="mx-auto max-w-4xl px-6 pb-16 pt-8">
         <header className="text-center">
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900">
-            Find where the Alzheimer's research disagrees.
+            Surfacing disagreement in research
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600">
-            Ask a research question. Contra retrieves relevant clinical
-            studies, classifies each as supporting or contradicting your
-            question, and summarizes where the evidence conflicts.
+            A research tool exploring how AI can reliably detect disagreement
+            in the scientific literature, with a focus on Alzheimer's research
           </p>
         </header>
 
         <form
-          className="mt-10"
+          className="mt-8"
           onSubmit={(e) => {
             e.preventDefault();
             void submit();

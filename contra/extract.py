@@ -61,6 +61,10 @@ async def extract_one(client: AsyncOpenAI, query: str, paper) -> dict[str, Any]:
     data["pmid"] = paper.pmid
     data["title"] = paper.title
     data["year"] = paper.year
+    data["journal"] = paper.journal
+    data["publication_types"] = paper.publication_types
+    data["cited_by_count"] = paper.cited_by_count
+    data["oa_pdf_url"] = paper.oa_pdf_url
     return data
 
 

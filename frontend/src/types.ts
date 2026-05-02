@@ -9,6 +9,10 @@ export interface Finding {
   sample_size: number | null;
   duration: string | null;
   confidence: "high" | "medium" | "low" | null;
+  journal: string | null;
+  publication_types: string[] | null;
+  cited_by_count: number | null;
+  oa_pdf_url: string | null;
 }
 
 export interface Timings {

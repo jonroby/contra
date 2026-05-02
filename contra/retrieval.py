@@ -24,6 +24,10 @@ class Paper:
     title: str
     abstract: str
     year: Optional[int]
+    journal: Optional[str] = None
+    publication_types: Optional[list[str]] = None
+    cited_by_count: Optional[int] = None
+    oa_pdf_url: Optional[str] = None
 
 
 def tokenize(text: str) -> list[str]:
@@ -42,9 +46,29 @@ class Retriever:
         self.pmid_to_idx: dict[str, int] = {}
         with psycopg.connect(db_url) as conn:
             with conn.cursor() as cur:
-                cur.execute("SELECT pmid, title, abstract, year FROM papers;")
-                for i, (pmid, title, abstract, year) in enumerate(cur.fetchall()):
-                    self.papers.append(Paper(pmid, title or "", abstract or "", year))
+                cur.execute(
+                    "SELECT pmid, title, abstract, year, journal, "
+                    "publication_types, cited_by_count, oa_pdf_url FROM papers;"
+                )
+                for i, row in enumerate(cur.fetchall()):
+                    pmid, title, abstract, year, journal, pub_types, cited, oa_url = row
+                    types_list = (
+                        [t.strip() for t in pub_types.split(";") if t.strip()]
+                        if pub_types
+                        else None
+                    )
+                    self.papers.append(
+                        Paper(
+                            pmid=pmid,
+                            title=title or "",
+                            abstract=abstract or "",
+                            year=year,
+                            journal=journal,
+                            publication_types=types_list,
+                            cited_by_count=cited,
+                            oa_pdf_url=oa_url,
+                        )
+                    )
                     self.pmid_to_idx[pmid] = i
 
         tokenized = [tokenize(f"{p.title} {p.abstract}") for p in self.papers]

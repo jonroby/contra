@@ -23,8 +23,10 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+from starlette.types import Scope
 
 load_dotenv()
 
@@ -80,9 +82,28 @@ def query(req: QueryRequest) -> dict:
 
 
 # Mount the built React app last so /api/* routes take precedence.
+#
+# Cache strategy:
+#   - Hashed assets under /assets/* are content-addressed (Vite puts a hash in
+#     the filename), so they can be cached forever.
+#   - index.html is the bootstrap that points at the hashed assets. It must
+#     never be cached, or browsers will keep loading old JS/CSS bundles after
+#     a deploy.
 FRONTEND_DIST = Path(__file__).parent / "frontend" / "dist"
+
+
+class CachedStatic(StaticFiles):
+    async def get_response(self, path: str, scope: Scope) -> Response:
+        response = await super().get_response(path, scope)
+        if path.endswith(".html") or path in ("", "/"):
+            response.headers["Cache-Control"] = "no-cache"
+        else:
+            response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+        return response
+
+
 if FRONTEND_DIST.exists():
-    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
+    app.mount("/", CachedStatic(directory=FRONTEND_DIST, html=True), name="frontend")
 else:
     print(
         f"[startup] WARNING: {FRONTEND_DIST} not found. "

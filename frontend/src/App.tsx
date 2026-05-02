@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import type { QueryResult } from "./types";
 import { Results } from "./components/Results";
 
+const FALLBACK_EXAMPLES = [
+  "Does lithium slow cognitive decline in Alzheimer's?",
+  "Is the Mediterranean diet protective against Alzheimer's?",
+  "Do statins reduce Alzheimer's risk?",
+];
+
 export default function App() {
   const [examples, setExamples] = useState<string[]>([]);
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<QueryResult | null>(null);
+  const [placeholder, setPlaceholder] = useState("");
 
   useEffect(() => {
     fetch("/api/examples")
@@ -17,6 +24,53 @@ export default function App() {
         /* examples are non-essential */
       });
   }, []);
+
+  useEffect(() => {
+    const list = examples.length > 0 ? examples : FALLBACK_EXAMPLES;
+    if (list.length === 0) return;
+
+    let cancelled = false;
+    let idx = 0;
+    let charIdx = 0;
+    let phase: "typing" | "pausing" | "deleting" = "typing";
+    let timer: ReturnType<typeof setTimeout>;
+
+    const STEP_MS = 25;
+
+    const tick = () => {
+      if (cancelled) return;
+      const current = list[idx];
+      if (phase === "typing") {
+        charIdx += 1;
+        setPlaceholder(current.slice(0, charIdx));
+        if (charIdx >= current.length) {
+          phase = "pausing";
+          timer = setTimeout(tick, 1800);
+          return;
+        }
+        timer = setTimeout(tick, STEP_MS);
+      } else if (phase === "pausing") {
+        phase = "deleting";
+        timer = setTimeout(tick, STEP_MS);
+      } else {
+        charIdx -= 1;
+        setPlaceholder(current.slice(0, Math.max(0, charIdx)));
+        if (charIdx <= 0) {
+          phase = "typing";
+          idx = (idx + 1) % list.length;
+          timer = setTimeout(tick, 400);
+          return;
+        }
+        timer = setTimeout(tick, STEP_MS);
+      }
+    };
+
+    timer = setTimeout(tick, 600);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [examples]);
 
   async function submit(q?: string) {
     const text = (q ?? question).trim();
@@ -46,29 +100,38 @@ export default function App() {
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      <nav className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
-        <div className="flex h-14 items-center px-6">
-          <a href="/" className="inline-flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-accent-500 text-white shadow-sm">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="h-4 w-4"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M4 4l16 16M20 4L4 20" />
-              </svg>
-            </div>
-            <span className="text-[15px] font-semibold tracking-tight text-slate-900">
-              Contra
-            </span>
-          </a>
+      <div className="sticky top-0 z-10 px-8 pt-6 pb-3">
+        <div className="inline-flex items-center gap-2.5">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            className="h-10 w-10"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <g
+              stroke="#26489d"
+              transform="rotate(-45 12 12) translate(0.5 0)"
+            >
+              <path d="M9 2v17.5a2.5 2.5 0 0 0 5 0V2" fill="white" />
+              <path d="M8 2h7" />
+              <path d="M9.5 12h4" />
+            </g>
+            <g
+              stroke="#be123c"
+              transform="rotate(45 12 12) translate(0.5 0)"
+            >
+              <path d="M9 2v17.5a2.5 2.5 0 0 0 5 0V2" fill="white" />
+              <path d="M8 2h7" />
+              <path d="M9.5 12h4" />
+            </g>
+          </svg>
+          <span className="text-xl font-bold uppercase tracking-wide text-accent-600">
+            Contra
+          </span>
         </div>
-      </nav>
-
+      </div>
       <div className="mx-auto max-w-4xl px-6 py-16">
         <header className="text-center">
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900">
@@ -98,7 +161,7 @@ export default function App() {
                   void submit();
                 }
               }}
-              placeholder="e.g., Does lithium slow cognitive decline in Alzheimer's?"
+              placeholder={placeholder}
               rows={3}
               disabled={loading}
               className="w-full resize-none rounded-2xl bg-transparent px-5 pt-4 pb-2 text-[15px] leading-relaxed text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:opacity-60"
